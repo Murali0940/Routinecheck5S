@@ -1,0 +1,51 @@
+package org.oaksystem.tests;
+
+import org.testng.annotations.Test;
+
+import com.microsoft.playwright.Locator;
+
+import base.BaseDriver;
+import fivesservice.Oaksystem;
+import pages.CompLoginPage;
+import pages.UserLoginPage;
+import utils.ConfigReader;
+
+public class OakSystemDrawTest extends BaseDriver {
+
+    Oaksystem oakSystem;
+
+    @Test(priority = 1, description = "Verify login with valid Company and User credentials")
+    public void validLoginTest() {
+
+        Locator languageDropdown = page.locator("#mySelect");
+        languageDropdown.selectOption(ConfigReader.get("selectLanguage"));
+
+        CompLoginPage companyPage = new CompLoginPage(page);
+
+        companyPage.companyLogin(ConfigReader.get("ohkuma.username"), ConfigReader.get("ohkuma.password"));
+
+        UserLoginPage userPage = new UserLoginPage(page);
+
+        userPage.userLogin(ConfigReader.get("ohkuma.user.username"), ConfigReader.get("ohkuma.user.password"));
+
+        userPage.verifyPageURL();
+
+    }
+
+    @Test(priority = 2, description = "validatingDrawSocketTest")
+
+    public void validatingDrawSocketTest() {
+
+        oakSystem = new Oaksystem(page);
+        oakSystem.homePageURL();
+        oakSystem.validateHyperLinkIcon();
+        oakSystem.clickHyperLinkIcon();
+        oakSystem.hyperLinkPageURL();
+        oakSystem.validateDrawSocketIcon();
+        oakSystem.clickDrawSocketIcon();
+        oakSystem.drawSocketURL();
+        oakSystem.setPagination("100");
+        oakSystem.verifyTodayFileCount();
+    }
+
+}

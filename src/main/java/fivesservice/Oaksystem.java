@@ -192,9 +192,17 @@ public class Oaksystem {
     }
 
     public void verifyTodayFileCount() {
-        APIFileUtil api = new APIFileUtil();
+
         Response response = getSocketFiles();
-        api.getFilesByDay(response.text(), "Today");
+
+        System.out.println("======================================");
+        System.out.println("GET SOCKET FILES API RESPONSE");
+        System.out.println("======================================");
+        System.out.println(response.text());
+        System.out.println("======================================");
+        APIFileUtil api = new APIFileUtil();
+        // Response response = getSocketFiles();
+        api.getFilesByDay(response.text(), "Today", "OAKSYSTEM");
         BaseDriver.takeScreenshot(page, "todayFiles");
         // page.reload();
         // page.waitForTimeout(1000);
