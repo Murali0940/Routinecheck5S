@@ -12,7 +12,7 @@ import utils.ConfigReader;
 
 public class NisinoScanTest extends BaseDriver {
 
-    @Test(priority = 1, description = "Verify login with valid Company and User credentials")
+    @Test(priority = 1, description = "Verify login with valid Company and User credentials.")
     public void validNisinoLoginTest() {
 
         Locator languageDropdown = page.locator("#mySelect");
