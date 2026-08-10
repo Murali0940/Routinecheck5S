@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-08-07T18:20:52 IST" name="routinecheck5S test suite" finished-at="2026-08-07T18:21:29 IST" duration-ms="37136">
+    <groups>
+    </groups>
+    <test started-at="2026-08-07T18:20:52 IST" name="routinecheck5S" finished-at="2026-08-07T18:21:29 IST" duration-ms="37136">
+      <class name="routinecheck5S.OakSystemDrawTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:routinecheck5S.OakSystemDrawTest@5f049ea1]" started-at="2026-08-07T18:20:52 IST" name="setup" finished-at="2026-08-07T18:21:07 IST" duration-ms="15256" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="validLoginTest()[pri:1, instance:routinecheck5S.OakSystemDrawTest@5f049ea1]" started-at="2026-08-07T18:21:07 IST" name="validLoginTest" description="Verify login with valid Company and User credentials" finished-at="2026-08-07T18:21:12 IST" duration-ms="4765" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validLoginTest -->
+        <test-method signature="validatingDrawSocketTest()[pri:2, instance:routinecheck5S.OakSystemDrawTest@5f049ea1]" started-at="2026-08-07T18:21:12 IST" name="validatingDrawSocketTest" description="validatingDrawSocketTest" finished-at="2026-08-07T18:21:29 IST" duration-ms="16616" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validatingDrawSocketTest -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:routinecheck5S.OakSystemDrawTest@5f049ea1]" started-at="2026-08-07T18:21:29 IST" name="teardown" finished-at="2026-08-07T18:21:29 IST" duration-ms="318" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- routinecheck5S.OakSystemDrawTest -->
+    </test> <!-- routinecheck5S -->
+  </suite> <!-- routinecheck5S test suite -->
+</testng-results>

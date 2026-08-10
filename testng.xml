@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="routinecheck5S test suite" parallel="false">
+
+    <listeners>
+        <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
+    </listeners>
+
+     <test name="routinecheck5S">
+
+        <classes>
+            <class name="routinecheck5S.OakSystemDrawTest"/>
+        </classes>
+
+    </test>
+
+</suite>

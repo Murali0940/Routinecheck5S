@@ -1,0 +1,5 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","4126","Verify login with valid Company and User credentials","Default Suite","2026-07-30","passed","2026-07-30","tests.HomepageTest","TestNGTest-88546f06-6527-4275-8465-adf9685505fd","tests.HomepageTest","validLoginTest"
+"","6852","Verify_pdf_search","Default Suite","2026-07-30","passed","2026-07-30","tests.HomepageTest","TestNGTest-88546f06-6527-4275-8465-adf9685505fd","tests.HomepageTest","Verify_pdf_search"
+"","3796","Verify login with valid Company and User credentials","Default Suite","2026-07-30","passed","2026-07-30","loginTestCases.ValidLoginTestCases","TestNGTest-893caaa8-8b9f-482f-8d22-9f68478e63ac","loginTestCases.ValidLoginTestCases","validLoginTest"
+"","10","setup","Default Suite","2026-07-30","broken","2026-07-30","loginTestCases.ValidLoginTestCases","TestNGTest-f00b39bf-fdaf-4275-877c-cb5611b66065","loginTestCases.ValidLoginTestCases","setup"
