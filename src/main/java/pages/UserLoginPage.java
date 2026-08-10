@@ -39,6 +39,7 @@ public class UserLoginPage {
         txtUsername1.fill(user);
         Allure.step("User username is: " + user);
         logger.info("User username is: " + user);
+        page.waitForTimeout(1000);
 
         txtPassword1.fill(pass);
         Allure.step("User password is: " + pass);
@@ -47,6 +48,7 @@ public class UserLoginPage {
         btnLogin1.click();
         Allure.step("User login button clicked.");
         logger.info("User login button clicked.");
+        page.waitForTimeout(1000);
 
         return new Homepage(page);
 

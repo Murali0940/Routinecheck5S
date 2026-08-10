@@ -33,6 +33,7 @@ public class CompLoginPage {
         System.out.println("Company username is: " + user);
         Allure.step("Company username is: " + user);
         logger.info("Company username is: " + user);
+        page.waitForTimeout(1000);
 
         txtPassword.fill(pass);
         System.out.println("Company password is: " + pass);
@@ -43,6 +44,7 @@ public class CompLoginPage {
         System.out.println("Company login button clicked.");
         Allure.step("Company login button clicked.");
         logger.info("Company login button clicked.");
+        page.waitForTimeout(1000);
 
         return new UserLoginPage(page);
 

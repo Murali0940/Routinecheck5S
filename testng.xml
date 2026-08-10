@@ -11,9 +11,10 @@
      <test name="routinecheck5S">
 
         <classes>
-            <class name="routinecheck5S.OakSystemDrawTest"/>
+            <class name="org.oaksystem.tests.OakSystemDrawTest"/>
+            <class name="org.nisino.tests.NisinoScanTest"/>
         </classes>
-
+`
     </test>
 
 </suite>
