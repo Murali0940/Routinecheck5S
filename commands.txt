@@ -1,0 +1,12 @@
+git status
+git checkout ohkuma - creates new branch
+git add .
+git commit -m "Add OHKUMA automation"
+git push -u origin ohkuma
+
+Now merge the branch to main
+
+git checkout main
+git pull origin main
+git merge ohkuma
+git push origin main
