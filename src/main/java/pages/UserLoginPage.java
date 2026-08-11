@@ -3,6 +3,7 @@ package pages;
 import com.microsoft.playwright.*;
 
 import io.qameta.allure.Allure;
+import io.qameta.allure.Step;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -34,6 +35,7 @@ public class UserLoginPage {
 
     }
 
+    @Step("Login to user login page with username: {user}")
     public Homepage userLogin(String user, String pass) {
 
         txtUsername1.fill(user);

@@ -22,11 +22,11 @@ public class OakSystemDrawTest extends BaseDriver {
 
         CompLoginPage companyPage = new CompLoginPage(page);
 
-        companyPage.companyLogin(ConfigReader.get("ohkuma.username"), ConfigReader.get("ohkuma.password"));
+        companyPage.companyLogin(ConfigReader.get("oaksystem.username"), ConfigReader.get("oaksystem.password"));
 
         UserLoginPage userPage = new UserLoginPage(page);
 
-        userPage.userLogin(ConfigReader.get("ohkuma.user.username"), ConfigReader.get("ohkuma.user.password"));
+        userPage.userLogin(ConfigReader.get("oaksystem.user.username"), ConfigReader.get("oaksystem.user.password"));
 
         userPage.verifyPageURL();
 

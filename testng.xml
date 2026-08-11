@@ -13,8 +13,8 @@
         <classes>
             <class name="org.oaksystem.tests.OakSystemDrawTest"/>
             <class name="org.nisino.tests.NisinoScanTest"/>
+            <class name="org.ohkuma.tests.OhkumaTest"/>
         </classes>
-`
     </test>
 
 </suite>

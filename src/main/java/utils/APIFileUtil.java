@@ -27,6 +27,10 @@ public class APIFileUtil {
             return 4;
         }
 
+        if (company.equalsIgnoreCase("OHKUMA")) {
+            return 1;
+        }
+
         throw new IllegalArgumentException(
                 "Unsupported company: " + company);
     }

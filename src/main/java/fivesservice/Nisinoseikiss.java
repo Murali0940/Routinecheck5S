@@ -5,6 +5,7 @@ import com.microsoft.playwright.Page;
 import com.microsoft.playwright.Response;
 
 import base.BaseDriver;
+import io.qameta.allure.Allure;
 import utils.APIFileUtil;
 
 public class Nisinoseikiss {
@@ -37,11 +38,14 @@ public class Nisinoseikiss {
         page.waitForLoadState();
         String currentURL = page.url();
         System.out.println("Current URL: " + currentURL);
+        Allure.step("Current URL: " + currentURL);
 
         if (currentURL.contains("home")) {
             System.out.println("Home page URL is correct.");
+            Allure.step("Home page URL is correct.");
         } else {
             System.out.println("Home page URL is incorrect.");
+            Allure.step("Home page URL is incorrect.");
         }
     }
 
@@ -52,11 +56,14 @@ public class Nisinoseikiss {
         page.waitForLoadState();
         String currentURL = page.url();
         System.out.println("Current URL: " + currentURL);
+        Allure.step("Current URL: " + currentURL);
 
         if (currentURL.contains("adsocket")) {
             System.out.println("adsocket page URL is correct.");
+            Allure.step("adsocket page URL is correct.");
         } else {
             System.out.println("adsocket page URL is incorrect.");
+            Allure.step("adsocket page URL is incorrect.");
         }
     }
 
@@ -66,11 +73,14 @@ public class Nisinoseikiss {
         page.waitForLoadState();
         String currentURL = page.url();
         System.out.println("Current URL: " + currentURL);
+        Allure.step("Current URL: " + currentURL);
 
         if (currentURL.contains("scan")) {
             System.out.println("scansocket page URL is correct..");
+            Allure.step("scansocket page URL is correct..");
         } else {
             System.out.println("scansocket page URL is incorrect.");
+            Allure.step("scansocket page URL is incorrect.");
         }
     }
 
@@ -82,6 +92,7 @@ public class Nisinoseikiss {
 
         if (currentValue.equals(expectedValue)) {
             System.out.println("Pagination already set to " + expectedValue);
+            Allure.step("Pagination already set to " + expectedValue);
             return;
         }
 
@@ -92,6 +103,7 @@ public class Nisinoseikiss {
         page.waitForCondition(() -> selectedValue.textContent().trim().equals(expectedValue));
 
         System.out.println("Pagination changed to " + expectedValue);
+        Allure.step("Pagination changed to " + expectedValue);
 
         page.waitForLoadState();
 
@@ -103,12 +115,14 @@ public class Nisinoseikiss {
     public void clickHyperLinkIcon() {
         page.waitForLoadState();
         page.waitForTimeout(1000);
+        Allure.step("HyperLink icon clicked");
         hyperLinkIcon.click();
     }
 
     public void clickScanSocketIcon() {
         page.waitForLoadState();
         page.waitForTimeout(1000);
+        Allure.step("Scan Socket icon clicked");
         scansocketicon.click();
     }
 
@@ -118,15 +132,16 @@ public class Nisinoseikiss {
                 .locator("//label[@title='作業前']/preceding::div[contains(@class,'imageDivSmall')][1]");
         beforeWorkFolder.scrollIntoViewIfNeeded();
         beforeWorkFolder.dblclick();
+        Allure.step("Before Work folder double clicked");
         page.waitForTimeout(1000);
         System.out.println("clicked 作業前 folder");
-
     }
 
     // click homeicon
     public void clickHome() {
         homeicon.click();
         page.waitForLoadState();
+        Allure.step("Home icon clicked");
     }
 
     public void clickcompletedfolder() {
@@ -135,6 +150,7 @@ public class Nisinoseikiss {
                 .locator("//label[@title='完了']/preceding::div[contains(@class,'imageDivSmall')][1]");
         completedFolder.scrollIntoViewIfNeeded();
         completedFolder.dblclick();
+        Allure.step("Completed folder double clicked");
         page.waitForTimeout(1000);
         System.out.println("clicked 完了 folder");
     }
@@ -145,8 +161,10 @@ public class Nisinoseikiss {
         page.waitForTimeout(1000);
         if (hyperLinkIcon.isVisible()) {
             System.out.println("HyperLink icon is displayed.");
+            Allure.step("HyperLink icon is displayed.");
         } else {
             System.out.println("HyperLink icon is not displayed.");
+            Allure.step("HyperLink icon is not displayed.");
         }
     }
 
@@ -154,14 +172,17 @@ public class Nisinoseikiss {
         page.waitForTimeout(1000);
         if (scansocketicon.isVisible()) {
             System.out.println("Scan Socket icon is displayed.");
+            Allure.step("Scan Socket icon is displayed.");
         } else {
             System.out.println("Scan Socket icon is not displayed.");
+            Allure.step("Scan Socket icon is not displayed.");
         }
     }
 
     public void verifyTodayFileCountAndGetScreenshot() {
 
         Response response = getSocketFiles();
+        Allure.step("Get Socket Files API response");
 
         // System.out.println("======================================");
         // System.out.println("GET SOCKET FILES API RESPONSE");
@@ -175,6 +196,7 @@ public class Nisinoseikiss {
     }
 
     public Response getSocketFiles() {
+        Allure.step("Waiting for Get Socket Files API response");
 
         Response response = page.waitForResponse(
                 res -> res.url().contains("getSocketFiles")
@@ -185,6 +207,7 @@ public class Nisinoseikiss {
                     page.reload();
 
                 });
+        Allure.step("Get Socket Files API response");
         return response;
 
     }

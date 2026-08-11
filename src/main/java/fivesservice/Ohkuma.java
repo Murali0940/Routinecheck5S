@@ -6,33 +6,31 @@ import com.microsoft.playwright.Response;
 
 import base.BaseDriver;
 import io.qameta.allure.Allure;
-import utils.APIFileUtil;
+import utils.OhkumaAPIFileUtil;
 
-public class Oaksystem {
+public class Ohkuma {
 
     private Page page;
 
     // locators
 
     private final Locator hyperLinkIcon;
+    private final Locator adSocketS09Icon;
 
-    private final Locator drawsocketicon;
+    // methods
 
-    public Oaksystem(Page page) {
+    public Ohkuma(Page page) {
         this.page = page;
         this.hyperLinkIcon = page.locator(
                 "//h4[text()='HyperLink']/preceding::input[@src='assets/icons/hyperLink.png']");
-        this.drawsocketicon = page.locator(
-                "//h4[text()='図面']/preceding::input[@src='assets/icons/Drawing.png']");
-    }
+        this.adSocketS09Icon = page.locator(
+                "(//input[@id='image' and @src='assets/transparent.png'])[3]");
 
-    // methods
+    }
 
     public void homePageURL() {
 
         page.waitForTimeout(1000);
-
-        Allure.step("Navigate to home page");
 
         page.waitForLoadState();
         String currentURL = page.url();
@@ -51,7 +49,6 @@ public class Oaksystem {
     public void hyperLinkPageURL() {
 
         page.waitForTimeout(1000);
-        Allure.step("Navigate to hyperLinkPageURL");
 
         page.waitForLoadState();
         String currentURL = page.url();
@@ -70,24 +67,22 @@ public class Oaksystem {
     public void drawSocketURL() {
 
         page.waitForTimeout(1000);
-        Allure.step("Navigate to drawSocketURL");
         page.waitForLoadState();
         String currentURL = page.url();
         System.out.println("Current URL: " + currentURL);
         Allure.step("Current URL: " + currentURL);
 
-        if (currentURL.contains("draw")) {
-            System.out.println("drawsocket page URL is correct..");
-            Allure.step("drawsocket page URL is correct.");
+        if (currentURL.contains("s09")) {
+            System.out.println("s09 page URL is correct..");
+            Allure.step("s09 page URL is correct..");
         } else {
-            System.out.println("drawsocket page URL is incorrect.");
-            Allure.step("drawsocket page URL is incorrect.");
+            System.out.println("s09 page URL is incorrect.");
+            Allure.step("s09 page URL is incorrect.");
         }
     }
 
     public void setPagination(String expectedValue) {
-
-        Allure.step("setPagination");
+        Allure.step("Setting pagination to " + expectedValue);
 
         Locator selectedValue = page.locator("(//label[contains(@class,'ui-dropdown-label')])[1]");
 
@@ -108,13 +103,12 @@ public class Oaksystem {
         Allure.step("Pagination changed to " + expectedValue);
 
         page.waitForLoadState();
-        Allure.step("Loading data");
+
         page.waitForTimeout(4000);
     }
 
     public Response getSocketFiles() {
-
-        Allure.step("getSocketFiles");
+        Allure.step("Getting socket files");
 
         Response response = page.waitForResponse(
                 res -> res.url().contains("getSocketFiles")
@@ -123,11 +117,27 @@ public class Oaksystem {
 
                     // Trigger the API
                     page.reload();
-                    Allure.step("API triggered");
 
                 });
         return response;
 
+    }
+
+    public void verifyTodayFileCount() {
+
+        Response response = getSocketFiles();
+
+        // System.out.println("======================================");
+        // System.out.println("GET SOCKET FILES API RESPONSE");
+        // System.out.println("======================================");
+        // System.out.println(response.text());
+        // System.out.println("======================================");
+        OhkumaAPIFileUtil api = new OhkumaAPIFileUtil();
+        // Response response = getSocketFiles();
+        api.ohkumaGetTodayFiles(response.text());
+        BaseDriver.takeScreenshot(page, "todayFiles");
+        page.reload();
+        page.waitForTimeout(1000);
     }
 
     // Actions
@@ -139,20 +149,17 @@ public class Oaksystem {
         Allure.step("HyperLink icon clicked");
     }
 
-    public void clickDrawSocketIcon() {
+    public void clickS09SocketIcon() {
         page.waitForLoadState();
         page.waitForTimeout(1000);
-        drawsocketicon.click();
-        Allure.step("Draw Socket icon clicked");
-        page.waitForLoadState();
-        page.waitForTimeout(1000);
+        adSocketS09Icon.click();
+        Allure.step("S09 Socket icon clicked");
     }
 
-    // validations
+    // Validations
 
     public void validateHyperLinkIcon() {
         page.waitForTimeout(1000);
-        Allure.step("validateHyperLinkIcon");
         if (hyperLinkIcon.isVisible()) {
             System.out.println("HyperLink icon is displayed.");
             Allure.step("HyperLink icon is displayed.");
@@ -162,34 +169,15 @@ public class Oaksystem {
         }
     }
 
-    public void validateDrawSocketIcon() {
+    public void validateS09SocketIcon() {
         page.waitForTimeout(1000);
-        Allure.step("validateDrawSocketIcon");
-        if (drawsocketicon.isVisible()) {
-            System.out.println("Draw Socket icon is displayed.");
-            Allure.step("Draw Socket icon is displayed.");
+        if (adSocketS09Icon.isVisible()) {
+            System.out.println("S09 Socket icon is displayed.");
+            Allure.step("S09 Socket icon is displayed.");
         } else {
-            System.out.println("Draw Socket icon is not displayed.");
-            Allure.step("Draw Socket icon is not displayed.");
+            System.out.println("S09 Socket icon is not displayed.");
+            Allure.step("S09 Socket icon is not displayed.");
         }
-    }
-
-    public void verifyTodayFileCount() {
-
-        Allure.step("verifyTodayFileCount");
-        page.reload();
-        page.waitForTimeout(2000);
-        Response response = getSocketFiles();
-
-        // System.out.println("======================================");
-        // Allure.step("GET SOCKET FILES API RESPONSE");
-        // System.out.println("======================================");
-        // System.out.println(response.text());
-        // Allure.step("GET SOCKET FILES API RESPONSE " + response.text());
-        System.out.println("======================================");
-        APIFileUtil api = new APIFileUtil();
-        api.getFilesByDay(response.text(), "Today", "OAKSYSTEM");
-        BaseDriver.takeScreenshot(page, "todayFiles");
     }
 
 }
