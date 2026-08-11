@@ -10,7 +10,6 @@ import pages.UserLoginPage;
 import utils.ConfigReader;
 import base.BaseDriver;
 
-
 public class OhkumaTest extends BaseDriver {
 
     Ohkuma ohkuma;
@@ -27,7 +26,7 @@ public class OhkumaTest extends BaseDriver {
 
         UserLoginPage userPage = new UserLoginPage(page);
 
-        userPage.userLogin(ConfigReader.get("ohkuma.user.username"), ConfigReader.get("ohkuma.user.password"));
+        userPage.userLogin(ConfigReader.get("user.username"), ConfigReader.get("user.password"));
 
         userPage.verifyPageURL();
 
