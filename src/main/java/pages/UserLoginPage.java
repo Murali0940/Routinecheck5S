@@ -11,11 +11,8 @@ import org.apache.logging.log4j.Logger;
 public class UserLoginPage {
 
     private Page page;
+
     private static final Logger logger = LogManager.getLogger(UserLoginPage.class);
-
-    private Locator txtUsername1;
-
-    private Locator txtPassword1;
 
     private Locator btnLogin1;
 
@@ -24,28 +21,23 @@ public class UserLoginPage {
     public UserLoginPage(Page page) {
 
         this.page = page;
-
-        txtUsername1 = page.locator("#username");
-
-        txtPassword1 = page.locator("#password");
-
-        btnLogin1 = page.locator("#login");
-
-        btnLogout1 = page.locator("#logout");
+        this.btnLogin1 = page.locator("#login");
+        this.btnLogout1 = page.locator("#logout");
 
     }
 
     @Step("Login to user login page with username: {user}")
     public Homepage userLogin(String user, String pass) {
 
-        txtUsername1.fill(user);
+        page.getByPlaceholder("Username").fill(user);
         Allure.step("User username is: " + user);
         logger.info("User username is: " + user);
         page.waitForTimeout(1000);
 
-        txtPassword1.fill(pass);
+        page.getByPlaceholder("Password").fill(pass);
         Allure.step("User password is: " + pass);
         logger.info("User password is: " + pass);
+        page.waitForTimeout(1000);
 
         btnLogin1.click();
         Allure.step("User login button clicked.");

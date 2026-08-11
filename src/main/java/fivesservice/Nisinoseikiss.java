@@ -33,8 +33,6 @@ public class Nisinoseikiss {
 
     public void homePageURL() {
 
-        page.waitForTimeout(1000);
-
         page.waitForLoadState();
         String currentURL = page.url();
         System.out.println("Current URL: " + currentURL);
@@ -50,8 +48,6 @@ public class Nisinoseikiss {
     }
 
     public void hyperLinkPageURL() {
-
-        page.waitForTimeout(1000);
 
         page.waitForLoadState();
         String currentURL = page.url();
@@ -69,7 +65,6 @@ public class Nisinoseikiss {
 
     public void scanSocketURL() {
 
-        page.waitForTimeout(1000);
         page.waitForLoadState();
         String currentURL = page.url();
         System.out.println("Current URL: " + currentURL);
@@ -113,52 +108,53 @@ public class Nisinoseikiss {
     // Actions
 
     public void clickHyperLinkIcon() {
-        page.waitForLoadState();
         page.waitForTimeout(2000);
+        page.waitForLoadState();
         Allure.step("HyperLink icon clicked");
         hyperLinkIcon.click();
     }
 
     public void clickScanSocketIcon() {
-        page.waitForLoadState();
         page.waitForTimeout(2000);
+        page.waitForLoadState();
         Allure.step("Scan Socket icon clicked");
         scansocketicon.click();
     }
 
     public void clickBeforeWorkFolder() {
+        page.waitForTimeout(2000);
         page.waitForLoadState();
         Locator beforeWorkFolder = page
                 .locator("//label[@title='作業前']/preceding::div[contains(@class,'imageDivSmall')][1]");
         beforeWorkFolder.scrollIntoViewIfNeeded();
         beforeWorkFolder.dblclick();
         Allure.step("Before Work folder double clicked");
-        page.waitForTimeout(1000);
         System.out.println("clicked 作業前 folder");
     }
 
     // click homeicon
     public void clickHome() {
+        page.waitForTimeout(2000);
         homeicon.click();
         page.waitForLoadState();
         Allure.step("Home icon clicked");
     }
 
     public void clickcompletedfolder() {
+        page.waitForTimeout(2000);
         page.waitForLoadState();
         Locator completedFolder = page
                 .locator("//label[@title='完了']/preceding::div[contains(@class,'imageDivSmall')][1]");
         completedFolder.scrollIntoViewIfNeeded();
         completedFolder.dblclick();
         Allure.step("Completed folder double clicked");
-        page.waitForTimeout(1000);
         System.out.println("clicked 完了 folder");
     }
 
     // validations
 
     public void validateHyperLinkIcon() {
-        page.waitForTimeout(2000);
+        page.waitForTimeout(1000);
         if (hyperLinkIcon.isVisible()) {
             System.out.println("HyperLink icon is displayed.");
             Allure.step("HyperLink icon is displayed.");
@@ -169,7 +165,7 @@ public class Nisinoseikiss {
     }
 
     public void validateScanSocketIcon() {
-        page.waitForTimeout(2000);
+        page.waitForTimeout(1000);
         if (scansocketicon.isVisible()) {
             System.out.println("Scan Socket icon is displayed.");
             Allure.step("Scan Socket icon is displayed.");
