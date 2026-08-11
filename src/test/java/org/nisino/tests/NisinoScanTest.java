@@ -2,8 +2,6 @@ package org.nisino.tests;
 
 import org.testng.annotations.Test;
 
-import com.microsoft.playwright.Locator;
-
 import base.BaseDriver;
 import fivesservice.Nisinoseikiss;
 import pages.CompLoginPage;
@@ -15,18 +13,29 @@ public class NisinoScanTest extends BaseDriver {
     @Test(priority = 1, description = "Verify login with valid Company and User credentials.")
     public void validNisinoLoginTest() {
 
-        Locator languageDropdown = page.locator("#mySelect");
-        languageDropdown.selectOption(ConfigReader.get("selectLanguage"));
+        page.locator("#mySelect").selectOption(ConfigReader.get("selectLanguage"));
+
+        System.out.println("Selected Language: " + ConfigReader.get("selectLanguage"));
+
+        System.out.println("Starting Company Login...");
 
         CompLoginPage companyPage = new CompLoginPage(page);
 
         companyPage.companyLogin(ConfigReader.get("nisino.compusername"), ConfigReader.get("nisino.comppassword"));
 
+        // ---------------------------------------------------------
+        // User Login
+        // ---------------------------------------------------------
+        System.out.println("Waiting for User Login page...");
+
         UserLoginPage userPage = new UserLoginPage(page);
 
         userPage.verifyPageURL();
 
+        System.out.println("User Login page verified.");
+
         userPage.userLogin(ConfigReader.get("user.username"), ConfigReader.get("user.password"));
+        System.out.println("User logged in successfully.");
 
     }
 

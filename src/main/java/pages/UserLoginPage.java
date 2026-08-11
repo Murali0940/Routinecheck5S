@@ -54,16 +54,15 @@ public class UserLoginPage {
 
     public void verifyPageURL() {
 
-        page.waitForLoadState();
+        page.waitForCondition(
+                () -> page.url().contains("userlogin"),
+                new Page.WaitForConditionOptions()
+                        .setTimeout(30000));
 
         String currentURL = page.url();
-        System.out.println("Current URL: " + currentURL);
 
-        if (currentURL.contains("userlogin")) {
-            System.out.println("userlogin page URL is correct.");
-        } else {
-            System.out.println("userlogin page URL is incorrect.");
-        }
+        System.out.println(
+                "URL after User Login: " + currentURL);
     }
 
 }
