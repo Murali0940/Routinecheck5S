@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="TestSuite" time="106.147" tests="6" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="TestSuite" time="139.661" tests="6" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="GB"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-21\bin"/>
-    <property name="sun.java.command" value="C:\Users\DELL\AppData\Local\Temp\surefire3974636391295278642\surefirebooter-20260811130417470_3.jar C:\Users\DELL\AppData\Local\Temp\surefire3974636391295278642 2026-08-11T13-04-17_315-jvmRun1 surefire-20260811130417470_1tmp surefire_0-20260811130417470_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\DELL\AppData\Local\Temp\surefire7739714529573752458\surefirebooter-20260811152059037_3.jar C:\Users\DELL\AppData\Local\Temp\surefire7739714529573752458 2026-08-11T15-20-58_780-jvmRun1 surefire-20260811152059037_1tmp surefire_0-20260811152059037_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="D:\PlaywrightJava\registrationservice\target\test-classes;D:\PlaywrightJava\registrationservice\target\classes;C:\Users\DELL\.m2\repository\com\microsoft\playwright\playwright\1.55.0\playwright-1.55.0.jar;C:\Users\DELL\.m2\repository\com\google\code\gson\gson\2.12.1\gson-2.12.1.jar;C:\Users\DELL\.m2\repository\com\google\errorprone\error_prone_annotations\2.36.0\error_prone_annotations-2.36.0.jar;C:\Users\DELL\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\DELL\.m2\repository\com\microsoft\playwright\driver\1.55.0\driver-1.55.0.jar;C:\Users\DELL\.m2\repository\com\microsoft\playwright\driver-bundle\1.55.0\driver-bundle-1.55.0.jar;C:\Users\DELL\.m2\repository\org\testng\testng\7.11.0\testng-7.11.0.jar;C:\Users\DELL\.m2\repository\org\slf4j\slf4j-api\2.0.16\slf4j-api-2.0.16.jar;C:\Users\DELL\.m2\repository\org\jcommander\jcommander\1.83\jcommander-1.83.jar;C:\Users\DELL\.m2\repository\org\webjars\jquery\3.7.1\jquery-3.7.1.jar;C:\Users\DELL\.m2\repository\io\qameta\allure\allure-testng\2.29.1\allure-testng-2.29.1.jar;C:\Users\DELL\.m2\repository\io\qameta\allure\allure-java-commons\2.29.1\allure-java-commons-2.29.1.jar;C:\Users\DELL\.m2\repository\io\qameta\allure\allure-model\2.29.1\allure-model-2.29.1.jar;C:\Users\DELL\.m2\repository\io\qameta\allure\allure-test-filter\2.29.1\allure-test-filter-2.29.1.jar;C:\Users\DELL\.m2\repository\org\apache\logging\log4j\log4j-api\2.26.1\log4j-api-2.26.1.jar;C:\Users\DELL\.m2\repository\org\apache\logging\log4j\log4j-core\2.26.1\log4j-core-2.26.1.jar;C:\Users\DELL\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.18.0\jackson-databind-2.18.0.jar;C:\Users\DELL\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.18.0\jackson-annotations-2.18.0.jar;C:\Users\DELL\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.18.0\jackson-core-2.18.0.jar;"/>
     <property name="allure.results.directory" value="D:\PlaywrightJava\registrationservice\target/allure-results"/>
@@ -31,7 +31,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\DELL\AppData\Local\Temp\surefire3974636391295278642\surefirebooter-20260811130417470_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\DELL\AppData\Local\Temp\surefire7739714529573752458\surefirebooter-20260811152059037_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="21.0.7+8-LTS-245"/>
@@ -59,7 +59,7 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="validLoginTest" classname="org.oaksystem.tests.OakSystemDrawTest" time="9.302">
+  <testcase name="validLoginTest" classname="org.oaksystem.tests.OakSystemDrawTest" time="13.087">
     <system-out><![CDATA[Company username is: oaksystem
 Company password is: oak123
 Company login button clicked.
@@ -71,7 +71,7 @@ SLF4J(W): Defaulting to no-operation (NOP) logger implementation
 SLF4J(W): See https://www.slf4j.org/codes.html#noProviders for further details.
 ]]></system-err>
   </testcase>
-  <testcase name="validatingDrawSocketTest" classname="org.oaksystem.tests.OakSystemDrawTest" time="19.353">
+  <testcase name="validatingDrawSocketTest" classname="org.oaksystem.tests.OakSystemDrawTest" time="21.956">
     <system-out><![CDATA[Current URL: https://www.alfadock-pack.com/ver10/#/home
 Home page URL is correct.
 HyperLink icon is displayed.
@@ -91,10 +91,10 @@ DAY     : Today
 Yellow Icon Files     : 7
 Non-Yellow Files      : 0
 ======================================
-Screenshot saved: screenshots/todayFiles_20260811_130503.png
+Screenshot saved: screenshots/todayFiles_20260811_152205.png
 ]]></system-out>
   </testcase>
-  <testcase name="validNisinoLoginTest" classname="org.nisino.tests.NisinoScanTest" time="8.307">
+  <testcase name="validNisinoLoginTest" classname="org.nisino.tests.NisinoScanTest" time="9.349">
     <system-out><![CDATA[Company username is: nisinoseikiss
 Company password is: eJ3HZWF6
 Company login button clicked.
@@ -102,7 +102,7 @@ Current URL: https://www.alfadock-pack.com/ver10/#/home
 userlogin page URL is incorrect.
 ]]></system-out>
   </testcase>
-  <testcase name="validatingScanSocketTest" classname="org.nisino.tests.NisinoScanTest" time="20.522">
+  <testcase name="validatingScanSocketTest" classname="org.nisino.tests.NisinoScanTest" time="27.952">
     <system-out><![CDATA[Current URL: https://www.alfadock-pack.com/ver10/#/home
 Home page URL is correct.
 HyperLink icon is displayed.
@@ -117,10 +117,10 @@ COMPANY : NISINOSEIKISS
 DAY     : Today
 ======================================
 --------------------------------------
-Yellow Icon Files     : 1
+Yellow Icon Files     : 3
 Non-Yellow Files      : 0
 ======================================
-Screenshot saved: screenshots/todayFiles_20260811_130531.png
+Screenshot saved: screenshots/todayFiles_20260811_152238.png
 clicked 完了 folder
 Pagination already set to 100
 
@@ -132,10 +132,10 @@ DAY     : Today
 Yellow Icon Files     : 0
 Non-Yellow Files      : 0
 ======================================
-Screenshot saved: screenshots/todayFiles_20260811_130535.png
+Screenshot saved: screenshots/todayFiles_20260811_152247.png
 ]]></system-out>
   </testcase>
-  <testcase name="validLoginTest" classname="org.ohkuma.tests.OhkumaTest" time="9.982">
+  <testcase name="validLoginTest" classname="org.ohkuma.tests.OhkumaTest" time="10.374">
     <system-out><![CDATA[Company username is: Ohkuma
 Company password is: ohkuma123
 Company login button clicked.
@@ -143,7 +143,7 @@ Current URL: https://www.alfadock-pack.com/ver10/#/home
 userlogin page URL is incorrect.
 ]]></system-out>
   </testcase>
-  <testcase name="validatingS09Socket" classname="org.ohkuma.tests.OhkumaTest" time="12.042">
+  <testcase name="validatingS09Socket" classname="org.ohkuma.tests.OhkumaTest" time="14.887">
     <system-out><![CDATA[Current URL: https://www.alfadock-pack.com/ver10/#/home
 Home page URL is correct.
 HyperLink icon is displayed.
@@ -164,7 +164,7 @@ Files Inside Folder Count : 0
 Yellow Icon Files         : 0
 Non-Yellow Icon Files     : 0
 ========================================
-Screenshot saved: screenshots/todayFiles_20260811_130601.png
+Screenshot saved: screenshots/todayFiles_20260811_152315.png
 ]]></system-out>
   </testcase>
 </testsuite>

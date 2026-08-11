@@ -7,4 +7,5 @@ base\BaseDriver.class
 fivesservice\Ohkuma.class
 utils\ConfigReader.class
 fivesservice\Nisinoseikiss.class
+fivesservice\Sanmatsu.class
 utils\APIFileUtil.class

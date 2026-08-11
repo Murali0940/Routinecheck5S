@@ -24,9 +24,9 @@ public class NisinoScanTest extends BaseDriver {
 
         UserLoginPage userPage = new UserLoginPage(page);
 
-        userPage.userLogin(ConfigReader.get("user.username"), ConfigReader.get("user.password"));
-
         userPage.verifyPageURL();
+
+        userPage.userLogin(ConfigReader.get("user.username"), ConfigReader.get("user.password"));
 
     }
 
