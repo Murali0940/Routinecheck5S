@@ -1,8 +1,6 @@
 # Maven
 target/
 
-# Compiled Java files
-*.class
 
 # IDE
 .idea/
