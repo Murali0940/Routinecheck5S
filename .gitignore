@@ -1,0 +1,25 @@
+# Maven build output
+target/
+
+# Allure test results
+allure-results/
+allure-report/
+
+# Test screenshots
+screenshots/
+
+# IntelliJ IDEA
+.idea/
+*.iml
+
+# Eclipse
+.classpath
+.project
+.settings/
+
+# VS Code
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
