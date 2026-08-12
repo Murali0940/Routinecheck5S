@@ -1,5 +1,5 @@
 git status
-git checkout (branch name) - creates new branch
+git checkout -b (branch name) - creates new branch
 git add .
 git commit -m "message"
 git push -u origin (branch name) 
