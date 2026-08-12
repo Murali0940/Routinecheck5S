@@ -1,5 +1,7 @@
 package fivesservice;
 
+import org.testng.log4testng.Logger;
+
 import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.Response;
@@ -12,6 +14,7 @@ import utils.APIFileUtil;
 public class Nisinoseikiss {
 
     protected Page page;
+    Logger logger;
 
     // locators
 
@@ -109,14 +112,35 @@ public class Nisinoseikiss {
     // Actions
 
     public void clickHyperLinkIcon() {
+
+        Thread.currentThread()
+                .getStackTrace()[1]
+                .getMethodName();
+
+        Allure.step("Clicking HyperLink icon");
+
+        Locator hyperLinkIcon = page.locator(
+                "div.outerLine2 > input[src='assets/icons/hyperLink.png']");
+
+        logger.info("Waiting for HyperLink icon to become visible...");
+
         hyperLinkIcon.waitFor(
                 new Locator.WaitForOptions()
                         .setState(WaitForSelectorState.VISIBLE));
-        hyperLinkIcon.click();
-        page.waitForTimeout(2000);
-        page.waitForLoadState();
-        Allure.step("HyperLink icon clicked");
 
+        logger.info("HyperLink icon is visible.");
+
+        if (!hyperLinkIcon.isEnabled()) {
+            throw new AssertionError(
+                    "HyperLink icon is visible but not enabled.");
+        }
+
+        hyperLinkIcon.scrollIntoViewIfNeeded();
+
+        hyperLinkIcon.click();
+
+        logger.info("HyperLink icon clicked successfully.");
+        Allure.step("HyperLink icon clicked successfully");
     }
 
     public void clickScanSocketIcon() {
