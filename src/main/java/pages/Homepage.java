@@ -47,7 +47,7 @@ public class Homepage {
             System.out.println("All search options unchecked.");
             logger.info("All search options unchecked.");
         } else {
-            System.out.println("Not all search options are checked. Current states - Filename: " + filename.isChecked()
+            System.out.println("Not all search options are checked.. Current states - Filename: " + filename.isChecked()
                     + ", Attributes: " + attribute.isChecked() + ", Content: " + content.isChecked());
             logger.info("Not all search options are checked. Current states - Filename: " + filename.isChecked()
                     + ", Attributes: " + attribute.isChecked() + ", Content: " + content.isChecked());
