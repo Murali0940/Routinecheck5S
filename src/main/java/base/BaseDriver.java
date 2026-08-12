@@ -17,10 +17,30 @@ public class BaseDriver {
     protected Browser browser;
     protected BrowserContext context;
     public Page page;
+    private double timeout;
 
     @BeforeClass
 
     public void setup() {
+
+        // ============================================================
+        // READ CONFIGURATION
+        // ============================================================
+
+        boolean headless = Boolean.parseBoolean(
+                ConfigReader.get("headless"));
+
+        double slowMo = Double.parseDouble(
+                ConfigReader.get("slowmo"));
+
+        timeout = Double.parseDouble(
+                ConfigReader.get("timeout"));
+
+        String baseUrl = ConfigReader.get("base.url");
+
+        // ============================================================
+        // START PLAYWRIGHT
+        // ============================================================
 
         playwright = Playwright.create();
 
@@ -28,9 +48,9 @@ public class BaseDriver {
 
                 .launch(new BrowserType.LaunchOptions()
 
-                        .setHeadless(Boolean.parseBoolean(ConfigReader.get("headless")))
+                        .setHeadless(headless)
 
-                        .setSlowMo(Double.parseDouble(ConfigReader.get("slowmo")))
+                        .setSlowMo(slowMo)
                         .setArgs(Arrays.asList("--start-maximized")));
         System.out.println("Browser launched successfully." + browser);
 
@@ -40,7 +60,7 @@ public class BaseDriver {
 
         System.out.println("Page created successfully." + page);
 
-        page.navigate(ConfigReader.get("base.url"));
+        page.navigate(baseUrl);
 
         System.out.println("Navigated to base URL successfully." + page.url());
 
@@ -52,14 +72,20 @@ public class BaseDriver {
 
     public void teardown() {
 
-        context.close();
-        System.out.println("Context closed successfully." + context);
+        if (context != null) {
+            context.close();
+            System.out.println("Context closed successfully." + context);
+        }
 
-        browser.close();
-        System.out.println("Browser closed successfully." + browser);
+        if (browser != null) {
+            browser.close();
+            System.out.println("Browser closed successfully." + browser);
+        }
 
-        playwright.close();
-        System.out.println("Playwright closed successfully." + playwright);
+        if (playwright != null) {
+            playwright.close();
+            System.out.println("Playwright closed successfully." + playwright);
+        }
 
     }
 
