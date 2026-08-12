@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-08-12T11:10:04 IST" name="routinecheck5S test suite" finished-at="2026-08-12T11:12:08 IST" duration-ms="124004">
+    <groups>
+    </groups>
+    <test started-at="2026-08-12T11:10:04 IST" name="routinecheck5S" finished-at="2026-08-12T11:12:08 IST" duration-ms="124004">
+      <class name="org.ohkuma.tests.OhkumaTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:org.ohkuma.tests.OhkumaTest@5e2c3d18]" started-at="2026-08-12T11:11:05 IST" name="setup" finished-at="2026-08-12T11:11:09 IST" duration-ms="4418" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="validLoginTest()[pri:1, instance:org.ohkuma.tests.OhkumaTest@5e2c3d18]" started-at="2026-08-12T11:11:09 IST" name="validLoginTest" description="Verify login with valid Company and User credentials" finished-at="2026-08-12T11:11:18 IST" duration-ms="8748" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validLoginTest -->
+        <test-method signature="validatingS09Socket()[pri:2, instance:org.ohkuma.tests.OhkumaTest@5e2c3d18]" started-at="2026-08-12T11:11:18 IST" name="validatingS09Socket" description="validatingS09Socket" finished-at="2026-08-12T11:11:33 IST" duration-ms="14661" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validatingS09Socket -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:org.ohkuma.tests.OhkumaTest@5e2c3d18]" started-at="2026-08-12T11:11:33 IST" name="teardown" finished-at="2026-08-12T11:11:33 IST" duration-ms="473" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- org.ohkuma.tests.OhkumaTest -->
+      <class name="org.oaksystem.tests.OakSystemDrawTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:org.oaksystem.tests.OakSystemDrawTest@18271936]" started-at="2026-08-12T11:10:04 IST" name="setup" finished-at="2026-08-12T11:10:33 IST" duration-ms="28604" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="validLoginTest()[pri:1, instance:org.oaksystem.tests.OakSystemDrawTest@18271936]" started-at="2026-08-12T11:10:33 IST" name="validLoginTest" description="Verify login with valid Company and User credentials" finished-at="2026-08-12T11:10:42 IST" duration-ms="9315" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validLoginTest -->
+        <test-method signature="validatingDrawSocketTest()[pri:2, instance:org.oaksystem.tests.OakSystemDrawTest@18271936]" started-at="2026-08-12T11:10:42 IST" name="validatingDrawSocketTest" description="validatingDrawSocketTest" finished-at="2026-08-12T11:11:04 IST" duration-ms="21421" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validatingDrawSocketTest -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:org.oaksystem.tests.OakSystemDrawTest@18271936]" started-at="2026-08-12T11:11:04 IST" name="teardown" finished-at="2026-08-12T11:11:05 IST" duration-ms="794" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- org.oaksystem.tests.OakSystemDrawTest -->
+      <class name="org.nisino.tests.NisinoScanTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:org.nisino.tests.NisinoScanTest@2cb4893b]" started-at="2026-08-12T11:11:33 IST" name="setup" finished-at="2026-08-12T11:11:36 IST" duration-ms="2955" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="validNisinoLoginTest()[pri:1, instance:org.nisino.tests.NisinoScanTest@2cb4893b]" started-at="2026-08-12T11:11:36 IST" name="validNisinoLoginTest" description="Verify login with valid Company and User credentials." finished-at="2026-08-12T11:11:45 IST" duration-ms="8944" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validNisinoLoginTest -->
+        <test-method signature="validatingScanSocketTest()[pri:2, instance:org.nisino.tests.NisinoScanTest@2cb4893b]" started-at="2026-08-12T11:11:45 IST" name="validatingScanSocketTest" description="validatingDrawSocketTest" finished-at="2026-08-12T11:12:08 IST" duration-ms="23136" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validatingScanSocketTest -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:org.nisino.tests.NisinoScanTest@2cb4893b]" started-at="2026-08-12T11:12:08 IST" name="teardown" finished-at="2026-08-12T11:12:08 IST" duration-ms="364" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- org.nisino.tests.NisinoScanTest -->
+    </test> <!-- routinecheck5S -->
+  </suite> <!-- routinecheck5S test suite -->
+</testng-results>
