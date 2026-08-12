@@ -32,12 +32,17 @@ public class BaseDriver {
 
                         .setSlowMo(Double.parseDouble(ConfigReader.get("slowmo")))
                         .setArgs(Arrays.asList("--start-maximized")));
+        System.out.println("Browser launched successfully." + browser);
 
         context = browser.newContext(new Browser.NewContextOptions().setViewportSize(null));
 
         page = context.newPage();
 
+        System.out.println("Page created successfully." + page);
+
         page.navigate(ConfigReader.get("base.url"));
+
+        System.out.println("Navigated to base URL successfully." + page.url());
 
         // page.pause(); //playwright inspector will open and you can debug your test
 
@@ -48,10 +53,13 @@ public class BaseDriver {
     public void teardown() {
 
         context.close();
+        System.out.println("Context closed successfully." + context);
 
         browser.close();
+        System.out.println("Browser closed successfully." + browser);
 
         playwright.close();
+        System.out.println("Playwright closed successfully." + playwright);
 
     }
 
@@ -68,15 +76,5 @@ public class BaseDriver {
 
         System.out.println("Screenshot saved: " + path);
     }
-
-    // @AfterMethod
-    // public void tearDown(ITestResult result) {
-
-    // if (result.getStatus() == ITestResult.SUCCESS) {
-    // takeScreenshot(result.getName());
-    // }
-    // }
-
-    
 
 }
