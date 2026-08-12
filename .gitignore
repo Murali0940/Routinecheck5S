@@ -5,9 +5,6 @@ target/
 allure-results/
 allure-report/
 
-# Test screenshots
-screenshots/
-
 # IntelliJ IDEA
 .idea/
 *.iml
