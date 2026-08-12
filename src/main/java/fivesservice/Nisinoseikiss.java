@@ -117,18 +117,15 @@ public class Nisinoseikiss {
                 .getStackTrace()[1]
                 .getMethodName();
 
+        System.out.println("Clicking hyperlink icon");
         Allure.step("Clicking HyperLink icon");
 
         Locator hyperLinkIcon = page.locator(
                 "div.outerLine2 > input[src='assets/icons/hyperLink.png']");
 
-        logger.info("Waiting for HyperLink icon to become visible...");
-
         hyperLinkIcon.waitFor(
                 new Locator.WaitForOptions()
                         .setState(WaitForSelectorState.VISIBLE));
-
-        logger.info("HyperLink icon is visible.");
 
         if (!hyperLinkIcon.isEnabled()) {
             throw new AssertionError(
@@ -139,8 +136,8 @@ public class Nisinoseikiss {
 
         hyperLinkIcon.click();
 
-        logger.info("HyperLink icon clicked successfully.");
-        Allure.step("HyperLink icon clicked successfully");
+        System.out.println("hyperlink icon clicked successfully");
+        Allure.step("hyperlink icon clicked successfully");
     }
 
     public void clickScanSocketIcon() {
@@ -150,6 +147,7 @@ public class Nisinoseikiss {
         scansocketicon.click();
         page.waitForTimeout(2000);
         page.waitForLoadState();
+        System.out.println("Scan Socket icon clicked");
         Allure.step("Scan Socket icon clicked");
 
     }

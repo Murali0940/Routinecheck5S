@@ -35,14 +35,14 @@ public class CompLoginPage {
 
         txtUsername.fill(user);
         System.out.println("Company username is: " + user);
-        Allure.step("Company username is: " + user);
-        logger.info("Company username is: " + user);
+        Allure.step("Company username entered" + user);
+        logger.info("Company username entered" + user);
         page.waitForTimeout(1000);
 
         txtPassword.fill(pass);
-        System.out.println("Company password is: " + pass);
-        Allure.step("Company password is: " + pass);
-        logger.info("Company password is: " + pass);
+        System.out.println("Company password entered");
+        Allure.step("Company password entered");
+        logger.info("Company password entered");
 
         btnLogin.click();
         System.out.println("Company login button clicked.");

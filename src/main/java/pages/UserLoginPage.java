@@ -31,14 +31,14 @@ public class UserLoginPage {
 
         page.getByPlaceholder("Username").fill(user);
         Allure.step("User username is: " + user);
-        logger.info("User username is: " + user);
+        logger.info("User username entered" + user);
         System.out.println("username is: " + user);
         page.waitForTimeout(1000);
 
         page.getByPlaceholder("Password").fill(pass);
-        Allure.step("User password is: " + pass);
-        logger.info("User password is: " + pass);
-        System.out.println("password is: " + pass);
+        Allure.step("User password entered");
+        logger.info("User password entered");
+        System.out.println("User password entered");
         page.waitForTimeout(1000);
 
         btnLogin1.click();
