@@ -1,6 +1,7 @@
 package pages;
 
 import com.microsoft.playwright.*;
+import com.microsoft.playwright.options.LoadState;
 
 import io.qameta.allure.Allure;
 import io.qameta.allure.Step;
@@ -47,7 +48,7 @@ public class CompLoginPage {
         System.out.println("Company login button clicked.");
         Allure.step("Company login button clicked.");
         logger.info("Company login button clicked.");
-        page.waitForTimeout(1000);
+        page.waitForLoadState(LoadState.NETWORKIDLE);
 
         return new UserLoginPage(page);
 

@@ -31,6 +31,10 @@ public class APIFileUtil {
             return 1;
         }
 
+        if (company.equalsIgnoreCase("SANMATSU")) {
+            return 1;
+        }
+
         throw new IllegalArgumentException(
                 "Unsupported company: " + company);
     }
