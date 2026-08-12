@@ -3,6 +3,7 @@ package fivesservice;
 import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.Response;
+import com.microsoft.playwright.options.WaitForSelectorState;
 
 import base.BaseDriver;
 import io.qameta.allure.Allure;
@@ -108,6 +109,9 @@ public class Nisinoseikiss {
     // Actions
 
     public void clickHyperLinkIcon() {
+        hyperLinkIcon.waitFor(
+                new Locator.WaitForOptions()
+                        .setState(WaitForSelectorState.VISIBLE));
         hyperLinkIcon.click();
         page.waitForTimeout(2000);
         page.waitForLoadState();
@@ -116,6 +120,9 @@ public class Nisinoseikiss {
     }
 
     public void clickScanSocketIcon() {
+        scansocketicon.waitFor(
+                new Locator.WaitForOptions()
+                        .setState(WaitForSelectorState.VISIBLE));
         scansocketicon.click();
         page.waitForTimeout(2000);
         page.waitForLoadState();
