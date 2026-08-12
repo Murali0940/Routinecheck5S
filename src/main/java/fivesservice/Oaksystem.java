@@ -29,7 +29,7 @@ public class Oaksystem {
 
     public void homePageURL() {
 
-        page.waitForTimeout(1000);
+        page.waitForTimeout(2000);
 
         page.waitForLoadState();
         String currentURL = page.url();
@@ -47,7 +47,7 @@ public class Oaksystem {
 
     public void hyperLinkPageURL() {
 
-        page.waitForTimeout(1000);
+        page.waitForTimeout(2000);
 
         page.waitForLoadState();
         String currentURL = page.url();
@@ -65,7 +65,7 @@ public class Oaksystem {
 
     public void drawSocketURL() {
 
-        page.waitForTimeout(1000);
+        page.waitForTimeout(2000);
         page.waitForLoadState();
         String currentURL = page.url();
         System.out.println("Current URL: " + currentURL);

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="TestSuite" time="139.667" tests="8" errors="0" skipped="0" failures="1">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="TestSuite" time="160.05" tests="8" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="GB"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-21\bin"/>
-    <property name="sun.java.command" value="C:\Users\DELL\AppData\Local\Temp\surefire11751455743508039684\surefirebooter-20260812184851716_3.jar C:\Users\DELL\AppData\Local\Temp\surefire11751455743508039684 2026-08-12T18-48-51_426-jvmRun1 surefire-20260812184851716_1tmp surefire_0-20260812184851716_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\DELL\AppData\Local\Temp\surefire10222318323767162972\surefirebooter-20260812190741688_3.jar C:\Users\DELL\AppData\Local\Temp\surefire10222318323767162972 2026-08-12T19-07-41_426-jvmRun1 surefire-20260812190741688_1tmp surefire_0-20260812190741688_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="D:\PlaywrightJava\registrationservice\target\test-classes;D:\PlaywrightJava\registrationservice\target\classes;C:\Users\DELL\.m2\repository\com\microsoft\playwright\playwright\1.55.0\playwright-1.55.0.jar;C:\Users\DELL\.m2\repository\com\google\code\gson\gson\2.12.1\gson-2.12.1.jar;C:\Users\DELL\.m2\repository\com\google\errorprone\error_prone_annotations\2.36.0\error_prone_annotations-2.36.0.jar;C:\Users\DELL\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\DELL\.m2\repository\com\microsoft\playwright\driver\1.55.0\driver-1.55.0.jar;C:\Users\DELL\.m2\repository\com\microsoft\playwright\driver-bundle\1.55.0\driver-bundle-1.55.0.jar;C:\Users\DELL\.m2\repository\org\testng\testng\7.11.0\testng-7.11.0.jar;C:\Users\DELL\.m2\repository\org\slf4j\slf4j-api\2.0.16\slf4j-api-2.0.16.jar;C:\Users\DELL\.m2\repository\org\jcommander\jcommander\1.83\jcommander-1.83.jar;C:\Users\DELL\.m2\repository\org\webjars\jquery\3.7.1\jquery-3.7.1.jar;C:\Users\DELL\.m2\repository\io\qameta\allure\allure-testng\2.29.1\allure-testng-2.29.1.jar;C:\Users\DELL\.m2\repository\io\qameta\allure\allure-java-commons\2.29.1\allure-java-commons-2.29.1.jar;C:\Users\DELL\.m2\repository\io\qameta\allure\allure-model\2.29.1\allure-model-2.29.1.jar;C:\Users\DELL\.m2\repository\io\qameta\allure\allure-test-filter\2.29.1\allure-test-filter-2.29.1.jar;C:\Users\DELL\.m2\repository\org\apache\logging\log4j\log4j-api\2.26.1\log4j-api-2.26.1.jar;C:\Users\DELL\.m2\repository\org\apache\logging\log4j\log4j-core\2.26.1\log4j-core-2.26.1.jar;C:\Users\DELL\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.18.0\jackson-databind-2.18.0.jar;C:\Users\DELL\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.18.0\jackson-annotations-2.18.0.jar;C:\Users\DELL\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.18.0\jackson-core-2.18.0.jar;"/>
     <property name="allure.results.directory" value="D:\PlaywrightJava\registrationservice\target/allure-results"/>
@@ -31,7 +31,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\DELL\AppData\Local\Temp\surefire11751455743508039684\surefirebooter-20260812184851716_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\DELL\AppData\Local\Temp\surefire10222318323767162972\surefirebooter-20260812190741688_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="21.0.7+8-LTS-245"/>
@@ -59,7 +59,7 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="validLoginTest" classname="org.oaksystem.tests.OakSystemDrawTest" time="5.106">
+  <testcase name="validLoginTest" classname="org.oaksystem.tests.OakSystemDrawTest" time="5.548">
     <system-out><![CDATA[Browser launched successfully.com.microsoft.playwright.impl.BrowserImpl@32193bea
 Page created successfully.com.microsoft.playwright.impl.PageImpl@fc258b1
 Navigated to base URL successfully.https://www.alfadock-pack.com/
@@ -76,7 +76,7 @@ SLF4J(W): Defaulting to no-operation (NOP) logger implementation
 SLF4J(W): See https://www.slf4j.org/codes.html#noProviders for further details.
 ]]></system-err>
   </testcase>
-  <testcase name="validatingDrawSocketTest" classname="org.oaksystem.tests.OakSystemDrawTest" time="17.119">
+  <testcase name="validatingDrawSocketTest" classname="org.oaksystem.tests.OakSystemDrawTest" time="19.228">
     <system-out><![CDATA[Current URL: https://www.alfadock-pack.com/ver10/#/home
 Home page URL is correct.
 Current URL: https://www.alfadock-pack.com/ver10/#/home/adsocket
@@ -93,10 +93,10 @@ DAY     : Today
 Yellow Icon Files     : 0
 Non-Yellow Files      : 0
 ======================================
-Screenshot saved: screenshots/todayFiles_20260812_184945.png
+Screenshot saved: screenshots/todayFiles_20260812_190837.png
 ]]></system-out>
   </testcase>
-  <testcase name="validLoginTest" classname="org.ohkuma.tests.OhkumaTest" time="4.116">
+  <testcase name="validLoginTest" classname="org.ohkuma.tests.OhkumaTest" time="3.911">
     <system-out><![CDATA[Context closed successfully.com.microsoft.playwright.impl.BrowserContextImpl@6d9f7a80
 Browser closed successfully.com.microsoft.playwright.impl.BrowserImpl@32193bea
 Playwright closed successfully.com.microsoft.playwright.impl.PlaywrightImpl@43826ec
@@ -112,10 +112,10 @@ User password entered
 Login button clicked
 ]]></system-out>
   </testcase>
-  <testcase name="validatingS09Socket" classname="org.ohkuma.tests.OhkumaTest" time="16.32">
-    <system-out><![CDATA[Current URL: https://www.alfadock-pack.com/userlogin.html
-Home page URL is incorrect.
-HyperLink icon is not displayed.
+  <testcase name="validatingS09Socket" classname="org.ohkuma.tests.OhkumaTest" time="20.232">
+    <system-out><![CDATA[Current URL: https://www.alfadock-pack.com/ver10/#/home
+Home page URL is correct.
+HyperLink icon is displayed.
 Current URL: https://www.alfadock-pack.com/ver10/#/home/adsocket
 adsocket page URL is correct.
 S09 Socket icon is displayed.
@@ -133,10 +133,10 @@ Files Inside Folder Count : 0
 Yellow Icon Files         : 0
 Non-Yellow Icon Files     : 0
 ========================================
-Screenshot saved: screenshots/todayFiles_20260812_185010.png
+Screenshot saved: screenshots/todayFiles_20260812_190908.png
 ]]></system-out>
   </testcase>
-  <testcase name="validNisinoLoginTest" classname="org.nisino.tests.NisinoScanTest" time="4.216">
+  <testcase name="validNisinoLoginTest" classname="org.nisino.tests.NisinoScanTest" time="4.145">
     <system-out><![CDATA[Context closed successfully.com.microsoft.playwright.impl.BrowserContextImpl@7578e06a
 Browser closed successfully.com.microsoft.playwright.impl.BrowserImpl@6b63d445
 Playwright closed successfully.com.microsoft.playwright.impl.PlaywrightImpl@5bfc257
@@ -157,7 +157,7 @@ Login button clicked
 User logged in successfully.
 ]]></system-out>
   </testcase>
-  <testcase name="validatingScanSocketTest" classname="org.nisino.tests.NisinoScanTest" time="25.2">
+  <testcase name="validatingScanSocketTest" classname="org.nisino.tests.NisinoScanTest" time="25.263">
     <system-out><![CDATA[HyperLink icon is not displayed.
 Clicking hyperlink icon
 hyperlink icon clicked successfully
@@ -176,7 +176,7 @@ DAY     : Today
 Yellow Icon Files     : 0
 Non-Yellow Files      : 0
 ======================================
-Screenshot saved: screenshots/todayFiles_20260812_185040.png
+Screenshot saved: screenshots/todayFiles_20260812_190940.png
 clicked 完了 folder
 Pagination already set to 100
 
@@ -188,10 +188,10 @@ DAY     : Today
 Yellow Icon Files     : 0
 Non-Yellow Files      : 0
 ======================================
-Screenshot saved: screenshots/todayFiles_20260812_185047.png
+Screenshot saved: screenshots/todayFiles_20260812_190947.png
 ]]></system-out>
   </testcase>
-  <testcase name="validLoginTest" classname="org.sanmatsu.tests.SanmatsuTest" time="4.317">
+  <testcase name="validLoginTest" classname="org.sanmatsu.tests.SanmatsuTest" time="4.084">
     <system-out><![CDATA[Context closed successfully.com.microsoft.playwright.impl.BrowserContextImpl@3e83c18
 Browser closed successfully.com.microsoft.playwright.impl.BrowserImpl@7cedfa63
 Playwright closed successfully.com.microsoft.playwright.impl.PlaywrightImpl@27f74733
@@ -207,87 +207,24 @@ User password entered
 Login button clicked
 ]]></system-out>
   </testcase>
-  <testcase name="validatingSanmatsuHomePage" classname="org.sanmatsu.tests.SanmatsuTest" time="13.522">
-    <failure message="Error {&#10;  message=&apos;Protocol error (Network.getResponseBody): No resource with given identifier found&#10;  name=&apos;Error&#10;  stack=&apos;Error: Protocol error (Network.getResponseBody): No resource with given identifier found&#10;    at C:\Users\DELL\AppData\Local\Temp\playwright-java-11605344127382276116\package\lib\server\chromium\crConnection.js:116:57&#10;    at new Promise (&lt;anonymous&gt;)&#10;    at CRSession.send (C:\Users\DELL\AppData\Local\Temp\playwright-java-11605344127382276116\package\lib\server\chromium\crConnection.js:115:12)&#10;    at Response.getResponseBody [as _getResponseBodyCallback] (C:\Users\DELL\AppData\Local\Temp\playwright-java-11605344127382276116\package\lib\server\chromium\crNetworkManager.js:329:39)&#10;    at C:\Users\DELL\AppData\Local\Temp\playwright-java-11605344127382276116\package\lib\server\network.js:419:21&#10;    at async ResponseDispatcher.body (C:\Users\DELL\AppData\Local\Temp\playwright-java-11605344127382276116\package\lib\server\dispatchers\networkDispatchers.js:91:22)&#10;    at async ProgressController.run (C:\Users\DELL\AppData\Local\Temp\playwright-java-11605344127382276116\package\lib\server\progress.js:78:22)&#10;    at async ResponseDispatcher._runCommand (C:\Users\DELL\AppData\Local\Temp\playwright-java-11605344127382276116\package\lib\server\dispatchers\dispatcher.js:95:14)&#10;    at async DispatcherConnection.dispatch (C:\Users\DELL\AppData\Local\Temp\playwright-java-11605344127382276116\package\lib\server\dispatchers\dispatcher.js:329:22)&#10;}" type="com.microsoft.playwright.PlaywrightException"><![CDATA[com.microsoft.playwright.PlaywrightException: 
-Error {
-  message='Protocol error (Network.getResponseBody): No resource with given identifier found
-  name='Error
-  stack='Error: Protocol error (Network.getResponseBody): No resource with given identifier found
-    at C:\Users\DELL\AppData\Local\Temp\playwright-java-11605344127382276116\package\lib\server\chromium\crConnection.js:116:57
-    at new Promise (<anonymous>)
-    at CRSession.send (C:\Users\DELL\AppData\Local\Temp\playwright-java-11605344127382276116\package\lib\server\chromium\crConnection.js:115:12)
-    at Response.getResponseBody [as _getResponseBodyCallback] (C:\Users\DELL\AppData\Local\Temp\playwright-java-11605344127382276116\package\lib\server\chromium\crNetworkManager.js:329:39)
-    at C:\Users\DELL\AppData\Local\Temp\playwright-java-11605344127382276116\package\lib\server\network.js:419:21
-    at async ResponseDispatcher.body (C:\Users\DELL\AppData\Local\Temp\playwright-java-11605344127382276116\package\lib\server\dispatchers\networkDispatchers.js:91:22)
-    at async ProgressController.run (C:\Users\DELL\AppData\Local\Temp\playwright-java-11605344127382276116\package\lib\server\progress.js:78:22)
-    at async ResponseDispatcher._runCommand (C:\Users\DELL\AppData\Local\Temp\playwright-java-11605344127382276116\package\lib\server\dispatchers\dispatcher.js:95:14)
-    at async DispatcherConnection.dispatch (C:\Users\DELL\AppData\Local\Temp\playwright-java-11605344127382276116\package\lib\server\dispatchers\dispatcher.js:329:22)
-}
-	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:56)
-	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:138)
-	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:131)
-	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:124)
-	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:114)
-	at com.microsoft.playwright.impl.ResponseImpl.body(ResponseImpl.java:55)
-	at com.microsoft.playwright.impl.ResponseImpl.text(ResponseImpl.java:149)
-	at fivesservice.Sanmatsu.verifyTodayFileCountAndGetScreenshot(Sanmatsu.java:170)
-	at org.sanmatsu.tests.SanmatsuTest.validatingSanmatsuHomePage(SanmatsuTest.java:47)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at org.testng.TestRunner.privateRun(TestRunner.java:741)
-	at org.testng.TestRunner.run(TestRunner.java:616)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
-	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
-	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
-	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
-	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-Caused by: com.microsoft.playwright.impl.DriverException: Error {
-  message='Protocol error (Network.getResponseBody): No resource with given identifier found
-  name='Error
-  stack='Error: Protocol error (Network.getResponseBody): No resource with given identifier found
-    at C:\Users\DELL\AppData\Local\Temp\playwright-java-11605344127382276116\package\lib\server\chromium\crConnection.js:116:57
-    at new Promise (<anonymous>)
-    at CRSession.send (C:\Users\DELL\AppData\Local\Temp\playwright-java-11605344127382276116\package\lib\server\chromium\crConnection.js:115:12)
-    at Response.getResponseBody [as _getResponseBodyCallback] (C:\Users\DELL\AppData\Local\Temp\playwright-java-11605344127382276116\package\lib\server\chromium\crNetworkManager.js:329:39)
-    at C:\Users\DELL\AppData\Local\Temp\playwright-java-11605344127382276116\package\lib\server\network.js:419:21
-    at async ResponseDispatcher.body (C:\Users\DELL\AppData\Local\Temp\playwright-java-11605344127382276116\package\lib\server\dispatchers\networkDispatchers.js:91:22)
-    at async ProgressController.run (C:\Users\DELL\AppData\Local\Temp\playwright-java-11605344127382276116\package\lib\server\progress.js:78:22)
-    at async ResponseDispatcher._runCommand (C:\Users\DELL\AppData\Local\Temp\playwright-java-11605344127382276116\package\lib\server\dispatchers\dispatcher.js:95:14)
-    at async DispatcherConnection.dispatch (C:\Users\DELL\AppData\Local\Temp\playwright-java-11605344127382276116\package\lib\server\dispatchers\dispatcher.js:329:22)
-}
-	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:262)
-	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:214)
-	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:136)
-	... 37 more
-]]></failure>
+  <testcase name="validatingSanmatsuHomePage" classname="org.sanmatsu.tests.SanmatsuTest" time="19.7">
     <system-out><![CDATA[Current URL: https://www.alfadock-pack.com/ver10/#/home
 Home page URL is correct.
 Current URL: https://www.alfadock-pack.com/ver10/#/home/adsocket
 adsocket page URL is correct.
 Current URL: https://www.alfadock-pack.com/ver10/#/adsocket/adgrid/draw/-1
-s09 page URL is incorrect.
+draw socket page URL is correct..
 Pagination changed to 100
+
+======================================
+COMPANY : SANMATSU
+DAY     : Today
+======================================
+--------------------------------------
+Yellow Icon Files     : 46
+Non-Yellow Files      : 0
+======================================
+Screenshot saved: screenshots/todayFiles_20260812_191020.png
 ]]></system-out>
   </testcase>
 </testsuite>

@@ -30,7 +30,7 @@ public class Ohkuma {
 
     public void homePageURL() {
 
-        page.waitForTimeout(1000);
+        page.waitForTimeout(2000);
 
         page.waitForLoadState();
         String currentURL = page.url();
@@ -48,8 +48,7 @@ public class Ohkuma {
 
     public void hyperLinkPageURL() {
 
-        page.waitForTimeout(1000);
-
+        page.waitForTimeout(2000);
         page.waitForLoadState();
         String currentURL = page.url();
         System.out.println("Current URL: " + currentURL);
@@ -66,7 +65,7 @@ public class Ohkuma {
 
     public void drawSocketURL() {
 
-        page.waitForTimeout(1000);
+        page.waitForTimeout(2000);
         page.waitForLoadState();
         String currentURL = page.url();
         System.out.println("Current URL: " + currentURL);
@@ -159,7 +158,7 @@ public class Ohkuma {
     // Validations
 
     public void validateHyperLinkIcon() {
-        page.waitForTimeout(1000);
+        page.waitForTimeout(2000);
         if (hyperLinkIcon.isVisible()) {
             System.out.println("HyperLink icon is displayed.");
             Allure.step("HyperLink icon is displayed.");
@@ -170,7 +169,7 @@ public class Ohkuma {
     }
 
     public void validateS09SocketIcon() {
-        page.waitForTimeout(1000);
+        page.waitForTimeout(2000);
         if (adSocketS09Icon.isVisible()) {
             System.out.println("S09 Socket icon is displayed.");
             Allure.step("S09 Socket icon is displayed.");

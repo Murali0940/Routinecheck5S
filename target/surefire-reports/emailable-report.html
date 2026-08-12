@@ -9,59 +9,17 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">routinecheck5S test suite</th></tr>
-<tr><td><a href="#t0">routinecheck5S</a></td><td class="num">7</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">137,998</td><td></td><td></td></tr>
+<tr><td><a href="#t0">routinecheck5S</a></td><td class="num">8</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">158,041</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">routinecheck5S test suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">routinecheck5S &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">org.sanmatsu.tests.SanmatsuTest</td><td><a href="#m0">validatingSanmatsuHomePage</a></td><td rowspan="1">1786540857589</td><td rowspan="1">13500</td></tr><tr><th colspan="4">routinecheck5S &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">org.nisino.tests.NisinoScanTest</td><td><a href="#m1">validNisinoLoginTest</a></td><td rowspan="1">1786540818931</td><td rowspan="1">4209</td></tr><tr class="passedeven"><td><a href="#m2">validatingScanSocketTest</a></td><td rowspan="1">1786540823151</td><td rowspan="1">25199</td></tr><tr class="passedodd"><td rowspan="2">org.oaksystem.tests.OakSystemDrawTest</td><td><a href="#m3">validLoginTest</a></td><td rowspan="1">1786540763872</td><td rowspan="1">4833</td></tr><tr class="passedodd"><td><a href="#m4">validatingDrawSocketTest</a></td><td rowspan="1">1786540768989</td><td rowspan="1">17101</td></tr><tr class="passedeven"><td rowspan="2">org.ohkuma.tests.OhkumaTest</td><td><a href="#m5">validLoginTest</a></td><td rowspan="1">1786540792087</td><td rowspan="1">4110</td></tr><tr class="passedeven"><td><a href="#m6">validatingS09Socket</a></td><td rowspan="1">1786540796206</td><td rowspan="1">16317</td></tr><tr class="passedodd"><td rowspan="1">org.sanmatsu.tests.SanmatsuTest</td><td><a href="#m7">validLoginTest</a></td><td rowspan="1">1786540853259</td><td rowspan="1">4323</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">routinecheck5S test suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">routinecheck5S &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">org.nisino.tests.NisinoScanTest</td><td><a href="#m0">validNisinoLoginTest</a></td><td rowspan="1">1786541958765</td><td rowspan="1">4136</td></tr><tr class="passedeven"><td><a href="#m1">validatingScanSocketTest</a></td><td rowspan="1">1786541962910</td><td rowspan="1">25257</td></tr><tr class="passedodd"><td rowspan="2">org.oaksystem.tests.OakSystemDrawTest</td><td><a href="#m2">validLoginTest</a></td><td rowspan="1">1786541893114</td><td rowspan="1">5269</td></tr><tr class="passedodd"><td><a href="#m3">validatingDrawSocketTest</a></td><td rowspan="1">1786541898675</td><td rowspan="1">19216</td></tr><tr class="passedeven"><td rowspan="2">org.ohkuma.tests.OhkumaTest</td><td><a href="#m4">validLoginTest</a></td><td rowspan="1">1786541927312</td><td rowspan="1">3917</td></tr><tr class="passedeven"><td><a href="#m5">validatingS09Socket</a></td><td rowspan="1">1786541931232</td><td rowspan="1">20228</td></tr><tr class="passedodd"><td rowspan="2">org.sanmatsu.tests.SanmatsuTest</td><td><a href="#m6">validLoginTest</a></td><td rowspan="1">1786541997270</td><td rowspan="1">4088</td></tr><tr class="passedodd"><td><a href="#m7">validatingSanmatsuHomePage</a></td><td rowspan="1">1786542001360</td><td rowspan="1">19693</td></tr></tbody>
 </table>
-<h2>routinecheck5S</h2><h3 id="m0">org.sanmatsu.tests.SanmatsuTest#validatingSanmatsuHomePage</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">com.microsoft.playwright.PlaywrightException: Error {
-  message=&apos;Protocol error (Network.getResponseBody): No resource with given identifier found
-  name=&apos;Error
-  stack=&apos;Error: Protocol error (Network.getResponseBody): No resource with given identifier found
-    at C:\Users\DELL\AppData\Local\Temp\playwright-java-11605344127382276116\package\lib\server\chromium\crConnection.js:116:57
-    at new Promise (&lt;anonymous&gt;)
-    at CRSession.send (C:\Users\DELL\AppData\Local\Temp\playwright-java-11605344127382276116\package\lib\server\chromium\crConnection.js:115:12)
-    at Response.getResponseBody [as _getResponseBodyCallback] (C:\Users\DELL\AppData\Local\Temp\playwright-java-11605344127382276116\package\lib\server\chromium\crNetworkManager.js:329:39)
-    at C:\Users\DELL\AppData\Local\Temp\playwright-java-11605344127382276116\package\lib\server\network.js:419:21
-    at async ResponseDispatcher.body (C:\Users\DELL\AppData\Local\Temp\playwright-java-11605344127382276116\package\lib\server\dispatchers\networkDispatchers.js:91:22)
-    at async ProgressController.run (C:\Users\DELL\AppData\Local\Temp\playwright-java-11605344127382276116\package\lib\server\progress.js:78:22)
-    at async ResponseDispatcher._runCommand (C:\Users\DELL\AppData\Local\Temp\playwright-java-11605344127382276116\package\lib\server\dispatchers\dispatcher.js:95:14)
-    at async DispatcherConnection.dispatch (C:\Users\DELL\AppData\Local\Temp\playwright-java-11605344127382276116\package\lib\server\dispatchers\dispatcher.js:329:22)
-}
-	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:56)
-	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:138)
-	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:131)
-	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:124)
-	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:114)
-	at com.microsoft.playwright.impl.ResponseImpl.body(ResponseImpl.java:55)
-	at com.microsoft.playwright.impl.ResponseImpl.text(ResponseImpl.java:149)
-	at fivesservice.Sanmatsu.verifyTodayFileCountAndGetScreenshot(Sanmatsu.java:170)
-	at org.sanmatsu.tests.SanmatsuTest.validatingSanmatsuHomePage(SanmatsuTest.java:47)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-Caused by: com.microsoft.playwright.impl.DriverException: Error {
-  message=&apos;Protocol error (Network.getResponseBody): No resource with given identifier found
-  name=&apos;Error
-  stack=&apos;Error: Protocol error (Network.getResponseBody): No resource with given identifier found
-    at C:\Users\DELL\AppData\Local\Temp\playwright-java-11605344127382276116\package\lib\server\chromium\crConnection.js:116:57
-    at new Promise (&lt;anonymous&gt;)
-    at CRSession.send (C:\Users\DELL\AppData\Local\Temp\playwright-java-11605344127382276116\package\lib\server\chromium\crConnection.js:115:12)
-    at Response.getResponseBody [as _getResponseBodyCallback] (C:\Users\DELL\AppData\Local\Temp\playwright-java-11605344127382276116\package\lib\server\chromium\crNetworkManager.js:329:39)
-    at C:\Users\DELL\AppData\Local\Temp\playwright-java-11605344127382276116\package\lib\server\network.js:419:21
-    at async ResponseDispatcher.body (C:\Users\DELL\AppData\Local\Temp\playwright-java-11605344127382276116\package\lib\server\dispatchers\networkDispatchers.js:91:22)
-    at async ProgressController.run (C:\Users\DELL\AppData\Local\Temp\playwright-java-11605344127382276116\package\lib\server\progress.js:78:22)
-    at async ResponseDispatcher._runCommand (C:\Users\DELL\AppData\Local\Temp\playwright-java-11605344127382276116\package\lib\server\dispatchers\dispatcher.js:95:14)
-    at async DispatcherConnection.dispatch (C:\Users\DELL\AppData\Local\Temp\playwright-java-11605344127382276116\package\lib\server\dispatchers\dispatcher.js:329:22)
-}
-	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:262)
-	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:214)
-	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:136)
-	... 37 more
-... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">org.nisino.tests.NisinoScanTest#validNisinoLoginTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">org.nisino.tests.NisinoScanTest#validatingScanSocketTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">org.oaksystem.tests.OakSystemDrawTest#validLoginTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">org.oaksystem.tests.OakSystemDrawTest#validatingDrawSocketTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m5">org.ohkuma.tests.OhkumaTest#validLoginTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m6">org.ohkuma.tests.OhkumaTest#validatingS09Socket</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m7">org.sanmatsu.tests.SanmatsuTest#validLoginTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>routinecheck5S</h2><h3 id="m0">org.nisino.tests.NisinoScanTest#validNisinoLoginTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">org.nisino.tests.NisinoScanTest#validatingScanSocketTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">org.oaksystem.tests.OakSystemDrawTest#validLoginTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">org.oaksystem.tests.OakSystemDrawTest#validatingDrawSocketTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">org.ohkuma.tests.OhkumaTest#validLoginTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">org.ohkuma.tests.OhkumaTest#validatingS09Socket</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">org.sanmatsu.tests.SanmatsuTest#validLoginTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">org.sanmatsu.tests.SanmatsuTest#validatingSanmatsuHomePage</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>
