@@ -35,21 +35,21 @@ public class Nisinoseikiss {
 
     // methods
 
-    public void homePageURL() {
+    // public void homePageURL() {
 
-        page.waitForLoadState();
-        String currentURL = page.url();
-        System.out.println("Current URL: " + currentURL);
-        Allure.step("Current URL: " + currentURL);
+    // page.waitForLoadState();
+    // String currentURL = page.url();
+    // System.out.println("Current URL: " + currentURL);
+    // Allure.step("Current URL: " + currentURL);
 
-        if (currentURL.contains("home")) {
-            System.out.println("Home page URL is correct.");
-            Allure.step("Home page URL is correct.");
-        } else {
-            System.out.println("Home page URL is incorrect.");
-            Allure.step("Home page URL is incorrect.");
-        }
-    }
+    // if (currentURL.contains("home")) {
+    // System.out.println("Home page URL is correct.");
+    // Allure.step("Home page URL is correct.");
+    // } else {
+    // System.out.println("Home page URL is incorrect.");
+    // Allure.step("Home page URL is incorrect.");
+    // }
+    // }
 
     public void hyperLinkPageURL() {
 

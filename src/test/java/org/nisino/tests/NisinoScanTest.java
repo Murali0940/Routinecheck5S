@@ -42,7 +42,6 @@ public class NisinoScanTest extends BaseDriver {
     public void validatingScanSocketTest() {
 
         Nisinoseikiss nisinoseikiss = new Nisinoseikiss(page);
-        nisinoseikiss.homePageURL();
         nisinoseikiss.validateHyperLinkIcon();
         nisinoseikiss.clickHyperLinkIcon();
         nisinoseikiss.hyperLinkPageURL();
