@@ -3,6 +3,7 @@ package fivesservice;
 import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.Response;
+import com.microsoft.playwright.options.LoadState;
 
 import base.BaseDriver;
 import io.qameta.allure.Allure;
@@ -34,7 +35,7 @@ public class Oaksystem {
 
         Allure.step("Navigate to home page");
 
-        page.waitForLoadState();
+        page.waitForLoadState(LoadState.NETWORKIDLE);
         String currentURL = page.url();
         System.out.println("Current URL: " + currentURL);
         Allure.step("Current URL: " + currentURL);
@@ -151,7 +152,7 @@ public class Oaksystem {
     // validations
 
     public void validateHyperLinkIcon() {
-        page.waitForTimeout(1000);
+        page.waitForTimeout(2000);
         Allure.step("validateHyperLinkIcon");
         if (hyperLinkIcon.isVisible()) {
             System.out.println("HyperLink icon is displayed.");
@@ -163,7 +164,7 @@ public class Oaksystem {
     }
 
     public void validateDrawSocketIcon() {
-        page.waitForTimeout(1000);
+        page.waitForTimeout(2000);
         Allure.step("validateDrawSocketIcon");
         if (drawsocketicon.isVisible()) {
             System.out.println("Draw Socket icon is displayed.");
