@@ -4,6 +4,8 @@ import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.Response;
 import com.microsoft.playwright.options.LoadState;
+import com.microsoft.playwright.options.WaitForSelectorState;
+import com.microsoft.playwright.options.WaitUntilState;
 
 import base.BaseDriver;
 import io.qameta.allure.Allure;
@@ -88,109 +90,189 @@ public class Oaksystem {
 
     public void setPagination(String expectedValue) {
 
-        Allure.step("setPagination");
+        Allure.step("Setting pagination to " + expectedValue);
 
-        Locator selectedValue = page.locator("(//label[contains(@class,'ui-dropdown-label')])[1]");
+        Locator selectedValue = page.locator(
+                "(//label[contains(@class,'ui-dropdown-label')])[1]");
+
+        // Wait until the pagination dropdown is available
+        selectedValue.waitFor(
+                new Locator.WaitForOptions()
+                        .setState(WaitForSelectorState.VISIBLE));
 
         String currentValue = selectedValue.textContent().trim();
 
+        // Already set
         if (currentValue.equals(expectedValue)) {
-            System.out.println("Pagination already set to " + expectedValue);
+
+            System.out.println(
+                    "Pagination already set to " + expectedValue);
+
+            Allure.step(
+                    "Pagination already set to " + expectedValue);
+
             return;
         }
 
-        page.locator("(//span[contains(@class,'ui-dropdown-trigger-icon')])[1]").click();
+        // Open pagination dropdown
+        Locator dropdownTrigger = page.locator(
+                "(//span[contains(@class,'ui-dropdown-trigger-icon')])[1]");
 
-        page.locator("//span[text()='" + expectedValue + "']").click();
+        dropdownTrigger.waitFor(
+                new Locator.WaitForOptions()
+                        .setState(WaitForSelectorState.VISIBLE));
 
-        page.waitForCondition(() -> selectedValue.textContent().trim().equals(expectedValue));
+        dropdownTrigger.click();
 
-        System.out.println("Pagination changed to " + expectedValue);
-        Allure.step("Pagination changed to " + expectedValue);
+        // Select requested pagination value
+        Locator paginationOption = page.locator(
+                "//span[text()='" + expectedValue + "']");
 
+        paginationOption.waitFor(
+                new Locator.WaitForOptions()
+                        .setState(WaitForSelectorState.VISIBLE));
+
+        paginationOption.click();
+
+        // Wait until dropdown actually changes
+        page.waitForCondition(
+                () -> selectedValue.textContent()
+                        .trim()
+                        .equals(expectedValue));
+
+        System.out.println(
+                "Pagination changed to " + expectedValue);
+
+        Allure.step(
+                "Pagination changed to " + expectedValue);
+
+        // Wait for the page data to settle
         page.waitForLoadState();
-        Allure.step("Loading data");
-        page.waitForTimeout(4000);
+
+        Allure.step("Pagination data loaded");
     }
 
     public Response getSocketFiles() {
 
-        Allure.step("getSocketFiles");
+        Allure.step("Waiting for Get Socket Files API response");
 
         Response response = page.waitForResponse(
                 res -> res.url().contains("getSocketFiles")
                         && res.status() == 200,
                 () -> {
 
-                    // Trigger the API
-                    page.reload();
-                    Allure.step("API triggered");
+                    Allure.step("Triggering Get Socket Files API");
 
+                    page.reload(
+                            new Page.ReloadOptions()
+                                    .setWaitUntil(
+                                            WaitUntilState.DOMCONTENTLOADED)
+                                    .setTimeout(60000));
                 });
-        return response;
 
+        Allure.step("Get Socket Files API response received");
+
+        return response;
     }
 
     // Actions
 
     public void clickHyperLinkIcon() {
-        page.waitForLoadState();
-        page.waitForTimeout(1000);
+
+        Allure.step("Clicking HyperLink icon");
+
+        hyperLinkIcon.waitFor(
+                new Locator.WaitForOptions()
+                        .setState(WaitForSelectorState.VISIBLE));
+
+        hyperLinkIcon.scrollIntoViewIfNeeded();
+
+        if (!hyperLinkIcon.isEnabled()) {
+            throw new AssertionError(
+                    "HyperLink icon is visible but not enabled.");
+        }
+
         hyperLinkIcon.click();
-        Allure.step("HyperLink icon clicked");
+
+        Allure.step("HyperLink icon clicked successfully");
     }
 
     public void clickDrawSocketIcon() {
-        page.waitForLoadState();
-        page.waitForTimeout(1000);
+
+        Allure.step("Clicking Draw Socket icon");
+
+        drawsocketicon.waitFor(
+                new Locator.WaitForOptions()
+                        .setState(WaitForSelectorState.VISIBLE));
+
+        drawsocketicon.scrollIntoViewIfNeeded();
+
+        if (!drawsocketicon.isEnabled()) {
+            throw new AssertionError(
+                    "Draw Socket icon is visible but not enabled.");
+        }
+
         drawsocketicon.click();
-        Allure.step("Draw Socket icon clicked");
+
+        Allure.step("Draw Socket icon clicked successfully");
+
+        // Wait for the navigation triggered by the click
         page.waitForLoadState();
-        page.waitForTimeout(1000);
     }
 
     // validations
 
     public void validateHyperLinkIcon() {
-        page.waitForTimeout(2000);
-        Allure.step("validateHyperLinkIcon");
+
+        Allure.step("Validating HyperLink icon");
+
+        hyperLinkIcon.waitFor(
+                new Locator.WaitForOptions()
+                        .setState(WaitForSelectorState.VISIBLE));
+
         if (hyperLinkIcon.isVisible()) {
+
             System.out.println("HyperLink icon is displayed.");
             Allure.step("HyperLink icon is displayed.");
+
         } else {
+
             System.out.println("HyperLink icon is not displayed.");
             Allure.step("HyperLink icon is not displayed.");
+
+            throw new AssertionError(
+                    "HyperLink icon is not displayed.");
         }
     }
 
     public void validateDrawSocketIcon() {
-        page.waitForTimeout(2000);
-        Allure.step("validateDrawSocketIcon");
-        if (drawsocketicon.isVisible()) {
-            System.out.println("Draw Socket icon is displayed.");
-            Allure.step("Draw Socket icon is displayed.");
-        } else {
-            System.out.println("Draw Socket icon is not displayed.");
-            Allure.step("Draw Socket icon is not displayed.");
-        }
+
+        Allure.step("Validating Draw Socket icon");
+
+        drawsocketicon.waitFor(
+                new Locator.WaitForOptions()
+                        .setState(WaitForSelectorState.VISIBLE));
+
+        System.out.println("Draw Socket icon is displayed.");
+        Allure.step("Draw Socket icon is displayed.");
     }
 
     public void verifyTodayFileCount() {
 
-        Allure.step("verifyTodayFileCount");
-        page.reload();
-        page.waitForTimeout(2000);
+        Allure.step("Verifying today's file count for OAKSYSTEM");
+
         Response response = getSocketFiles();
 
-        // System.out.println("======================================");
-        // Allure.step("GET SOCKET FILES API RESPONSE");
-        // System.out.println("======================================");
-        // System.out.println(response.text());
-        // Allure.step("GET SOCKET FILES API RESPONSE " + response.text());
-        System.out.println("======================================");
         APIFileUtil api = new APIFileUtil();
-        api.getFilesByDay(response.text(), "Today", "OAKSYSTEM");
-        BaseDriver.takeScreenshot(page, "todayFiles");
+
+        api.getFilesByDay(
+                response.text(),
+                "Today",
+                "OAKSYSTEM");
+
+        BaseDriver.takeScreenshot(
+                page,
+                "todayFiles");
     }
 
 }
