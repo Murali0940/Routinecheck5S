@@ -104,12 +104,12 @@ public class Sanmatsu {
         System.out.println("Current URL: " + currentURL);
         Allure.step("Current URL: " + currentURL);
 
-        if (currentURL.contains("s09")) {
-            System.out.println("s09 page URL is correct..");
-            Allure.step("s09 page URL is correct..");
+        if (currentURL.contains("draw")) {
+            System.out.println("draw socket page URL is correct..");
+            Allure.step("draw socket page URL is correct..");
         } else {
-            System.out.println("s09 page URL is incorrect.");
-            Allure.step("s09 page URL is incorrect.");
+            System.out.println("draw socket page URL is incorrect.");
+            Allure.step("draw socket page URL is incorrect.");
         }
     }
 

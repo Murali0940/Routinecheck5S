@@ -38,14 +38,14 @@ public class OakSystemDrawTest extends BaseDriver {
 
         oakSystem = new Oaksystem(page);
         oakSystem.homePageURL();
-        oakSystem.validateHyperLinkIcon();
-        oakSystem.clickHyperLinkIcon();
+        oakSystem.validatehyperlinkicon();
+        oakSystem.clickhyperlinkicon();
         oakSystem.hyperLinkPageURL();
-        oakSystem.validateDrawSocketIcon();
-        oakSystem.clickDrawSocketIcon();
+        oakSystem.validatedrawsocketicon();
+        oakSystem.clickdrawsocketicon();
         oakSystem.drawSocketURL();
         oakSystem.setPagination("100");
-        oakSystem.verifyTodayFileCount();
+        oakSystem.verifyTodayFileCountAndGetScreenshot();
     }
 
 }
