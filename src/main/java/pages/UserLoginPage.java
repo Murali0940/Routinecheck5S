@@ -32,16 +32,19 @@ public class UserLoginPage {
         page.getByPlaceholder("Username").fill(user);
         Allure.step("User username is: " + user);
         logger.info("User username is: " + user);
+        System.out.println("username is: " + user);
         page.waitForTimeout(1000);
 
         page.getByPlaceholder("Password").fill(pass);
         Allure.step("User password is: " + pass);
         logger.info("User password is: " + pass);
+        System.out.println("password is: " + pass);
         page.waitForTimeout(1000);
 
         btnLogin1.click();
         Allure.step("User login button clicked.");
         logger.info("User login button clicked.");
+        System.out.println("Login button clicked.");
         page.waitForTimeout(1000);
 
         return new Homepage(page);
@@ -53,11 +56,6 @@ public class UserLoginPage {
     }
 
     public void verifyPageURL() {
-
-        page.waitForCondition(
-                () -> page.url().contains("userlogin"),
-                new Page.WaitForConditionOptions()
-                        .setTimeout(30000));
 
         String currentURL = page.url();
 

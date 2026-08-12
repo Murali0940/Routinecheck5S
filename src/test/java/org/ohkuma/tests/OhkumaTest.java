@@ -28,7 +28,7 @@ public class OhkumaTest extends BaseDriver {
 
         userPage.verifyPageURL();
 
-        userPage.userLogin(ConfigReader.get("user.username"), ConfigReader.get("user.password"));
+        userPage.userLogin(ConfigReader.get("username"), ConfigReader.get("password"));
 
     }
 

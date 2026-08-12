@@ -20,21 +20,19 @@ public class NisinoScanTest extends BaseDriver {
         System.out.println("Starting Company Login...");
 
         CompLoginPage companyPage = new CompLoginPage(page);
+        UserLoginPage userPage = new UserLoginPage(page);
 
         companyPage.companyLogin(ConfigReader.get("nisino.compusername"), ConfigReader.get("nisino.comppassword"));
 
+        userPage.verifyPageURL();
         // ---------------------------------------------------------
         // User Login
         // ---------------------------------------------------------
         System.out.println("Waiting for User Login page...");
 
-        UserLoginPage userPage = new UserLoginPage(page);
-
-        userPage.verifyPageURL();
-
         System.out.println("User Login page verified.");
 
-        userPage.userLogin(ConfigReader.get("user.username"), ConfigReader.get("user.password"));
+        userPage.userLogin(ConfigReader.get("username"), ConfigReader.get("password"));
         System.out.println("User logged in successfully.");
 
     }
