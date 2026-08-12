@@ -12,8 +12,8 @@
 
         <classes>
             <class name="org.oaksystem.tests.OakSystemDrawTest"/>
-            <class name="org.nisino.tests.NisinoScanTest"/>
             <class name="org.ohkuma.tests.OhkumaTest"/>
+            <class name="org.nisino.tests.NisinoScanTest"/>
         </classes>
     </test>
 

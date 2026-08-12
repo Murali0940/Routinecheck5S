@@ -108,17 +108,19 @@ public class Nisinoseikiss {
     // Actions
 
     public void clickHyperLinkIcon() {
+        hyperLinkIcon.click();
         page.waitForTimeout(2000);
         page.waitForLoadState();
         Allure.step("HyperLink icon clicked");
-        hyperLinkIcon.click();
+
     }
 
     public void clickScanSocketIcon() {
+        scansocketicon.click();
         page.waitForTimeout(2000);
         page.waitForLoadState();
         Allure.step("Scan Socket icon clicked");
-        scansocketicon.click();
+
     }
 
     public void clickBeforeWorkFolder() {
@@ -165,7 +167,6 @@ public class Nisinoseikiss {
     }
 
     public void validateScanSocketIcon() {
-        page.waitForTimeout(1000);
         if (scansocketicon.isVisible()) {
             System.out.println("Scan Socket icon is displayed.");
             Allure.step("Scan Socket icon is displayed.");
