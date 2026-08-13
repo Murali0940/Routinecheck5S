@@ -45,7 +45,7 @@ public class OhkumaTest extends BaseDriver {
         ohkuma.clickS09SocketIcon();
         ohkuma.drawSocketURL();
         ohkuma.setPagination("100");
-        ohkuma.verifyTodayFileCount();
+        ohkuma.verifyTodayFileCountAndGetScreenshot();
     }
 
 }

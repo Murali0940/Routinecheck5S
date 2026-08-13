@@ -7,6 +7,10 @@ import java.util.List;
 
 public class TestExecutionReport {
 
+    // ============================================================
+    // REPORT STORAGE
+    // ============================================================
+
     private static final List<String> results = new ArrayList<>();
 
     private static final List<String> screenshotPaths = new ArrayList<>();
@@ -25,17 +29,216 @@ public class TestExecutionReport {
             int noAttributeFileCount,
             String screenshotPath) {
 
-        String result = "======================================\n" +
-                "COMPANY : " + company + "\n" +
-                "DAY     : " + day + "\n" +
-                "======================================\n" +
-                "--------------------------------------\n" +
-                "Attribute Icon Files     : " + attributeFileCount + "\n" +
-                "No Attribute Icon Files : " + noAttributeFileCount + "\n" +
-                "Screenshot              : " + screenshotPath + "\n" +
-                "======================================\n";
+        StringBuilder result = new StringBuilder();
 
-        results.add(result);
+        result.append("""
+                <table width="100%"
+                       cellpadding="0"
+                       cellspacing="0"
+                       style="
+                           border:1px solid #d9e2ec;
+                           border-radius:8px;
+                           margin-bottom:20px;
+                           background-color:#ffffff;
+                       ">
+
+                    <!-- COMPANY HEADER -->
+                    <tr>
+                        <td colspan="4"
+                            style="
+                                background-color:#f8fafc;
+                                padding:15px;
+                                border-bottom:1px solid #e5e7eb;
+                            ">
+
+                            <table width="100%"
+                                   cellpadding="0"
+                                   cellspacing="0">
+
+                                <tr>
+
+                                    <td style="
+                                        font-size:18px;
+                                        font-weight:bold;
+                                        color:#0f172a;
+                                    ">
+                """);
+
+        result.append(escapeHtml(company));
+
+        result.append("""
+                                    </td>
+
+                                    <td align="right">
+
+                                        <span style="
+                                            background-color:#dcfce7;
+                                            color:#166534;
+                                            padding:6px 12px;
+                                            border-radius:20px;
+                                            font-size:11px;
+                                            font-weight:bold;
+                                        ">
+                                            PASSED
+                                        </span>
+
+                                    </td>
+
+                                </tr>
+
+                                <tr>
+
+                                    <td style="
+                                        padding-top:5px;
+                                        color:#64748b;
+                                        font-size:12px;
+                                    ">
+                """);
+
+        result.append(escapeHtml(day));
+
+        result.append("""
+                                    </td>
+
+                                </tr>
+
+                            </table>
+
+                        </td>
+                    </tr>
+
+                    <!-- TABLE HEADER -->
+                    <tr style="
+                        background-color:#2563eb;
+                        color:#ffffff;
+                    ">
+
+                        <th style="
+                            padding:11px;
+                            text-align:left;
+                            font-size:12px;
+                        ">
+                            Day
+                        </th>
+
+                        <th style="
+                            padding:11px;
+                            text-align:center;
+                            font-size:12px;
+                        ">
+                            Attribute Files
+                        </th>
+
+                        <th style="
+                            padding:11px;
+                            text-align:center;
+                            font-size:12px;
+                        ">
+                            No Attribute Files
+                        </th>
+
+                        <th style="
+                            padding:11px;
+                            text-align:center;
+                            font-size:12px;
+                        ">
+                            Screenshot
+                        </th>
+
+                    </tr>
+
+                    <!-- TABLE DATA -->
+                    <tr>
+
+                        <td style="
+                            padding:12px;
+                            border-bottom:1px solid #e5e7eb;
+                            color:#334155;
+                            font-size:13px;
+                        ">
+                """);
+
+        result.append(escapeHtml(day));
+
+        result.append("""
+                        </td>
+
+                        <td style="
+                            padding:12px;
+                            text-align:center;
+                            border-bottom:1px solid #e5e7eb;
+                            color:#15803d;
+                            font-size:20px;
+                            font-weight:bold;
+                        ">
+                """);
+
+        result.append(attributeFileCount);
+
+        result.append("""
+                        </td>
+
+                        <td style="
+                            padding:12px;
+                            text-align:center;
+                            border-bottom:1px solid #e5e7eb;
+                            color:#ea580c;
+                            font-size:20px;
+                            font-weight:bold;
+                        ">
+                """);
+
+        result.append(noAttributeFileCount);
+
+        result.append("""
+                        </td>
+
+                        <td style="
+                            padding:12px;
+                            text-align:center;
+                            border-bottom:1px solid #e5e7eb;
+                        ">
+                """);
+
+        if (screenshotPath != null) {
+
+            result.append("""
+                            <span style="
+                                background-color:#eff6ff;
+                                color:#2563eb;
+                                padding:6px 10px;
+                                border-radius:6px;
+                                font-size:11px;
+                                font-weight:bold;
+                            ">
+                                Attached
+                            </span>
+                    """);
+
+        } else {
+
+            result.append("""
+                            <span style="
+                                background-color:#f1f5f9;
+                                color:#64748b;
+                                padding:6px 10px;
+                                border-radius:6px;
+                                font-size:11px;
+                            ">
+                                Not Available
+                            </span>
+                    """);
+        }
+
+        result.append("""
+                        </td>
+
+                    </tr>
+
+                </table>
+                """);
+
+        results.add(result.toString());
 
         if (screenshotPath != null) {
             screenshotPaths.add(screenshotPath);
@@ -56,31 +259,214 @@ public class TestExecutionReport {
             int nonYellowFileCount,
             String screenshotPath) {
 
-        String result = "========================================\n" +
-                "             " + company + " - "
-                + day.toUpperCase() + "\n" +
-                "========================================\n" +
-                "----------------------------------------\n" +
-                "Today File Count          : "
-                + todayFileCount + "\n" +
-                "Folder Count              : "
-                + folderCount + "\n" +
-                "Files Inside Folder Count : "
-                + filesInsideFolderCount + "\n" +
-                "Yellow Icon Files         : "
-                + yellowFileCount + "\n" +
-                "Non-Yellow Icon Files     : "
-                + nonYellowFileCount + "\n" +
-                "Screenshot                : "
-                + screenshotPath + "\n" +
-                "========================================\n";
+        StringBuilder result = new StringBuilder();
 
-        results.add(result);
+        result.append("""
+                <table width="100%"
+                       cellpadding="0"
+                       cellspacing="0"
+                       style="
+                           border:1px solid #d9e2ec;
+                           border-radius:8px;
+                           margin-bottom:20px;
+                           background-color:#ffffff;
+                       ">
+
+                    <!-- COMPANY HEADER -->
+                    <tr>
+                        <td colspan="3"
+                            style="
+                                background-color:#f8fafc;
+                                padding:15px;
+                                border-bottom:1px solid #e5e7eb;
+                            ">
+
+                            <table width="100%"
+                                   cellpadding="0"
+                                   cellspacing="0">
+
+                                <tr>
+
+                                    <td style="
+                                        font-size:18px;
+                                        font-weight:bold;
+                                        color:#0f172a;
+                                    ">
+                """);
+
+        result.append(escapeHtml(company));
+
+        result.append("""
+                                    </td>
+
+                                    <td align="right">
+
+                                        <span style="
+                                            background-color:#dcfce7;
+                                            color:#166534;
+                                            padding:6px 12px;
+                                            border-radius:20px;
+                                            font-size:11px;
+                                            font-weight:bold;
+                                        ">
+                                            PASSED
+                                        </span>
+
+                                    </td>
+
+                                </tr>
+
+                                <tr>
+
+                                    <td style="
+                                        padding-top:5px;
+                                        color:#64748b;
+                                        font-size:12px;
+                                    ">
+                """);
+
+        result.append(escapeHtml(day));
+
+        result.append("""
+                                    </td>
+
+                                </tr>
+
+                            </table>
+
+                        </td>
+                    </tr>
+
+                    <!-- TABLE HEADER -->
+                    <tr style="
+                        background-color:#2563eb;
+                        color:#ffffff;
+                    ">
+
+                        <th style="
+                            padding:10px;
+                            text-align:left;
+                            font-size:12px;
+                        ">
+                            Metric
+                        </th>
+
+                        <th style="
+                            padding:10px;
+                            text-align:center;
+                            font-size:12px;
+                        ">
+                            Count
+                        </th>
+
+                        <th style="
+                            padding:10px;
+                            text-align:center;
+                            font-size:12px;
+                        ">
+                            Status
+                        </th>
+
+                    </tr>
+                """);
+
+        result.append(
+                metricRow(
+                        "Today File Count",
+                        todayFileCount,
+                        "#2563eb"));
+
+        result.append(
+                metricRow(
+                        "Folder Count",
+                        folderCount,
+                        "#9333ea"));
+
+        result.append(
+                metricRow(
+                        "Files Inside Folder",
+                        filesInsideFolderCount,
+                        "#ea580c"));
+
+        result.append(
+                metricRow(
+                        "Yellow / Attribute Files",
+                        yellowFileCount,
+                        "#16a34a"));
+
+        result.append(
+                metricRow(
+                        "Non-Yellow / No Attribute Files",
+                        nonYellowFileCount,
+                        "#dc2626"));
+
+        result.append("""
+                    <tr>
+
+                        <td style="
+                            padding:12px;
+                            color:#334155;
+                            font-size:13px;
+                            border-top:1px solid #e5e7eb;
+                        ">
+                            Screenshot
+                        </td>
+
+                        <td colspan="2"
+                            style="
+                                padding:12px;
+                                text-align:center;
+                                border-top:1px solid #e5e7eb;
+                            ">
+                """);
+
+        if (screenshotPath != null) {
+
+            result.append("""
+                            <span style="
+                                background-color:#eff6ff;
+                                color:#2563eb;
+                                padding:6px 10px;
+                                border-radius:6px;
+                                font-size:11px;
+                                font-weight:bold;
+                            ">
+                                Attached
+                            </span>
+                    """);
+
+        } else {
+
+            result.append("""
+                            <span style="
+                                background-color:#f1f5f9;
+                                color:#64748b;
+                                padding:6px 10px;
+                                border-radius:6px;
+                                font-size:11px;
+                            ">
+                                Not Available
+                            </span>
+                    """);
+        }
+
+        result.append("""
+                        </td>
+
+                    </tr>
+
+                </table>
+                """);
+
+        results.add(result.toString());
 
         if (screenshotPath != null) {
             screenshotPaths.add(screenshotPath);
         }
     }
+
+    // ============================================================
+    // NISINO RESULT
     // TWO FOLDERS -> ONE COMPANY RESULT
     // ============================================================
 
@@ -98,52 +484,198 @@ public class TestExecutionReport {
         int totalNoAttribute = beforeWorkResult.getNoAttributeFileCount()
                 + completedResult.getNoAttributeFileCount();
 
-        String result = "======================================\n" +
-                "COMPANY : " + company + "\n" +
-                "DAY     : " + day + "\n" +
-                "======================================\n" +
+        StringBuilder result = new StringBuilder();
 
-                "-------------- 作業前 ----------------\n" +
+        result.append("""
+                <table width="100%"
+                       cellpadding="0"
+                       cellspacing="0"
+                       style="
+                           border:1px solid #d9e2ec;
+                           border-radius:8px;
+                           margin-bottom:20px;
+                           background-color:#ffffff;
+                       ">
 
-                "Attribute Icon Files     : "
-                + beforeWorkResult.getAttributeFileCount()
-                + "\n" +
+                    <!-- COMPANY HEADER -->
+                    <tr>
+                        <td colspan="4"
+                            style="
+                                background-color:#f8fafc;
+                                padding:15px;
+                                border-bottom:1px solid #e5e7eb;
+                            ">
 
-                "No Attribute Icon Files : "
-                + beforeWorkResult.getNoAttributeFileCount()
-                + "\n" +
+                            <table width="100%"
+                                   cellpadding="0"
+                                   cellspacing="0">
 
-                "Screenshot              : "
-                + beforeWorkScreenshot
-                + "\n" +
+                                <tr>
 
-                "---------------- 完了 ----------------\n" +
+                                    <td style="
+                                        font-size:18px;
+                                        font-weight:bold;
+                                        color:#0f172a;
+                                    ">
+                """);
 
-                "Attribute Icon Files     : "
-                + completedResult.getAttributeFileCount()
-                + "\n" +
+        result.append(escapeHtml(company));
 
-                "No Attribute Icon Files : "
-                + completedResult.getNoAttributeFileCount()
-                + "\n" +
+        result.append("""
+                                    </td>
 
-                "Screenshot              : "
-                + completedScreenshot
-                + "\n" +
+                                    <td align="right">
 
-                "--------------------------------------\n" +
+                                        <span style="
+                                            background-color:#dcfce7;
+                                            color:#166534;
+                                            padding:6px 12px;
+                                            border-radius:20px;
+                                            font-size:11px;
+                                            font-weight:bold;
+                                        ">
+                                            PASSED
+                                        </span>
 
-                "TOTAL ATTRIBUTE FILES   : "
-                + totalAttribute
-                + "\n" +
+                                    </td>
 
-                "TOTAL NO ATTRIBUTE FILES: "
-                + totalNoAttribute
-                + "\n" +
+                                </tr>
 
-                "======================================\n";
+                                <tr>
 
-        results.add(result);
+                                    <td style="
+                                        padding-top:5px;
+                                        color:#64748b;
+                                        font-size:12px;
+                                    ">
+                """);
+
+        result.append(escapeHtml(day));
+
+        result.append("""
+                                    </td>
+
+                                </tr>
+
+                            </table>
+
+                        </td>
+                    </tr>
+
+                    <!-- FOLDER TABLE HEADER -->
+                    <tr style="
+                        background-color:#2563eb;
+                        color:#ffffff;
+                    ">
+
+                        <th style="
+                            padding:11px;
+                            text-align:left;
+                            font-size:12px;
+                        ">
+                            Folder
+                        </th>
+
+                        <th style="
+                            padding:11px;
+                            text-align:center;
+                            font-size:12px;
+                        ">
+                            Attribute Files
+                        </th>
+
+                        <th style="
+                            padding:11px;
+                            text-align:center;
+                            font-size:12px;
+                        ">
+                            No Attribute Files
+                        </th>
+
+                        <th style="
+                            padding:11px;
+                            text-align:center;
+                            font-size:12px;
+                        ">
+                            Screenshot
+                        </th>
+
+                    </tr>
+                """);
+
+        result.append(
+                nisinoFolderRow(
+                        "作業前",
+                        beforeWorkResult,
+                        beforeWorkScreenshot));
+
+        result.append(
+                nisinoFolderRow(
+                        "完了",
+                        completedResult,
+                        completedScreenshot));
+
+        result.append("""
+                    <!-- TOTAL -->
+                    <tr>
+
+                        <td style="
+                            padding:13px;
+                            background-color:#f8fafc;
+                            font-weight:bold;
+                            color:#0f172a;
+                            border-top:1px solid #d9e2ec;
+                        ">
+                            TOTAL
+                        </td>
+
+                        <td style="
+                            padding:13px;
+                            text-align:center;
+                            background-color:#f8fafc;
+                            font-weight:bold;
+                            color:#15803d;
+                            border-top:1px solid #d9e2ec;
+                            font-size:18px;
+                        ">
+                """);
+
+        result.append(totalAttribute);
+
+        result.append("""
+                        </td>
+
+                        <td style="
+                            padding:13px;
+                            text-align:center;
+                            background-color:#f8fafc;
+                            font-weight:bold;
+                            color:#ea580c;
+                            border-top:1px solid #d9e2ec;
+                            font-size:18px;
+                        ">
+                """);
+
+        result.append(totalNoAttribute);
+
+        result.append("""
+                        </td>
+
+                        <td style="
+                            padding:13px;
+                            text-align:center;
+                            background-color:#f8fafc;
+                            border-top:1px solid #d9e2ec;
+                        ">
+                            -
+                        </td>
+
+                    </tr>
+
+                </table>
+                """);
+
+        results.add(result.toString());
 
         if (beforeWorkScreenshot != null) {
             screenshotPaths.add(beforeWorkScreenshot);
@@ -155,28 +687,401 @@ public class TestExecutionReport {
     }
 
     // ============================================================
-    // GET COMPLETE REPORT
+    // NORMAL METRIC ROW
+    // ============================================================
+
+    private static String metricRow(
+            String metricName,
+            int value,
+            String valueColor) {
+
+        return """
+                <tr>
+
+                    <td style="
+                        padding:12px;
+                        border-top:1px solid #e5e7eb;
+                        color:#334155;
+                        font-size:13px;
+                    ">
+                        %s
+                    </td>
+
+                    <td style="
+                        padding:12px;
+                        border-top:1px solid #e5e7eb;
+                        text-align:center;
+                        font-size:19px;
+                        font-weight:bold;
+                        color:%s;
+                    ">
+                        %d
+                    </td>
+
+                    <td style="
+                        padding:12px;
+                        border-top:1px solid #e5e7eb;
+                        text-align:center;
+                    ">
+                        <span style="
+                            background-color:#f0fdf4;
+                            color:#166534;
+                            padding:5px 9px;
+                            border-radius:15px;
+                            font-size:10px;
+                            font-weight:bold;
+                        ">
+                            COMPLETED
+                        </span>
+                    </td>
+
+                </tr>
+                """.formatted(
+                escapeHtml(metricName),
+                valueColor,
+                value);
+    }
+
+    // ============================================================
+    // NISINO FOLDER ROW
+    // ============================================================
+
+    private static String nisinoFolderRow(
+            String folderName,
+            FileCountResult result,
+            String screenshotPath) {
+
+        String screenshotStatus;
+
+        if (screenshotPath != null) {
+
+            screenshotStatus = """
+                    <span style="
+                        background-color:#eff6ff;
+                        color:#2563eb;
+                        padding:6px 10px;
+                        border-radius:6px;
+                        font-size:11px;
+                        font-weight:bold;
+                    ">
+                        Attached
+                    </span>
+                    """;
+
+        } else {
+
+            screenshotStatus = """
+                    <span style="
+                        background-color:#f1f5f9;
+                        color:#64748b;
+                        padding:6px 10px;
+                        border-radius:6px;
+                        font-size:11px;
+                    ">
+                        Not Available
+                    </span>
+                    """;
+        }
+
+        return """
+                <tr>
+
+                    <td style="
+                        padding:12px;
+                        border-top:1px solid #e5e7eb;
+                        color:#0f172a;
+                        font-size:13px;
+                        font-weight:bold;
+                    ">
+                        %s
+                    </td>
+
+                    <td style="
+                        padding:12px;
+                        border-top:1px solid #e5e7eb;
+                        text-align:center;
+                        color:#15803d;
+                        font-size:19px;
+                        font-weight:bold;
+                    ">
+                        %d
+                    </td>
+
+                    <td style="
+                        padding:12px;
+                        border-top:1px solid #e5e7eb;
+                        text-align:center;
+                        color:#ea580c;
+                        font-size:19px;
+                        font-weight:bold;
+                    ">
+                        %d
+                    </td>
+
+                    <td style="
+                        padding:12px;
+                        border-top:1px solid #e5e7eb;
+                        text-align:center;
+                    ">
+                        %s
+                    </td>
+
+                </tr>
+                """.formatted(
+                escapeHtml(folderName),
+                result.getAttributeFileCount(),
+                result.getNoAttributeFileCount(),
+                screenshotStatus);
+    }
+
+    // ============================================================
+    // GET COMPLETE HTML REPORT
     // ============================================================
 
     public static String getReport() {
 
         StringBuilder report = new StringBuilder();
 
-        report.append(
-                "AUTOMATION TEST REPORT\n\n");
+        String executionTime = LocalDateTime.now()
+                .format(DATE_TIME_FORMATTER);
 
-        report.append(
-                "Execution Time : "
-                        + LocalDateTime.now()
-                                .format(DATE_TIME_FORMATTER)
-                        + "\n\n");
+        report.append("""
+                <!DOCTYPE html>
+                <html>
+                <head>
+                    <meta charset="UTF-8">
+                    <title>Automation Test Report</title>
+                </head>
+
+                <body style="
+                    margin:0;
+                    padding:0;
+                    background-color:#eef2f7;
+                    font-family:Arial,Helvetica,sans-serif;
+                    color:#1f2937;
+                ">
+
+                    <table width="100%"
+                           cellpadding="0"
+                           cellspacing="0"
+                           style="
+                               background-color:#eef2f7;
+                               padding:25px 0;
+                           ">
+
+                        <tr>
+
+                            <td align="center">
+
+                                <table width="900"
+                                       cellpadding="0"
+                                       cellspacing="0"
+                                       style="
+                                           background-color:#ffffff;
+                                           border-radius:12px;
+                                           overflow:hidden;
+                                       ">
+
+                                    <!-- MAIN HEADER -->
+                                    <tr>
+
+                                        <td style="
+                                            background-color:#1d4ed8;
+                                            padding:28px 30px;
+                                            color:#ffffff;
+                                        ">
+
+                                            <div style="
+                                                font-size:28px;
+                                                font-weight:bold;
+                                            ">
+                                                Automation Test Report
+                                            </div>
+
+                                            <div style="
+                                                margin-top:7px;
+                                                font-size:13px;
+                                                color:#dbeafe;
+                                            ">
+                                                Files Check
+                                            </div>
+
+                                            <div style="
+                                                margin-top:8px;
+                                                font-size:12px;
+                                                color:#dbeafe;
+                                            ">
+                                                Execution Time:
+                """);
+
+        report.append(executionTime);
+
+        report.append("""
+                                            </div>
+
+                                        </td>
+
+                                    </tr>
+
+                                    <!-- SUMMARY -->
+                                    <tr>
+
+                                        <td style="
+                                            padding:20px 25px;
+                                            background-color:#f8fafc;
+                                            border-bottom:1px solid #e5e7eb;
+                                        ">
+
+                                            <table width="100%"
+                                                   cellpadding="0"
+                                                   cellspacing="0">
+
+                                                <tr>
+
+                                                    <td width="50%"
+                                                        style="padding-right:8px;">
+
+                                                        <table width="100%"
+                                                               cellpadding="0"
+                                                               cellspacing="0"
+                                                               style="
+                                                                   border:1px solid #e2e8f0;
+                                                                   background:#ffffff;
+                                                                   border-radius:8px;
+                                                               ">
+
+                                                            <tr>
+
+                                                                <td align="center"
+                                                                    style="padding:16px;">
+
+                                                                    <div style="
+                                                                        font-size:27px;
+                                                                        font-weight:bold;
+                                                                        color:#2563eb;
+                                                                    ">
+                """);
+
+        report.append(results.size());
+
+        report.append("""
+                                                                    </div>
+
+                                                                    <div style="
+                                                                        font-size:12px;
+                                                                        color:#64748b;
+                                                                        margin-top:4px;
+                                                                    ">
+                                                                        Companies Tested
+                                                                    </div>
+
+                                                                </td>
+
+                                                            </tr>
+
+                                                        </table>
+
+                                                    </td>
+
+                                                    <td width="50%"
+                                                        style="padding-left:8px;">
+
+                                                        <table width="100%"
+                                                               cellpadding="0"
+                                                               cellspacing="0"
+                                                               style="
+                                                                   border:1px solid #e2e8f0;
+                                                                   background:#ffffff;
+                                                                   border-radius:8px;
+                                                               ">
+
+                                                            <tr>
+
+                                                                <td align="center"
+                                                                    style="padding:16px;">
+
+                                                                    <div style="
+                                                                        font-size:27px;
+                                                                        font-weight:bold;
+                                                                        color:#16a34a;
+                                                                    ">
+                                                                        ✓
+                                                                    </div>
+
+                                                                    <div style="
+                                                                        font-size:12px;
+                                                                        color:#64748b;
+                                                                        margin-top:4px;
+                                                                    ">
+                                                                        Automation Execution
+                                                                    </div>
+
+                                                                </td>
+
+                                                            </tr>
+
+                                                        </table>
+
+                                                    </td>
+
+                                                </tr>
+
+                                            </table>
+
+                                        </td>
+
+                                    </tr>
+
+                                    <!-- COMPANY REPORTS -->
+
+                                    <tr>
+
+                                        <td style="
+                                            padding:25px;
+                                            background-color:#ffffff;
+                                        ">
+                """);
 
         for (String result : results) {
 
             report.append(result);
-
-            report.append("\n");
         }
+
+        report.append("""
+                                        </td>
+
+                                    </tr>
+
+                                    <!-- FOOTER -->
+                                    <tr>
+
+                                        <td align="center"
+                                            style="
+                                                padding:18px;
+                                                background-color:#0f172a;
+                                                color:#94a3b8;
+                                                font-size:11px;
+                                            ">
+
+                                            Generated automatically by
+                                            Playwright Automation Framework
+
+                                        </td>
+
+                                    </tr>
+
+                                </table>
+
+                            </td>
+
+                        </tr>
+
+                    </table>
+
+                </body>
+
+                </html>
+                """);
 
         return report.toString();
     }
@@ -186,7 +1091,9 @@ public class TestExecutionReport {
     // ============================================================
 
     public static List<String> getScreenshotPaths() {
-        return new ArrayList<>(screenshotPaths);
+
+        return new ArrayList<>(
+                screenshotPaths);
     }
 
     // ============================================================
@@ -197,5 +1104,23 @@ public class TestExecutionReport {
 
         results.clear();
         screenshotPaths.clear();
+    }
+
+    // ============================================================
+    // HTML ESCAPE
+    // ============================================================
+
+    private static String escapeHtml(String value) {
+
+        if (value == null) {
+            return "";
+        }
+
+        return value
+                .replace("&", "&amp;")
+                .replace("<", "&lt;")
+                .replace(">", "&gt;")
+                .replace("\"", "&quot;")
+                .replace("'", "&#39;");
     }
 }

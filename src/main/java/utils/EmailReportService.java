@@ -4,81 +4,158 @@ import java.io.File;
 import java.util.List;
 
 import org.apache.commons.mail2.jakarta.EmailAttachment;
-import org.apache.commons.mail2.jakarta.MultiPartEmail;
+import org.apache.commons.mail2.jakarta.HtmlEmail;
 
 public class EmailReportService {
 
-    public static void sendEmail(String report) {
+        public static void sendEmail(String report) {
 
-        try {
+                try {
 
-            String senderEmail = ConfigReader.get("SENDER_EMAIL_ADDRESS");
-            String appPassword = ConfigReader.get("APP_PASSWORD");
+                        // =====================================================
+                        // EMAIL CONFIGURATION
+                        // =====================================================
 
-            String receiver1 = ConfigReader.get("RECEIVER_EMAIL_ADDRESS1");
-            String receiver2 = ConfigReader.get("RECEIVER_EMAIL_ADDRESS2");
+                        String senderEmail = ConfigReader.get("SENDER_EMAIL_ADDRESS");
 
-            String[] receiverEmails = {
-                    receiver1,
-                    receiver2
-            };
+                        String appPassword = ConfigReader.get("APP_PASSWORD");
 
-            MultiPartEmail email = new MultiPartEmail();
+                        String receiver1 = ConfigReader.get("RECEIVER_EMAIL_ADDRESS1");
 
-            email.setHostName("smtp.gmail.com");
-            email.setSmtpPort(587);
+                        String receiver2 = ConfigReader.get("RECEIVER_EMAIL_ADDRESS2");
 
-            email.setAuthentication(
-                    senderEmail,
-                    appPassword);
+                        String[] receiverEmails = {
+                                        receiver1,
+                                        receiver2
+                        };
 
-            email.setStartTLSEnabled(true);
+                        // =====================================================
+                        // CREATE HTML EMAIL
+                        // =====================================================
 
-            email.setFrom(senderEmail);
+                        HtmlEmail email = new HtmlEmail();
 
-            for (String receiverEmail : receiverEmails) {
-                email.addTo(receiverEmail);
-            }
+                        email.setHostName("smtp.gmail.com");
 
-            email.setSubject(
-                    "Routine Company Check");
+                        email.setSmtpPort(587);
 
-            email.setMsg(report);
+                        email.setAuthentication(
+                                        senderEmail,
+                                        appPassword);
 
-            /*
-             * Attach all company screenshots.
-             */
-            List<String> screenshotPaths = TestExecutionReport.getScreenshotPaths();
+                        email.setStartTLSEnabled(true);
 
-            for (String screenshotPath : screenshotPaths) {
+                        // =====================================================
+                        // SENDER
+                        // =====================================================
 
-                File screenshotFile = new File(screenshotPath);
+                        email.setFrom(
+                                        senderEmail,
+                                        "Routine Company Check");
 
-                if (screenshotFile.exists()) {
+                        // =====================================================
+                        // RECEIVERS
+                        // =====================================================
 
-                    EmailAttachment attachment = new EmailAttachment();
-                    attachment.setPath(screenshotPath);
-                    attachment.setDisposition(EmailAttachment.ATTACHMENT);
-                    attachment.setName(screenshotFile.getName());
+                        for (String receiverEmail : receiverEmails) {
 
-                    email.attach(attachment);
+                                if (receiverEmail != null
+                                                && !receiverEmail.trim().isEmpty()) {
 
-                    System.out.println("Attaching screenshot: " + screenshotPath);
+                                        email.addTo(
+                                                        receiverEmail.trim());
+                                }
+                        }
 
-                } else {
+                        // =====================================================
+                        // SUBJECT
+                        // =====================================================
 
-                    System.out.println("Screenshot not found, skipping: " + screenshotPath);
+                        email.setSubject("Routine Company Check - Automation Report");
+
+                        // IMPORTANT: UTF-8
+                        email.setCharset("UTF-8");
+
+                        // =====================================================
+                        // HTML REPORT
+                        // =====================================================
+
+                        email.setHtmlMsg(report);
+
+                        // =====================================================
+                        // PLAIN TEXT FALLBACK
+                        // =====================================================
+
+                        email.setTextMsg("Please open this email in an HTML-compatible email client.");
+
+                        // =====================================================
+                        // ATTACH COMPANY SCREENSHOTS
+                        // =====================================================
+
+                        List<String> screenshotPaths = TestExecutionReport.getScreenshotPaths();
+
+                        for (String screenshotPath : screenshotPaths) {
+
+                                if (screenshotPath == null
+                                                || screenshotPath.trim().isEmpty()) {
+
+                                        continue;
+                                }
+
+                                File screenshotFile = new File(screenshotPath);
+
+                                if (screenshotFile.exists()
+                                                && screenshotFile.isFile()) {
+
+                                        EmailAttachment attachment = new EmailAttachment();
+
+                                        attachment.setPath(
+                                                        screenshotFile.getAbsolutePath());
+
+                                        attachment.setDisposition(
+                                                        EmailAttachment.ATTACHMENT);
+
+                                        attachment.setDescription(
+                                                        "Automation execution screenshot");
+
+                                        attachment.setName(
+                                                        screenshotFile.getName());
+
+                                        email.attach(attachment);
+
+                                        System.out.println(
+                                                        "Attaching screenshot: "
+                                                                        + screenshotFile.getAbsolutePath());
+
+                                } else {
+
+                                        System.out.println(
+                                                        "Screenshot not found, skipping: "
+                                                                        + screenshotPath);
+                                }
+                        }
+
+                        // =====================================================
+                        // SEND EMAIL
+                        // =====================================================
+
+                        email.send();
+
+                        System.out.println("======================================");
+
+                        System.out.println("Email report sent successfully.");
+
+                        System.out.println("======================================");
+
+                } catch (Exception e) {
+
+                        System.err.println("======================================");
+
+                        System.err.println("Failed to send email.");
+
+                        System.err.println("======================================");
+
+                        e.printStackTrace();
                 }
-            }
-
-            email.send();
-
-            System.out.println("Email report sent successfully.");
-
-        } catch (Exception e) {
-
-            System.err.println("Failed to send email.");
-            e.printStackTrace();
         }
-    }
-}
+}

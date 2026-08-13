@@ -164,7 +164,7 @@ public class OhkumaAPIFileUtil {
                          * Add OHKUMA result to email report.
                          */
                         TestExecutionReport.addOhkumaResult(
-                                        "OHKUMA",
+                                        "OHKUMA S09 SOCKET",
                                         "Today",
                                         todayFileCount,
                                         folderCount,

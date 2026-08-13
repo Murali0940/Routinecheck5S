@@ -55,11 +55,11 @@ public class NisinoScanTest extends BaseDriver {
         nisinoseikiss.clickScanSocketIcon();
         nisinoseikiss.clickBeforeWorkFolder();
         nisinoseikiss.setPagination("100");
-        beforeWorkResult = nisinoseikiss.verifyTodayFileCountAndGetScreenshot("作業前");
+        beforeWorkResult = nisinoseikiss.verifyTodayFileCountAndGetScreenshot("BEFORE WORK");
         nisinoseikiss.clickHome();
         nisinoseikiss.clickcompletedfolder();
         nisinoseikiss.setPagination("100");
-        completedResult = nisinoseikiss.verifyTodayFileCountAndGetScreenshot("完了");
+        completedResult = nisinoseikiss.verifyTodayFileCountAndGetScreenshot("COMPLETED");
         TestExecutionReport.addNisinoResult(
                 "NISINOSEIKISS",
                 "Today",

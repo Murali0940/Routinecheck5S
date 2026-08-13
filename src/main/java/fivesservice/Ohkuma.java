@@ -107,37 +107,45 @@ public class Ohkuma {
         page.waitForTimeout(4000);
     }
 
-    public Response getSocketFiles() {
-        Allure.step("Getting socket files");
+    public String getSocketFiles() {
+
+        Allure.step("Waiting for Get Socket Files API response");
 
         Response response = page.waitForResponse(
                 res -> res.url().contains("getSocketFiles")
                         && res.status() == 200,
+                new Page.WaitForResponseOptions()
+                        .setTimeout(60000),
                 () -> {
-
-                    // Trigger the API
                     page.reload();
-
                 });
-        return response;
 
+        String responseBody = response.text();
+
+        Allure.step(
+                "Get Socket Files API response received successfully");
+
+        return responseBody;
     }
 
-    public void verifyTodayFileCount() {
+    public void verifyTodayFileCountAndGetScreenshot() {
 
         page.waitForLoadState(LoadState.NETWORKIDLE);
 
-        Response response = getSocketFiles();
+        String responseBody = getSocketFiles();
+
+        Allure.step("Get Socket Files API response");
 
         String screenshotPath = BaseDriver.takeScreenshot(
                 page,
                 "OHKUMA_todayFiles");
 
         OhkumaAPIFileUtil api = new OhkumaAPIFileUtil();
-        api.ohkumaGetTodayFiles(response.text(), screenshotPath);
 
-        page.reload();
-        page.waitForTimeout(3000);
+        api.ohkumaGetTodayFiles(responseBody, screenshotPath);
+
+        // Add OHKUMA report here if your API utility
+        // returns/stores the required counts.
     }
 
     // Actions
