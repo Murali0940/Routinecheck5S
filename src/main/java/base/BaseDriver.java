@@ -89,7 +89,7 @@ public class BaseDriver {
 
     }
 
-    public static void takeScreenshot(Page page, String screenshotName) {
+    public static String takeScreenshot(Page page, String screenshotName) {
 
         String timestamp = LocalDateTime.now()
                 .format(DateTimeFormatter.ofPattern("yyyyMMdd_HHmmss"));
@@ -101,6 +101,7 @@ public class BaseDriver {
                 .setFullPage(true));
 
         System.out.println("Screenshot saved: " + path);
+        return path;
     }
 
 }

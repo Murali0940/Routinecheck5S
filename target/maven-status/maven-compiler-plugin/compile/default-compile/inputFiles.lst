@@ -3,9 +3,13 @@ D:\PlaywrightJava\registrationservice\src\main\java\fivesservice\Nisinoseikiss.j
 D:\PlaywrightJava\registrationservice\src\main\java\fivesservice\Oaksystem.java
 D:\PlaywrightJava\registrationservice\src\main\java\fivesservice\Ohkuma.java
 D:\PlaywrightJava\registrationservice\src\main\java\fivesservice\Sanmatsu.java
+D:\PlaywrightJava\registrationservice\src\main\java\listeners\EmailReportListener.java
 D:\PlaywrightJava\registrationservice\src\main\java\pages\CompLoginPage.java
 D:\PlaywrightJava\registrationservice\src\main\java\pages\Homepage.java
 D:\PlaywrightJava\registrationservice\src\main\java\pages\UserLoginPage.java
 D:\PlaywrightJava\registrationservice\src\main\java\utils\APIFileUtil.java
 D:\PlaywrightJava\registrationservice\src\main\java\utils\ConfigReader.java
+D:\PlaywrightJava\registrationservice\src\main\java\utils\EmailReportService.java
+D:\PlaywrightJava\registrationservice\src\main\java\utils\FileCountResult.java
 D:\PlaywrightJava\registrationservice\src\main\java\utils\OhkumaAPIFileUtil.java
+D:\PlaywrightJava\registrationservice\src\main\java\utils\TestExecutionReport.java

@@ -16,6 +16,8 @@ public class APIFileUtil {
      *
      * OAKSYSTEM -> 7
      * NISINOSEIKISS -> 4
+     * OHKUMA -> 1
+     * SANMATSU -> 1
      */
     private int getCompanyAttribute(String company) {
 
@@ -42,17 +44,10 @@ public class APIFileUtil {
     /**
      * Get yellow and non-yellow file information.
      *
-     * Yellow files:
-     * Count only.
-     *
-     * Non-yellow files:
-     * Count + filenames.
-     *
-     * @param jsonResponse API response
-     * @param dayFilter    Today / Yesterday
-     * @param company      OAKSYSTEM / NISINOSEIKISS
+     * This method only calculates and returns the result.
+     * It does NOT add anything to TestExecutionReport.
      */
-    public void getFilesByDay(
+    public FileCountResult getFilesByDay(
             String jsonResponse,
             String dayFilter,
             String company) {
@@ -79,11 +74,11 @@ public class APIFileUtil {
 
             for (JsonNode file : files) {
 
-                String fileName = file.get("filename").asText();
+                String fileName = file.path("filename").asText();
 
-                String date = file.get("date").asText();
+                String date = file.path("date").asText();
 
-                int attribute = file.get("attribute").asInt();
+                int attribute = file.path("attribute").asInt();
 
                 LocalDate fileDate = LocalDateTime
                         .parse(date, FORMATTER)
@@ -102,36 +97,49 @@ public class APIFileUtil {
                 } else {
 
                     throw new IllegalArgumentException(
-                            "Unsupported day filter: " + dayFilter);
+                            "Unsupported day filter: "
+                                    + dayFilter);
                 }
 
-                // Process only files for the requested day
+                // Process only requested day
                 if (!matchedDate) {
                     continue;
                 }
 
-                // Yellow icon file
+                // Attribute / Yellow icon file
                 if (attribute == companyAttribute) {
 
                     yellowFileCount++;
 
-                }
-                // File without yellow icon
-                else {
+                } else {
 
+                    // No attribute / Non-yellow file
                     nonYellowFileCount++;
 
                     System.out.println(
-                            "Non-Yellow File : " + fileName);
+                            "Non-Yellow File : "
+                                    + fileName);
                 }
             }
 
-            System.out.println("--------------------------------------");
             System.out.println(
-                    "Yellow Icon Files     : " + yellowFileCount);
+                    "--------------------------------------");
+
             System.out.println(
-                    "Non-Yellow Files      : " + nonYellowFileCount);
-            System.out.println("======================================");
+                    "Attribute Icon Files     : "
+                            + yellowFileCount);
+
+            System.out.println(
+                    "No Attribute Icon Files : "
+                            + nonYellowFileCount);
+
+            System.out.println(
+                    "======================================");
+
+            return new FileCountResult(
+                    yellowFileCount,
+                    nonYellowFileCount,
+                    null);
 
         } catch (Exception e) {
 

@@ -6,6 +6,7 @@
 
     <listeners>
         <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
+        <listener class-name="listeners.EmailReportListener"/>
     </listeners>
 
      <test name="routinecheck5S">
