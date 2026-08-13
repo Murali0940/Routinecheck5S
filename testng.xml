@@ -18,5 +18,4 @@
             <class name="org.nisino.tests.NisinoScanTest"/>
         </classes>
     </test>
-
 </suite>
