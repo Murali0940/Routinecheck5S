@@ -3,10 +3,13 @@ package fivesservice;
 import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.Response;
+import com.microsoft.playwright.options.LoadState;
 
 import base.BaseDriver;
 import io.qameta.allure.Allure;
 import utils.APIFileUtil;
+import utils.FileCountResult;
+import utils.TestExecutionReport;
 
 public class Sanmatsu {
 
@@ -157,18 +160,24 @@ public class Sanmatsu {
 
     public void verifyTodayFileCountAndGetScreenshot() {
 
+        page.waitForLoadState(LoadState.NETWORKIDLE);
+
         Response response = getSocketFiles();
+
         Allure.step("Get Socket Files API response");
 
-        // System.out.println("======================================");
-        // System.out.println("GET SOCKET FILES API RESPONSE");
-        // System.out.println("======================================");
-        // System.out.println(response.text());
-        // System.out.println("======================================");
-
         APIFileUtil api = new APIFileUtil();
-        api.getFilesByDay(response.text(), "Today", "SANMATSU");
-        BaseDriver.takeScreenshot(page, "todayFiles");
+
+        FileCountResult result = api.getFilesByDay(response.text(), "Today", "SANMATSU");
+
+        String screenshotPath = BaseDriver.takeScreenshot(page, "SANMATSU_todayFiles");
+
+        TestExecutionReport.addResult("SANMATSU", "Today",
+                result.getAttributeFileCount(),
+                result.getNoAttributeFileCount(),
+                screenshotPath);
+
+        page.waitForTimeout(3000);
     }
 
 }

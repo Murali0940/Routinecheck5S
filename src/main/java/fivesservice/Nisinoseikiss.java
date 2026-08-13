@@ -5,11 +5,13 @@ import org.testng.log4testng.Logger;
 import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.Response;
+import com.microsoft.playwright.options.LoadState;
 import com.microsoft.playwright.options.WaitForSelectorState;
 
 import base.BaseDriver;
 import io.qameta.allure.Allure;
 import utils.APIFileUtil;
+import utils.FileCountResult;
 
 public class Nisinoseikiss {
 
@@ -185,7 +187,7 @@ public class Nisinoseikiss {
     // validations
 
     public void validateHyperLinkIcon() {
-        page.waitForTimeout(1000);
+        page.waitForTimeout(2000);
         if (hyperLinkIcon.isVisible()) {
             System.out.println("HyperLink icon is displayed.");
             Allure.step("HyperLink icon is displayed.");
@@ -196,6 +198,7 @@ public class Nisinoseikiss {
     }
 
     public void validateScanSocketIcon() {
+        page.waitForTimeout(2000);
         if (scansocketicon.isVisible()) {
             System.out.println("Scan Socket icon is displayed.");
             Allure.step("Scan Socket icon is displayed.");
@@ -205,37 +208,60 @@ public class Nisinoseikiss {
         }
     }
 
-    public void verifyTodayFileCountAndGetScreenshot() {
+    // ---------------------------------------------------------
+    // API RESULT
+    // ---------------------------------------------------------
+
+    /**
+     * Gets the file count for the currently opened folder.
+     *
+     * This method returns the result instead of directly
+     * adding it to TestExecutionReport.
+     *
+     * This allows 作業前 and 完了 to be combined
+     * into ONE NISINOSEIKISS email report.
+     */
+
+    public FileCountResult verifyTodayFileCountAndGetScreenshot(
+            String folderName) {
+
+        page.waitForLoadState(LoadState.NETWORKIDLE);
 
         Response response = getSocketFiles();
-        Allure.step("Get Socket Files API response");
 
-        // System.out.println("======================================");
-        // System.out.println("GET SOCKET FILES API RESPONSE");
-        // System.out.println("======================================");
-        // System.out.println(response.text());
-        // System.out.println("======================================");
+        Allure.step(
+                "Get Socket Files API response - " + folderName);
 
         APIFileUtil api = new APIFileUtil();
-        api.getFilesByDay(response.text(), "Today", "NISINOSEIKISS");
-        BaseDriver.takeScreenshot(page, "todayFiles");
+
+        FileCountResult result = api.getFilesByDay(
+                response.text(),
+                "Today",
+                "NISINOSEIKISS");
+
+        String screenshotPath = BaseDriver.takeScreenshot(
+                page,
+                "NISINOSEIKISS_" + folderName);
+
+        return new FileCountResult(
+                result.getAttributeFileCount(),
+                result.getNoAttributeFileCount(),
+                screenshotPath);
     }
 
     public Response getSocketFiles() {
+
         Allure.step("Waiting for Get Socket Files API response");
 
-        Response response = page.waitForResponse(
-                res -> res.url().contains("getSocketFiles")
-                        && res.status() == 200,
+        Response response = page.waitForResponse(res -> res.url().contains("getSocketFiles") && res.status() == 200,
                 () -> {
-
-                    // Trigger the API
+                    // Trigger API
                     page.reload();
-
                 });
-        Allure.step("Get Socket Files API response");
-        return response;
 
+        Allure.step("Get Socket Files API response");
+        page.waitForTimeout(3000);
+        return response;
     }
 
 }

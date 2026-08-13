@@ -3,6 +3,7 @@ package fivesservice;
 import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.Response;
+import com.microsoft.playwright.options.LoadState;
 
 import base.BaseDriver;
 import io.qameta.allure.Allure;
@@ -124,19 +125,19 @@ public class Ohkuma {
 
     public void verifyTodayFileCount() {
 
+        page.waitForLoadState(LoadState.NETWORKIDLE);
+
         Response response = getSocketFiles();
 
-        // System.out.println("======================================");
-        // System.out.println("GET SOCKET FILES API RESPONSE");
-        // System.out.println("======================================");
-        // System.out.println(response.text());
-        // System.out.println("======================================");
+        String screenshotPath = BaseDriver.takeScreenshot(
+                page,
+                "OHKUMA_todayFiles");
+
         OhkumaAPIFileUtil api = new OhkumaAPIFileUtil();
-        // Response response = getSocketFiles();
-        api.ohkumaGetTodayFiles(response.text());
-        BaseDriver.takeScreenshot(page, "todayFiles");
+        api.ohkumaGetTodayFiles(response.text(), screenshotPath);
+
         page.reload();
-        page.waitForTimeout(1000);
+        page.waitForTimeout(3000);
     }
 
     // Actions
@@ -150,7 +151,7 @@ public class Ohkuma {
 
     public void clickS09SocketIcon() {
         page.waitForLoadState();
-        page.waitForTimeout(1000);
+        page.waitForTimeout(2000);
         adSocketS09Icon.click();
         Allure.step("S09 Socket icon clicked");
     }

@@ -3,9 +3,13 @@ package fivesservice;
 import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.Response;
+import com.microsoft.playwright.options.LoadState;
+
 import base.BaseDriver;
 import io.qameta.allure.Allure;
 import utils.APIFileUtil;
+import utils.FileCountResult;
+import utils.TestExecutionReport;
 
 public class Oaksystem {
 
@@ -157,18 +161,31 @@ public class Oaksystem {
 
     public void verifyTodayFileCountAndGetScreenshot() {
 
+        page.waitForLoadState(LoadState.NETWORKIDLE);
+
         Response response = getSocketFiles();
+
         Allure.step("Get Socket Files API response");
 
-        // System.out.println("======================================");
-        // System.out.println("GET SOCKET FILES API RESPONSE");
-        // System.out.println("======================================");
-        // System.out.println(response.text());
-        // System.out.println("======================================");
-
         APIFileUtil api = new APIFileUtil();
-        api.getFilesByDay(response.text(), "Today", "OAKSYSTEM");
-        BaseDriver.takeScreenshot(page, "todayFiles");
+
+        FileCountResult result = api.getFilesByDay(
+                response.text(),
+                "Today",
+                "OAKSYSTEM");
+
+        String screenshotPath = BaseDriver.takeScreenshot(
+                page,
+                "OAKSYSTEM_todayFiles");
+
+        TestExecutionReport.addResult(
+                "OAKSYSTEM",
+                "Today",
+                result.getAttributeFileCount(),
+                result.getNoAttributeFileCount(),
+                screenshotPath);
+
+        page.waitForTimeout(3000);
     }
 
 }

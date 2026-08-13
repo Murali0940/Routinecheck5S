@@ -7,6 +7,8 @@ import fivesservice.Nisinoseikiss;
 import pages.CompLoginPage;
 import pages.UserLoginPage;
 import utils.ConfigReader;
+import utils.FileCountResult;
+import utils.TestExecutionReport;
 
 public class NisinoScanTest extends BaseDriver {
 
@@ -41,6 +43,10 @@ public class NisinoScanTest extends BaseDriver {
 
     public void validatingScanSocketTest() {
 
+        FileCountResult beforeWorkResult;
+
+        FileCountResult completedResult;
+
         Nisinoseikiss nisinoseikiss = new Nisinoseikiss(page);
         nisinoseikiss.validateHyperLinkIcon();
         nisinoseikiss.clickHyperLinkIcon();
@@ -49,11 +55,18 @@ public class NisinoScanTest extends BaseDriver {
         nisinoseikiss.clickScanSocketIcon();
         nisinoseikiss.clickBeforeWorkFolder();
         nisinoseikiss.setPagination("100");
-        nisinoseikiss.verifyTodayFileCountAndGetScreenshot();
+        beforeWorkResult = nisinoseikiss.verifyTodayFileCountAndGetScreenshot("作業前");
         nisinoseikiss.clickHome();
         nisinoseikiss.clickcompletedfolder();
         nisinoseikiss.setPagination("100");
-        nisinoseikiss.verifyTodayFileCountAndGetScreenshot();
+        completedResult = nisinoseikiss.verifyTodayFileCountAndGetScreenshot("完了");
+        TestExecutionReport.addNisinoResult(
+                "NISINOSEIKISS",
+                "Today",
+                beforeWorkResult,
+                beforeWorkResult.getScreenshotPath(),
+                completedResult,
+                completedResult.getScreenshotPath());
 
     }
 
