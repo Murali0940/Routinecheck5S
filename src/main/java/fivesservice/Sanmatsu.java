@@ -153,12 +153,11 @@ public class Sanmatsu {
                     page.reload();
                 });
 
-        // Wait until the response body is available
-        page.waitForTimeout(1000);
-
         String responseBody = response.text();
 
         Allure.step("Get Socket Files API response received successfully");
+        // Wait until the response body is available
+        page.waitForTimeout(3000);
 
         return responseBody;
     }
