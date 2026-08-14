@@ -12,58 +12,122 @@ public final class ConfigReader {
     static {
 
         /*
-         * Load application.properties.
+         * Load all four configuration files.
          *
          * Jenkins:
-         * -Dconfig.file=<secret file path>
+         * Load files from Jenkins Secret File paths.
          *
          * Local:
-         * application.properties from resources.
+         * Load files from src/main/resources.
          */
         loadApplicationProperties();
-
-        /*
-         * Load remaining properties
-         * from src/main/resources.
-         */
-        loadProperties("company-credentials.properties");
-        loadProperties("user-credentials.properties");
-        loadProperties("test-report.properties");
+        loadCompanyCredentials();
+        loadUserCredentials();
+        loadTestReportProperties();
     }
 
     private ConfigReader() {
         // Prevent object creation
     }
 
-    /**
-     * Load application.properties.
-     *
-     * Jenkins -> external secret file
-     * Local -> classpath resource
-     */
+    // ============================================================
+    // APPLICATION PROPERTIES
+    // ============================================================
+
     private static void loadApplicationProperties() {
 
-        String configFile = System.getProperty("config.file");
+        loadExternalOrClasspath(
+                "config.file",
+                "application.properties");
+    }
 
-        if (configFile != null
-                && !configFile.isBlank()) {
+    // ============================================================
+    // COMPANY CREDENTIALS
+    // ============================================================
 
-            loadExternalProperties(configFile);
+    private static void loadCompanyCredentials() {
+
+        loadExternalOrClasspath(
+                "company.config",
+                "company-credentials.properties");
+    }
+
+    // ============================================================
+    // USER CREDENTIALS
+    // ============================================================
+
+    private static void loadUserCredentials() {
+
+        loadExternalOrClasspath(
+                "user.config",
+                "user-credentials.properties");
+    }
+
+    // ============================================================
+    // TEST REPORT
+    // ============================================================
+
+    private static void loadTestReportProperties() {
+
+        loadExternalOrClasspath(
+                "report.config",
+                "test-report.properties");
+    }
+
+    // ============================================================
+    // LOAD PROPERTY FILE
+    // ============================================================
+
+    private static void loadExternalOrClasspath(
+            String systemProperty,
+            String classpathFile) {
+
+        String externalFile =
+                System.getProperty(systemProperty);
+
+        if (externalFile != null
+                && !externalFile.isBlank()) {
+
+            loadExternalProperties(externalFile);
 
         } else {
 
-            loadProperties("application.properties");
+            loadClasspathProperties(classpathFile);
         }
     }
 
-    /**
-     * Load properties from classpath.
-     */
-    private static void loadProperties(String fileName) {
+    // ============================================================
+    // LOAD FROM JENKINS / EXTERNAL FILE
+    // ============================================================
 
-        try (InputStream inputStream = ConfigReader.class
-                .getClassLoader()
-                .getResourceAsStream(fileName)) {
+    private static void loadExternalProperties(
+            String filePath) {
+
+        try (InputStream inputStream =
+                     new FileInputStream(filePath)) {
+
+            properties.load(inputStream);
+
+        } catch (IOException e) {
+
+            throw new RuntimeException(
+                    "Failed to load external properties file: "
+                            + filePath,
+                    e);
+        }
+    }
+
+    // ============================================================
+    // LOAD FROM RESOURCES / LOCAL
+    // ============================================================
+
+    private static void loadClasspathProperties(
+            String fileName) {
+
+        try (InputStream inputStream =
+                     ConfigReader.class
+                             .getClassLoader()
+                             .getResourceAsStream(fileName)) {
 
             if (inputStream == null) {
 
@@ -83,35 +147,17 @@ public final class ConfigReader {
         }
     }
 
-    /**
-     * Load properties from external file.
-     *
-     * Used by Jenkins Secret File.
-     */
-    private static void loadExternalProperties(
-            String filePath) {
+    // ============================================================
+    // GET PROPERTY
+    // ============================================================
 
-        try (InputStream inputStream = new FileInputStream(filePath)) {
-
-            properties.load(inputStream);
-
-        } catch (IOException e) {
-
-            throw new RuntimeException(
-                    "Failed to load external properties file: "
-                            + filePath,
-                    e);
-        }
-    }
-
-    /**
-     * Get property value.
-     */
     public static String get(String key) {
 
-        String value = properties.getProperty(key);
+        String value =
+                properties.getProperty(key);
 
-        if (value == null || value.isBlank()) {
+        if (value == null
+                || value.isBlank()) {
 
             throw new RuntimeException(
                     "Property not found: "
