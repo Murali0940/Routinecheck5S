@@ -11,79 +11,32 @@ public final class ConfigReader {
 
     static {
 
-        /*
-         * Load all four configuration files.
-         *
-         * Jenkins:
-         * Load files from Jenkins Secret File paths.
-         *
-         * Local:
-         * Load files from src/main/resources.
-         */
-        loadApplicationProperties();
-        loadCompanyCredentials();
-        loadUserCredentials();
-        loadTestReportProperties();
+        loadPropertiesFile(
+                "config.file",
+                "application.properties");
+
+        loadPropertiesFile(
+                "company.config",
+                "company-credentials.properties");
+
+        loadPropertiesFile(
+                "user.config",
+                "user-credentials.properties");
+
+        loadPropertiesFile(
+                "report.config",
+                "test-report.properties");
     }
 
     private ConfigReader() {
         // Prevent object creation
     }
 
-    // ============================================================
-    // APPLICATION PROPERTIES
-    // ============================================================
-
-    private static void loadApplicationProperties() {
-
-        loadExternalOrClasspath(
-                "config.file",
-                "application.properties");
-    }
-
-    // ============================================================
-    // COMPANY CREDENTIALS
-    // ============================================================
-
-    private static void loadCompanyCredentials() {
-
-        loadExternalOrClasspath(
-                "company.config",
-                "company-credentials.properties");
-    }
-
-    // ============================================================
-    // USER CREDENTIALS
-    // ============================================================
-
-    private static void loadUserCredentials() {
-
-        loadExternalOrClasspath(
-                "user.config",
-                "user-credentials.properties");
-    }
-
-    // ============================================================
-    // TEST REPORT
-    // ============================================================
-
-    private static void loadTestReportProperties() {
-
-        loadExternalOrClasspath(
-                "report.config",
-                "test-report.properties");
-    }
-
-    // ============================================================
-    // LOAD PROPERTY FILE
-    // ============================================================
-
-    private static void loadExternalOrClasspath(
+    private static void loadPropertiesFile(
             String systemProperty,
             String classpathFile) {
 
-        String externalFile =
-                System.getProperty(systemProperty);
+        String externalFile = System.getProperty(systemProperty);
 
         if (externalFile != null
                 && !externalFile.isBlank()) {
@@ -96,38 +49,27 @@ public final class ConfigReader {
         }
     }
 
-    // ============================================================
-    // LOAD FROM JENKINS / EXTERNAL FILE
-    // ============================================================
-
     private static void loadExternalProperties(
             String filePath) {
 
-        try (InputStream inputStream =
-                     new FileInputStream(filePath)) {
+        try (InputStream inputStream = new FileInputStream(filePath)) {
 
             properties.load(inputStream);
 
         } catch (IOException e) {
 
             throw new RuntimeException(
-                    "Failed to load external properties file: "
-                            + filePath,
+                    "Failed to load external properties file",
                     e);
         }
     }
 
-    // ============================================================
-    // LOAD FROM RESOURCES / LOCAL
-    // ============================================================
-
     private static void loadClasspathProperties(
             String fileName) {
 
-        try (InputStream inputStream =
-                     ConfigReader.class
-                             .getClassLoader()
-                             .getResourceAsStream(fileName)) {
+        try (InputStream inputStream = ConfigReader.class
+                .getClassLoader()
+                .getResourceAsStream(fileName)) {
 
             if (inputStream == null) {
 
@@ -147,21 +89,14 @@ public final class ConfigReader {
         }
     }
 
-    // ============================================================
-    // GET PROPERTY
-    // ============================================================
-
     public static String get(String key) {
 
-        String value =
-                properties.getProperty(key);
+        String value = properties.getProperty(key);
 
-        if (value == null
-                || value.isBlank()) {
+        if (value == null || value.isBlank()) {
 
             throw new RuntimeException(
-                    "Property not found: "
-                            + key);
+                    "Property not found: " + key);
         }
 
         return value.trim();
