@@ -90,18 +90,15 @@ public final class ConfigReader {
     }
 
     public static String get(String key) {
-        String sysProp = System.getProperty(key);
-        if (sysProp != null && !sysProp.isBlank()) {
-            return sysProp.trim();
-        }
-        String envVar = System.getenv(key);
-        if (envVar != null && !envVar.isBlank()) {
-            return envVar.trim();
-        }
+
         String value = properties.getProperty(key);
+
         if (value == null || value.isBlank()) {
-            throw new RuntimeException("Property not found: " + key);
+
+            throw new RuntimeException(
+                    "Property not found: " + key);
         }
+
         return value.trim();
     }
 }
