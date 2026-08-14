@@ -25,8 +25,9 @@ public class TestExecutionReport {
     public static void addResult(
             String company,
             String day,
+            int totalFileCount,
             int attributeFileCount,
-            int noAttributeFileCount,
+            int nonAttributeFileCount,
             String screenshotPath) {
 
         StringBuilder result = new StringBuilder();
@@ -44,7 +45,7 @@ public class TestExecutionReport {
 
                     <!-- COMPANY HEADER -->
                     <tr>
-                        <td colspan="4"
+                        <td colspan="5"
                             style="
                                 background-color:#f8fafc;
                                 padding:15px;
@@ -126,7 +127,7 @@ public class TestExecutionReport {
                             text-align:center;
                             font-size:12px;
                         ">
-                            Attribute Files
+                            Total File Count
                         </th>
 
                         <th style="
@@ -134,7 +135,15 @@ public class TestExecutionReport {
                             text-align:center;
                             font-size:12px;
                         ">
-                            No Attribute Files
+                            Attribute Icon Files
+                        </th>
+
+                        <th style="
+                            padding:11px;
+                            text-align:center;
+                            font-size:12px;
+                        ">
+                            Non-Attribute Icon Files
                         </th>
 
                         <th style="
@@ -150,6 +159,7 @@ public class TestExecutionReport {
                     <!-- TABLE DATA -->
                     <tr>
 
+                        <!-- DAY -->
                         <td style="
                             padding:12px;
                             border-bottom:1px solid #e5e7eb;
@@ -163,6 +173,23 @@ public class TestExecutionReport {
         result.append("""
                         </td>
 
+                        <!-- TOTAL FILE COUNT -->
+                        <td style="
+                            padding:12px;
+                            text-align:center;
+                            border-bottom:1px solid #e5e7eb;
+                            color:#2563eb;
+                            font-size:20px;
+                            font-weight:bold;
+                        ">
+                """);
+
+        result.append(totalFileCount);
+
+        result.append("""
+                        </td>
+
+                        <!-- ATTRIBUTE ICON FILES -->
                         <td style="
                             padding:12px;
                             text-align:center;
@@ -178,21 +205,23 @@ public class TestExecutionReport {
         result.append("""
                         </td>
 
+                        <!-- NON-ATTRIBUTE ICON FILES -->
                         <td style="
                             padding:12px;
                             text-align:center;
                             border-bottom:1px solid #e5e7eb;
-                            color:#ea580c;
+                            color:#dc2626;
                             font-size:20px;
                             font-weight:bold;
                         ">
                 """);
 
-        result.append(noAttributeFileCount);
+        result.append(nonAttributeFileCount);
 
         result.append("""
                         </td>
 
+                        <!-- SCREENSHOT -->
                         <td style="
                             padding:12px;
                             text-align:center;
@@ -200,7 +229,7 @@ public class TestExecutionReport {
                         ">
                 """);
 
-        if (screenshotPath != null) {
+        if (screenshotPath != null && !screenshotPath.isBlank()) {
 
             result.append("""
                             <span style="
@@ -240,7 +269,7 @@ public class TestExecutionReport {
 
         results.add(result.toString());
 
-        if (screenshotPath != null) {
+        if (screenshotPath != null && !screenshotPath.isBlank()) {
             screenshotPaths.add(screenshotPath);
         }
     }
@@ -252,11 +281,9 @@ public class TestExecutionReport {
     public static void addOhkumaResult(
             String company,
             String day,
-            int todayFileCount,
-            int folderCount,
-            int filesInsideFolderCount,
-            int yellowFileCount,
-            int nonYellowFileCount,
+            int totalFileCount,
+            int attributeIconFileCount,
+            int nonAttributeIconFileCount,
             String screenshotPath) {
 
         StringBuilder result = new StringBuilder();
@@ -370,83 +397,83 @@ public class TestExecutionReport {
                     </tr>
                 """);
 
+        /*
+         * 1. Total File Count
+         */
         result.append(
                 metricRow(
-                        "Today File Count",
-                        todayFileCount,
+                        "Total File Count",
+                        totalFileCount,
                         "#2563eb"));
 
+        /*
+         * 2. Attribute Icon File Count
+         */
         result.append(
                 metricRow(
-                        "Folder Count",
-                        folderCount,
-                        "#9333ea"));
-
-        result.append(
-                metricRow(
-                        "Files Inside Folder",
-                        filesInsideFolderCount,
-                        "#ea580c"));
-
-        result.append(
-                metricRow(
-                        "Yellow / Attribute Files",
-                        yellowFileCount,
+                        "Attribute Icon File Count",
+                        attributeIconFileCount,
                         "#16a34a"));
 
+        /*
+         * 3. Non-Attribute Icon File Count
+         */
         result.append(
                 metricRow(
-                        "Non-Yellow / No Attribute Files",
-                        nonYellowFileCount,
+                        "Non-Attribute Icon File Count",
+                        nonAttributeIconFileCount,
                         "#dc2626"));
 
+        /*
+         * 4. Screenshot
+         */
         result.append("""
-                    <tr>
+                <tr>
 
-                        <td style="
+                    <td style="
+                        padding:12px;
+                        color:#334155;
+                        font-size:13px;
+                        border-top:1px solid #e5e7eb;
+                    ">
+                        Screenshot
+                    </td>
+
+                    <td colspan="2"
+                        style="
                             padding:12px;
-                            color:#334155;
-                            font-size:13px;
+                            text-align:center;
                             border-top:1px solid #e5e7eb;
                         ">
-                            Screenshot
-                        </td>
-
-                        <td colspan="2"
-                            style="
-                                padding:12px;
-                                text-align:center;
-                                border-top:1px solid #e5e7eb;
-                            ">
                 """);
 
-        if (screenshotPath != null) {
+        if (screenshotPath != null && !screenshotPath.isBlank()) {
 
             result.append("""
-                            <span style="
-                                background-color:#eff6ff;
-                                color:#2563eb;
-                                padding:6px 10px;
-                                border-radius:6px;
-                                font-size:11px;
-                                font-weight:bold;
-                            ">
-                                Attached
-                            </span>
+                        <span style="
+                            background-color:#eff6ff;
+                            color:#2563eb;
+                            padding:6px 10px;
+                            border-radius:6px;
+                            font-size:11px;
+                            font-weight:bold;
+                        ">
+                            Attached
+                        </span>
                     """);
 
         } else {
 
             result.append("""
-                            <span style="
-                                background-color:#f1f5f9;
-                                color:#64748b;
-                                padding:6px 10px;
-                                border-radius:6px;
-                                font-size:11px;
-                            ">
-                                Not Available
-                            </span>
+                        <span style="
+                            background-color:#f1f5f9;
+                            color:#64748b;
+                            padding:6px 10px;
+                            border-radius:6px;
+                            font-size:11px;
+                        ">
+                            Not Available
+                        </span>
                     """);
         }
 
@@ -458,9 +485,15 @@ public class TestExecutionReport {
                 </table>
                 """);
 
+        /*
+         * Add report result.
+         */
         results.add(result.toString());
 
-        if (screenshotPath != null) {
+        /*
+         * Add screenshot path.
+         */
+        if (screenshotPath != null && !screenshotPath.isBlank()) {
             screenshotPaths.add(screenshotPath);
         }
     }
@@ -481,8 +514,8 @@ public class TestExecutionReport {
         int totalAttribute = beforeWorkResult.getAttributeFileCount()
                 + completedResult.getAttributeFileCount();
 
-        int totalNoAttribute = beforeWorkResult.getNoAttributeFileCount()
-                + completedResult.getNoAttributeFileCount();
+        int totalNoAttribute = beforeWorkResult.getNonAttributeFileCount()
+                + completedResult.getNonAttributeFileCount();
 
         StringBuilder result = new StringBuilder();
 
@@ -830,7 +863,7 @@ public class TestExecutionReport {
                 """.formatted(
                 escapeHtml(folderName),
                 result.getAttributeFileCount(),
-                result.getNoAttributeFileCount(),
+                result.getNonAttributeFileCount(),
                 screenshotStatus);
     }
 

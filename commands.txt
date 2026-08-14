@@ -11,3 +11,6 @@ git checkout main
 git pull origin main
 git merge ohkuma
 git push origin main
+===========================
+
+ngrok start command -> ngrok http 8080

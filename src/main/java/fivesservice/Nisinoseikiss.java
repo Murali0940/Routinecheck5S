@@ -245,7 +245,8 @@ public class Nisinoseikiss {
 
         return new FileCountResult(
                 result.getAttributeFileCount(),
-                result.getNoAttributeFileCount(),
+                result.getNonAttributeFileCount(),
+                result.getTotalFileCount(),
                 screenshotPath);
     }
 

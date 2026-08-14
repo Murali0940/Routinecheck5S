@@ -181,8 +181,9 @@ public class Oaksystem {
         TestExecutionReport.addResult(
                 "OAKSYSTEM",
                 "Today",
+                result.getTotalFileCount(),
                 result.getAttributeFileCount(),
-                result.getNoAttributeFileCount(),
+                result.getNonAttributeFileCount(),
                 screenshotPath);
 
         page.waitForTimeout(3000);

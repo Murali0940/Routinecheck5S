@@ -24,12 +24,11 @@ public class EmailReportService {
 
                         String receiver2 = ConfigReader.get("RECEIVER_EMAIL_ADDRESS2");
 
-                        String receiver3 = ConfigReader.get("RECEIVER_EMAIL_ADDRESS3");
+                        // String receiver3 = ConfigReader.get("RECEIVER_EMAIL_ADDRESS3");
 
                         String[] receiverEmails = {
                                         receiver1,
-                                        receiver2,
-                                        receiver3
+                                        receiver2
                         };
 
                         // =====================================================

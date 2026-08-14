@@ -6,45 +6,27 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Set;
 
 public class OhkumaAPIFileUtil {
 
         private static final DateTimeFormatter FORMATTER = DateTimeFormatter.ofPattern("MM/dd/yyyy HH:mm:ss");
 
-        private static final int OHKUMA_ATTRIBUTE = 1;
-
-        /*
-         * Add your folder names here.
-         */
-        private static final Set<String> FOLDER_NAMES = new HashSet<>(Arrays.asList(
-                        "栃木溶接",
-                        "栃木ベンダー",
-                        "本社ベンダー",
-                        "栃木艤装",
-                        "本社溶接",
-                        "本社スポット",
-                        "栃木スポット",
-                        "本社ロボット",
-                        "栃木ロボット",
-                        "本社機械加工",
-                        "図面",
-                        "栃木機械加工",
-                        "本社出荷検査",
-                        "艤装図面",
-                        "組立図",
-                        "カチオン吊りかけ",
-                        "カチオン降ろし",
-                        "本社プレス",
-                        "栃木出荷検査",
-                        "栃木スポット - コピー"));
+        private static final int ATTRIBUTE_ICON = 1;
 
         /**
-         * Get OHKUMA Today's file information.
+         * Get OHKUMA today's file information.
+         *
+         * Metrics:
+         * 1. Total File Count
+         * 2. Attribute Icon File Count
+         * 3. Non-Attribute File Count
+         *
+         * @param jsonResponse   OHKUMA API response
+         * @param screenshotPath Screenshot path for email report
          */
-        public void ohkumaGetTodayFiles(String jsonResponse, String screenshotPath) {
+        public void ohkumaGetTodayFiles(
+                        String jsonResponse,
+                        String screenshotPath) {
 
                 try {
 
@@ -60,117 +42,64 @@ public class OhkumaAPIFileUtil {
 
                         LocalDate today = LocalDate.now();
 
-                        int todayFileCount = 0;
-                        int folderCount = 0;
-                        int filesInsideFolderCount = 0;
-                        int yellowFileCount = 0;
-                        int nonYellowFileCount = 0;
-
-                        System.out.println();
-                        System.out.println("========================================");
-                        System.out.println("             OHKUMA - TODAY");
-                        System.out.println("========================================");
+                        int totalFileCount = 0;
+                        int attributeIconFileCount = 0;
+                        int nonAttributeFileCount = 0;
 
                         /*
-                         * Process API records.
+                         * Process today's API records.
                          */
                         for (JsonNode file : files) {
 
-                                String fileName = file
-                                                .path("filename")
-                                                .asText();
-
-                                String date = file
-                                                .path("date")
-                                                .asText();
-
-                                int attribute = file
-                                                .path("attribute")
-                                                .asInt();
+                                String date = file.path("date").asText();
 
                                 LocalDate fileDate = LocalDateTime
                                                 .parse(date, FORMATTER)
                                                 .toLocalDate();
 
                                 /*
-                                 * Process only today's records.
+                                 * Ignore records that are not from today.
                                  */
                                 if (!fileDate.equals(today)) {
                                         continue;
                                 }
 
-                                todayFileCount++;
+                                totalFileCount++;
+
+                                int attribute = file
+                                                .path("attribute")
+                                                .asInt();
 
                                 /*
-                                 * Check whether the filename is one of
-                                 * the folder names provided above.
+                                 * Separate Attribute and Non-Attribute files.
                                  */
-                                if (FOLDER_NAMES.contains(fileName)) {
+                                if (attribute == ATTRIBUTE_ICON) {
 
-                                        folderCount++;
-
-                                        System.out.println(
-                                                        "Folder Name : " + fileName);
-
-                                        continue;
-                                }
-
-                                /*
-                                 * File inside a folder.
-                                 */
-                                filesInsideFolderCount++;
-
-                                /*
-                                 * Yellow icon file.
-                                 */
-                                if (attribute == OHKUMA_ATTRIBUTE) {
-
-                                        yellowFileCount++;
+                                        attributeIconFileCount++;
 
                                 } else {
 
-                                        /*
-                                         * Non-yellow icon file.
-                                         */
-                                        nonYellowFileCount++;
+                                        nonAttributeFileCount++;
                                 }
                         }
 
-                        System.out.println("----------------------------------------");
-
-                        System.out.println(
-                                        "Today File Count          : "
-                                                        + todayFileCount);
-
-                        System.out.println(
-                                        "Folder Count              : "
-                                                        + folderCount);
-
-                        System.out.println(
-                                        "Files Inside Folder Count : "
-                                                        + filesInsideFolderCount);
-
-                        System.out.println(
-                                        "Yellow Icon Files         : "
-                                                        + yellowFileCount);
-
-                        System.out.println(
-                                        "Non-Yellow Icon Files     : "
-                                                        + nonYellowFileCount);
-
-                        System.out.println("========================================");
+                        /*
+                         * Print OHKUMA result.
+                         */
+                        printOhkumaResult(
+                                        totalFileCount,
+                                        attributeIconFileCount,
+                                        nonAttributeFileCount);
 
                         /*
-                         * Add OHKUMA result to email report.
+                         * Add result to email report.
                          */
                         TestExecutionReport.addOhkumaResult(
                                         "OHKUMA S09 SOCKET",
                                         "Today",
-                                        todayFileCount,
-                                        folderCount,
-                                        filesInsideFolderCount,
-                                        yellowFileCount,
-                                        nonYellowFileCount,
+                                        totalFileCount,
+                                        attributeIconFileCount,
+                                        nonAttributeFileCount,
                                         screenshotPath);
 
                 } catch (Exception e) {
@@ -179,5 +108,33 @@ public class OhkumaAPIFileUtil {
                                         "Failed to process OHKUMA Today API response",
                                         e);
                 }
+        }
+
+        /**
+         * Print OHKUMA result to console.
+         */
+        private void printOhkumaResult(
+                        int totalFileCount,
+                        int attributeIconFileCount,
+                        int nonAttributeFileCount) {
+
+                System.out.println();
+                System.out.println("========================================");
+                System.out.println("             OHKUMA - TODAY");
+                System.out.println("========================================");
+
+                System.out.println(
+                                "Total File Count          : "
+                                                + totalFileCount);
+
+                System.out.println(
+                                "Attribute Icon File Count : "
+                                                + attributeIconFileCount);
+
+                System.out.println(
+                                "Non-Attribute File Count  : "
+                                                + nonAttributeFileCount);
+
+                System.out.println("========================================");
         }
 }

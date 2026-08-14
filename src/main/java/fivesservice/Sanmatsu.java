@@ -4,6 +4,8 @@ import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.Response;
 import com.microsoft.playwright.options.LoadState;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 import base.BaseDriver;
 import io.qameta.allure.Allure;
@@ -149,15 +151,33 @@ public class Sanmatsu {
         Response response = page.waitForResponse(
                 res -> res.url().contains("getSocketFiles")
                         && res.status() == 200,
-                () -> {
-                    page.reload();
-                });
+                page::reload);
 
         String responseBody = response.text();
 
+        if (responseBody == null || responseBody.isBlank()) {
+            throw new RuntimeException(
+                    "Get Socket Files API returned an empty response");
+        }
+
+        try {
+
+            ObjectMapper mapper = new ObjectMapper();
+            JsonNode files = mapper.readTree(responseBody);
+
+            if (!files.isArray()) {
+                throw new RuntimeException(
+                        "Get Socket Files API response is not a JSON array");
+            }
+
+        } catch (Exception e) {
+
+            throw new RuntimeException(
+                    "Invalid Get Socket Files API response",
+                    e);
+        }
+
         Allure.step("Get Socket Files API response received successfully");
-        // Wait until the response body is available
-        page.waitForTimeout(3000);
 
         return responseBody;
     }
@@ -170,12 +190,15 @@ public class Sanmatsu {
 
         Allure.step("Get Socket Files API response");
 
-        APIFileUtil api = new APIFileUtil();
+        APIFileUtil apiFileUtil = new APIFileUtil();
 
-        FileCountResult result = api.getFilesByDay(
+        FileCountResult result = apiFileUtil.getTodayFileCount(
                 responseBody,
-                "Today",
                 "SANMATSU");
+
+        System.out.println("Total : " + result.getTotalFileCount());
+        System.out.println("Attribute : " + result.getAttributeFileCount());
+        System.out.println("Non-Attribute : " + result.getNonAttributeFileCount());
 
         String screenshotPath = BaseDriver.takeScreenshot(
                 page,
@@ -184,8 +207,9 @@ public class Sanmatsu {
         TestExecutionReport.addResult(
                 "SANMATSU",
                 "Today",
+                result.getTotalFileCount(),
                 result.getAttributeFileCount(),
-                result.getNoAttributeFileCount(),
+                result.getNonAttributeFileCount(),
                 screenshotPath);
     }
 

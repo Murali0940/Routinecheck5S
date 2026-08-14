@@ -22,3 +22,5 @@ Thumbs.db
 # Playwright
 playwright-report/
 test-results/
+
+src/main/resources/
