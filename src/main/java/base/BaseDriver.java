@@ -17,7 +17,7 @@ public class BaseDriver {
     protected Browser browser;
     protected BrowserContext context;
     public Page page;
-    private double timeout;
+    public double timeout;
 
     @BeforeClass
 
