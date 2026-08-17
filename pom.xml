@@ -96,6 +96,9 @@
                         <suiteXmlFile>testng.xml</suiteXmlFile>
                     </suiteXmlFiles>
 
+                    <!-- Fix Japanese / multi-byte character display in console -->
+                    <argLine>-Dfile.encoding=UTF-8 -Dstdout.encoding=UTF-8</argLine>
+
                     <systemPropertyVariables>
                         <allure.results.directory>
                             ${project.build.directory}/allure-results
@@ -103,6 +106,7 @@
                     </systemPropertyVariables>
                 </configuration>
             </plugin>
+
 
             <plugin>
                 <groupId>io.qameta.allure</groupId>

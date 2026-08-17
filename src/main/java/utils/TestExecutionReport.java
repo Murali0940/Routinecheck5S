@@ -282,8 +282,8 @@ public class TestExecutionReport {
             String company,
             String day,
             int totalFileCount,
-            int attributeIconFileCount,
-            int nonAttributeIconFileCount,
+            int attributeFileCount,
+            int nonAttributeFileCount,
             String screenshotPath) {
 
         StringBuilder result = new StringBuilder();
@@ -300,6 +300,7 @@ public class TestExecutionReport {
                        ">
 
                     <!-- COMPANY HEADER -->
+
                     <tr>
                         <td colspan="3"
                             style="
@@ -365,6 +366,7 @@ public class TestExecutionReport {
                     </tr>
 
                     <!-- TABLE HEADER -->
+
                     <tr style="
                         background-color:#2563eb;
                         color:#ffffff;
@@ -397,36 +399,40 @@ public class TestExecutionReport {
                     </tr>
                 """);
 
-        /*
-         * 1. Total File Count
-         */
+        // ============================================================
+        // 1. TODAY'S TOTAL FILE COUNT
+        // ============================================================
+
         result.append(
                 metricRow(
-                        "Total File Count",
+                        "Today's Total File Count",
                         totalFileCount,
                         "#2563eb"));
 
-        /*
-         * 2. Attribute Icon File Count
-         */
+        // ============================================================
+        // 2. TODAY'S YELLOW ICON FILE COUNT
+        // ============================================================
+
         result.append(
                 metricRow(
-                        "Attribute Icon File Count",
-                        attributeIconFileCount,
-                        "#16a34a"));
+                        "Today's Yellow Icon File Count",
+                        attributeFileCount,
+                        "#eab308"));
 
-        /*
-         * 3. Non-Attribute Icon File Count
-         */
+        // ============================================================
+        // 3. TODAY'S NO YELLOW ICON FILE COUNT
+        // ============================================================
+
         result.append(
                 metricRow(
-                        "Non-Attribute Icon File Count",
-                        nonAttributeIconFileCount,
-                        "#dc2626"));
+                        "Today's No Yellow Icon File Count",
+                        nonAttributeFileCount,
+                        "#64748b"));
 
-        /*
-         * 4. Screenshot
-         */
+        // ============================================================
+        // 4. SCREENSHOT
+        // ============================================================
+
         result.append("""
                 <tr>
 
@@ -447,7 +453,8 @@ public class TestExecutionReport {
                         ">
                 """);
 
-        if (screenshotPath != null && !screenshotPath.isBlank()) {
+        if (screenshotPath != null
+                && !screenshotPath.isBlank()) {
 
             result.append("""
                         <span style="
@@ -485,15 +492,19 @@ public class TestExecutionReport {
                 </table>
                 """);
 
-        /*
-         * Add report result.
-         */
+        // ============================================================
+        // ADD RESULT
+        // ============================================================
+
         results.add(result.toString());
 
-        /*
-         * Add screenshot path.
-         */
-        if (screenshotPath != null && !screenshotPath.isBlank()) {
+        // ============================================================
+        // ADD SCREENSHOT
+        // ============================================================
+
+        if (screenshotPath != null
+                && !screenshotPath.isBlank()) {
+
             screenshotPaths.add(screenshotPath);
         }
     }

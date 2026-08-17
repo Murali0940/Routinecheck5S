@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="TestSuite" time="167.948" tests="8" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="TestSuite" time="239.22" tests="8" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="GB"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-21\bin"/>
-    <property name="sun.java.command" value="C:\Users\DELL\AppData\Local\Temp\surefire14208797577469328832\surefirebooter-20260814155208671_3.jar C:\Users\DELL\AppData\Local\Temp\surefire14208797577469328832 2026-08-14T15-52-08_367-jvmRun1 surefire-20260814155208671_1tmp surefire_0-20260814155208671_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\DELL\AppData\Local\Temp\surefire10996687230629159026\surefirebooter-20260817161748963_3.jar C:\Users\DELL\AppData\Local\Temp\surefire10996687230629159026 2026-08-17T16-17-48_796-jvmRun1 surefire-20260817161748963_1tmp surefire_0-20260817161748963_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="D:\PlaywrightJava\registrationservice\target\test-classes;D:\PlaywrightJava\registrationservice\target\classes;C:\Users\DELL\.m2\repository\com\microsoft\playwright\playwright\1.55.0\playwright-1.55.0.jar;C:\Users\DELL\.m2\repository\com\google\code\gson\gson\2.12.1\gson-2.12.1.jar;C:\Users\DELL\.m2\repository\com\google\errorprone\error_prone_annotations\2.36.0\error_prone_annotations-2.36.0.jar;C:\Users\DELL\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\DELL\.m2\repository\com\microsoft\playwright\driver\1.55.0\driver-1.55.0.jar;C:\Users\DELL\.m2\repository\com\microsoft\playwright\driver-bundle\1.55.0\driver-bundle-1.55.0.jar;C:\Users\DELL\.m2\repository\org\testng\testng\7.11.0\testng-7.11.0.jar;C:\Users\DELL\.m2\repository\org\slf4j\slf4j-api\2.0.16\slf4j-api-2.0.16.jar;C:\Users\DELL\.m2\repository\org\jcommander\jcommander\1.83\jcommander-1.83.jar;C:\Users\DELL\.m2\repository\org\webjars\jquery\3.7.1\jquery-3.7.1.jar;C:\Users\DELL\.m2\repository\io\qameta\allure\allure-testng\2.29.1\allure-testng-2.29.1.jar;C:\Users\DELL\.m2\repository\io\qameta\allure\allure-java-commons\2.29.1\allure-java-commons-2.29.1.jar;C:\Users\DELL\.m2\repository\io\qameta\allure\allure-model\2.29.1\allure-model-2.29.1.jar;C:\Users\DELL\.m2\repository\io\qameta\allure\allure-test-filter\2.29.1\allure-test-filter-2.29.1.jar;C:\Users\DELL\.m2\repository\org\apache\logging\log4j\log4j-api\2.26.1\log4j-api-2.26.1.jar;C:\Users\DELL\.m2\repository\org\apache\logging\log4j\log4j-core\2.26.1\log4j-core-2.26.1.jar;C:\Users\DELL\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.18.0\jackson-databind-2.18.0.jar;C:\Users\DELL\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.18.0\jackson-annotations-2.18.0.jar;C:\Users\DELL\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.18.0\jackson-core-2.18.0.jar;C:\Users\DELL\.m2\repository\org\apache\commons\commons-email2-jakarta\2.0.0-M1\commons-email2-jakarta-2.0.0-M1.jar;C:\Users\DELL\.m2\repository\org\apache\commons\commons-email2-core\2.0.0-M1\commons-email2-core-2.0.0-M1.jar;C:\Users\DELL\.m2\repository\com\sun\mail\jakarta.mail\2.0.1\jakarta.mail-2.0.1.jar;C:\Users\DELL\.m2\repository\com\sun\activation\jakarta.activation\2.0.1\jakarta.activation-2.0.1.jar;"/>
     <property name="allure.results.directory" value="D:\PlaywrightJava\registrationservice\target/allure-results"/>
@@ -31,12 +31,12 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\DELL\AppData\Local\Temp\surefire14208797577469328832\surefirebooter-20260814155208671_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\DELL\AppData\Local\Temp\surefire10996687230629159026\surefirebooter-20260817161748963_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="21.0.7+8-LTS-245"/>
     <property name="user.name" value="DELL"/>
-    <property name="stdout.encoding" value="MS932"/>
+    <property name="stdout.encoding" value="UTF-8"/>
     <property name="path.separator" value=";"/>
     <property name="os.version" value="10.0"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
@@ -59,7 +59,7 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="validLoginTest" classname="org.ohkuma.tests.OhkumaTest" time="4.952">
+  <testcase name="validLoginTest" classname="org.ohkuma.tests.OhkumaTest" time="3.638">
     <system-out><![CDATA[======================================
 TEST SUITE STARTED
 ======================================
@@ -79,7 +79,7 @@ SLF4J(W): Defaulting to no-operation (NOP) logger implementation
 SLF4J(W): See https://www.slf4j.org/codes.html#noProviders for further details.
 ]]></system-err>
   </testcase>
-  <testcase name="validatingS09Socket" classname="org.ohkuma.tests.OhkumaTest" time="17.845">
+  <testcase name="validatingS09Socket" classname="org.ohkuma.tests.OhkumaTest" time="117.74">
     <system-out><![CDATA[Current URL: https://www.alfadock-pack.com/ver10/#/home
 Home page URL is correct.
 HyperLink icon is displayed.
@@ -89,23 +89,85 @@ S09 Socket icon is displayed.
 Current URL: https://www.alfadock-pack.com/ver10/#/adsocket/adgrid/s09/-1
 s09 page URL is correct..
 Pagination already set to 100
-Screenshot saved: screenshots/OHKUMA_todayFiles_20260814_155301.png
+Screenshot saved: screenshots/OHKUMA_S09_Folders_20260817_161823.png
+[OHKUMA] Today's folder found: 本社溶接
+[OHKUMA] Today's folder found: 本社ベンダー
+[OHKUMA] Today's folder found: 栃木溶接
+[OHKUMA] Today's folder found: 栃木ベンダー
+[OHKUMA] Today's folder found: 栃木スポット
+[OHKUMA] Total today's folders found: 5
+[OHKUMA] Today's folders to process: [本社溶接, 本社ベンダー, 栃木溶接, 栃木ベンダー, 栃木スポット]
+[OHKUMA] Processing folder [1/5]: 本社溶接
+[OHKUMA] Double-clicked folder: 本社溶接
 
 ========================================
-             OHKUMA - TODAY
+ OHKUMA FOLDER : 本社溶接
 ========================================
-Total File Count          : 0
-Attribute Icon File Count : 0
-Non-Attribute File Count  : 0
+Today's Total File Count     : 2
+Today's Yellow Icon Files    : 2
+Today's No Yellow Icon Files : 0
 ========================================
+[OHKUMA] Home icon clicked - returned to S09 folder list.
+[OHKUMA] Processing folder [2/5]: 本社ベンダー
+[OHKUMA] Double-clicked folder: 本社ベンダー
+
+========================================
+ OHKUMA FOLDER : 本社ベンダー
+========================================
+Today's Total File Count     : 3
+Today's Yellow Icon Files    : 3
+Today's No Yellow Icon Files : 0
+========================================
+[OHKUMA] Home icon clicked - returned to S09 folder list.
+[OHKUMA] Processing folder [3/5]: 栃木溶接
+[OHKUMA] Double-clicked folder: 栃木溶接
+
+========================================
+ OHKUMA FOLDER : 栃木溶接
+========================================
+Today's Total File Count     : 3
+Today's Yellow Icon Files    : 3
+Today's No Yellow Icon Files : 0
+========================================
+[OHKUMA] Home icon clicked - returned to S09 folder list.
+[OHKUMA] Processing folder [4/5]: 栃木ベンダー
+[OHKUMA] Double-clicked folder: 栃木ベンダー
+
+========================================
+ OHKUMA FOLDER : 栃木ベンダー
+========================================
+Today's Total File Count     : 4
+Today's Yellow Icon Files    : 3
+Today's No Yellow Icon Files : 1
+========================================
+[OHKUMA] Home icon clicked - returned to S09 folder list.
+[OHKUMA] Processing folder [5/5]: 栃木スポット
+[OHKUMA] Double-clicked folder: 栃木スポット
+
+========================================
+ OHKUMA FOLDER : 栃木スポット
+========================================
+Today's Total File Count     : 1
+Today's Yellow Icon Files    : 0
+Today's No Yellow Icon Files : 1
+========================================
+
+========================================
+     OHKUMA - ALL TODAY FOLDERS TOTAL
+========================================
+Today's Total File Count     : 13
+Today's Yellow Icon Files    : 11
+Today's No Yellow Icon Files : 2
+========================================
+[OHKUMA] All today's folders processed.
 ]]></system-out>
   </testcase>
-  <testcase name="validLoginTest" classname="org.sanmatsu.tests.SanmatsuTest" time="4.284">
+  <testcase name="validLoginTest" classname="org.sanmatsu.tests.SanmatsuTest" time="3.317">
     <system-out><![CDATA[Context closed successfully.com.microsoft.playwright.impl.BrowserContextImpl@3b00856b
 Browser closed successfully.com.microsoft.playwright.impl.BrowserImpl@37091312
-Playwright closed successfully.com.microsoft.playwright.impl.PlaywrightImpl@11a7ba62
-Browser launched successfully.com.microsoft.playwright.impl.BrowserImpl@30404dba
-Page created successfully.com.microsoft.playwright.impl.PageImpl@231baf51
+Playwright closed successfully.com.microsoft.playwright.impl.PlaywrightImpl@7bef452c
+Browser launched successfully.com.microsoft.playwright.impl.BrowserImpl@57fae983
+Page created successfully.com.microsoft.playwright.impl.PageImpl@44f3fe83
 Navigated to base URL successfully.https://www.alfadock-pack.com/
 Company username entered: sanmatsu
 Company password entered
@@ -116,7 +178,7 @@ User password entered
 Login button clicked
 ]]></system-out>
   </testcase>
-  <testcase name="validatingSanmatsuHomePage" classname="org.sanmatsu.tests.SanmatsuTest" time="17.323">
+  <testcase name="validatingSanmatsuHomePage" classname="org.sanmatsu.tests.SanmatsuTest" time="29.068">
     <system-out><![CDATA[Current URL: https://www.alfadock-pack.com/ver10/#/home
 Home page URL is correct.
 Current URL: https://www.alfadock-pack.com/ver10/#/home/adsocket
@@ -124,27 +186,32 @@ adsocket page URL is correct.
 Current URL: https://www.alfadock-pack.com/ver10/#/adsocket/adgrid/draw/-1
 draw socket page URL is correct..
 Pagination changed to 100
+Screenshot saved: screenshots/SANMATSU_todayFiles_20260817_162030.png
+[SANMATSU] Processing page 1...
+[SANMATSU] Page 1 total records: 100, today modified files: 100
+[SANMATSU] All 100 files were today's files. Moving to page 2...
+[SANMATSU] Processing page 2...
+[SANMATSU] Page 2 total records: 100, today modified files: 100
+[SANMATSU] All 100 files were today's files. Moving to page 3...
+[SANMATSU] Processing page 3...
+[SANMATSU] Page 3 total records: 100, today modified files: 71
+[SANMATSU] Reached older files on page 3 (71/100 today). All today files counted.
 
-======================================
-COMPANY : SANMATSU
-DAY     : Today
-======================================
-Total File Count         : 13
-Attribute Icon Files     : 13
-Non-Attribute Icon Files : 0
-======================================
-Total : 13
-Attribute : 13
-Non-Attribute : 0
-Screenshot saved: screenshots/SANMATSU_todayFiles_20260814_155328.png
+========================================
+     SANMATSU - ALL PAGES TODAY TOTAL
+========================================
+Today's Total File Count     : 271
+Today's Yellow Icon Files    : 268
+Today's No Yellow Icon Files : 3
+========================================
 ]]></system-out>
   </testcase>
-  <testcase name="validLoginTest" classname="org.oaksystem.tests.OakSystemDrawTest" time="3.905">
-    <system-out><![CDATA[Context closed successfully.com.microsoft.playwright.impl.BrowserContextImpl@6050462a
-Browser closed successfully.com.microsoft.playwright.impl.BrowserImpl@30404dba
-Playwright closed successfully.com.microsoft.playwright.impl.PlaywrightImpl@2b0b4d53
-Browser launched successfully.com.microsoft.playwright.impl.BrowserImpl@38548b19
-Page created successfully.com.microsoft.playwright.impl.PageImpl@1bcb79c2
+  <testcase name="validLoginTest" classname="org.oaksystem.tests.OakSystemDrawTest" time="3.299">
+    <system-out><![CDATA[Context closed successfully.com.microsoft.playwright.impl.BrowserContextImpl@4a29f290
+Browser closed successfully.com.microsoft.playwright.impl.BrowserImpl@57fae983
+Playwright closed successfully.com.microsoft.playwright.impl.PlaywrightImpl@6d4a65c6
+Browser launched successfully.com.microsoft.playwright.impl.BrowserImpl@4c98a6d5
+Page created successfully.com.microsoft.playwright.impl.PageImpl@dffa30b
 Navigated to base URL successfully.https://www.alfadock-pack.com/
 Company username entered: oaksystem
 Company password entered
@@ -155,7 +222,7 @@ User password entered
 Login button clicked
 ]]></system-out>
   </testcase>
-  <testcase name="validatingDrawSocketTest" classname="org.oaksystem.tests.OakSystemDrawTest" time="22.226">
+  <testcase name="validatingDrawSocketTest" classname="org.oaksystem.tests.OakSystemDrawTest" time="17.569">
     <system-out><![CDATA[Current URL: https://www.alfadock-pack.com/ver10/#/home
 Home page URL is correct.
 Current URL: https://www.alfadock-pack.com/ver10/#/home/adsocket
@@ -169,19 +236,19 @@ COMPANY : OAKSYSTEM
 DAY     : Today
 ======================================
 --------------------------------------
-Attribute Icon Files     : 0
+Attribute Icon Files     : 5
 Non-Attribute Icon Files : 0
-Total File Count         : 0
+Total File Count         : 5
 ======================================
-Screenshot saved: screenshots/OAKSYSTEM_todayFiles_20260814_155357.png
+Screenshot saved: screenshots/OAKSYSTEM_todayFiles_20260817_162102.png
 ]]></system-out>
   </testcase>
-  <testcase name="validNisinoLoginTest" classname="org.nisino.tests.NisinoScanTest" time="3.925">
-    <system-out><![CDATA[Context closed successfully.com.microsoft.playwright.impl.BrowserContextImpl@41aaedaa
-Browser closed successfully.com.microsoft.playwright.impl.BrowserImpl@38548b19
-Playwright closed successfully.com.microsoft.playwright.impl.PlaywrightImpl@14151bc5
-Browser launched successfully.com.microsoft.playwright.impl.BrowserImpl@2a49fe
-Page created successfully.com.microsoft.playwright.impl.PageImpl@76954a33
+  <testcase name="validNisinoLoginTest" classname="org.nisino.tests.NisinoScanTest" time="3.28">
+    <system-out><![CDATA[Context closed successfully.com.microsoft.playwright.impl.BrowserContextImpl@392a04e7
+Browser closed successfully.com.microsoft.playwright.impl.BrowserImpl@4c98a6d5
+Playwright closed successfully.com.microsoft.playwright.impl.PlaywrightImpl@5cf87cfd
+Browser launched successfully.com.microsoft.playwright.impl.BrowserImpl@3a4ba480
+Page created successfully.com.microsoft.playwright.impl.PageImpl@74971ed9
 Navigated to base URL successfully.https://www.alfadock-pack.com/
 Selected Language: English
 Starting Company Login...
@@ -197,8 +264,8 @@ Login button clicked
 User logged in successfully.
 ]]></system-out>
   </testcase>
-  <testcase name="validatingScanSocketTest" classname="org.nisino.tests.NisinoScanTest" time="33.029">
-    <system-out><![CDATA[HyperLink icon is displayed.
+  <testcase name="validatingScanSocketTest" classname="org.nisino.tests.NisinoScanTest" time="26.726">
+    <system-out><![CDATA[HyperLink icon is not displayed.
 Clicking hyperlink icon
 hyperlink icon clicked successfully
 Current URL: https://www.alfadock-pack.com/ver10/#/home/adsocket
@@ -213,11 +280,11 @@ COMPANY : NISINOSEIKISS
 DAY     : Today
 ======================================
 --------------------------------------
-Attribute Icon Files     : 0
+Attribute Icon Files     : 30
 Non-Attribute Icon Files : 0
-Total File Count         : 0
+Total File Count         : 30
 ======================================
-Screenshot saved: screenshots/NISINOSEIKISS_BEFORE WORK_20260814_155428.png
+Screenshot saved: screenshots/NISINOSEIKISS_BEFORE WORK_20260817_162129.png
 clicked 完了 folder
 Pagination already set to 100
 
@@ -226,11 +293,11 @@ COMPANY : NISINOSEIKISS
 DAY     : Today
 ======================================
 --------------------------------------
-Attribute Icon Files     : 0
+Attribute Icon Files     : 14
 Non-Attribute Icon Files : 0
-Total File Count         : 0
+Total File Count         : 14
 ======================================
-Screenshot saved: screenshots/NISINOSEIKISS_COMPLETED_20260814_155442.png
+Screenshot saved: screenshots/NISINOSEIKISS_COMPLETED_20260817_162137.png
 ]]></system-out>
   </testcase>
 </testsuite>

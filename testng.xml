@@ -12,10 +12,11 @@
      <test name="routinecheck5S">
 
         <classes>
-            <class name="org.ohkuma.tests.OhkumaTest"/>
+           <class name="org.ohkuma.tests.OhkumaTest"/>
             <class name="org.sanmatsu.tests.SanmatsuTest"/>
             <class name="org.oaksystem.tests.OakSystemDrawTest"/>
             <class name="org.nisino.tests.NisinoScanTest"/>
         </classes>
     </test>
+
 </suite>

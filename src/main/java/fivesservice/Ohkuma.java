@@ -4,10 +4,15 @@ import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.Response;
 import com.microsoft.playwright.options.LoadState;
+import com.microsoft.playwright.options.WaitForSelectorState;
 
 import base.BaseDriver;
 import io.qameta.allure.Allure;
+import utils.FileCountResult;
 import utils.OhkumaAPIFileUtil;
+import utils.TestExecutionReport;
+
+import java.util.List;
 
 public class Ohkuma {
 
@@ -128,27 +133,9 @@ public class Ohkuma {
         return responseBody;
     }
 
-    public void verifyTodayFileCountAndGetScreenshot() {
-
-        page.waitForLoadState(LoadState.NETWORKIDLE);
-
-        String responseBody = getSocketFiles();
-
-        Allure.step("Get Socket Files API response");
-
-        String screenshotPath = BaseDriver.takeScreenshot(
-                page,
-                "OHKUMA_todayFiles");
-
-        OhkumaAPIFileUtil api = new OhkumaAPIFileUtil();
-
-        api.ohkumaGetTodayFiles(responseBody, screenshotPath);
-
-        // Add OHKUMA report here if your API utility
-        // returns/stores the required counts.
-    }
-
-    // Actions
+    // ============================================================
+    // PUBLIC ACTIONS
+    // ============================================================
 
     public void clickHyperLinkIcon() {
         page.waitForLoadState();
@@ -164,7 +151,9 @@ public class Ohkuma {
         Allure.step("S09 Socket icon clicked");
     }
 
-    // Validations
+    // ============================================================
+    // VALIDATIONS
+    // ============================================================
 
     public void validateHyperLinkIcon() {
         page.waitForTimeout(2000);
@@ -186,6 +175,172 @@ public class Ohkuma {
             System.out.println("S09 Socket icon is not displayed.");
             Allure.step("S09 Socket icon is not displayed.");
         }
+    }
+
+    // ============================================================
+    // VERIFY TODAY FILE COUNT — LOOP ALL TODAY FOLDERS
+    // ============================================================
+
+    public void verifyTodayFileCountAndGetScreenshot() {
+
+        page.waitForLoadState(LoadState.NETWORKIDLE);
+
+        // -------------------------------------------------------
+        // Take screenshot of the S09 folders page
+        // -------------------------------------------------------
+        String folderScreenshotPath = BaseDriver.takeScreenshot(
+                page,
+                "OHKUMA_S09_Folders");
+
+        // -------------------------------------------------------
+        // STEP 1: Get the top-level API response to find
+        //         today's folders (items with NO guid).
+        // -------------------------------------------------------
+
+        String topLevelJson = getSocketFiles();
+
+        OhkumaAPIFileUtil api = new OhkumaAPIFileUtil();
+
+        List<String> todayFolders = api.getTodayFolderNames(topLevelJson);
+
+        if (todayFolders.isEmpty()) {
+            System.out.println("[OHKUMA] No today's folders found in S09 socket.");
+            Allure.step("[OHKUMA] No today's folders found.");
+
+            TestExecutionReport.addOhkumaResult(
+                    "OHKUMA",
+                    "Today",
+                    0,
+                    0,
+                    0,
+                    folderScreenshotPath);
+            return;
+        }
+
+        System.out.println("[OHKUMA] Today's folders to process: " + todayFolders);
+        Allure.step("[OHKUMA] Today's folders: " + todayFolders);
+
+        int grandTotalFiles = 0;
+        int grandTotalYellowFiles = 0;
+        int grandTotalNonYellowFiles = 0;
+
+        // -------------------------------------------------------
+        // STEP 2: Loop over each today folder.
+        // -------------------------------------------------------
+
+        for (int i = 0; i < todayFolders.size(); i++) {
+
+            String folderName = todayFolders.get(i);
+
+            System.out.println("[OHKUMA] Processing folder [" + (i + 1) + "/" + todayFolders.size() + "]: " + folderName);
+            Allure.step("Processing folder: " + folderName);
+
+            // ---------------------------------------------------
+            // STEP 2a: Double-click the folder.
+            // ---------------------------------------------------
+
+            doubleClickTodayFolder(folderName);
+
+            // ---------------------------------------------------
+            // STEP 2b: Get API response inside the folder,
+            //          count today's total / yellow / non-yellow files.
+            // ---------------------------------------------------
+
+            String folderJson = getSocketFiles();
+
+            FileCountResult result = api.countFilesInFolder(
+                    folderJson,
+                    null,
+                    folderName);
+
+            grandTotalFiles += result.getTotalFileCount();
+            grandTotalYellowFiles += result.getAttributeFileCount();
+            grandTotalNonYellowFiles += result.getNonAttributeFileCount();
+
+            // ---------------------------------------------------
+            // STEP 2c: Click Home to return to S09 folder list
+            //          (only if more folders remain).
+            // ---------------------------------------------------
+
+            if (i < todayFolders.size() - 1) {
+                clickHome();
+            }
+        }
+
+        // -------------------------------------------------------
+        // STEP 3: Print Grand Totals & Add Single Report Entry
+        // -------------------------------------------------------
+
+        System.out.println();
+        System.out.println("========================================");
+        System.out.println("     OHKUMA - ALL TODAY FOLDERS TOTAL");
+        System.out.println("========================================");
+        System.out.println("Today's Total File Count     : " + grandTotalFiles);
+        System.out.println("Today's Yellow Icon Files    : " + grandTotalYellowFiles);
+        System.out.println("Today's No Yellow Icon Files : " + grandTotalNonYellowFiles);
+        System.out.println("========================================");
+
+        Allure.step("Grand Total Today Files: " + grandTotalFiles);
+        Allure.step("Grand Total Yellow Files: " + grandTotalYellowFiles);
+        Allure.step("Grand Total Non-Yellow Files: " + grandTotalNonYellowFiles);
+
+        TestExecutionReport.addOhkumaResult(
+                "OHKUMA",
+                "Today",
+                grandTotalFiles,
+                grandTotalYellowFiles,
+                grandTotalNonYellowFiles,
+                folderScreenshotPath);
+
+        System.out.println("[OHKUMA] All today's folders processed.");
+        Allure.step("[OHKUMA] All today's folders processed.");
+    }
+
+    // ============================================================
+    // DOUBLE-CLICK A TODAY FOLDER BY ITS TITLE
+    // ============================================================
+
+    /**
+     * Finds the folder whose label/title exactly matches folderName
+     * and double-clicks it.
+     */
+    private void doubleClickTodayFolder(String folderName) {
+
+        Allure.step("Double-clicking folder: " + folderName);
+
+        // Locate the small image-div (folder icon) preceding the label with this title.
+        Locator folderIcon = page.locator(
+                "//label[@title='" + folderName + "']/preceding::div[contains(@class,'imageDivSmall')][1]");
+
+        folderIcon.waitFor(new Locator.WaitForOptions()
+                .setState(WaitForSelectorState.VISIBLE));
+
+        folderIcon.scrollIntoViewIfNeeded();
+
+        folderIcon.dblclick();
+
+        page.waitForTimeout(2000);
+        page.waitForLoadState(LoadState.NETWORKIDLE);
+
+        System.out.println("[OHKUMA] Double-clicked folder: " + folderName);
+        Allure.step("Folder double-clicked: " + folderName);
+    }
+
+    // ============================================================
+    // CLICK HOME ICON (Returns to S09 folder list)
+    // ============================================================
+
+    public void clickHome() {
+
+        page.waitForTimeout(2000);
+
+        page.locator("//span[@class='fa fa-home']").click();
+
+        page.waitForLoadState(LoadState.NETWORKIDLE);
+        page.waitForTimeout(2000);
+
+        System.out.println("[OHKUMA] Home icon clicked - returned to S09 folder list.");
+        Allure.step("Home icon clicked - returned to S09 folder list.");
     }
 
 }

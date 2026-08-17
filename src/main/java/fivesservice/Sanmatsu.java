@@ -7,15 +7,15 @@ import com.microsoft.playwright.options.LoadState;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import java.time.LocalDate;
 import base.BaseDriver;
 import io.qameta.allure.Allure;
-import utils.APIFileUtil;
-import utils.FileCountResult;
 import utils.TestExecutionReport;
 
 public class Sanmatsu {
 
     private Page page;
+    private String latestSocketFilesJson = "";
 
     // locators
     private final Locator hyperLinkIcon;
@@ -30,13 +30,25 @@ public class Sanmatsu {
         this.drawSocketIcon = page.locator(
                 "//h4[text()='ドキュワークス図面']/preceding::input[@type='image' and @src='assets/icons/Drawing.png']");
 
+        // Automatically capture getSocketFiles API response in real-time
+        this.page.onResponse(res -> {
+            if (res.url().contains("getSocketFiles") && res.status() == 200) {
+                try {
+                    String text = res.text();
+                    if (text != null && !text.isBlank() && text.trim().startsWith("[")) {
+                        this.latestSocketFilesJson = text;
+                    }
+                } catch (Exception ignored) {
+                }
+            }
+        });
     }
 
     // actions
 
     public void clickhyperlinkicon() {
 
-        page.waitForLoadState();
+        page.waitForLoadState(LoadState.NETWORKIDLE);
         page.waitForTimeout(1000);
         hyperLinkIcon.click();
         Allure.step("HyperLink icon clicked..");
@@ -44,9 +56,11 @@ public class Sanmatsu {
     }
 
     public void clickdrawsocketicon() {
-        page.waitForLoadState();
+        page.waitForLoadState(LoadState.NETWORKIDLE);
         page.waitForTimeout(1000);
         drawSocketIcon.click();
+        page.waitForLoadState(LoadState.NETWORKIDLE);
+        page.waitForTimeout(2000);
         Allure.step("Drawsocket icon clicked");
 
     }
@@ -57,7 +71,7 @@ public class Sanmatsu {
 
         page.waitForTimeout(1000);
 
-        page.waitForLoadState();
+        page.waitForLoadState(LoadState.NETWORKIDLE);
         String currentURL = page.url();
         System.out.println("Current URL: " + currentURL);
         Allure.step("Current URL: " + currentURL);
@@ -87,7 +101,7 @@ public class Sanmatsu {
 
         page.waitForTimeout(1000);
 
-        page.waitForLoadState();
+        page.waitForLoadState(LoadState.NETWORKIDLE);
         String currentURL = page.url();
         System.out.println("Current URL: " + currentURL);
         Allure.step("Current URL: " + currentURL);
@@ -104,7 +118,7 @@ public class Sanmatsu {
     public void drawSocketURL() {
 
         page.waitForTimeout(1000);
-        page.waitForLoadState();
+        page.waitForLoadState(LoadState.NETWORKIDLE);
         String currentURL = page.url();
         System.out.println("Current URL: " + currentURL);
         Allure.step("Current URL: " + currentURL);
@@ -121,6 +135,9 @@ public class Sanmatsu {
     public void setPagination(String expectedValue) {
         Allure.step("Setting pagination to " + expectedValue);
 
+        page.waitForLoadState(LoadState.NETWORKIDLE);
+        page.waitForTimeout(1000);
+
         Locator selectedValue = page.locator("(//label[contains(@class,'ui-dropdown-label')])[1]");
 
         String currentValue = selectedValue.textContent().trim();
@@ -131,6 +148,7 @@ public class Sanmatsu {
         }
 
         page.locator("(//span[contains(@class,'ui-dropdown-trigger-icon')])[1]").click();
+        page.waitForTimeout(500);
 
         page.locator("//span[text()='" + expectedValue + "']").click();
 
@@ -139,7 +157,7 @@ public class Sanmatsu {
         System.out.println("Pagination changed to " + expectedValue);
         Allure.step("Pagination changed to " + expectedValue);
 
-        page.waitForLoadState();
+        page.waitForLoadState(LoadState.NETWORKIDLE);
 
         page.waitForTimeout(4000);
     }
@@ -148,68 +166,191 @@ public class Sanmatsu {
 
         Allure.step("Waiting for Get Socket Files API response");
 
-        Response response = page.waitForResponse(
-                res -> res.url().contains("getSocketFiles")
-                        && res.status() == 200,
-                page::reload);
-
-        String responseBody = response.text();
-
-        if (responseBody == null || responseBody.isBlank()) {
-            throw new RuntimeException(
-                    "Get Socket Files API returned an empty response");
+        // If response was already captured via onResponse listener, return it
+        if (latestSocketFilesJson != null && !latestSocketFilesJson.isBlank()) {
+            Allure.step("Using captured Get Socket Files API response");
+            return latestSocketFilesJson;
         }
 
         try {
+            Response response = page.waitForResponse(
+                    res -> res.url().contains("getSocketFiles")
+                            && res.status() == 200,
+                    new Page.WaitForResponseOptions().setTimeout(60000),
+                    () -> {
+                        page.reload();
+                    });
 
-            ObjectMapper mapper = new ObjectMapper();
-            JsonNode files = mapper.readTree(responseBody);
+            page.waitForLoadState(LoadState.NETWORKIDLE);
+            page.waitForTimeout(2000);
 
-            if (!files.isArray()) {
-                throw new RuntimeException(
-                        "Get Socket Files API response is not a JSON array");
+            if (latestSocketFilesJson != null && !latestSocketFilesJson.isBlank()) {
+                return latestSocketFilesJson;
             }
 
+            return response.text();
+
         } catch (Exception e) {
-
-            throw new RuntimeException(
-                    "Invalid Get Socket Files API response",
-                    e);
+            if (latestSocketFilesJson != null && !latestSocketFilesJson.isBlank()) {
+                return latestSocketFilesJson;
+            }
+            throw new RuntimeException("Failed to get Socket Files API response for Sanmatsu", e);
         }
+    }
 
-        Allure.step("Get Socket Files API response received successfully");
-
-        return responseBody;
+    private static LocalDate parseDate(String dateStr) {
+        if (dateStr == null || dateStr.isBlank()) {
+            return null;
+        }
+        String cleaned = dateStr.trim();
+        java.time.format.DateTimeFormatter[] formatters = new java.time.format.DateTimeFormatter[] {
+                java.time.format.DateTimeFormatter.ofPattern("MM/dd/yyyy HH:mm:ss"),
+                java.time.format.DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss"),
+                java.time.format.DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"),
+                java.time.format.DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss"),
+                java.time.format.DateTimeFormatter.ofPattern("MM/dd/yyyy"),
+                java.time.format.DateTimeFormatter.ofPattern("yyyy/MM/dd"),
+                java.time.format.DateTimeFormatter.ofPattern("yyyy-MM-dd")
+        };
+        for (java.time.format.DateTimeFormatter dtf : formatters) {
+            try {
+                if (cleaned.length() > 10 && (cleaned.contains(":") || cleaned.contains("T"))) {
+                    return java.time.LocalDateTime.parse(cleaned, dtf).toLocalDate();
+                } else {
+                    return java.time.LocalDate.parse(cleaned, dtf);
+                }
+            } catch (Exception ignored) {
+            }
+        }
+        try {
+            return java.time.LocalDate.parse(cleaned);
+        } catch (Exception ignored) {
+        }
+        return null;
     }
 
     public void verifyTodayFileCountAndGetScreenshot() {
 
+        // Wait until page is completely loaded
         page.waitForLoadState(LoadState.NETWORKIDLE);
-
-        String responseBody = getSocketFiles();
-
-        Allure.step("Get Socket Files API response");
-
-        APIFileUtil apiFileUtil = new APIFileUtil();
-
-        FileCountResult result = apiFileUtil.getTodayFileCount(
-                responseBody,
-                "SANMATSU");
-
-        System.out.println("Total : " + result.getTotalFileCount());
-        System.out.println("Attribute : " + result.getAttributeFileCount());
-        System.out.println("Non-Attribute : " + result.getNonAttributeFileCount());
+        page.waitForTimeout(3000);
 
         String screenshotPath = BaseDriver.takeScreenshot(
                 page,
                 "SANMATSU_todayFiles");
 
+        int totalFileCount = 0;
+        int yellowIconFileCount = 0;
+        int nonYellowIconFileCount = 0;
+
+        LocalDate today = LocalDate.now();
+
+        String currentResponseBody = getSocketFiles();
+        int pageNumber = 1;
+
+        while (true) {
+            System.out.println("[SANMATSU] Processing page " + pageNumber + "...");
+
+            int todayFilesInThisPage = 0;
+            int totalFilesInThisPage = 0;
+
+            try {
+                ObjectMapper mapper = new ObjectMapper();
+                JsonNode files = mapper.readTree(currentResponseBody);
+
+                if (files.isArray() && !files.isEmpty()) {
+                    totalFilesInThisPage = files.size();
+
+                    for (JsonNode file : files) {
+                        String modifiedDate = file.has("modifieddate") && !file.path("modifieddate").asText().isBlank()
+                                ? file.path("modifieddate").asText().trim()
+                                : (file.has("date") ? file.path("date").asText().trim() : "");
+
+                        if (modifiedDate.isBlank())
+                            continue;
+
+                        LocalDate fileDate = parseDate(modifiedDate);
+                        if (fileDate == null || !fileDate.equals(today))
+                            continue;
+
+                        todayFilesInThisPage++;
+                        totalFileCount++;
+
+                        int attribute = file.path("attribute").asInt(0);
+                        if (attribute == 1) {
+                            yellowIconFileCount++;
+                        } else {
+                            nonYellowIconFileCount++;
+                        }
+                    }
+                }
+            } catch (Exception e) {
+                throw new RuntimeException("Failed to parse Sanmatsu files on page " + pageNumber, e);
+            }
+
+            System.out.println("[SANMATSU] Page " + pageNumber + " total records: " + totalFilesInThisPage
+                    + ", today modified files: " + todayFilesInThisPage);
+
+            // If no today files found on this page, stop immediately
+            if (todayFilesInThisPage == 0) {
+                System.out.println("[SANMATSU] No today files found on page " + pageNumber + ". Stopping pagination.");
+                break;
+            }
+
+            // If older files started appearing on this page, all today files are counted
+            if (todayFilesInThisPage < totalFilesInThisPage) {
+                System.out.println("[SANMATSU] Reached older files on page " + pageNumber
+                        + " (" + todayFilesInThisPage + "/" + totalFilesInThisPage
+                        + " today). All today files counted.");
+                break;
+            }
+
+            // Check if Next Page button exists and is clickable (not disabled)
+            Locator nextButton = page.locator("//a[contains(@class,'ui-paginator-next')]");
+
+            if (nextButton.isVisible() && !nextButton.getAttribute("class").contains("ui-state-disabled")) {
+                pageNumber++;
+                System.out.println("[SANMATSU] All " + todayFilesInThisPage
+                        + " files were today's files. Moving to page " + pageNumber + "...");
+
+                try {
+                    Response nextResponse = page.waitForResponse(
+                            res -> res.url().contains("getSocketFiles") && res.status() == 200,
+                            new Page.WaitForResponseOptions().setTimeout(30000),
+                            () -> nextButton.click());
+
+                    page.waitForLoadState(LoadState.NETWORKIDLE);
+                    page.waitForTimeout(1500);
+                    currentResponseBody = nextResponse.text();
+                } catch (Exception e) {
+                    System.out.println("[SANMATSU] Could not load next page response: " + e.getMessage());
+                    break;
+                }
+            } else {
+                System.out.println("[SANMATSU] Reached last page (" + pageNumber + ").");
+                break;
+            }
+        }
+
+        System.out.println();
+        System.out.println("========================================");
+        System.out.println("     SANMATSU - ALL PAGES TODAY TOTAL");
+        System.out.println("========================================");
+        System.out.println("Today's Total File Count     : " + totalFileCount);
+        System.out.println("Today's Yellow Icon Files    : " + yellowIconFileCount);
+        System.out.println("Today's No Yellow Icon Files : " + nonYellowIconFileCount);
+        System.out.println("========================================");
+
+        Allure.step("Today's Total File Count: " + totalFileCount);
+        Allure.step("Today's Yellow Icon Files: " + yellowIconFileCount);
+        Allure.step("Today's No Yellow Icon Files: " + nonYellowIconFileCount);
+
         TestExecutionReport.addResult(
                 "SANMATSU",
                 "Today",
-                result.getTotalFileCount(),
-                result.getAttributeFileCount(),
-                result.getNonAttributeFileCount(),
+                totalFileCount,
+                yellowIconFileCount,
+                nonYellowIconFileCount,
                 screenshotPath);
     }
 
