@@ -116,21 +116,53 @@ public class Ohkuma {
 
         Allure.step("Waiting for Get Socket Files API response");
 
-        Response response = page.waitForResponse(
-                res -> res.url().contains("getSocketFiles")
-                        && res.status() == 200,
+        final String[] responseBody = { null };
+
+        page.waitForResponse(
+                res -> {
+
+                    if (res.url().contains("getSocketFiles")
+                            && res.status() == 200) {
+
+                        try {
+
+                            responseBody[0] = res.text();
+
+                            return true;
+
+                        } catch (Exception e) {
+
+                            System.out.println(
+                                    "[OHKUMA] Failed to read "
+                                            + "getSocketFiles response: "
+                                            + e.getMessage());
+
+                            return false;
+                        }
+                    }
+
+                    return false;
+                },
+
                 new Page.WaitForResponseOptions()
                         .setTimeout(60000),
+
                 () -> {
                     page.reload();
                 });
 
-        String responseBody = response.text();
+        if (responseBody[0] == null
+                || responseBody[0].isBlank()) {
+
+            throw new RuntimeException(
+                    "[OHKUMA] getSocketFiles API response "
+                            + "was empty or could not be read.");
+        }
 
         Allure.step(
                 "Get Socket Files API response received successfully");
 
-        return responseBody;
+        return responseBody[0];
     }
 
     // ============================================================
@@ -194,7 +226,7 @@ public class Ohkuma {
 
         // -------------------------------------------------------
         // STEP 1: Get the top-level API response to find
-        //         today's folders (items with NO guid).
+        // today's folders (items with NO guid).
         // -------------------------------------------------------
 
         String topLevelJson = getSocketFiles();
@@ -232,7 +264,8 @@ public class Ohkuma {
 
             String folderName = todayFolders.get(i);
 
-            System.out.println("[OHKUMA] Processing folder [" + (i + 1) + "/" + todayFolders.size() + "]: " + folderName);
+            System.out
+                    .println("[OHKUMA] Processing folder [" + (i + 1) + "/" + todayFolders.size() + "]: " + folderName);
             Allure.step("Processing folder: " + folderName);
 
             // ---------------------------------------------------
@@ -243,7 +276,7 @@ public class Ohkuma {
 
             // ---------------------------------------------------
             // STEP 2b: Get API response inside the folder,
-            //          count today's total / yellow / non-yellow files.
+            // count today's total / yellow / non-yellow files.
             // ---------------------------------------------------
 
             String folderJson = getSocketFiles();
@@ -259,7 +292,7 @@ public class Ohkuma {
 
             // ---------------------------------------------------
             // STEP 2c: Click Home to return to S09 folder list
-            //          (only if more folders remain).
+            // (only if more folders remain).
             // ---------------------------------------------------
 
             if (i < todayFolders.size() - 1) {

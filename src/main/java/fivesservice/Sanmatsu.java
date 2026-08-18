@@ -10,6 +10,8 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import java.time.LocalDate;
 import base.BaseDriver;
 import io.qameta.allure.Allure;
+import utils.FileCountResult;
+import utils.SanmatsuAPIFileUtil;
 import utils.TestExecutionReport;
 
 public class Sanmatsu {
@@ -235,116 +237,297 @@ public class Sanmatsu {
         page.waitForLoadState(LoadState.NETWORKIDLE);
         page.waitForTimeout(3000);
 
+        /*
+         * Take screenshot of SANMATSU page.
+         */
         String screenshotPath = BaseDriver.takeScreenshot(
                 page,
                 "SANMATSU_todayFiles");
 
+        /*
+         * ============================================================
+         * SANMATSU API UTILITY
+         * ============================================================
+         */
+        SanmatsuAPIFileUtil sanmatsuAPI = new SanmatsuAPIFileUtil();
+
+        /*
+         * Overall counts from all pages.
+         */
         int totalFileCount = 0;
         int yellowIconFileCount = 0;
         int nonYellowIconFileCount = 0;
 
-        LocalDate today = LocalDate.now();
-
+        /*
+         * Get first page API response.
+         */
         String currentResponseBody = getSocketFiles();
+
         int pageNumber = 1;
 
+        /*
+         * ============================================================
+         * PROCESS ALL PAGES
+         * ============================================================
+         */
         while (true) {
-            System.out.println("[SANMATSU] Processing page " + pageNumber + "...");
 
-            int todayFilesInThisPage = 0;
-            int totalFilesInThisPage = 0;
+            System.out.println(
+                    "[SANMATSU] Processing page "
+                            + pageNumber + "...");
+
+            /*
+             * Pass current page API response to
+             * SanmatsuAPIFileUtil.
+             *
+             * The utility handles:
+             *
+             * 1. guid check
+             * 2. filetype = 1
+             * 3. modifieddate UTC -> India (+05:30)
+             * 4. Today check
+             * 5. attribute = 1 -> Yellow
+             * 6. attribute = 0 -> Non Yellow
+             */
+            FileCountResult pageResult = sanmatsuAPI.getTodayFileCount(
+                    currentResponseBody);
+
+            /*
+             * Add current page counts to overall counts.
+             */
+            totalFileCount += pageResult.getTotalFileCount();
+
+            yellowIconFileCount += pageResult.getAttributeFileCount();
+
+            nonYellowIconFileCount += pageResult.getNonAttributeFileCount();
+
+            /*
+             * Number of valid today's files on this page.
+             */
+            int todayFilesInThisPage = pageResult.getTotalFileCount();
+
+            /*
+             * ============================================================
+             * GET CURRENT PAGE RECORD COUNT
+             * ============================================================
+             */
+            int totalRecordsInThisPage = 0;
 
             try {
+
                 ObjectMapper mapper = new ObjectMapper();
-                JsonNode files = mapper.readTree(currentResponseBody);
 
-                if (files.isArray() && !files.isEmpty()) {
-                    totalFilesInThisPage = files.size();
+                JsonNode files = mapper.readTree(
+                        currentResponseBody);
 
-                    for (JsonNode file : files) {
-                        String modifiedDate = file.has("modifieddate") && !file.path("modifieddate").asText().isBlank()
-                                ? file.path("modifieddate").asText().trim()
-                                : (file.has("date") ? file.path("date").asText().trim() : "");
+                if (files.isArray()) {
 
-                        if (modifiedDate.isBlank())
-                            continue;
-
-                        LocalDate fileDate = parseDate(modifiedDate);
-                        if (fileDate == null || !fileDate.equals(today))
-                            continue;
-
-                        todayFilesInThisPage++;
-                        totalFileCount++;
-
-                        int attribute = file.path("attribute").asInt(0);
-                        if (attribute == 1) {
-                            yellowIconFileCount++;
-                        } else {
-                            nonYellowIconFileCount++;
-                        }
-                    }
+                    totalRecordsInThisPage = files.size();
                 }
+
             } catch (Exception e) {
-                throw new RuntimeException("Failed to parse Sanmatsu files on page " + pageNumber, e);
+
+                throw new RuntimeException(
+                        "Failed to read SANMATSU page "
+                                + pageNumber
+                                + " response",
+                        e);
             }
 
-            System.out.println("[SANMATSU] Page " + pageNumber + " total records: " + totalFilesInThisPage
-                    + ", today modified files: " + todayFilesInThisPage);
+            /*
+             * ============================================================
+             * PAGE LOG
+             * ============================================================
+             */
+            System.out.println(
+                    "[SANMATSU] Page "
+                            + pageNumber
+                            + " total records: "
+                            + totalRecordsInThisPage
+                            + ", valid today's files: "
+                            + todayFilesInThisPage);
 
-            // If no today files found on this page, stop immediately
+            /*
+             * ============================================================
+             * NO TODAY'S FILES
+             * ============================================================
+             */
             if (todayFilesInThisPage == 0) {
-                System.out.println("[SANMATSU] No today files found on page " + pageNumber + ". Stopping pagination.");
+
+                System.out.println(
+                        "[SANMATSU] No today's files found "
+                                + "on page "
+                                + pageNumber
+                                + ". Stopping pagination.");
+
                 break;
             }
 
-            // If older files started appearing on this page, all today files are counted
-            if (todayFilesInThisPage < totalFilesInThisPage) {
-                System.out.println("[SANMATSU] Reached older files on page " + pageNumber
-                        + " (" + todayFilesInThisPage + "/" + totalFilesInThisPage
-                        + " today). All today files counted.");
+            /*
+             * ============================================================
+             * OLDER RECORDS FOUND
+             * ============================================================
+             *
+             * If the current page contains fewer valid today's files
+             * than total records, older/non-file records have started.
+             *
+             * Today's files on this page are already counted.
+             */
+            if (todayFilesInThisPage < totalRecordsInThisPage) {
+
+                System.out.println(
+                        "[SANMATSU] Reached older/non-matching "
+                                + "records on page "
+                                + pageNumber
+                                + " ("
+                                + todayFilesInThisPage
+                                + "/"
+                                + totalRecordsInThisPage
+                                + ").");
+
+                System.out.println(
+                        "[SANMATSU] All today's valid files "
+                                + "on this page have been counted.");
+
                 break;
             }
 
-            // Check if Next Page button exists and is clickable (not disabled)
-            Locator nextButton = page.locator("//a[contains(@class,'ui-paginator-next')]");
+            /*
+             * ============================================================
+             * NEXT PAGE BUTTON
+             * ============================================================
+             */
+            Locator nextButton = page.locator(
+                    "//a[contains(@class,'ui-paginator-next')]");
 
-            if (nextButton.isVisible() && !nextButton.getAttribute("class").contains("ui-state-disabled")) {
+            /*
+             * Check whether Next button is available.
+             */
+            if (nextButton.isVisible()
+                    && !nextButton
+                            .getAttribute("class")
+                            .contains("ui-state-disabled")) {
+
                 pageNumber++;
-                System.out.println("[SANMATSU] All " + todayFilesInThisPage
-                        + " files were today's files. Moving to page " + pageNumber + "...");
+
+                System.out.println(
+                        "[SANMATSU] All "
+                                + todayFilesInThisPage
+                                + " records on previous page "
+                                + "were valid today's files.");
+
+                System.out.println(
+                        "[SANMATSU] Moving to page "
+                                + pageNumber
+                                + "...");
 
                 try {
+
+                    /*
+                     * Wait for the next getSocketFiles API response
+                     * while clicking Next.
+                     */
                     Response nextResponse = page.waitForResponse(
-                            res -> res.url().contains("getSocketFiles") && res.status() == 200,
-                            new Page.WaitForResponseOptions().setTimeout(30000),
+                            res -> res.url()
+                                    .contains(
+                                            "getSocketFiles")
+                                    && res.status() == 200,
+
+                            new Page.WaitForResponseOptions()
+                                    .setTimeout(30000),
+
                             () -> nextButton.click());
 
-                    page.waitForLoadState(LoadState.NETWORKIDLE);
+                    /*
+                     * Wait for page update.
+                     */
+                    page.waitForLoadState(
+                            LoadState.NETWORKIDLE);
+
                     page.waitForTimeout(1500);
+
+                    /*
+                     * Get next page API response.
+                     */
                     currentResponseBody = nextResponse.text();
+
                 } catch (Exception e) {
-                    System.out.println("[SANMATSU] Could not load next page response: " + e.getMessage());
+
+                    System.out.println(
+                            "[SANMATSU] Could not load "
+                                    + "next page response: "
+                                    + e.getMessage());
+
                     break;
                 }
+
             } else {
-                System.out.println("[SANMATSU] Reached last page (" + pageNumber + ").");
+
+                /*
+                 * No next page.
+                 */
+                System.out.println(
+                        "[SANMATSU] Reached last page ("
+                                + pageNumber
+                                + ").");
+
                 break;
             }
         }
 
+        /*
+         * ============================================================
+         * FINAL RESULT
+         * ============================================================
+         */
         System.out.println();
-        System.out.println("========================================");
-        System.out.println("     SANMATSU - ALL PAGES TODAY TOTAL");
-        System.out.println("========================================");
-        System.out.println("Today's Total File Count     : " + totalFileCount);
-        System.out.println("Today's Yellow Icon Files    : " + yellowIconFileCount);
-        System.out.println("Today's No Yellow Icon Files : " + nonYellowIconFileCount);
-        System.out.println("========================================");
 
-        Allure.step("Today's Total File Count: " + totalFileCount);
-        Allure.step("Today's Yellow Icon Files: " + yellowIconFileCount);
-        Allure.step("Today's No Yellow Icon Files: " + nonYellowIconFileCount);
+        System.out.println(
+                "========================================");
 
+        System.out.println(
+                "     SANMATSU - ALL PAGES TODAY TOTAL");
+
+        System.out.println(
+                "========================================");
+
+        System.out.println(
+                "Today's Total File Count     : "
+                        + totalFileCount);
+
+        System.out.println(
+                "Today's Yellow Icon Files    : "
+                        + yellowIconFileCount);
+
+        System.out.println(
+                "Today's No Yellow Icon Files : "
+                        + nonYellowIconFileCount);
+
+        System.out.println(
+                "========================================");
+
+        /*
+         * ============================================================
+         * ALLURE
+         * ============================================================
+         */
+        Allure.step(
+                "Today's Total File Count: "
+                        + totalFileCount);
+
+        Allure.step(
+                "Today's Yellow Icon Files: "
+                        + yellowIconFileCount);
+
+        Allure.step(
+                "Today's No Yellow Icon Files: "
+                        + nonYellowIconFileCount);
+
+        /*
+         * ============================================================
+         * TEST EXECUTION REPORT
+         * ============================================================
+         */
         TestExecutionReport.addResult(
                 "SANMATSU",
                 "Today",

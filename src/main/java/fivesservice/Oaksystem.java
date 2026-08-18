@@ -9,6 +9,7 @@ import base.BaseDriver;
 import io.qameta.allure.Allure;
 import utils.APIFileUtil;
 import utils.FileCountResult;
+import utils.OakSystemFileAPIUtil;
 import utils.TestExecutionReport;
 
 public class Oaksystem {
@@ -163,21 +164,47 @@ public class Oaksystem {
 
         page.waitForLoadState(LoadState.NETWORKIDLE);
 
+        /*
+         * Get Socket Files API response.
+         */
         Response response = getSocketFiles();
 
         Allure.step("Get Socket Files API response");
 
-        APIFileUtil api = new APIFileUtil();
+        /*
+         * ============================================================
+         * OAKSYSTEM FILE COUNT
+         * ============================================================
+         *
+         * OakSystem class will:
+         *
+         * 1. Read modifieddate
+         * 2. Treat modifieddate as UTC
+         * 3. Convert UTC + 05:30 (India)
+         * 4. Check whether converted date is TODAY
+         * 5. Count today's files
+         * 6. Count Yellow files
+         * 7. Count Non Yellow files
+         */
+        OakSystemFileAPIUtil okSystemFileAPIUtil = new OakSystemFileAPIUtil();
 
-        FileCountResult result = api.getFilesByDay(
-                response.text(),
-                "Today",
-                "OAKSYSTEM");
+        FileCountResult result = okSystemFileAPIUtil.getTodayFileCount(
+                response.text());
 
+        /*
+         * ============================================================
+         * TAKE SCREENSHOT
+         * ============================================================
+         */
         String screenshotPath = BaseDriver.takeScreenshot(
                 page,
                 "OAKSYSTEM_todayFiles");
 
+        /*
+         * ============================================================
+         * ADD RESULT TO TEST EXECUTION REPORT
+         * ============================================================
+         */
         TestExecutionReport.addResult(
                 "OAKSYSTEM",
                 "Today",
@@ -186,6 +213,9 @@ public class Oaksystem {
                 result.getNonAttributeFileCount(),
                 screenshotPath);
 
+        /*
+         * Small wait after processing.
+         */
         page.waitForTimeout(3000);
     }
 
