@@ -7,7 +7,6 @@ import com.microsoft.playwright.options.LoadState;
 
 import base.BaseDriver;
 import io.qameta.allure.Allure;
-import utils.AllureScreenshotUtil;
 import utils.FileCountResult;
 import utils.OakSystemFileAPIUtil;
 import utils.TestExecutionReport;
