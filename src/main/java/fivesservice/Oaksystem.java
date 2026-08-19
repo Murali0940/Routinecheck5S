@@ -210,6 +210,8 @@ public class Oaksystem {
         FileCountResult result = okSystemFileAPIUtil.getTodayFileCount(
                 response.text());
 
+        page.waitForLoadState(LoadState.NETWORKIDLE);
+
         /*
          * ============================================================
          * TAKE SCREENSHOT
