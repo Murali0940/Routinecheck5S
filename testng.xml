@@ -13,9 +13,10 @@
 
         <classes>
             <class name="org.ohkuma.tests.OhkumaTest"/>
-            <class name="org.oaksystem.tests.OakSystemDrawTest"/>
+            <class name="org.oaksystem.tests.OakSystemDrawTest"/>   
             <class name="org.sanmatsu.tests.SanmatsuTest"/>
             <class name="org.nisino.tests.NisinoScanTest"/>
+            <!-- <class name="org.attributeprocess.AttributeProcessTest"/> -->
         </classes>
     </test>
 

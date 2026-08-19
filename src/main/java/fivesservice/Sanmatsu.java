@@ -25,22 +25,22 @@ public class Sanmatsu {
 
     // constructor
 
-    public Sanmatsu(Page page) {
-        this.page = page;
-        this.hyperLinkIcon = page.locator(
-                "//h4[text()='HyperLink']/preceding::input[@src='assets/icons/hyperLink.png']");
-        this.drawSocketIcon = page.locator(
-                "//h4[text()='ドキュワークス図面']/preceding::input[@type='image' and @src='assets/icons/Drawing.png']");
+        public Sanmatsu(Page page) {
+            this.page = page;
+            this.hyperLinkIcon = page.locator(
+                    "//h4[text()='HyperLink']/preceding::input[@src='assets/icons/hyperLink.png']");
+            this.drawSocketIcon = page.locator(
+                    "//h4[text()='ドキュワークス図面']/preceding::input[@type='image' and @src='assets/icons/Drawing.png']");
 
-        // Automatically capture getSocketFiles API response in real-time
-        this.page.onResponse(res -> {
-            if (res.url().contains("getSocketFiles") && res.status() == 200) {
-                try {
-                    String text = res.text();
-                    if (text != null && !text.isBlank() && text.trim().startsWith("[")) {
-                        this.latestSocketFilesJson = text;
-                    }
-                } catch (Exception ignored) {
+            // Automatically capture getSocketFiles API response in real-time
+            this.page.onResponse(res -> {
+                if (res.url().contains("getSocketFiles") && res.status() == 200) {
+                    try {
+                        String text = res.text();
+                        if (text != null && !text.isBlank() && text.trim().startsWith("[")) {
+                            this.latestSocketFilesJson = text;
+                        }
+                    } catch (Exception ignored) {
                 }
             }
         });

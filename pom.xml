@@ -23,6 +23,12 @@
 
     <dependencies>
 
+        <dependency>
+            <groupId>org.apache.pdfbox</groupId>
+            <artifactId>pdfbox</artifactId>
+            <version>3.0.6</version>
+        </dependency>
+
         <!-- Playwright -->
         <dependency>
             <groupId>com.microsoft.playwright</groupId>
