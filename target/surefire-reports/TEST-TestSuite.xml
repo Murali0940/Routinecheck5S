@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="TestSuite" time="187.832" tests="8" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="TestSuite" time="220.176" tests="8" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="GB"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-21\bin"/>
-    <property name="sun.java.command" value="C:\Users\DELL\AppData\Local\Temp\surefire2702039827097572891\surefirebooter-20260818164339062_3.jar C:\Users\DELL\AppData\Local\Temp\surefire2702039827097572891 2026-08-18T16-43-38_860-jvmRun1 surefire-20260818164339062_1tmp surefire_0-20260818164339062_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\DELL\AppData\Local\Temp\surefire5149872096263062309\surefirebooter-20260819135324880_3.jar C:\Users\DELL\AppData\Local\Temp\surefire5149872096263062309 2026-08-19T13-53-24_687-jvmRun1 surefire-20260819135324880_1tmp surefire_0-20260819135324880_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="D:\PlaywrightJava\registrationservice\target\test-classes;D:\PlaywrightJava\registrationservice\target\classes;C:\Users\DELL\.m2\repository\com\microsoft\playwright\playwright\1.55.0\playwright-1.55.0.jar;C:\Users\DELL\.m2\repository\com\google\code\gson\gson\2.12.1\gson-2.12.1.jar;C:\Users\DELL\.m2\repository\com\google\errorprone\error_prone_annotations\2.36.0\error_prone_annotations-2.36.0.jar;C:\Users\DELL\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\DELL\.m2\repository\com\microsoft\playwright\driver\1.55.0\driver-1.55.0.jar;C:\Users\DELL\.m2\repository\com\microsoft\playwright\driver-bundle\1.55.0\driver-bundle-1.55.0.jar;C:\Users\DELL\.m2\repository\org\testng\testng\7.11.0\testng-7.11.0.jar;C:\Users\DELL\.m2\repository\org\slf4j\slf4j-api\2.0.16\slf4j-api-2.0.16.jar;C:\Users\DELL\.m2\repository\org\jcommander\jcommander\1.83\jcommander-1.83.jar;C:\Users\DELL\.m2\repository\org\webjars\jquery\3.7.1\jquery-3.7.1.jar;C:\Users\DELL\.m2\repository\io\qameta\allure\allure-testng\2.29.1\allure-testng-2.29.1.jar;C:\Users\DELL\.m2\repository\io\qameta\allure\allure-java-commons\2.29.1\allure-java-commons-2.29.1.jar;C:\Users\DELL\.m2\repository\io\qameta\allure\allure-model\2.29.1\allure-model-2.29.1.jar;C:\Users\DELL\.m2\repository\io\qameta\allure\allure-test-filter\2.29.1\allure-test-filter-2.29.1.jar;C:\Users\DELL\.m2\repository\org\apache\logging\log4j\log4j-api\2.26.1\log4j-api-2.26.1.jar;C:\Users\DELL\.m2\repository\org\apache\logging\log4j\log4j-core\2.26.1\log4j-core-2.26.1.jar;C:\Users\DELL\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.18.0\jackson-databind-2.18.0.jar;C:\Users\DELL\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.18.0\jackson-annotations-2.18.0.jar;C:\Users\DELL\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.18.0\jackson-core-2.18.0.jar;C:\Users\DELL\.m2\repository\org\apache\commons\commons-email2-jakarta\2.0.0-M1\commons-email2-jakarta-2.0.0-M1.jar;C:\Users\DELL\.m2\repository\org\apache\commons\commons-email2-core\2.0.0-M1\commons-email2-core-2.0.0-M1.jar;C:\Users\DELL\.m2\repository\com\sun\mail\jakarta.mail\2.0.1\jakarta.mail-2.0.1.jar;C:\Users\DELL\.m2\repository\com\sun\activation\jakarta.activation\2.0.1\jakarta.activation-2.0.1.jar;"/>
     <property name="allure.results.directory" value="D:\PlaywrightJava\registrationservice\target/allure-results"/>
@@ -31,7 +31,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\DELL\AppData\Local\Temp\surefire2702039827097572891\surefirebooter-20260818164339062_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\DELL\AppData\Local\Temp\surefire5149872096263062309\surefirebooter-20260819135324880_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="21.0.7+8-LTS-245"/>
@@ -59,7 +59,7 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="validLoginTest" classname="org.ohkuma.tests.OhkumaTest" time="3.943">
+  <testcase name="validLoginTest" classname="org.ohkuma.tests.OhkumaTest" time="4.623">
     <system-out><![CDATA[======================================
 TEST SUITE STARTED
 ======================================
@@ -79,7 +79,7 @@ SLF4J(W): Defaulting to no-operation (NOP) logger implementation
 SLF4J(W): See https://www.slf4j.org/codes.html#noProviders for further details.
 ]]></system-err>
   </testcase>
-  <testcase name="validatingS09Socket" classname="org.ohkuma.tests.OhkumaTest" time="55.228">
+  <testcase name="validatingS09Socket" classname="org.ohkuma.tests.OhkumaTest" time="75.438">
     <system-out><![CDATA[Current URL: https://www.alfadock-pack.com/ver10/#/home
 Home page URL is correct.
 HyperLink icon is displayed.
@@ -89,20 +89,20 @@ S09 Socket icon is displayed.
 Current URL: https://www.alfadock-pack.com/ver10/#/adsocket/adgrid/s09/-1
 s09 page URL is correct..
 Pagination already set to 100
-Screenshot saved: screenshots/OHKUMA_S09_Folders_20260818_164413.png
+Screenshot saved: screenshots/OHKUMA_S09_Folders_20260819_135409.png
 
-[OHKUMA] Today's India date: 2026-08-18
-[OHKUMA] Folder: 本社溶接 | API modifieddate: 08/18/2026 08:06:00 | India date: 2026-08-18
+[OHKUMA] Today's India date: 2026-08-19
+[OHKUMA] Folder: 本社溶接 | API modifieddate: 08/19/2026 07:47:00 | India date: 2026-08-19
 [OHKUMA] Today's folder found: 本社溶接
-[OHKUMA] Folder: 本社ベンダー | API modifieddate: 08/18/2026 07:59:00 | India date: 2026-08-18
-[OHKUMA] Today's folder found: 本社ベンダー
-[OHKUMA] Folder: 本社スポット | API modifieddate: 08/18/2026 07:22:00 | India date: 2026-08-18
+[OHKUMA] Folder: 本社スポット | API modifieddate: 08/19/2026 07:47:00 | India date: 2026-08-19
 [OHKUMA] Today's folder found: 本社スポット
+[OHKUMA] Folder: 本社ベンダー | API modifieddate: 08/19/2026 07:44:00 | India date: 2026-08-19
+[OHKUMA] Today's folder found: 本社ベンダー
+[OHKUMA] Folder: 栃木艤装 | API modifieddate: 08/19/2026 02:35:00 | India date: 2026-08-19
+[OHKUMA] Today's folder found: 栃木艤装
 [OHKUMA] Folder: 栃木ベンダー | API modifieddate: 08/17/2026 23:50:00 | India date: 2026-08-18
-[OHKUMA] Today's folder found: 栃木ベンダー
 [OHKUMA] Folder: 栃木溶接 | API modifieddate: 08/17/2026 02:47:00 | India date: 2026-08-17
 [OHKUMA] Folder: 栃木スポット | API modifieddate: 08/17/2026 01:42:00 | India date: 2026-08-17
-[OHKUMA] Folder: 栃木艤装 | API modifieddate: 08/07/2026 01:45:00 | India date: 2026-08-07
 [OHKUMA] Folder: 本社ロボット | API modifieddate: 08/04/2026 06:58:00 | India date: 2026-08-04
 [OHKUMA] Folder: 栃木ロボット | API modifieddate: 08/04/2026 06:45:00 | India date: 2026-08-04
 [OHKUMA] Folder: 本社機械加工 | API modifieddate: 07/22/2026 05:23:00 | India date: 2026-07-22
@@ -118,21 +118,21 @@ Screenshot saved: screenshots/OHKUMA_S09_Folders_20260818_164413.png
 [OHKUMA] Folder: 栃木スポット - コピー | API modifieddate: 05/10/2023 04:05:00 | India date: 2023-05-10
 [OHKUMA] Folder: 16457E0340 | API modifieddate: 12/27/2022 07:20:00 | India date: 2022-12-27
 [OHKUMA] Total today's folders found: 4
-[OHKUMA] Today's folders to process: [本社溶接, 本社ベンダー, 本社スポット, 栃木ベンダー]
+[OHKUMA] Today's folders to process: [本社溶接, 本社スポット, 本社ベンダー, 栃木艤装]
 [OHKUMA] Processing folder [1/4]: 本社溶接
 [OHKUMA] Double-clicked folder: 本社溶接
+[OHKUMA] File: 21806E1E60.jpg | API modifieddate: 08/19/2026 07:47:00 | India date: 2026-08-19
+[OHKUMA] YELLOW file found: 21806E1E60.jpg
+[OHKUMA] File: D42263500.jpg | API modifieddate: 08/19/2026 07:36:00 | India date: 2026-08-19
+[OHKUMA] YELLOW file found: D42263500.jpg
+[OHKUMA] File: 95692341.jpg | API modifieddate: 08/19/2026 07:19:00 | India date: 2026-08-19
+[OHKUMA] YELLOW file found: 95692341.jpg
 [OHKUMA] File: YA40064993.jpg | API modifieddate: 08/18/2026 08:06:00 | India date: 2026-08-18
-[OHKUMA] YELLOW file found: YA40064993.jpg
 [OHKUMA] File: YA40064994.jpg | API modifieddate: 08/18/2026 07:51:00 | India date: 2026-08-18
-[OHKUMA] YELLOW file found: YA40064994.jpg
 [OHKUMA] File: Thumbs.db | API modifieddate: 08/18/2026 07:47:00 | India date: 2026-08-18
-[OHKUMA] NO YELLOW file found: Thumbs.db
 [OHKUMA] File: YA40069170.jpg | API modifieddate: 08/18/2026 07:05:00 | India date: 2026-08-18
-[OHKUMA] YELLOW file found: YA40069170.jpg
 [OHKUMA] File: YA40069656.jpg | API modifieddate: 08/18/2026 06:33:00 | India date: 2026-08-18
-[OHKUMA] YELLOW file found: YA40069656.jpg
 [OHKUMA] File: YA40081659.jpg | API modifieddate: 08/18/2026 06:19:00 | India date: 2026-08-18
-[OHKUMA] YELLOW file found: YA40081659.jpg
 [OHKUMA] File: 95681105.jpg | API modifieddate: 08/17/2026 07:15:00 | India date: 2026-08-17
 [OHKUMA] File: YA40069577.jpg | API modifieddate: 08/17/2026 04:38:00 | India date: 2026-08-17
 [OHKUMA] File: 23362383.jpg | API modifieddate: 08/07/2026 00:56:00 | India date: 2026-08-07
@@ -224,148 +224,28 @@ Screenshot saved: screenshots/OHKUMA_S09_Folders_20260818_164413.png
 [OHKUMA] File: YA40072988D001.jpg | API modifieddate: 07/02/2026 07:11:00 | India date: 2026-07-02
 [OHKUMA] File: 81E58902000.jpg | API modifieddate: 07/02/2026 06:51:00 | India date: 2026-07-02
 [OHKUMA] File: YA40052437.jpg | API modifieddate: 07/02/2026 06:45:00 | India date: 2026-07-02
-[OHKUMA] File: TWA3581694.jpg | API modifieddate: 07/02/2026 04:08:00 | India date: 2026-07-02
-[OHKUMA] File: YA40061225.jpg | API modifieddate: 07/01/2026 05:14:00 | India date: 2026-07-01
-[OHKUMA] File: YA40052656.jpg | API modifieddate: 06/30/2026 08:46:00 | India date: 2026-06-30
 
 ========================================
  OHKUMA FOLDER : 本社溶接
 ========================================
-Today's Total File Count     : 6
-Today's Yellow Icon Files    : 5
-Today's No Yellow Icon Files : 1
-Yellow + No Yellow           : 6
-========================================
-[OHKUMA] Home icon clicked - returned to S09 folder list.
-[OHKUMA] Processing folder [2/4]: 本社ベンダー
-[OHKUMA] Double-clicked folder: 本社ベンダー
-[OHKUMA] File: YA40064993.jpg | API modifieddate: 08/18/2026 07:59:00 | India date: 2026-08-18
-[OHKUMA] YELLOW file found: YA40064993.jpg
-[OHKUMA] File: YA40064994.jpg | API modifieddate: 08/18/2026 07:28:00 | India date: 2026-08-18
-[OHKUMA] YELLOW file found: YA40064994.jpg
-[OHKUMA] File: 47381E5730.jpg | API modifieddate: 08/18/2026 07:20:00 | India date: 2026-08-18
-[OHKUMA] YELLOW file found: 47381E5730.jpg
-[OHKUMA] File: YA40069170.jpg | API modifieddate: 08/18/2026 07:05:00 | India date: 2026-08-18
-[OHKUMA] YELLOW file found: YA40069170.jpg
-[OHKUMA] File: YA00106702.jpg | API modifieddate: 08/18/2026 06:40:00 | India date: 2026-08-18
-[OHKUMA] YELLOW file found: YA00106702.jpg
-[OHKUMA] File: YA40069656.jpg | API modifieddate: 08/18/2026 06:35:00 | India date: 2026-08-18
-[OHKUMA] YELLOW file found: YA40069656.jpg
-[OHKUMA] File: YA40081659.jpg | API modifieddate: 08/18/2026 06:19:00 | India date: 2026-08-18
-[OHKUMA] YELLOW file found: YA40081659.jpg
-[OHKUMA] File: 95681105.jpg | API modifieddate: 08/17/2026 07:13:00 | India date: 2026-08-17
-[OHKUMA] File: YA40069577.jpg | API modifieddate: 08/17/2026 04:39:00 | India date: 2026-08-17
-[OHKUMA] File: 95686634.jpg | API modifieddate: 08/17/2026 01:45:00 | India date: 2026-08-17
-[OHKUMA] File: 95686637.jpg | API modifieddate: 08/07/2026 03:02:00 | India date: 2026-08-07
-[OHKUMA] File: 23362383.jpg | API modifieddate: 08/07/2026 00:38:00 | India date: 2026-08-07
-[OHKUMA] File: 23362385.jpg | API modifieddate: 08/07/2026 00:28:00 | India date: 2026-08-07
-[OHKUMA] File: YA40070239.jpg | API modifieddate: 08/05/2026 09:51:00 | India date: 2026-08-05
-[OHKUMA] File: 95681104.jpg | API modifieddate: 08/05/2026 07:36:00 | India date: 2026-08-05
-[OHKUMA] File: 81E78811000.jpg | API modifieddate: 08/04/2026 05:25:00 | India date: 2026-08-04
-[OHKUMA] File: YA00109028.jpg | API modifieddate: 08/04/2026 03:58:00 | India date: 2026-08-04
-[OHKUMA] File: YA40072267.jpg | API modifieddate: 08/04/2026 03:02:00 | India date: 2026-08-04
-[OHKUMA] File: 95686248.jpg | API modifieddate: 08/03/2026 07:56:00 | India date: 2026-08-03
-[OHKUMA] File: 95686247.jpg | API modifieddate: 08/03/2026 07:55:00 | India date: 2026-08-03
-[OHKUMA] File: 95641260.jpg | API modifieddate: 08/03/2026 07:54:00 | India date: 2026-08-03
-[OHKUMA] File: 95678672.jpg | API modifieddate: 08/03/2026 07:35:00 | India date: 2026-08-03
-[OHKUMA] File: 95660823.jpg | API modifieddate: 08/03/2026 07:34:00 | India date: 2026-08-03
-[OHKUMA] File: YA00115569D001.jpg | API modifieddate: 08/03/2026 07:20:00 | India date: 2026-08-03
-[OHKUMA] File: YA00115568D001.jpg | API modifieddate: 08/03/2026 07:20:00 | India date: 2026-08-03
-[OHKUMA] File: YA40074519.jpg | API modifieddate: 08/03/2026 05:33:00 | India date: 2026-08-03
-[OHKUMA] File: YA40074520.jpg | API modifieddate: 08/03/2026 05:29:00 | India date: 2026-08-03
-[OHKUMA] File: YA40070763D001.jpg | API modifieddate: 08/03/2026 05:17:00 | India date: 2026-08-03
-[OHKUMA] File: S440JE1410.jpg | API modifieddate: 08/03/2026 05:17:00 | India date: 2026-08-03
-[OHKUMA] File: YA40072543D001.jpg | API modifieddate: 08/03/2026 04:50:00 | India date: 2026-08-03
-[OHKUMA] File: YA40073527D001.jpg | API modifieddate: 08/03/2026 04:44:00 | India date: 2026-08-03
-[OHKUMA] File: YA40073916.jpg | API modifieddate: 08/03/2026 02:51:00 | India date: 2026-08-03
-[OHKUMA] File: YA40073915.jpg | API modifieddate: 08/03/2026 02:51:00 | India date: 2026-08-03
-[OHKUMA] File: YA40069576.jpg | API modifieddate: 08/03/2026 02:14:00 | India date: 2026-08-03
-[OHKUMA] File: YA40069575.jpg | API modifieddate: 08/03/2026 02:14:00 | India date: 2026-08-03
-[OHKUMA] File: YA40069574.jpg | API modifieddate: 08/03/2026 02:14:00 | India date: 2026-08-03
-[OHKUMA] File: YA40069573.jpg | API modifieddate: 08/03/2026 02:14:00 | India date: 2026-08-03
-[OHKUMA] File: YA40070912D001.jpg | API modifieddate: 07/31/2026 07:44:00 | India date: 2026-07-31
-[OHKUMA] File: YA40078614D001.jpg | API modifieddate: 07/31/2026 07:33:00 | India date: 2026-07-31
-[OHKUMA] File: YA40084430.jpg | API modifieddate: 07/31/2026 07:14:00 | India date: 2026-07-31
-[OHKUMA] File: YA40084427.jpg | API modifieddate: 07/31/2026 06:57:00 | India date: 2026-07-31
-[OHKUMA] File: S4707E0D10.jpg | API modifieddate: 07/31/2026 06:54:00 | India date: 2026-07-31
-[OHKUMA] File: YA40069403.jpg | API modifieddate: 07/31/2026 06:41:00 | India date: 2026-07-31
-[OHKUMA] File: YA40082550D001.jpg | API modifieddate: 07/31/2026 04:15:00 | India date: 2026-07-31
-[OHKUMA] File: YA00115241.jpg | API modifieddate: 07/31/2026 00:27:00 | India date: 2026-07-31
-[OHKUMA] File: YA40074916.jpg | API modifieddate: 07/31/2026 00:22:00 | India date: 2026-07-31
-[OHKUMA] File: YA40074915.jpg | API modifieddate: 07/31/2026 00:22:00 | India date: 2026-07-31
-[OHKUMA] File: 95689615.jpg | API modifieddate: 07/30/2026 07:17:00 | India date: 2026-07-30
-[OHKUMA] File: 95693204.jpg | API modifieddate: 07/30/2026 07:11:00 | India date: 2026-07-30
-[OHKUMA] File: 95686636.jpg | API modifieddate: 07/30/2026 05:06:00 | India date: 2026-07-30
-[OHKUMA] File: YA40036244.jpg | API modifieddate: 07/29/2026 07:34:00 | India date: 2026-07-29
-[OHKUMA] File: YA00114875.jpg | API modifieddate: 07/29/2026 07:26:00 | India date: 2026-07-29
-[OHKUMA] File: YA40071878D001.jpg | API modifieddate: 07/29/2026 07:20:00 | India date: 2026-07-29
-[OHKUMA] File: YA40056215.jpg | API modifieddate: 07/29/2026 07:05:00 | India date: 2026-07-29
-[OHKUMA] File: YA40081664.jpg | API modifieddate: 07/29/2026 05:38:00 | India date: 2026-07-29
-[OHKUMA] File: 95694843.jpg | API modifieddate: 07/29/2026 00:36:00 | India date: 2026-07-29
-[OHKUMA] File: YA40071947D001.jpg | API modifieddate: 07/28/2026 07:49:00 | India date: 2026-07-28
-[OHKUMA] File: YA40064227.jpg | API modifieddate: 07/28/2026 07:40:00 | India date: 2026-07-28
-[OHKUMA] File: YA40054206.jpg | API modifieddate: 07/28/2026 07:17:00 | India date: 2026-07-28
-[OHKUMA] File: 8102521XXXD001.jpg | API modifieddate: 07/28/2026 07:08:00 | India date: 2026-07-28
-[OHKUMA] File: 95693207.jpg | API modifieddate: 07/28/2026 07:03:00 | India date: 2026-07-28
-[OHKUMA] File: 95695895.jpg | API modifieddate: 07/28/2026 05:55:00 | India date: 2026-07-28
-[OHKUMA] File: 11A71723000.jpg | API modifieddate: 07/28/2026 02:59:00 | India date: 2026-07-28
-[OHKUMA] File: YA00109569.jpg | API modifieddate: 07/27/2026 06:01:00 | India date: 2026-07-27
-[OHKUMA] File: 95694842.jpg | API modifieddate: 07/27/2026 06:01:00 | India date: 2026-07-27
-[OHKUMA] File: 21806E1E90.jpg | API modifieddate: 07/27/2026 04:20:00 | India date: 2026-07-27
-[OHKUMA] File: 95679984.jpg | API modifieddate: 07/27/2026 04:07:00 | India date: 2026-07-27
-[OHKUMA] File: 95640193.jpg | API modifieddate: 07/27/2026 00:02:00 | India date: 2026-07-27
-[OHKUMA] File: TWA3694619.jpg | API modifieddate: 07/24/2026 06:25:00 | India date: 2026-07-24
-[OHKUMA] File: TWA3709374.jpg | API modifieddate: 07/24/2026 06:00:00 | India date: 2026-07-24
-[OHKUMA] File: TWA3836200.jpg | API modifieddate: 07/24/2026 05:57:00 | India date: 2026-07-24
-[OHKUMA] File: 81E77513002.jpg | API modifieddate: 07/23/2026 08:52:00 | India date: 2026-07-23
-[OHKUMA] File: TWA0194095.jpg | API modifieddate: 07/23/2026 07:35:00 | India date: 2026-07-23
-[OHKUMA] File: TWA3701527.jpg | API modifieddate: 07/23/2026 07:33:00 | India date: 2026-07-23
-[OHKUMA] File: TWA3737955.jpg | API modifieddate: 07/23/2026 07:13:00 | India date: 2026-07-23
-[OHKUMA] File: RYU2222142.jpg | API modifieddate: 07/23/2026 06:58:00 | India date: 2026-07-23
-[OHKUMA] File: TWA3710169.jpg | API modifieddate: 07/22/2026 07:40:00 | India date: 2026-07-22
-[OHKUMA] File: TWA3134809.jpg | API modifieddate: 07/22/2026 07:27:00 | India date: 2026-07-22
-[OHKUMA] File: 95686263.jpg | API modifieddate: 07/22/2026 07:27:00 | India date: 2026-07-22
-[OHKUMA] File: 95686262.jpg | API modifieddate: 07/22/2026 07:27:00 | India date: 2026-07-22
-[OHKUMA] File: TWA3836197.jpg | API modifieddate: 07/22/2026 07:06:00 | India date: 2026-07-22
-[OHKUMA] File: TWA3690930.jpg | API modifieddate: 07/22/2026 07:00:00 | India date: 2026-07-22
-[OHKUMA] File: TWA3836186.jpg | API modifieddate: 07/22/2026 06:48:00 | India date: 2026-07-22
-[OHKUMA] File: 95638752.jpg | API modifieddate: 07/22/2026 01:32:00 | India date: 2026-07-22
-[OHKUMA] File: 95638786.jpg | API modifieddate: 07/22/2026 01:28:00 | India date: 2026-07-22
-[OHKUMA] File: S4701E2670.jpg | API modifieddate: 07/22/2026 01:22:00 | India date: 2026-07-22
-[OHKUMA] File: S4701E2250.jpg | API modifieddate: 07/21/2026 08:19:00 | India date: 2026-07-21
-[OHKUMA] File: TWA3701535.jpg | API modifieddate: 07/21/2026 07:49:00 | India date: 2026-07-21
-[OHKUMA] File: 95687307.jpg | API modifieddate: 07/21/2026 07:48:00 | India date: 2026-07-21
-[OHKUMA] File: TWA3737944.jpg | API modifieddate: 07/21/2026 07:29:00 | India date: 2026-07-21
-[OHKUMA] File: YA40072907.jpg | API modifieddate: 07/21/2026 07:15:00 | India date: 2026-07-21
-[OHKUMA] File: TWA3716338.jpg | API modifieddate: 07/21/2026 07:08:00 | India date: 2026-07-21
-[OHKUMA] File: S4701E2310.jpg | API modifieddate: 07/21/2026 06:50:00 | India date: 2026-07-21
-[OHKUMA] File: S4712E1R90.jpg | API modifieddate: 07/21/2026 06:30:00 | India date: 2026-07-21
-[OHKUMA] File: 82E68505000.jpg | API modifieddate: 07/21/2026 04:11:00 | India date: 2026-07-21
-[OHKUMA] File: 95638754.jpg | API modifieddate: 07/21/2026 01:47:00 | India date: 2026-07-21
-[OHKUMA] File: YA40069158.jpg | API modifieddate: 07/17/2026 02:30:00 | India date: 2026-07-17
-[OHKUMA] File: YA00107466D001.jpg | API modifieddate: 07/16/2026 09:59:00 | India date: 2026-07-16
-[OHKUMA] File: 24279128.jpg | API modifieddate: 07/16/2026 07:11:00 | India date: 2026-07-16
-[OHKUMA] File: 95691673.jpg | API modifieddate: 07/16/2026 07:01:00 | India date: 2026-07-16
-
-========================================
- OHKUMA FOLDER : 本社ベンダー
-========================================
-Today's Total File Count     : 7
-Today's Yellow Icon Files    : 7
+Today's Total File Count     : 3
+Today's Yellow Icon Files    : 3
 Today's No Yellow Icon Files : 0
-Yellow + No Yellow           : 7
+Yellow + No Yellow           : 3
 ========================================
 [OHKUMA] Home icon clicked - returned to S09 folder list.
-[OHKUMA] Processing folder [3/4]: 本社スポット
+[OHKUMA] Processing folder [2/4]: 本社スポット
 [OHKUMA] Double-clicked folder: 本社スポット
+[OHKUMA] File: 21806E1E60.jpg | API modifieddate: 08/19/2026 07:47:00 | India date: 2026-08-19
+[OHKUMA] YELLOW file found: 21806E1E60.jpg
+[OHKUMA] File: 23211E0M40.jpg | API modifieddate: 08/19/2026 06:58:00 | India date: 2026-08-19
+[OHKUMA] YELLOW file found: 23211E0M40.jpg
+[OHKUMA] File: YA40069561.jpg | API modifieddate: 08/19/2026 06:37:00 | India date: 2026-08-19
+[OHKUMA] YELLOW file found: YA40069561.jpg
 [OHKUMA] File: 47381E5730.jpg | API modifieddate: 08/18/2026 07:22:00 | India date: 2026-08-18
-[OHKUMA] YELLOW file found: 47381E5730.jpg
 [OHKUMA] File: YA40069170.jpg | API modifieddate: 08/18/2026 07:08:00 | India date: 2026-08-18
-[OHKUMA] YELLOW file found: YA40069170.jpg
 [OHKUMA] File: YA40069656.jpg | API modifieddate: 08/18/2026 06:35:00 | India date: 2026-08-18
-[OHKUMA] YELLOW file found: YA40069656.jpg
 [OHKUMA] File: YA40081659.jpg | API modifieddate: 08/18/2026 06:21:00 | India date: 2026-08-18
-[OHKUMA] YELLOW file found: YA40081659.jpg
 [OHKUMA] File: 23362383.jpg | API modifieddate: 08/07/2026 00:44:00 | India date: 2026-08-07
 [OHKUMA] File: 23362385.jpg | API modifieddate: 08/07/2026 00:33:00 | India date: 2026-08-07
 [OHKUMA] File: 95690184.jpg | API modifieddate: 08/04/2026 07:38:00 | India date: 2026-08-04
@@ -459,148 +339,234 @@ Yellow + No Yellow           : 7
 [OHKUMA] File: 22173709.jpg | API modifieddate: 05/19/2026 08:46:00 | India date: 2026-05-19
 [OHKUMA] File: 5157401Z6C.jpg | API modifieddate: 05/18/2026 07:27:00 | India date: 2026-05-18
 [OHKUMA] File: 95686652.jpg | API modifieddate: 05/18/2026 07:03:00 | India date: 2026-05-18
-[OHKUMA] File: 95687286.jpg | API modifieddate: 05/18/2026 06:50:00 | India date: 2026-05-18
-[OHKUMA] File: YA40081742D001.jpg | API modifieddate: 05/15/2026 00:20:00 | India date: 2026-05-15
-[OHKUMA] File: YA40068834D001.jpg | API modifieddate: 05/14/2026 07:44:00 | India date: 2026-05-14
 
 ========================================
  OHKUMA FOLDER : 本社スポット
 ========================================
-Today's Total File Count     : 4
-Today's Yellow Icon Files    : 4
+Today's Total File Count     : 3
+Today's Yellow Icon Files    : 3
 Today's No Yellow Icon Files : 0
-Yellow + No Yellow           : 4
+Yellow + No Yellow           : 3
 ========================================
 [OHKUMA] Home icon clicked - returned to S09 folder list.
-[OHKUMA] Processing folder [4/4]: 栃木ベンダー
-[OHKUMA] Double-clicked folder: 栃木ベンダー
-[OHKUMA] File: YA00096083.jpg | API modifieddate: 08/17/2026 23:50:00 | India date: 2026-08-18
-[OHKUMA] YELLOW file found: YA00096083.jpg
-[OHKUMA] File: 8112808.jpg | API modifieddate: 08/17/2026 02:47:00 | India date: 2026-08-17
-[OHKUMA] File: Thumbs.db | API modifieddate: 08/17/2026 02:44:00 | India date: 2026-08-17
-[OHKUMA] File: 8112807.jpg | API modifieddate: 08/17/2026 02:38:00 | India date: 2026-08-17
-[OHKUMA] File: YA40080372.jpg | API modifieddate: 08/17/2026 02:10:00 | India date: 2026-08-17
-[OHKUMA] File: YA40038449.jpg | API modifieddate: 08/07/2026 07:44:00 | India date: 2026-08-07
-[OHKUMA] File: YA40084419D001.jpg | API modifieddate: 08/03/2026 05:28:00 | India date: 2026-08-03
-[OHKUMA] File: S4707E0D10.jpg | API modifieddate: 07/31/2026 06:43:00 | India date: 2026-07-31
-[OHKUMA] File: 22133480.jpg | API modifieddate: 07/30/2026 08:08:00 | India date: 2026-07-30
-[OHKUMA] File: 26332E0D30.jpg | API modifieddate: 07/30/2026 07:01:00 | India date: 2026-07-30
-[OHKUMA] File: 22673018.jpg | API modifieddate: 07/30/2026 03:54:00 | India date: 2026-07-30
-[OHKUMA] File: 22845489.jpg | API modifieddate: 07/29/2026 00:58:00 | India date: 2026-07-29
-[OHKUMA] File: 95691499.jpg | API modifieddate: 07/24/2026 01:55:00 | India date: 2026-07-24
-[OHKUMA] File: 95691497.jpg | API modifieddate: 07/24/2026 01:43:00 | India date: 2026-07-24
-[OHKUMA] File: 95691495.jpg | API modifieddate: 07/24/2026 01:41:00 | India date: 2026-07-24
-[OHKUMA] File: 95691501.jpg | API modifieddate: 07/24/2026 00:54:00 | India date: 2026-07-24
-[OHKUMA] File: 95691507.jpg | API modifieddate: 07/24/2026 00:52:00 | India date: 2026-07-24
-[OHKUMA] File: 95691505.jpg | API modifieddate: 07/24/2026 00:52:00 | India date: 2026-07-24
-[OHKUMA] File: 95690219.jpg | API modifieddate: 07/23/2026 09:37:00 | India date: 2026-07-23
-[OHKUMA] File: 95638796.jpg | API modifieddate: 07/22/2026 01:23:00 | India date: 2026-07-22
-[OHKUMA] File: 95638792.jpg | API modifieddate: 07/22/2026 01:17:00 | India date: 2026-07-22
-[OHKUMA] File: 95638794.jpg | API modifieddate: 07/22/2026 00:29:00 | India date: 2026-07-22
-[OHKUMA] File: T96NK08D.jpg | API modifieddate: 07/22/2026 00:28:00 | India date: 2026-07-22
-[OHKUMA] File: 95638802.jpg | API modifieddate: 07/22/2026 00:17:00 | India date: 2026-07-22
-[OHKUMA] File: 95681109.jpg | API modifieddate: 07/17/2026 07:49:00 | India date: 2026-07-17
-[OHKUMA] File: 95681106.jpg | API modifieddate: 07/17/2026 06:02:00 | India date: 2026-07-17
-[OHKUMA] File: 95650921.jpg | API modifieddate: 07/17/2026 05:58:00 | India date: 2026-07-17
-[OHKUMA] File: 95633217.jpg | API modifieddate: 07/17/2026 02:40:00 | India date: 2026-07-17
-[OHKUMA] File: 95638800.jpg | API modifieddate: 07/15/2026 10:06:00 | India date: 2026-07-15
-[OHKUMA] File: 95638798.jpg | API modifieddate: 07/15/2026 10:04:00 | India date: 2026-07-15
-[OHKUMA] File: S4701E1G80.jpg | API modifieddate: 07/13/2026 00:31:00 | India date: 2026-07-13
-[OHKUMA] File: MC21A04SFB.jpg | API modifieddate: 07/10/2026 02:44:00 | India date: 2026-07-10
-[OHKUMA] File: 9769116.jpg | API modifieddate: 07/09/2026 23:48:00 | India date: 2026-07-10
-[OHKUMA] File: 47381E5G40.jpg | API modifieddate: 07/06/2026 00:17:00 | India date: 2026-07-06
-[OHKUMA] File: YA40069130D001.jpg | API modifieddate: 07/05/2026 23:53:00 | India date: 2026-07-06
-[OHKUMA] File: YJ00009036.jpg | API modifieddate: 07/03/2026 08:51:00 | India date: 2026-07-03
-[OHKUMA] File: YA40083263D001.jpg | API modifieddate: 07/03/2026 06:38:00 | India date: 2026-07-03
-[OHKUMA] File: 95630642.jpg | API modifieddate: 07/01/2026 08:40:00 | India date: 2026-07-01
-[OHKUMA] File: YA00099567.jpg | API modifieddate: 06/30/2026 02:19:00 | India date: 2026-06-30
-[OHKUMA] File: 95639501.jpg | API modifieddate: 06/29/2026 06:38:00 | India date: 2026-06-29
-[OHKUMA] File: 95647508.jpg | API modifieddate: 06/29/2026 06:38:00 | India date: 2026-06-29
-[OHKUMA] File: 95647458.jpg | API modifieddate: 06/29/2026 06:19:00 | India date: 2026-06-29
-[OHKUMA] File: 95639499.jpg | API modifieddate: 06/29/2026 05:55:00 | India date: 2026-06-29
-[OHKUMA] File: 23379968.jpg | API modifieddate: 06/28/2026 23:28:00 | India date: 2026-06-29
-[OHKUMA] File: S4402E0E61.jpg | API modifieddate: 06/25/2026 05:42:00 | India date: 2026-06-25
-[OHKUMA] File: 22807640.jpg | API modifieddate: 06/19/2026 07:21:00 | India date: 2026-06-19
-[OHKUMA] File: 22812768.jpg | API modifieddate: 06/19/2026 06:41:00 | India date: 2026-06-19
-[OHKUMA] File: YA00012328.jpg | API modifieddate: 06/16/2026 04:33:00 | India date: 2026-06-16
-[OHKUMA] File: 23250127.jpg | API modifieddate: 06/16/2026 03:30:00 | India date: 2026-06-16
-[OHKUMA] File: 23168939.jpg | API modifieddate: 06/16/2026 03:30:00 | India date: 2026-06-16
-[OHKUMA] File: 22888293.jpg | API modifieddate: 06/16/2026 03:29:00 | India date: 2026-06-16
-[OHKUMA] File: 22811819.jpg | API modifieddate: 06/16/2026 03:28:00 | India date: 2026-06-16
-[OHKUMA] File: 22129950.jpg | API modifieddate: 06/16/2026 03:27:00 | India date: 2026-06-16
-[OHKUMA] File: 95647172.jpg | API modifieddate: 06/15/2026 01:29:00 | India date: 2026-06-15
-[OHKUMA] File: 24225362.jpg | API modifieddate: 06/15/2026 01:29:00 | India date: 2026-06-15
-[OHKUMA] File: 24225358.jpg | API modifieddate: 06/15/2026 01:28:00 | India date: 2026-06-15
-[OHKUMA] File: 24144476.jpg | API modifieddate: 06/15/2026 01:28:00 | India date: 2026-06-15
-[OHKUMA] File: 24131318.jpg | API modifieddate: 06/15/2026 01:28:00 | India date: 2026-06-15
-[OHKUMA] File: 22814271.jpg | API modifieddate: 06/15/2026 01:28:00 | India date: 2026-06-15
-[OHKUMA] File: 22566948.jpg | API modifieddate: 06/15/2026 01:27:00 | India date: 2026-06-15
-[OHKUMA] File: 22398707.jpg | API modifieddate: 06/15/2026 01:27:00 | India date: 2026-06-15
-[OHKUMA] File: 95645546.jpg | API modifieddate: 06/12/2026 08:51:00 | India date: 2026-06-12
-[OHKUMA] File: 24409616.jpg | API modifieddate: 06/12/2026 08:51:00 | India date: 2026-06-12
-[OHKUMA] File: 24299389.jpg | API modifieddate: 06/12/2026 08:51:00 | India date: 2026-06-12
-[OHKUMA] File: 22788047.jpg | API modifieddate: 06/12/2026 08:51:00 | India date: 2026-06-12
-[OHKUMA] File: 22783676.jpg | API modifieddate: 06/12/2026 08:49:00 | India date: 2026-06-12
-[OHKUMA] File: 23699466.jpg | API modifieddate: 06/12/2026 07:39:00 | India date: 2026-06-12
-[OHKUMA] File: YA00027798.jpg | API modifieddate: 06/11/2026 06:48:00 | India date: 2026-06-11
-[OHKUMA] File: YA00086771.jpg | API modifieddate: 06/11/2026 01:56:00 | India date: 2026-06-11
-[OHKUMA] File: 22888291.jpg | API modifieddate: 06/10/2026 08:47:00 | India date: 2026-06-10
-[OHKUMA] File: 22814268.jpg | API modifieddate: 06/10/2026 08:46:00 | India date: 2026-06-10
-[OHKUMA] File: 22811893.jpg | API modifieddate: 06/10/2026 08:46:00 | India date: 2026-06-10
-[OHKUMA] File: 22811816.jpg | API modifieddate: 06/10/2026 08:44:00 | India date: 2026-06-10
-[OHKUMA] File: 22811511.jpg | API modifieddate: 06/10/2026 08:42:00 | India date: 2026-06-10
-[OHKUMA] File: 22806467.jpg | API modifieddate: 06/10/2026 08:41:00 | India date: 2026-06-10
-[OHKUMA] File: 95638772.jpg | API modifieddate: 06/09/2026 05:31:00 | India date: 2026-06-09
-[OHKUMA] File: 95638776.jpg | API modifieddate: 06/09/2026 05:26:00 | India date: 2026-06-09
-[OHKUMA] File: 23521245.jpg | API modifieddate: 06/08/2026 05:52:00 | India date: 2026-06-08
-[OHKUMA] File: 23372561.jpg | API modifieddate: 06/08/2026 05:20:00 | India date: 2026-06-08
-[OHKUMA] File: 24427878.jpg | API modifieddate: 06/08/2026 05:06:00 | India date: 2026-06-08
-[OHKUMA] File: 24401462.jpg | API modifieddate: 06/08/2026 05:06:00 | India date: 2026-06-08
-[OHKUMA] File: 24316543.jpg | API modifieddate: 06/08/2026 05:06:00 | India date: 2026-06-08
-[OHKUMA] File: 24144471.jpg | API modifieddate: 06/08/2026 05:06:00 | India date: 2026-06-08
-[OHKUMA] File: 22845487.jpg | API modifieddate: 06/08/2026 05:04:00 | India date: 2026-06-08
-[OHKUMA] File: 22807597.jpg | API modifieddate: 06/08/2026 05:04:00 | India date: 2026-06-08
-[OHKUMA] File: 22797594.jpg | API modifieddate: 06/08/2026 05:03:00 | India date: 2026-06-08
-[OHKUMA] File: 22783693.jpg | API modifieddate: 06/08/2026 05:03:00 | India date: 2026-06-08
-[OHKUMA] File: 22116174.jpg | API modifieddate: 06/08/2026 05:02:00 | India date: 2026-06-08
-[OHKUMA] File: 23495261.jpg | API modifieddate: 06/05/2026 08:17:00 | India date: 2026-06-05
-[OHKUMA] File: 22807542.jpg | API modifieddate: 06/05/2026 07:44:00 | India date: 2026-06-05
-[OHKUMA] File: 71140907000.jpg | API modifieddate: 05/29/2026 08:35:00 | India date: 2026-05-29
-[OHKUMA] File: 22879698.jpg | API modifieddate: 05/29/2026 08:34:00 | India date: 2026-05-29
-[OHKUMA] File: 22857330.jpg | API modifieddate: 05/29/2026 08:33:00 | India date: 2026-05-29
-[OHKUMA] File: 22811783.jpg | API modifieddate: 05/29/2026 07:31:00 | India date: 2026-05-29
-[OHKUMA] File: S167122770.jpg | API modifieddate: 05/29/2026 05:56:00 | India date: 2026-05-29
-[OHKUMA] File: 23959088.jpg | API modifieddate: 05/26/2026 08:28:00 | India date: 2026-05-26
-[OHKUMA] File: 22939981.jpg | API modifieddate: 05/26/2026 08:28:00 | India date: 2026-05-26
-[OHKUMA] File: 70B12544000.jpg | API modifieddate: 05/26/2026 01:15:00 | India date: 2026-05-26
-[OHKUMA] File: 10344217010.jpg | API modifieddate: 05/26/2026 00:52:00 | India date: 2026-05-26
-[OHKUMA] File: 24275132.jpg | API modifieddate: 05/22/2026 03:04:00 | India date: 2026-05-22
+[OHKUMA] Processing folder [3/4]: 本社ベンダー
+[OHKUMA] Double-clicked folder: 本社ベンダー
+[OHKUMA] File: 21806E1E60.jpg | API modifieddate: 08/19/2026 07:44:00 | India date: 2026-08-19
+[OHKUMA] YELLOW file found: 21806E1E60.jpg
+[OHKUMA] File: D42263500.jpg | API modifieddate: 08/19/2026 07:36:00 | India date: 2026-08-19
+[OHKUMA] YELLOW file found: D42263500.jpg
+[OHKUMA] File: 95692341.jpg | API modifieddate: 08/19/2026 07:19:00 | India date: 2026-08-19
+[OHKUMA] YELLOW file found: 95692341.jpg
+[OHKUMA] File: 23211E0M40.jpg | API modifieddate: 08/19/2026 06:58:00 | India date: 2026-08-19
+[OHKUMA] YELLOW file found: 23211E0M40.jpg
+[OHKUMA] File: YA40069561.jpg | API modifieddate: 08/19/2026 06:38:00 | India date: 2026-08-19
+[OHKUMA] YELLOW file found: YA40069561.jpg
+[OHKUMA] File: YA40064993.jpg | API modifieddate: 08/18/2026 07:59:00 | India date: 2026-08-18
+[OHKUMA] File: YA40064994.jpg | API modifieddate: 08/18/2026 07:28:00 | India date: 2026-08-18
+[OHKUMA] File: 47381E5730.jpg | API modifieddate: 08/18/2026 07:20:00 | India date: 2026-08-18
+[OHKUMA] File: YA40069170.jpg | API modifieddate: 08/18/2026 07:05:00 | India date: 2026-08-18
+[OHKUMA] File: YA00106702.jpg | API modifieddate: 08/18/2026 06:40:00 | India date: 2026-08-18
+[OHKUMA] File: YA40069656.jpg | API modifieddate: 08/18/2026 06:35:00 | India date: 2026-08-18
+[OHKUMA] File: YA40081659.jpg | API modifieddate: 08/18/2026 06:19:00 | India date: 2026-08-18
+[OHKUMA] File: 95681105.jpg | API modifieddate: 08/17/2026 07:13:00 | India date: 2026-08-17
+[OHKUMA] File: YA40069577.jpg | API modifieddate: 08/17/2026 04:39:00 | India date: 2026-08-17
+[OHKUMA] File: 95686634.jpg | API modifieddate: 08/17/2026 01:45:00 | India date: 2026-08-17
+[OHKUMA] File: 95686637.jpg | API modifieddate: 08/07/2026 03:02:00 | India date: 2026-08-07
+[OHKUMA] File: 23362383.jpg | API modifieddate: 08/07/2026 00:38:00 | India date: 2026-08-07
+[OHKUMA] File: 23362385.jpg | API modifieddate: 08/07/2026 00:28:00 | India date: 2026-08-07
+[OHKUMA] File: YA40070239.jpg | API modifieddate: 08/05/2026 09:51:00 | India date: 2026-08-05
+[OHKUMA] File: 95681104.jpg | API modifieddate: 08/05/2026 07:36:00 | India date: 2026-08-05
+[OHKUMA] File: 81E78811000.jpg | API modifieddate: 08/04/2026 05:25:00 | India date: 2026-08-04
+[OHKUMA] File: YA00109028.jpg | API modifieddate: 08/04/2026 03:58:00 | India date: 2026-08-04
+[OHKUMA] File: YA40072267.jpg | API modifieddate: 08/04/2026 03:02:00 | India date: 2026-08-04
+[OHKUMA] File: 95686248.jpg | API modifieddate: 08/03/2026 07:56:00 | India date: 2026-08-03
+[OHKUMA] File: 95686247.jpg | API modifieddate: 08/03/2026 07:55:00 | India date: 2026-08-03
+[OHKUMA] File: 95641260.jpg | API modifieddate: 08/03/2026 07:54:00 | India date: 2026-08-03
+[OHKUMA] File: 95678672.jpg | API modifieddate: 08/03/2026 07:35:00 | India date: 2026-08-03
+[OHKUMA] File: 95660823.jpg | API modifieddate: 08/03/2026 07:34:00 | India date: 2026-08-03
+[OHKUMA] File: YA00115569D001.jpg | API modifieddate: 08/03/2026 07:20:00 | India date: 2026-08-03
+[OHKUMA] File: YA00115568D001.jpg | API modifieddate: 08/03/2026 07:20:00 | India date: 2026-08-03
+[OHKUMA] File: YA40074519.jpg | API modifieddate: 08/03/2026 05:33:00 | India date: 2026-08-03
+[OHKUMA] File: YA40074520.jpg | API modifieddate: 08/03/2026 05:29:00 | India date: 2026-08-03
+[OHKUMA] File: YA40070763D001.jpg | API modifieddate: 08/03/2026 05:17:00 | India date: 2026-08-03
+[OHKUMA] File: S440JE1410.jpg | API modifieddate: 08/03/2026 05:17:00 | India date: 2026-08-03
+[OHKUMA] File: YA40072543D001.jpg | API modifieddate: 08/03/2026 04:50:00 | India date: 2026-08-03
+[OHKUMA] File: YA40073527D001.jpg | API modifieddate: 08/03/2026 04:44:00 | India date: 2026-08-03
+[OHKUMA] File: YA40073916.jpg | API modifieddate: 08/03/2026 02:51:00 | India date: 2026-08-03
+[OHKUMA] File: YA40073915.jpg | API modifieddate: 08/03/2026 02:51:00 | India date: 2026-08-03
+[OHKUMA] File: YA40069576.jpg | API modifieddate: 08/03/2026 02:14:00 | India date: 2026-08-03
+[OHKUMA] File: YA40069575.jpg | API modifieddate: 08/03/2026 02:14:00 | India date: 2026-08-03
+[OHKUMA] File: YA40069574.jpg | API modifieddate: 08/03/2026 02:14:00 | India date: 2026-08-03
+[OHKUMA] File: YA40069573.jpg | API modifieddate: 08/03/2026 02:14:00 | India date: 2026-08-03
+[OHKUMA] File: YA40070912D001.jpg | API modifieddate: 07/31/2026 07:44:00 | India date: 2026-07-31
+[OHKUMA] File: YA40078614D001.jpg | API modifieddate: 07/31/2026 07:33:00 | India date: 2026-07-31
+[OHKUMA] File: YA40084430.jpg | API modifieddate: 07/31/2026 07:14:00 | India date: 2026-07-31
+[OHKUMA] File: YA40084427.jpg | API modifieddate: 07/31/2026 06:57:00 | India date: 2026-07-31
+[OHKUMA] File: S4707E0D10.jpg | API modifieddate: 07/31/2026 06:54:00 | India date: 2026-07-31
+[OHKUMA] File: YA40069403.jpg | API modifieddate: 07/31/2026 06:41:00 | India date: 2026-07-31
+[OHKUMA] File: YA40082550D001.jpg | API modifieddate: 07/31/2026 04:15:00 | India date: 2026-07-31
+[OHKUMA] File: YA00115241.jpg | API modifieddate: 07/31/2026 00:27:00 | India date: 2026-07-31
+[OHKUMA] File: YA40074916.jpg | API modifieddate: 07/31/2026 00:22:00 | India date: 2026-07-31
+[OHKUMA] File: YA40074915.jpg | API modifieddate: 07/31/2026 00:22:00 | India date: 2026-07-31
+[OHKUMA] File: 95689615.jpg | API modifieddate: 07/30/2026 07:17:00 | India date: 2026-07-30
+[OHKUMA] File: 95693204.jpg | API modifieddate: 07/30/2026 07:11:00 | India date: 2026-07-30
+[OHKUMA] File: 95686636.jpg | API modifieddate: 07/30/2026 05:06:00 | India date: 2026-07-30
+[OHKUMA] File: YA40036244.jpg | API modifieddate: 07/29/2026 07:34:00 | India date: 2026-07-29
+[OHKUMA] File: YA00114875.jpg | API modifieddate: 07/29/2026 07:26:00 | India date: 2026-07-29
+[OHKUMA] File: YA40071878D001.jpg | API modifieddate: 07/29/2026 07:20:00 | India date: 2026-07-29
+[OHKUMA] File: YA40056215.jpg | API modifieddate: 07/29/2026 07:05:00 | India date: 2026-07-29
+[OHKUMA] File: YA40081664.jpg | API modifieddate: 07/29/2026 05:38:00 | India date: 2026-07-29
+[OHKUMA] File: 95694843.jpg | API modifieddate: 07/29/2026 00:36:00 | India date: 2026-07-29
+[OHKUMA] File: YA40071947D001.jpg | API modifieddate: 07/28/2026 07:49:00 | India date: 2026-07-28
+[OHKUMA] File: YA40064227.jpg | API modifieddate: 07/28/2026 07:40:00 | India date: 2026-07-28
+[OHKUMA] File: YA40054206.jpg | API modifieddate: 07/28/2026 07:17:00 | India date: 2026-07-28
+[OHKUMA] File: 8102521XXXD001.jpg | API modifieddate: 07/28/2026 07:08:00 | India date: 2026-07-28
+[OHKUMA] File: 95693207.jpg | API modifieddate: 07/28/2026 07:03:00 | India date: 2026-07-28
+[OHKUMA] File: 95695895.jpg | API modifieddate: 07/28/2026 05:55:00 | India date: 2026-07-28
+[OHKUMA] File: 11A71723000.jpg | API modifieddate: 07/28/2026 02:59:00 | India date: 2026-07-28
+[OHKUMA] File: YA00109569.jpg | API modifieddate: 07/27/2026 06:01:00 | India date: 2026-07-27
+[OHKUMA] File: 95694842.jpg | API modifieddate: 07/27/2026 06:01:00 | India date: 2026-07-27
+[OHKUMA] File: 21806E1E90.jpg | API modifieddate: 07/27/2026 04:20:00 | India date: 2026-07-27
+[OHKUMA] File: 95679984.jpg | API modifieddate: 07/27/2026 04:07:00 | India date: 2026-07-27
+[OHKUMA] File: 95640193.jpg | API modifieddate: 07/27/2026 00:02:00 | India date: 2026-07-27
+[OHKUMA] File: TWA3694619.jpg | API modifieddate: 07/24/2026 06:25:00 | India date: 2026-07-24
+[OHKUMA] File: TWA3709374.jpg | API modifieddate: 07/24/2026 06:00:00 | India date: 2026-07-24
+[OHKUMA] File: TWA3836200.jpg | API modifieddate: 07/24/2026 05:57:00 | India date: 2026-07-24
+[OHKUMA] File: 81E77513002.jpg | API modifieddate: 07/23/2026 08:52:00 | India date: 2026-07-23
+[OHKUMA] File: TWA0194095.jpg | API modifieddate: 07/23/2026 07:35:00 | India date: 2026-07-23
+[OHKUMA] File: TWA3701527.jpg | API modifieddate: 07/23/2026 07:33:00 | India date: 2026-07-23
+[OHKUMA] File: TWA3737955.jpg | API modifieddate: 07/23/2026 07:13:00 | India date: 2026-07-23
+[OHKUMA] File: RYU2222142.jpg | API modifieddate: 07/23/2026 06:58:00 | India date: 2026-07-23
+[OHKUMA] File: TWA3710169.jpg | API modifieddate: 07/22/2026 07:40:00 | India date: 2026-07-22
+[OHKUMA] File: TWA3134809.jpg | API modifieddate: 07/22/2026 07:27:00 | India date: 2026-07-22
+[OHKUMA] File: 95686263.jpg | API modifieddate: 07/22/2026 07:27:00 | India date: 2026-07-22
+[OHKUMA] File: 95686262.jpg | API modifieddate: 07/22/2026 07:27:00 | India date: 2026-07-22
+[OHKUMA] File: TWA3836197.jpg | API modifieddate: 07/22/2026 07:06:00 | India date: 2026-07-22
+[OHKUMA] File: TWA3690930.jpg | API modifieddate: 07/22/2026 07:00:00 | India date: 2026-07-22
+[OHKUMA] File: TWA3836186.jpg | API modifieddate: 07/22/2026 06:48:00 | India date: 2026-07-22
+[OHKUMA] File: 95638752.jpg | API modifieddate: 07/22/2026 01:32:00 | India date: 2026-07-22
+[OHKUMA] File: 95638786.jpg | API modifieddate: 07/22/2026 01:28:00 | India date: 2026-07-22
+[OHKUMA] File: S4701E2670.jpg | API modifieddate: 07/22/2026 01:22:00 | India date: 2026-07-22
+[OHKUMA] File: S4701E2250.jpg | API modifieddate: 07/21/2026 08:19:00 | India date: 2026-07-21
+[OHKUMA] File: TWA3701535.jpg | API modifieddate: 07/21/2026 07:49:00 | India date: 2026-07-21
+[OHKUMA] File: 95687307.jpg | API modifieddate: 07/21/2026 07:48:00 | India date: 2026-07-21
+[OHKUMA] File: TWA3737944.jpg | API modifieddate: 07/21/2026 07:29:00 | India date: 2026-07-21
+[OHKUMA] File: YA40072907.jpg | API modifieddate: 07/21/2026 07:15:00 | India date: 2026-07-21
+[OHKUMA] File: TWA3716338.jpg | API modifieddate: 07/21/2026 07:08:00 | India date: 2026-07-21
+[OHKUMA] File: S4701E2310.jpg | API modifieddate: 07/21/2026 06:50:00 | India date: 2026-07-21
+[OHKUMA] File: S4712E1R90.jpg | API modifieddate: 07/21/2026 06:30:00 | India date: 2026-07-21
+[OHKUMA] File: 82E68505000.jpg | API modifieddate: 07/21/2026 04:11:00 | India date: 2026-07-21
 
 ========================================
- OHKUMA FOLDER : 栃木ベンダー
+ OHKUMA FOLDER : 本社ベンダー
 ========================================
-Today's Total File Count     : 1
-Today's Yellow Icon Files    : 1
+Today's Total File Count     : 5
+Today's Yellow Icon Files    : 5
 Today's No Yellow Icon Files : 0
-Yellow + No Yellow           : 1
+Yellow + No Yellow           : 5
+========================================
+[OHKUMA] Home icon clicked - returned to S09 folder list.
+[OHKUMA] Processing folder [4/4]: 栃木艤装
+[OHKUMA] Double-clicked folder: 栃木艤装
+[OHKUMA] File: Thumbs.db | API modifieddate: 08/19/2026 02:35:00 | India date: 2026-08-19
+[OHKUMA] NO YELLOW file found: Thumbs.db
+[OHKUMA] File: 5157200Z9E.jpg | API modifieddate: 08/19/2026 02:35:00 | India date: 2026-08-19
+[OHKUMA] YELLOW file found: 5157200Z9E.jpg
+[OHKUMA] File: 5157501Z6A.jpg | API modifieddate: 07/03/2026 02:54:00 | India date: 2026-07-03
+[OHKUMA] File: 5222811620.jpg | API modifieddate: 07/03/2026 02:12:00 | India date: 2026-07-03
+[OHKUMA] File: 5157201Z0D.jpg | API modifieddate: 07/02/2026 04:56:00 | India date: 2026-07-02
+[OHKUMA] File: 5222811754.jpg | API modifieddate: 06/29/2026 02:54:00 | India date: 2026-06-29
+[OHKUMA] File: 5223321926.jpg | API modifieddate: 06/29/2026 02:54:00 | India date: 2026-06-29
+[OHKUMA] File: 5222811608.jpg | API modifieddate: 06/29/2026 02:53:00 | India date: 2026-06-29
+[OHKUMA] File: 5222811813.jpg | API modifieddate: 06/16/2026 03:30:00 | India date: 2026-06-16
+[OHKUMA] File: 22811620.jpg | API modifieddate: 06/15/2026 01:19:00 | India date: 2026-06-15
+[OHKUMA] File: 5222811825.jpg | API modifieddate: 06/12/2026 03:55:00 | India date: 2026-06-12
+[OHKUMA] File: 5222814275.jpg | API modifieddate: 05/29/2026 06:15:00 | India date: 2026-05-29
+[OHKUMA] File: 5158100Z3C.jpg | API modifieddate: 05/29/2026 05:51:00 | India date: 2026-05-29
+[OHKUMA] File: 5158100Z3A.jpg | API modifieddate: 05/29/2026 05:50:00 | India date: 2026-05-29
+[OHKUMA] File: 5158000Z7E.jpg | API modifieddate: 05/29/2026 05:48:00 | India date: 2026-05-29
+[OHKUMA] File: 5157501Z3C.jpg | API modifieddate: 05/29/2026 05:48:00 | India date: 2026-05-29
+[OHKUMA] File: 5157401Z6E.jpg | API modifieddate: 05/29/2026 05:48:00 | India date: 2026-05-29
+[OHKUMA] File: 5157401Z4E.jpg | API modifieddate: 05/29/2026 05:46:00 | India date: 2026-05-29
+[OHKUMA] File: 5157401Z3E.jpg | API modifieddate: 05/29/2026 05:46:00 | India date: 2026-05-29
+[OHKUMA] File: 5157100Z0E.jpg | API modifieddate: 05/29/2026 05:45:00 | India date: 2026-05-29
+[OHKUMA] File: 5157001Z1C.jpg | API modifieddate: 05/29/2026 05:45:00 | India date: 2026-05-29
+[OHKUMA] File: 5155000Z3E.jpg | API modifieddate: 05/29/2026 05:44:00 | India date: 2026-05-29
+[OHKUMA] File: 5153200Z7A.jpg | API modifieddate: 05/29/2026 05:43:00 | India date: 2026-05-29
+[OHKUMA] File: 5151400Z2C.jpg | API modifieddate: 05/29/2026 05:42:00 | India date: 2026-05-29
+[OHKUMA] File: 5151400Z2A.jpg | API modifieddate: 05/29/2026 05:41:00 | India date: 2026-05-29
+[OHKUMA] File: 23321933.jpg | API modifieddate: 05/29/2026 05:40:00 | India date: 2026-05-29
+[OHKUMA] File: 23321930.jpg | API modifieddate: 05/29/2026 05:40:00 | India date: 2026-05-29
+[OHKUMA] File: 23321926.jpg | API modifieddate: 05/29/2026 05:39:00 | India date: 2026-05-29
+[OHKUMA] File: 22814275.jpg | API modifieddate: 05/29/2026 05:38:00 | India date: 2026-05-29
+[OHKUMA] File: 22811919.jpg | API modifieddate: 05/29/2026 05:38:00 | India date: 2026-05-29
+[OHKUMA] File: 22811847.jpg | API modifieddate: 05/29/2026 05:37:00 | India date: 2026-05-29
+[OHKUMA] File: 22811825.jpg | API modifieddate: 05/29/2026 05:35:00 | India date: 2026-05-29
+[OHKUMA] File: 22811813.jpg | API modifieddate: 05/29/2026 05:35:00 | India date: 2026-05-29
+[OHKUMA] File: 22811777.jpg | API modifieddate: 05/29/2026 05:34:00 | India date: 2026-05-29
+[OHKUMA] File: 22811694.jpg | API modifieddate: 05/29/2026 05:34:00 | India date: 2026-05-29
+[OHKUMA] File: 22811754.jpg | API modifieddate: 05/29/2026 05:34:00 | India date: 2026-05-29
+[OHKUMA] File: 22811686.jpg | API modifieddate: 05/29/2026 05:34:00 | India date: 2026-05-29
+[OHKUMA] File: 22811682.jpg | API modifieddate: 05/29/2026 05:33:00 | India date: 2026-05-29
+[OHKUMA] File: 22811678.jpg | API modifieddate: 05/29/2026 05:33:00 | India date: 2026-05-29
+[OHKUMA] File: 22811629.jpg | API modifieddate: 05/29/2026 05:33:00 | India date: 2026-05-29
+[OHKUMA] File: 22811615.jpg | API modifieddate: 05/29/2026 05:32:00 | India date: 2026-05-29
+[OHKUMA] File: 22811608.jpg | API modifieddate: 05/29/2026 05:31:00 | India date: 2026-05-29
+[OHKUMA] File: 22811434.jpg | API modifieddate: 05/29/2026 05:30:00 | India date: 2026-05-29
+[OHKUMA] File: 22811419.jpg | API modifieddate: 05/29/2026 05:29:00 | India date: 2026-05-29
+[OHKUMA] File: 22158017.jpg | API modifieddate: 05/29/2026 05:29:00 | India date: 2026-05-29
+[OHKUMA] File: 22178803.jpg | API modifieddate: 05/29/2026 05:29:00 | India date: 2026-05-29
+[OHKUMA] File: 5157501Z6E.jpg | API modifieddate: 05/22/2026 02:20:00 | India date: 2026-05-22
+[OHKUMA] File: 5157401Z6C.jpg | API modifieddate: 05/22/2026 02:20:00 | India date: 2026-05-22
+[OHKUMA] File: 22811847.pdf | API modifieddate: 02/20/2026 07:14:00 | India date: 2026-02-20
+[OHKUMA] File: 22814275.pdf | API modifieddate: 02/20/2026 07:14:00 | India date: 2026-02-20
+[OHKUMA] File: 22811825.pdf | API modifieddate: 02/20/2026 07:14:00 | India date: 2026-02-20
+[OHKUMA] File: 22811813.pdf | API modifieddate: 02/20/2026 07:14:00 | India date: 2026-02-20
+[OHKUMA] File: 22811777.pdf | API modifieddate: 02/20/2026 07:14:00 | India date: 2026-02-20
+[OHKUMA] File: 22811419.pdf | API modifieddate: 02/20/2026 07:14:00 | India date: 2026-02-20
+[OHKUMA] File: 22178803.pdf | API modifieddate: 02/20/2026 07:13:00 | India date: 2026-02-20
+[OHKUMA] File: 22158017.pdf | API modifieddate: 02/20/2026 07:13:00 | India date: 2026-02-20
+[OHKUMA] File: 5158000Z7E.tif | API modifieddate: 02/06/2026 12:20:00 | India date: 2026-02-06
+[OHKUMA] File: 5157401Z6E.tif | API modifieddate: 02/06/2026 12:19:00 | India date: 2026-02-06
+[OHKUMA] File: 5157401Z4E.tif | API modifieddate: 02/06/2026 12:18:00 | India date: 2026-02-06
+[OHKUMA] File: 5157201Z0D.tif | API modifieddate: 02/06/2026 12:15:00 | India date: 2026-02-06
+[OHKUMA] File: 5157001Z1C.tif | API modifieddate: 02/06/2026 12:12:00 | India date: 2026-02-06
+[OHKUMA] File: 5151400Z2A.tif | API modifieddate: 02/06/2026 12:09:00 | India date: 2026-02-06
+[OHKUMA] File: 22811847.tif | API modifieddate: 02/06/2026 12:00:00 | India date: 2026-02-06
+[OHKUMA] File: 22811813.tif | API modifieddate: 02/06/2026 11:59:00 | India date: 2026-02-06
+[OHKUMA] File: 22811608.tif | API modifieddate: 02/06/2026 11:49:00 | India date: 2026-02-06
+[OHKUMA] File: 22811419.tif | API modifieddate: 02/06/2026 11:46:00 | India date: 2026-02-06
+[OHKUMA] File: 22158017.tif | API modifieddate: 02/06/2026 11:44:00 | India date: 2026-02-06
+[OHKUMA] File: 5157401Z3E.tif | API modifieddate: 02/05/2026 09:51:00 | India date: 2026-02-05
+[OHKUMA] File: 5153200Z7A.tif | API modifieddate: 02/05/2026 09:50:00 | India date: 2026-02-05
+[OHKUMA] File: 22178803.tif | API modifieddate: 02/05/2026 09:42:00 | India date: 2026-02-05
+[OHKUMA] File: 83341047000　ベンダー　スポット　図面　　（青）.jpg | API modifieddate: 05/10/2023 04:11:00 | India date: 2023-05-10
+
+========================================
+ OHKUMA FOLDER : 栃木艤装
+========================================
+Today's Total File Count     : 2
+Today's Yellow Icon Files    : 1
+Today's No Yellow Icon Files : 1
+Yellow + No Yellow           : 2
 ========================================
 
 ========================================
      OHKUMA - ALL TODAY FOLDERS TOTAL
 ========================================
-Today's Total File Count     : 18
-Today's Yellow Icon Files    : 17
+Today's Total File Count     : 13
+Today's Yellow Icon Files    : 12
 Today's No Yellow Icon Files : 1
 ========================================
 [OHKUMA] All today's folders processed.
 ]]></system-out>
   </testcase>
-  <testcase name="validLoginTest" classname="org.oaksystem.tests.OakSystemDrawTest" time="3.479">
+  <testcase name="validLoginTest" classname="org.oaksystem.tests.OakSystemDrawTest" time="4.156">
     <system-out><![CDATA[Context closed successfully.com.microsoft.playwright.impl.BrowserContextImpl@3b00856b
 Browser closed successfully.com.microsoft.playwright.impl.BrowserImpl@37091312
-Playwright closed successfully.com.microsoft.playwright.impl.PlaywrightImpl@27f74733
-Browser launched successfully.com.microsoft.playwright.impl.BrowserImpl@4bb8855f
-Page created successfully.com.microsoft.playwright.impl.PageImpl@4bee18dc
+Playwright closed successfully.com.microsoft.playwright.impl.PlaywrightImpl@44f3fe83
+Browser launched successfully.com.microsoft.playwright.impl.BrowserImpl@417d6615
+Page created successfully.com.microsoft.playwright.impl.PageImpl@489543a6
 Navigated to base URL successfully.https://www.alfadock-pack.com/
 Company username entered: oaksystem
 Company password entered
@@ -611,51 +577,38 @@ User password entered
 Login button clicked
 ]]></system-out>
   </testcase>
-  <testcase name="validatingDrawSocketTest" classname="org.oaksystem.tests.OakSystemDrawTest" time="17.606">
+  <testcase name="validatingDrawSocketTest" classname="org.oaksystem.tests.OakSystemDrawTest" time="19.511">
     <system-out><![CDATA[Current URL: https://www.alfadock-pack.com/ver10/#/home
 Home page URL is correct.
+hyperlink icon is visible
 Current URL: https://www.alfadock-pack.com/ver10/#/home/adsocket
 adsocket page URL is correct.
+drawsocket icon is visible
 Current URL: https://www.alfadock-pack.com/ver10/#/adsocket/adgrid/draw/-1
 draw socket page URL is correct..
 Pagination changed to 100
-[OAKSYSTEM] YELLOW : 20260818141502677.pdf | GUID = dc8ccd29-0908-41b5-939d-747925b2d1e4 | filetype = 1 | modifieddate = 08/18/2026 11:09:00 | attribute = 7
-[OAKSYSTEM] YELLOW : 20260818155034382_0002.pdf | GUID = 4b1caa0c-5dd2-46aa-bef4-f63299351bf0 | filetype = 1 | modifieddate = 08/18/2026 06:54:00 | attribute = 7
-[OAKSYSTEM] YELLOW : 20260818155034382_0001.pdf | GUID = 1a0003c1-f549-4c7a-9e1b-7399a90c187b | filetype = 1 | modifieddate = 08/18/2026 06:53:00 | attribute = 7
-[OAKSYSTEM] YELLOW : 20260818143757145.pdf | GUID = 9d6ed513-3cdc-418b-929f-bd2d2fb89996 | filetype = 1 | modifieddate = 08/18/2026 05:42:00 | attribute = 7
-[OAKSYSTEM] YELLOW : 20260818141646735.pdf | GUID = d78f32c0-bbc5-4b68-a27f-21850e3ca7e6 | filetype = 1 | modifieddate = 08/18/2026 05:21:00 | attribute = 7
-[OAKSYSTEM] YELLOW : 20260818141620368.pdf | GUID = de949a9d-310c-4f7f-9d4a-6f8d176ed978 | filetype = 1 | modifieddate = 08/18/2026 05:21:00 | attribute = 7
-[OAKSYSTEM] YELLOW : 20260818141556556.pdf | GUID = 284dda99-f287-4d16-8568-22590e8c382a | filetype = 1 | modifieddate = 08/18/2026 05:21:00 | attribute = 7
-[OAKSYSTEM] YELLOW : 20260818141530646.pdf | GUID = f6c9b851-279e-497d-8e04-8c7eab272c72 | filetype = 1 | modifieddate = 08/18/2026 05:21:00 | attribute = 7
-[OAKSYSTEM] YELLOW : 20260818134339512_0002.pdf | GUID = b043752e-cf8e-417a-bbdd-0502e7d245bd | filetype = 1 | modifieddate = 08/18/2026 04:47:00 | attribute = 7
-[OAKSYSTEM] YELLOW : 20260818134339512_0001.pdf | GUID = 641f1782-8639-4c4f-932c-cf4554ec5492 | filetype = 1 | modifieddate = 08/18/2026 04:47:00 | attribute = 7
-[OAKSYSTEM] YELLOW : 20260818113034934.pdf | GUID = 6e5d5f7e-e6ce-48b6-8943-4a36fdb5af29 | filetype = 1 | modifieddate = 08/18/2026 02:34:00 | attribute = 7
-[OAKSYSTEM] YELLOW : 20260818091542605_0001.pdf | GUID = 6b324cf7-62bf-47f7-ad59-ab2d993c38c5 | filetype = 1 | modifieddate = 08/18/2026 00:19:00 | attribute = 7
-[OAKSYSTEM] YELLOW : 20260818084035274_0002.pdf | GUID = f7163845-9b36-422b-a324-802885fcf5ce | filetype = 1 | modifieddate = 08/17/2026 23:45:00 | attribute = 6
-[OAKSYSTEM] YELLOW : 20260818084035274_0004.pdf | GUID = 27347a14-bd7e-47d1-9e44-8abf076aa251 | filetype = 1 | modifieddate = 08/17/2026 23:44:00 | attribute = 6
-[OAKSYSTEM] YELLOW : 20260818084035274_0003.pdf | GUID = 7d7fe6b6-d071-4fb6-a435-80ade79c333b | filetype = 1 | modifieddate = 08/17/2026 23:44:00 | attribute = 6
-[OAKSYSTEM] YELLOW : 20260818084044464_0001.pdf | GUID = f3ac78a7-2e0a-47b7-96bb-fbbcebaf5a40 | filetype = 1 | modifieddate = 08/17/2026 23:44:00 | attribute = 6
-[OAKSYSTEM] YELLOW : 20260818084035274_0001.pdf | GUID = 772ded1f-43ee-4e25-b0e7-a992ef240224 | filetype = 1 | modifieddate = 08/17/2026 23:44:00 | attribute = 6
-[OAKSYSTEM] YELLOW : 20260818084002416.pdf | GUID = 7bf51c8b-1b49-4fef-8f76-ced53e90fdc8 | filetype = 1 | modifieddate = 08/17/2026 23:43:00 | attribute = 7
+[OAKSYSTEM] YELLOW : 20260819152654049.pdf | GUID = cbf758b9-9851-4f50-8689-a7ed3ea2b99e | filetype = 1 | modifieddate = 08/19/2026 06:30:00 | attribute = 7
+[OAKSYSTEM] YELLOW : 20260819152642515.pdf | GUID = 35610822-ea2a-4006-8d19-b8ed6e186a28 | filetype = 1 | modifieddate = 08/19/2026 06:30:00 | attribute = 7
+[OAKSYSTEM] YELLOW : 20260819142131929.pdf | GUID = 35db1a78-4713-4adf-975a-03690c7cdd0b | filetype = 1 | modifieddate = 08/19/2026 05:25:00 | attribute = 7
 
 ========================================
        OAKSYSTEM - TODAY
 ========================================
-Today's India Date       : 2026-08-18
-Total File Count         : 18
-Yellow Icon Files        : 18
+Today's India Date       : 2026-08-19
+Total File Count         : 3
+Yellow Icon Files        : 3
 Non Yellow Icon Files    : 0
-Yellow + Non Yellow      : 18
+Yellow + Non Yellow      : 3
 ========================================
-Screenshot saved: screenshots/OAKSYSTEM_todayFiles_20260818_164515.png
+Screenshot saved: screenshots/OAKSYSTEM_todayFiles_20260819_135534.png
 ]]></system-out>
   </testcase>
-  <testcase name="validLoginTest" classname="org.sanmatsu.tests.SanmatsuTest" time="3.417">
-    <system-out><![CDATA[Context closed successfully.com.microsoft.playwright.impl.BrowserContextImpl@57fae983
-Browser closed successfully.com.microsoft.playwright.impl.BrowserImpl@4bb8855f
-Playwright closed successfully.com.microsoft.playwright.impl.PlaywrightImpl@322803db
-Browser launched successfully.com.microsoft.playwright.impl.BrowserImpl@6ceb7b5e
-Page created successfully.com.microsoft.playwright.impl.PageImpl@d176a31
+  <testcase name="validLoginTest" classname="org.sanmatsu.tests.SanmatsuTest" time="4.127">
+    <system-out><![CDATA[Context closed successfully.com.microsoft.playwright.impl.BrowserContextImpl@7a6ebe1e
+Browser closed successfully.com.microsoft.playwright.impl.BrowserImpl@417d6615
+Playwright closed successfully.com.microsoft.playwright.impl.PlaywrightImpl@3a91d146
+Browser launched successfully.com.microsoft.playwright.impl.BrowserImpl@6f952d6c
+Page created successfully.com.microsoft.playwright.impl.PageImpl@aa004a0
 Navigated to base URL successfully.https://www.alfadock-pack.com/
 Company username entered: sanmatsu
 Company password entered
@@ -666,7 +619,7 @@ User password entered
 Login button clicked
 ]]></system-out>
   </testcase>
-  <testcase name="validatingSanmatsuHomePage" classname="org.sanmatsu.tests.SanmatsuTest" time="37.443">
+  <testcase name="validatingSanmatsuHomePage" classname="org.sanmatsu.tests.SanmatsuTest" time="25.93">
     <system-out><![CDATA[Current URL: https://www.alfadock-pack.com/ver10/#/home
 Home page URL is correct.
 Current URL: https://www.alfadock-pack.com/ver10/#/home/adsocket
@@ -674,415 +627,240 @@ adsocket page URL is correct.
 Current URL: https://www.alfadock-pack.com/ver10/#/adsocket/adgrid/draw/-1
 draw socket page URL is correct..
 Pagination changed to 100
-Screenshot saved: screenshots/SANMATSU_todayFiles_20260818_164543.png
+Screenshot saved: screenshots/SANMATSU_todayFiles_20260819_135606.png
 [SANMATSU] Processing page 1...
-[SANMATSU] YELLOW : 00114AA@1.pdf | GUID = e1110e6b-7c44-45b0-9dca-c399a437beca | filetype = 1 | modifieddate = 08/18/2026 11:15:00 | attribute = 1
-[SANMATSU] YELLOW : 00114AA.pdf | GUID = 0a41079c-2f37-4831-acb0-a7547e81a2f0 | filetype = 1 | modifieddate = 08/18/2026 11:15:00 | attribute = 1
-[SANMATSU] YELLOW : 1412-260609-KOU2.pdf | GUID = 28e0d896-0c77-4935-93c4-4784266cedaa | filetype = 1 | modifieddate = 08/18/2026 11:03:00 | attribute = 1
-[SANMATSU] YELLOW : 1412-260609-KOU2@9.pdf | GUID = f7b196eb-e69f-4551-b958-288af8b2c58b | filetype = 1 | modifieddate = 08/18/2026 11:03:00 | attribute = 1
-[SANMATSU] YELLOW : LJRL-510050-00@1.pdf | GUID = 8d35599a-4441-4cca-a273-a5e72f52885c | filetype = 1 | modifieddate = 08/18/2026 10:37:00 | attribute = 1
-[SANMATSU] YELLOW : LJRL-510050-00.pdf | GUID = 27c32a39-fcdb-47fe-a30b-67e719bf5eb1 | filetype = 1 | modifieddate = 08/18/2026 10:37:00 | attribute = 1
-[SANMATSU] YELLOW : LJRL-510049-00@1.pdf | GUID = 7aa1dbb6-0792-4234-b5ed-1f001bd4410f | filetype = 1 | modifieddate = 08/18/2026 10:30:00 | attribute = 1
-[SANMATSU] YELLOW : LJRL-510049-00.pdf | GUID = 7d7d0905-a3cf-4d2f-a41c-5c2f6e86b242 | filetype = 1 | modifieddate = 08/18/2026 10:30:00 | attribute = 1
-[SANMATSU] YELLOW : X56-0044-0-STM.pdf | GUID = c2261d9a-f2d9-42c1-9a33-e6565e95f04b | filetype = 1 | modifieddate = 08/18/2026 10:30:00 | attribute = 1
-[SANMATSU] YELLOW : 00233AA.pdf | GUID = 774d1880-a255-48ef-b76e-fd391e0f5aba | filetype = 1 | modifieddate = 08/18/2026 10:30:00 | attribute = 1
-[SANMATSU] YELLOW : 00233AA@1.pdf | GUID = f2da49b3-e729-4250-a63b-368602b065ab | filetype = 1 | modifieddate = 08/18/2026 10:30:00 | attribute = 1
-[SANMATSU] YELLOW : 3H-7-100-12-STM.pdf | GUID = 28a6d4ab-59c3-4626-887c-02bd82fa3df0 | filetype = 1 | modifieddate = 08/18/2026 10:30:00 | attribute = 1
-[SANMATSU] YELLOW : LCVZ-510123-00@1.pdf | GUID = eab6a3aa-10b6-497b-bd78-8fe229823c72 | filetype = 1 | modifieddate = 08/18/2026 10:21:00 | attribute = 1
-[SANMATSU] YELLOW : LCVZ-510123-00.pdf | GUID = 1b792300-8b1c-4ca0-8389-84873c61b158 | filetype = 1 | modifieddate = 08/18/2026 10:21:00 | attribute = 1
-[SANMATSU] YELLOW : LKTG-510053-00@1.pdf | GUID = e28b6d26-6183-4ba6-a2d3-c5003997c9ca | filetype = 1 | modifieddate = 08/18/2026 10:11:00 | attribute = 1
-[SANMATSU] YELLOW : 5010-695167-11@1.pdf | GUID = 6844b64b-1489-4c85-a3b3-e5dd0cea902f | filetype = 1 | modifieddate = 08/18/2026 10:11:00 | attribute = 1
-[SANMATSU] YELLOW : LKTG-510053-00.pdf | GUID = 11e7dacf-d1fd-4d77-972f-16e608b8152f | filetype = 1 | modifieddate = 08/18/2026 10:11:00 | attribute = 1
-[SANMATSU] YELLOW : LKTG-510056-01.pdf | GUID = b9f061e6-3bf4-4190-912f-2ed8773853c2 | filetype = 1 | modifieddate = 08/18/2026 10:11:00 | attribute = 1
-[SANMATSU] YELLOW : LKTG-510056-01@1.pdf | GUID = cd37052a-058e-4027-91e4-84c33592fddc | filetype = 1 | modifieddate = 08/18/2026 10:11:00 | attribute = 1
-[SANMATSU] YELLOW : 5010-695167-11.pdf | GUID = 4610abc2-90d1-46dd-bd56-5e8765017ee1 | filetype = 1 | modifieddate = 08/18/2026 10:11:00 | attribute = 1
-[SANMATSU] YELLOW : LKTG-510052-00@1.pdf | GUID = f3442fcf-6fcf-4d3b-b7a2-507712c40647 | filetype = 1 | modifieddate = 08/18/2026 09:58:00 | attribute = 1
-[SANMATSU] YELLOW : LKTG-510052-00.pdf | GUID = fdf31f6e-166f-4e46-a9b1-81f65568e45f | filetype = 1 | modifieddate = 08/18/2026 09:58:00 | attribute = 1
-[SANMATSU] YELLOW : DEL_5010-695167-11@1.pdf | GUID = 007d3c3c-3bee-416b-ba72-7709f7a243af | filetype = 1 | modifieddate = 08/18/2026 09:58:00 | attribute = 1
-[SANMATSU] YELLOW : 5010-696398-11@1.pdf | GUID = cff5056e-f807-4ff5-a3ee-a940117acbdb | filetype = 1 | modifieddate = 08/18/2026 09:58:00 | attribute = 1
-[SANMATSU] YELLOW : 5010-696398-11.pdf | GUID = dc347ac8-9f69-4a92-86fd-b1346a1bb08b | filetype = 1 | modifieddate = 08/18/2026 09:58:00 | attribute = 1
-[SANMATSU] YELLOW : DEL_5010-695167-11.pdf | GUID = 0bdccd89-ee68-4c7b-bab2-c2d83d65cf52 | filetype = 1 | modifieddate = 08/18/2026 09:58:00 | attribute = 1
-[SANMATSU] YELLOW : 5010-695167-11@9.pdf | GUID = 9eaf31ed-c079-49c9-b5f7-e0433bc725fb | filetype = 1 | modifieddate = 08/18/2026 09:58:00 | attribute = 1
-[SANMATSU] YELLOW : X56-0044-0-STM@1.pdf | GUID = 2d8c467e-cd62-4275-a4c0-34c3579791b7 | filetype = 1 | modifieddate = 08/18/2026 09:58:00 | attribute = 1
-[SANMATSU] YELLOW : 1B10-232836-13.pdf | GUID = 3d5c72c5-8b9a-49b7-8320-936bd13c4241 | filetype = 1 | modifieddate = 08/18/2026 09:47:00 | attribute = 1
-[SANMATSU] YELLOW : 1B10-232836-13@1.pdf | GUID = 597f827a-4ad2-43e5-8205-5f70a7faea74 | filetype = 1 | modifieddate = 08/18/2026 09:47:00 | attribute = 1
-[SANMATSU] YELLOW : 5010-777092-11@1.pdf | GUID = d04bd54b-d213-4fa1-8a48-8c847548b65d | filetype = 1 | modifieddate = 08/18/2026 09:38:00 | attribute = 1
-[SANMATSU] YELLOW : 5010-777092-11.pdf | GUID = 47ea8715-d550-4041-9524-4e89e21874e3 | filetype = 1 | modifieddate = 08/18/2026 09:38:00 | attribute = 1
-[SANMATSU] YELLOW : LRDW-510161-00.pdf | GUID = e6082ed1-a4af-4b7a-85ae-980c303eb08e | filetype = 1 | modifieddate = 08/18/2026 09:28:00 | attribute = 1
-[SANMATSU] YELLOW : LNNH-511859-00@1.pdf | GUID = 815fdd25-5dd6-484c-93f3-31092716990d | filetype = 1 | modifieddate = 08/18/2026 09:28:00 | attribute = 1
-[SANMATSU] YELLOW : 5010-639583-11.pdf | GUID = c71b2d0d-23c7-4e2d-a9d1-95c81ef87633 | filetype = 1 | modifieddate = 08/18/2026 09:28:00 | attribute = 1
-[SANMATSU] YELLOW : 5010-639583-11@1.pdf | GUID = 4164b2b7-ae21-4400-8ec0-1fca7f72f93c | filetype = 1 | modifieddate = 08/18/2026 09:28:00 | attribute = 1
-[SANMATSU] YELLOW : 11091522-78@1.pdf | GUID = b95a1a20-fc28-4403-96f8-06fcfe2ec11d | filetype = 1 | modifieddate = 08/18/2026 09:17:00 | attribute = 1
-[SANMATSU] YELLOW : DEL_LRDW-510161-00.pdf | GUID = 89323844-529a-489e-9941-84bc2ed07adb | filetype = 1 | modifieddate = 08/18/2026 09:17:00 | attribute = 1
-[SANMATSU] YELLOW : LRDW-510161-00@1.pdf | GUID = 328f0c0b-d326-4e90-9b8d-d78ec0401750 | filetype = 1 | modifieddate = 08/18/2026 09:16:00 | attribute = 1
-[SANMATSU] YELLOW : TER3050@P.pdf | GUID = 60659811-363c-4e78-be30-e4ac49f907d1 | filetype = 1 | modifieddate = 08/18/2026 09:16:00 | attribute = 1
-[SANMATSU] YELLOW : 5010-701997-11@1.pdf | GUID = f7452027-6d94-4645-9a59-1072a4898c40 | filetype = 1 | modifieddate = 08/18/2026 09:16:00 | attribute = 1
-[SANMATSU] YELLOW : LRDW-510161-00@9.pdf | GUID = 1f5564f9-946d-4359-8fce-65eafda2c676 | filetype = 1 | modifieddate = 08/18/2026 09:16:00 | attribute = 1
-[SANMATSU] YELLOW : LNNH-511859-00.pdf | GUID = 3eb6cec7-66eb-4167-9cc7-fc1652582b49 | filetype = 1 | modifieddate = 08/18/2026 09:06:00 | attribute = 1
-[SANMATSU] YELLOW : 5010-639582-11@1.pdf | GUID = 255856f3-dce2-4ca3-8ea2-75fcd5b57d04 | filetype = 1 | modifieddate = 08/18/2026 09:06:00 | attribute = 1
-[SANMATSU] YELLOW : 5010-709744-11@1.pdf | GUID = d86f30f4-969f-4332-8edb-fa78ce805f46 | filetype = 1 | modifieddate = 08/18/2026 09:06:00 | attribute = 1
-[SANMATSU] YELLOW : 5010-639582-11.pdf | GUID = 2c71be1b-ef68-4df5-86f2-a771c8231ed4 | filetype = 1 | modifieddate = 08/18/2026 09:06:00 | attribute = 1
-[SANMATSU] YELLOW : 5010-709744-11.pdf | GUID = 6f585813-b3d5-4a0d-b623-a0686370af9b | filetype = 1 | modifieddate = 08/18/2026 09:06:00 | attribute = 1
-[SANMATSU] YELLOW : 5010-577153-12.pdf | GUID = 9371c4c6-1129-4362-afa3-7eb79e75449f | filetype = 1 | modifieddate = 08/18/2026 09:06:00 | attribute = 1
-[SANMATSU] YELLOW : 5010-694800-12@1.pdf | GUID = cbe6e4da-e70d-4bd9-9570-75bfed1858b1 | filetype = 1 | modifieddate = 08/18/2026 09:06:00 | attribute = 1
-[SANMATSU] YELLOW : 5010-694800-12.pdf | GUID = 465e3293-32c9-4290-b92d-1f6224ee9bd5 | filetype = 1 | modifieddate = 08/18/2026 09:05:00 | attribute = 1
-[SANMATSU] YELLOW : TER0770@P.pdf | GUID = 81804634-e199-4a1f-8bdf-4072349b66bd | filetype = 1 | modifieddate = 08/18/2026 09:05:00 | attribute = 1
-[SANMATSU] YELLOW : 5010-577153-12@9.pdf | GUID = 33cb40ed-76ce-401c-9156-46dae614dde4 | filetype = 1 | modifieddate = 08/18/2026 09:05:00 | attribute = 1
-[SANMATSU] YELLOW : 00288AA@1.pdf | GUID = 75d2f7c6-7108-4e87-8300-614e821836e3 | filetype = 1 | modifieddate = 08/18/2026 08:42:00 | attribute = 1
-[SANMATSU] YELLOW : 1412-260609-KOU1.pdf | GUID = fb8d4190-add1-49e8-b96e-7b1917d62028 | filetype = 1 | modifieddate = 08/18/2026 08:42:00 | attribute = 1
-[SANMATSU] YELLOW : 00285AA@1.pdf | GUID = 4c78f758-09a9-42f2-a3ce-c3c7af8da761 | filetype = 1 | modifieddate = 08/18/2026 08:42:00 | attribute = 1
-[SANMATSU] YELLOW : 1412-260609-KOU1@9.pdf | GUID = af3399b4-f759-46b4-a1c3-e1436963cdf5 | filetype = 1 | modifieddate = 08/18/2026 08:42:00 | attribute = 1
-[SANMATSU] YELLOW : 5010-608118-11@1.pdf | GUID = ea6a2364-5655-499e-9751-ee3b0b2f6bd4 | filetype = 1 | modifieddate = 08/18/2026 08:32:00 | attribute = 1
-[SANMATSU] YELLOW : 5010-718160-11.pdf | GUID = b7558aa3-cb97-47d0-8c69-83c66a0b7b46 | filetype = 1 | modifieddate = 08/18/2026 08:32:00 | attribute = 1
-[SANMATSU] YELLOW : 5010-718160-11@1.pdf | GUID = 7a537504-0a48-4ebc-af2c-a554ca2ef223 | filetype = 1 | modifieddate = 08/18/2026 08:32:00 | attribute = 1
-[SANMATSU] YELLOW : CL180-WCBLL-SKR.pdf | GUID = 8f607e67-e7be-47d4-97e9-3a3ddb2b2248 | filetype = 1 | modifieddate = 08/18/2026 08:32:00 | attribute = 1
-[SANMATSU] YELLOW : 5010-608118-11.pdf | GUID = f42e8c2c-417f-4f99-b4e7-99d65a0feccd | filetype = 1 | modifieddate = 08/18/2026 08:32:00 | attribute = 1
-[SANMATSU] YELLOW : KTM-377B-005-0@1.pdf | GUID = d77955f2-31d5-4d18-8cc2-bfdce583605e | filetype = 1 | modifieddate = 08/18/2026 08:32:00 | attribute = 1
-[SANMATSU] YELLOW : 11095372-11@1.pdf | GUID = f048cdc3-8353-4b3c-a7ec-49a17b5cf25c | filetype = 1 | modifieddate = 08/18/2026 08:21:00 | attribute = 1
-[SANMATSU] YELLOW : 5010-718165-11.pdf | GUID = e8f37228-6de6-4990-a572-669b2fd5f561 | filetype = 1 | modifieddate = 08/18/2026 08:21:00 | attribute = 1
-[SANMATSU] YELLOW : 5010-701997-11.pdf | GUID = 41a42c31-b83d-49b2-8246-c081c184ace3 | filetype = 1 | modifieddate = 08/18/2026 08:21:00 | attribute = 1
-[SANMATSU] YELLOW : 5010-718165-11@1.pdf | GUID = 6bc1f5b2-0b15-49ef-bea5-77716f74f1ae | filetype = 1 | modifieddate = 08/18/2026 08:21:00 | attribute = 1
-[SANMATSU] NON YELLOW : TF020-MSK@G.pdf | GUID = ebc40321-a4b4-47f1-8553-5028ea3ac6cc | filetype = 1 | modifieddate = 08/18/2026 08:20:00 | attribute = 0
-[SANMATSU] NON YELLOW : TY001-ESK@G.pdf | GUID = 296fae6b-7668-4da0-bef7-bced397525c9 | filetype = 1 | modifieddate = 08/18/2026 08:20:00 | attribute = 0
-[SANMATSU] YELLOW : 5010-718143-11@1.pdf | GUID = eda9c0c8-0545-4932-b974-9d2235df3448 | filetype = 1 | modifieddate = 08/18/2026 08:10:00 | attribute = 1
-[SANMATSU] YELLOW : 5010-507637-11.pdf | GUID = 54550715-9083-4c8f-9a2b-aed1c2ba4f18 | filetype = 1 | modifieddate = 08/18/2026 08:10:00 | attribute = 1
-[SANMATSU] YELLOW : 5010-718143-11.pdf | GUID = f55dc137-6d43-4599-a919-92abf9497a51 | filetype = 1 | modifieddate = 08/18/2026 08:10:00 | attribute = 1
-[SANMATSU] YELLOW : 5010-507637-11@1.pdf | GUID = 64f8663d-d3d4-40c5-ab41-98099efc25b8 | filetype = 1 | modifieddate = 08/18/2026 08:09:00 | attribute = 1
-[SANMATSU] NON YELLOW : ZEROLIFT-VER2-TO@G.pdf | GUID = e1c489f4-8beb-428b-a629-dcf17e39af5d | filetype = 1 | modifieddate = 08/18/2026 08:09:00 | attribute = 0
-[SANMATSU] YELLOW : AB026-031-005A.pdf | GUID = ecf68657-d091-469b-8b9a-34cdd8bd5f87 | filetype = 1 | modifieddate = 08/18/2026 08:09:00 | attribute = 1
-[SANMATSU] YELLOW : 5010-591137-14@9.pdf | GUID = 57685747-6843-43c2-94b8-2724d3587396 | filetype = 1 | modifieddate = 08/18/2026 08:09:00 | attribute = 1
-[SANMATSU] YELLOW : 5010-591137-14.pdf | GUID = e30704b3-8b15-44bf-b3fe-d4c29d5c26f7 | filetype = 1 | modifieddate = 08/18/2026 08:08:00 | attribute = 1
-[SANMATSU] YELLOW : 5010-532867-11.pdf | GUID = 53ed59d9-c3da-49e4-8257-70802cfe5086 | filetype = 1 | modifieddate = 08/18/2026 07:57:00 | attribute = 1
-[SANMATSU] YELLOW : 5010-532867-11@1.pdf | GUID = ff2c2f1a-7ea1-4b88-8617-bb90de12d4f2 | filetype = 1 | modifieddate = 08/18/2026 07:57:00 | attribute = 1
-[SANMATSU] YELLOW : AB026-022-014A.pdf | GUID = 53468aef-d2bb-4836-a377-f54cfc9267eb | filetype = 1 | modifieddate = 08/18/2026 07:57:00 | attribute = 1
-[SANMATSU] YELLOW : 5010-700320-11.pdf | GUID = f14093bc-1eef-49ef-886e-b7f276242d99 | filetype = 1 | modifieddate = 08/18/2026 07:46:00 | attribute = 1
-[SANMATSU] YELLOW : 11095372-05@1.pdf | GUID = 664213e3-3136-4348-b0eb-694f9c81ab18 | filetype = 1 | modifieddate = 08/18/2026 07:46:00 | attribute = 1
-[SANMATSU] YELLOW : 5010-700320-11@1.pdf | GUID = bf501017-9ae8-489d-8bfb-7413b5171c26 | filetype = 1 | modifieddate = 08/18/2026 07:46:00 | attribute = 1
-[SANMATSU] YELLOW : DEL_1412-260316-SIMPLATE@9.pdf | GUID = 68d7df0e-b7d2-4a3a-9a91-11536ddbf374 | filetype = 1 | modifieddate = 08/18/2026 07:34:00 | attribute = 1
-[SANMATSU] YELLOW : 5010-718164-11.pdf | GUID = 95e4a793-dd6c-4694-83a3-5b22d7905db3 | filetype = 1 | modifieddate = 08/18/2026 07:34:00 | attribute = 1
-[SANMATSU] YELLOW : 5010-582635-11@1.pdf | GUID = 99d4413a-c845-4b00-a6a2-652b2e0abfc4 | filetype = 1 | modifieddate = 08/18/2026 07:34:00 | attribute = 1
-[SANMATSU] YELLOW : 1412-260316-SIMPLATE.pdf | GUID = 1592b0f9-50d6-4063-8a27-a0caff83d68d | filetype = 1 | modifieddate = 08/18/2026 07:34:00 | attribute = 1
-[SANMATSU] YELLOW : DEL_1412-260316-SIMPLATE@1.pdf | GUID = 94747977-939b-49f0-bd87-174c951609a4 | filetype = 1 | modifieddate = 08/18/2026 07:34:00 | attribute = 1
-[SANMATSU] YELLOW : 5010-582635-11.pdf | GUID = 6813aad8-9b79-4ae0-a34a-b418519d9cba | filetype = 1 | modifieddate = 08/18/2026 07:33:00 | attribute = 1
-[SANMATSU] YELLOW : AB026-022-015A.pdf | GUID = 85acdf27-d0e9-4995-b8af-51ccda8ef4df | filetype = 1 | modifieddate = 08/18/2026 07:33:00 | attribute = 1
-[SANMATSU] NON YELLOW : DEL_1412-260316-SIMPLATE@G.pdf | GUID = 7dc846b5-331c-4e88-be04-d6ed964d759e | filetype = 1 | modifieddate = 08/18/2026 07:33:00 | attribute = 0
-[SANMATSU] YELLOW : 5010-718164-11@1.pdf | GUID = 833a228a-1e95-4135-bd4d-ce1b803395c5 | filetype = 1 | modifieddate = 08/18/2026 07:33:00 | attribute = 1
-[SANMATSU] YELLOW : 5010-591137-14@1.pdf | GUID = 86ce80d0-078c-497e-a7ea-612cf69d8d19 | filetype = 1 | modifieddate = 08/18/2026 07:23:00 | attribute = 1
-[SANMATSU] YELLOW : 5010-718162-11@1.pdf | GUID = 854b3b20-15ea-4211-b6af-2895bcee5c19 | filetype = 1 | modifieddate = 08/18/2026 07:22:00 | attribute = 1
-[SANMATSU] NON YELLOW : TF020-ESK@G.pdf | GUID = 72808f9d-a86f-4aa8-a59a-adfa2ef20f0f | filetype = 1 | modifieddate = 08/18/2026 07:22:00 | attribute = 0
-[SANMATSU] YELLOW : 5010-718162-11.pdf | GUID = 2b9bfb3b-5a29-41c6-9fc5-f31b978a2485 | filetype = 1 | modifieddate = 08/18/2026 07:22:00 | attribute = 1
-[SANMATSU] YELLOW : 00216AA@1.pdf | GUID = 89cc5a24-5179-40f5-997e-c830d83f55a6 | filetype = 1 | modifieddate = 08/18/2026 07:12:00 | attribute = 1
-[SANMATSU] YELLOW : 1412-260812-KOU2.pdf | GUID = 1fa9efd9-b4b5-4119-9438-68895164d65d | filetype = 1 | modifieddate = 08/18/2026 07:12:00 | attribute = 1
-[SANMATSU] YELLOW : 5010-718163-11.pdf | GUID = b03b25c2-50f1-4901-8703-a41494570759 | filetype = 1 | modifieddate = 08/18/2026 07:01:00 | attribute = 1
-[SANMATSU] YELLOW : 5010-603278-11.pdf | GUID = 2257c6ae-e00a-43d2-aa35-659b2b04f720 | filetype = 1 | modifieddate = 08/18/2026 07:01:00 | attribute = 1
-[SANMATSU] YELLOW : 5010-718163-11@1.pdf | GUID = e5946dad-ad7b-497e-ba17-ed43d1d35413 | filetype = 1 | modifieddate = 08/18/2026 07:01:00 | attribute = 1
+[SANMATSU] NON YELLOW : 0022-62590SA@9.pdf | GUID = 9f43e8d6-ca42-427a-ba0b-9f5c4c818666 | filetype = 1 | modifieddate = 08/19/2026 08:25:00 | attribute = 0
+[SANMATSU] YELLOW : 0022-62590SA.pdf | GUID = fec3f3c8-26d2-4970-ac9b-735acea7f388 | filetype = 1 | modifieddate = 08/19/2026 08:25:00 | attribute = 1
+[SANMATSU] NON YELLOW : 57533-8242B-KOUNYU@G.pdf | GUID = 6cd3ae30-2ee9-4884-9bdb-26ff1d066bcf | filetype = 1 | modifieddate = 08/19/2026 08:25:00 | attribute = 0
+[SANMATSU] YELLOW : 9803-1360-01@1.pdf | GUID = ccea226a-f999-4fa2-8567-036e0c2bace9 | filetype = 1 | modifieddate = 08/19/2026 08:15:00 | attribute = 1
+[SANMATSU] YELLOW : 9803-1360-01.pdf | GUID = a2835c08-5c5f-48db-a7e3-36b4008474a7 | filetype = 1 | modifieddate = 08/19/2026 08:15:00 | attribute = 1
+[SANMATSU] YELLOW : 5010-805189-11.pdf | GUID = d7b281c2-3285-4ac2-84fd-b4c6365aef41 | filetype = 1 | modifieddate = 08/19/2026 08:15:00 | attribute = 1
+[SANMATSU] YELLOW : 5010-805189-11@1.pdf | GUID = 12e1bc46-8ceb-432b-a626-c586a1d2fb35 | filetype = 1 | modifieddate = 08/19/2026 08:15:00 | attribute = 1
+[SANMATSU] YELLOW : 310-0167-A@1.pdf | GUID = 2f26cb12-c90c-41d4-9614-5bd25395382f | filetype = 1 | modifieddate = 08/19/2026 08:03:00 | attribute = 1
+[SANMATSU] YELLOW : 5010-656635-11.pdf | GUID = bbe84e7b-65d0-4fda-9350-647a3da6cf9f | filetype = 1 | modifieddate = 08/19/2026 08:03:00 | attribute = 1
+[SANMATSU] YELLOW : 00203AA.pdf | GUID = 04a29021-19c7-42e7-82ac-8c2ef854a6db | filetype = 1 | modifieddate = 08/19/2026 08:02:00 | attribute = 1
+[SANMATSU] YELLOW : 11095372-11.pdf | GUID = 5a7958da-ca8d-41d1-97e4-d3f831823453 | filetype = 1 | modifieddate = 08/19/2026 07:51:00 | attribute = 1
+[SANMATSU] YELLOW : 9803-1359-01.pdf | GUID = 2c140fc7-1db4-482f-a088-93aeda879eaf | filetype = 1 | modifieddate = 08/19/2026 07:51:00 | attribute = 1
+[SANMATSU] YELLOW : 9803-1359-01@1.pdf | GUID = 6c156452-c04c-4c21-9a84-21b7f5076bb3 | filetype = 1 | modifieddate = 08/19/2026 07:51:00 | attribute = 1
+[SANMATSU] YELLOW : 11095372-11@1.pdf | GUID = ec33d730-8f32-44e9-a59a-e4935a021f5f | filetype = 1 | modifieddate = 08/19/2026 07:51:00 | attribute = 1
+[SANMATSU] YELLOW : 11091521-87@9.pdf | GUID = 307381cb-7b40-48c3-ad3e-274cceddc91f | filetype = 1 | modifieddate = 08/19/2026 07:40:00 | attribute = 1
+[SANMATSU] YELLOW : 3B10-632758-11@1.pdf | GUID = a6726691-fee3-4154-995d-2dc1efebfd5e | filetype = 1 | modifieddate = 08/19/2026 07:40:00 | attribute = 1
+[SANMATSU] YELLOW : 11091522-24@9.pdf | GUID = 36b431a1-3bf3-4524-bbf1-bb5974a0aa88 | filetype = 1 | modifieddate = 08/19/2026 07:40:00 | attribute = 1
+[SANMATSU] YELLOW : 3B10-632758-11.pdf | GUID = fdbabba8-66be-42f3-a2c7-284f9f6fca67 | filetype = 1 | modifieddate = 08/19/2026 07:40:00 | attribute = 1
+[SANMATSU] YELLOW : 11091521-87@1.pdf | GUID = faed6564-af37-4ad1-ba71-89854beedf32 | filetype = 1 | modifieddate = 08/19/2026 07:40:00 | attribute = 1
+[SANMATSU] YELLOW : 11091522-24@1.pdf | GUID = 813f2001-1dfe-4e29-8da9-a303cad8b126 | filetype = 1 | modifieddate = 08/19/2026 07:40:00 | attribute = 1
+[SANMATSU] YELLOW : 60353-7282A+.pdf | GUID = 444c5432-b0ca-42df-8be4-6e9065ff9f66 | filetype = 1 | modifieddate = 08/19/2026 07:29:00 | attribute = 1
+[SANMATSU] NON YELLOW : AB024-MSK@G.pdf | GUID = 26040595-2ab5-44bc-8875-0a9b79c18529 | filetype = 1 | modifieddate = 08/19/2026 07:28:00 | attribute = 0
+[SANMATSU] YELLOW : 60353-7282A+@1.pdf | GUID = d40e587d-677b-4289-8b08-fd061c884015 | filetype = 1 | modifieddate = 08/19/2026 07:28:00 | attribute = 1
+[SANMATSU] YELLOW : KCN-425B-019-0@1.pdf | GUID = c43d43f5-525b-46ad-a8fd-edb098743b7b | filetype = 1 | modifieddate = 08/19/2026 07:28:00 | attribute = 1
+[SANMATSU] YELLOW : 00217AA@1.pdf | GUID = 225d39fe-ff8b-4669-87d1-d1ef9e928c23 | filetype = 1 | modifieddate = 08/19/2026 07:28:00 | attribute = 1
+[SANMATSU] YELLOW : 27AAC518.pdf | GUID = aa025ee4-74fe-40aa-aac1-263af51f2940 | filetype = 1 | modifieddate = 08/19/2026 07:18:00 | attribute = 1
+[SANMATSU] YELLOW : KCN-425B-023-0.pdf | GUID = 695cf54f-5301-4b11-ab7b-7e3547f5aafe | filetype = 1 | modifieddate = 08/19/2026 07:18:00 | attribute = 1
+[SANMATSU] YELLOW : 00214AB.pdf | GUID = 764597d1-1663-42e1-b4e6-590a379d9a85 | filetype = 1 | modifieddate = 08/19/2026 07:18:00 | attribute = 1
+[SANMATSU] YELLOW : 27AAC518@9.pdf | GUID = 2955f2ae-35e8-40fd-804d-afe5d1c5c8db | filetype = 1 | modifieddate = 08/19/2026 07:18:00 | attribute = 1
+[SANMATSU] YELLOW : KCN-425B-023-0@1.pdf | GUID = d09f4d80-84d7-48f1-bf9f-44f4c7874999 | filetype = 1 | modifieddate = 08/19/2026 07:18:00 | attribute = 1
+[SANMATSU] YELLOW : 11095372-12@1.pdf | GUID = 7ad767fe-e652-44d3-90ba-c4690f240bac | filetype = 1 | modifieddate = 08/19/2026 07:18:00 | attribute = 1
+[SANMATSU] YELLOW : 27AAC518@1.pdf | GUID = 39bd76da-78d4-40d2-99f5-61e20703a7e9 | filetype = 1 | modifieddate = 08/19/2026 07:17:00 | attribute = 1
+[SANMATSU] YELLOW : 11095372-12.pdf | GUID = e5ded664-528a-4ea0-980c-8c18137a971b | filetype = 1 | modifieddate = 08/19/2026 07:17:00 | attribute = 1
+[SANMATSU] YELLOW : 00214AB@1.pdf | GUID = 0dc428b5-c2ca-4609-b325-882ed9b99307 | filetype = 1 | modifieddate = 08/19/2026 07:07:00 | attribute = 1
+[SANMATSU] YELLOW : 27AAC517@1.pdf | GUID = 8ae26f21-4154-4fae-ba23-27878826d477 | filetype = 1 | modifieddate = 08/19/2026 07:07:00 | attribute = 1
+[SANMATSU] YELLOW : DEL_00214AB.pdf | GUID = a2b76e48-c216-49b0-8bfa-93cf62f2d35e | filetype = 1 | modifieddate = 08/19/2026 07:07:00 | attribute = 1
+[SANMATSU] YELLOW : 27AAC517.pdf | GUID = 285856db-d156-402a-a760-dd400f1d1133 | filetype = 1 | modifieddate = 08/19/2026 07:07:00 | attribute = 1
+[SANMATSU] YELLOW : 27AAC517@9.pdf | GUID = f82dd03e-f42e-431e-b314-aa968344fbf5 | filetype = 1 | modifieddate = 08/19/2026 07:07:00 | attribute = 1
+[SANMATSU] YELLOW : GB30206H0437-1@1.pdf | GUID = 1214c662-8cad-4299-8450-3696b3901715 | filetype = 1 | modifieddate = 08/19/2026 07:07:00 | attribute = 1
+[SANMATSU] YELLOW : 5010-753493-11@9.pdf | GUID = ea8b5a23-39c6-4dbe-9885-4b0102402980 | filetype = 1 | modifieddate = 08/19/2026 07:05:00 | attribute = 1
+[SANMATSU] YELLOW : KCN-425B-026-0.pdf | GUID = 1e5d9979-8b17-4185-a79b-88dfa956afde | filetype = 1 | modifieddate = 08/19/2026 07:05:00 | attribute = 1
+[SANMATSU] YELLOW : 00214AB@9.pdf | GUID = 8bbdd8ff-0daf-4555-946e-c3161761512e | filetype = 1 | modifieddate = 08/19/2026 07:05:00 | attribute = 1
+[SANMATSU] YELLOW : KCN-425B-026-0@1.pdf | GUID = d03118ed-6843-404b-9160-17f65d824072 | filetype = 1 | modifieddate = 08/19/2026 07:05:00 | attribute = 1
+[SANMATSU] YELLOW : 00214AA.pdf | GUID = 9ca3c03a-e03e-4635-9dd6-3c5592eb9508 | filetype = 1 | modifieddate = 08/19/2026 06:54:00 | attribute = 1
+[SANMATSU] YELLOW : KCN-425B-019-0.pdf | GUID = e7d8480a-3b90-4ca1-a1e9-f5f55a44f745 | filetype = 1 | modifieddate = 08/19/2026 06:43:00 | attribute = 1
+[SANMATSU] YELLOW : KCN-425B-006-0.pdf | GUID = 818c2d93-de52-4025-9dec-6177dededf95 | filetype = 1 | modifieddate = 08/19/2026 06:31:00 | attribute = 1
+[SANMATSU] YELLOW : KCN-425B-006-0@1.pdf | GUID = 6c8987ae-3523-49ab-81ef-5097ab13b4ca | filetype = 1 | modifieddate = 08/19/2026 06:31:00 | attribute = 1
+[SANMATSU] YELLOW : 00221AA.pdf | GUID = 6b274cfe-08af-429b-a457-423eda90800a | filetype = 1 | modifieddate = 08/19/2026 06:31:00 | attribute = 1
+[SANMATSU] YELLOW : 5010-577153-12@9.pdf | GUID = 7fc9434d-649e-44b3-a387-f8aa9677fe74 | filetype = 1 | modifieddate = 08/19/2026 06:20:00 | attribute = 1
+[SANMATSU] YELLOW : 5010-577153-12.pdf | GUID = b24bad65-5bf1-4e85-bbd6-a24bc65ec5f4 | filetype = 1 | modifieddate = 08/19/2026 06:19:00 | attribute = 1
+[SANMATSU] YELLOW : JTS-N01-003-00.pdf | GUID = f01d1936-b4f3-49fd-9c3d-af64b07b0d02 | filetype = 1 | modifieddate = 08/19/2026 06:09:00 | attribute = 1
+[SANMATSU] YELLOW : JTS-N01-003-00@1.pdf | GUID = b137fca1-cc9e-4486-8177-57ebf194d3d8 | filetype = 1 | modifieddate = 08/19/2026 06:09:00 | attribute = 1
+[SANMATSU] YELLOW : 3B10-502480-12@P.pdf | GUID = b7b45ee6-60c4-459b-9e33-b0dacff0dd1a | filetype = 1 | modifieddate = 08/19/2026 06:08:00 | attribute = 1
+[SANMATSU] YELLOW : LASY-010000-00.pdf | GUID = 0e5b5a05-4757-441b-b6fc-0eccbbaaaf15 | filetype = 1 | modifieddate = 08/19/2026 05:57:00 | attribute = 1
+[SANMATSU] YELLOW : LASY-010000-00@1.pdf | GUID = 3fc21a45-b222-4a78-846e-394dec2c1bfb | filetype = 1 | modifieddate = 08/19/2026 05:57:00 | attribute = 1
+[SANMATSU] YELLOW : 5010-656635-11@1.pdf | GUID = a2b42b99-e9b4-4a9a-acda-d0585be1d55e | filetype = 1 | modifieddate = 08/19/2026 05:57:00 | attribute = 1
+[SANMATSU] YELLOW : 60361-4868A-IN.pdf | GUID = 58229d9c-e468-4858-a86d-0e38351d7f2b | filetype = 1 | modifieddate = 08/19/2026 05:57:00 | attribute = 1
+[SANMATSU] YELLOW : 60353-7282A.pdf | GUID = 9097f61a-83a1-4d0e-a011-0f2c00d509f0 | filetype = 1 | modifieddate = 08/19/2026 05:35:00 | attribute = 1
+[SANMATSU] YELLOW : KCN-425B-029-0@1.pdf | GUID = 0b865868-f0c9-4925-ae7c-82aae99acdfa | filetype = 1 | modifieddate = 08/19/2026 05:35:00 | attribute = 1
+[SANMATSU] YELLOW : KCN-425B-029-0.pdf | GUID = 3c03a820-4501-4292-bf52-1e4afc02fcc8 | filetype = 1 | modifieddate = 08/19/2026 05:35:00 | attribute = 1
+[SANMATSU] YELLOW : 11095372-05.pdf | GUID = da80cadd-af13-45b7-9923-9711ceabf52d | filetype = 1 | modifieddate = 08/19/2026 05:14:00 | attribute = 1
+[SANMATSU] YELLOW : 11095372-05@1.pdf | GUID = 7752d561-d345-4060-94ed-d98b9e445e4c | filetype = 1 | modifieddate = 08/19/2026 05:14:00 | attribute = 1
+[SANMATSU] YELLOW : 00239AA.pdf | GUID = 166c4e20-c93b-4980-9976-f621d7a34bc7 | filetype = 1 | modifieddate = 08/19/2026 05:13:00 | attribute = 1
+[SANMATSU] YELLOW : 3B10-583894-11.pdf | GUID = a11082a7-f6cf-40cc-a15d-79a27745f207 | filetype = 1 | modifieddate = 08/19/2026 05:13:00 | attribute = 1
+[SANMATSU] YELLOW : tf008-10-009b.pdf | GUID = 24672338-1e3c-45bc-b9ef-911d94b290da | filetype = 1 | modifieddate = 08/19/2026 05:13:00 | attribute = 1
+[SANMATSU] YELLOW : 3B10-583895-11.pdf | GUID = 120cdcb4-5896-4abc-a2fc-74613f48a994 | filetype = 1 | modifieddate = 08/19/2026 05:13:00 | attribute = 1
+[SANMATSU] YELLOW : 1408039-01@9.pdf | GUID = 7c0db818-3e6b-44c3-8464-88ec2bcfea8d | filetype = 1 | modifieddate = 08/19/2026 05:01:00 | attribute = 1
+[SANMATSU] YELLOW : 1408039-01@P.pdf | GUID = 50296654-6031-4f07-bbfd-224cadc5b2cc | filetype = 1 | modifieddate = 08/19/2026 05:01:00 | attribute = 1
+[SANMATSU] YELLOW : LASY-010002-00@1.pdf | GUID = 885ee6fd-9cc3-44a1-8e8e-4a24e5db737c | filetype = 1 | modifieddate = 08/19/2026 04:50:00 | attribute = 1
+[SANMATSU] NON YELLOW : 2S10-508786-11@G.pdf | GUID = 1e58a9f7-8378-4a5f-bff9-1971b609f02f | filetype = 1 | modifieddate = 08/19/2026 04:49:00 | attribute = 0
+[SANMATSU] YELLOW : LASY-010002-00.pdf | GUID = 71fc3556-3c21-45e2-b8f1-967819d9b99c | filetype = 1 | modifieddate = 08/19/2026 04:49:00 | attribute = 1
+[SANMATSU] NON YELLOW : 2S10-508788-11@G.pdf | GUID = aef41d71-aa39-4255-a59f-45f41889f5b0 | filetype = 1 | modifieddate = 08/19/2026 04:49:00 | attribute = 0
+[SANMATSU] YELLOW : KCN-425B-009-0@1.pdf | GUID = 843ef0ec-4522-43e1-9fcf-5d802a2eab2e | filetype = 1 | modifieddate = 08/19/2026 04:49:00 | attribute = 1
+[SANMATSU] YELLOW : 0043-25613SA+@1.pdf | GUID = 9a6c02aa-7f26-4ce1-966c-5c673f4f07fb | filetype = 1 | modifieddate = 08/19/2026 04:39:00 | attribute = 1
+[SANMATSU] YELLOW : 0043-25613SA+.pdf | GUID = b8d0d487-d286-44e3-b614-a6fa8681f7e4 | filetype = 1 | modifieddate = 08/19/2026 04:39:00 | attribute = 1
+[SANMATSU] YELLOW : 0043-25613SA+@9.pdf | GUID = 1d427e6a-b7d4-465d-bd6a-d9f4fac3749d | filetype = 1 | modifieddate = 08/19/2026 04:39:00 | attribute = 1
+[SANMATSU] YELLOW : 00119AA.pdf | GUID = 40c20fc3-c722-4ed4-9632-92a190d98a70 | filetype = 1 | modifieddate = 08/19/2026 04:39:00 | attribute = 1
+[SANMATSU] YELLOW : 00119AA@1.pdf | GUID = ba05edb2-e647-4fb7-b9b1-1578957636e2 | filetype = 1 | modifieddate = 08/19/2026 04:39:00 | attribute = 1
+[SANMATSU] YELLOW : Y-B-29326@9.pdf | GUID = 277912f2-7507-4c8e-aea2-9c63b1f3fc26 | filetype = 1 | modifieddate = 08/19/2026 04:27:00 | attribute = 1
+[SANMATSU] YELLOW : 11095372-04@1.pdf | GUID = ccb27a40-14f7-43e4-8698-6a3a95663243 | filetype = 1 | modifieddate = 08/19/2026 04:27:00 | attribute = 1
+[SANMATSU] YELLOW : LCST-010058-00@1.pdf | GUID = 60c70e17-378e-41d2-a0dc-9b6224e0c7d1 | filetype = 1 | modifieddate = 08/19/2026 04:27:00 | attribute = 1
+[SANMATSU] YELLOW : 11095372-04.pdf | GUID = 8d8f63dd-4a8f-4391-bed1-ec2fa4d664a7 | filetype = 1 | modifieddate = 08/19/2026 04:27:00 | attribute = 1
+[SANMATSU] YELLOW : Y-B-29326@1.pdf | GUID = 38e1780b-5e05-4f42-bd1a-77dc85832766 | filetype = 1 | modifieddate = 08/19/2026 04:26:00 | attribute = 1
+[SANMATSU] YELLOW : LCST-010058-00.pdf | GUID = 087d19a0-79f0-47c9-adb9-260bdf81b7fc | filetype = 1 | modifieddate = 08/19/2026 04:26:00 | attribute = 1
+[SANMATSU] YELLOW : 5010-797494-11@1.pdf | GUID = f04f9a7c-c19f-4a38-ab79-cf1dad369839 | filetype = 1 | modifieddate = 08/19/2026 04:15:00 | attribute = 1
+[SANMATSU] YELLOW : 5010-672382-12.pdf | GUID = c2bfa26e-323d-4052-8b03-9f4f20dd6836 | filetype = 1 | modifieddate = 08/19/2026 04:14:00 | attribute = 1
+[SANMATSU] YELLOW : 5010-672382-12@1.pdf | GUID = 5194e9e4-57b6-4c31-ac43-a21a860fac4a | filetype = 1 | modifieddate = 08/19/2026 04:14:00 | attribute = 1
+[SANMATSU] YELLOW : KCN-425B-024-0.pdf | GUID = f5c72c2f-e032-45bf-9b36-7e854256c9a4 | filetype = 1 | modifieddate = 08/19/2026 04:05:00 | attribute = 1
+[SANMATSU] YELLOW : KCN-425B-024-0@1.pdf | GUID = d015032a-3b81-4a2b-becf-d9df968fa5c1 | filetype = 1 | modifieddate = 08/19/2026 04:05:00 | attribute = 1
+[SANMATSU] NON YELLOW : CT10-038912-11@G.pdf | GUID = 5fe95903-1c98-465e-ba68-d18e096a710b | filetype = 1 | modifieddate = 08/19/2026 04:04:00 | attribute = 0
+[SANMATSU] YELLOW : 3B10-587594-11@1.pdf | GUID = c1dae6aa-251f-48fc-9fcb-06c61ded4267 | filetype = 1 | modifieddate = 08/19/2026 03:53:00 | attribute = 1
+[SANMATSU] YELLOW : KCN-425B-009-0.pdf | GUID = 28cb2fca-d215-45a5-983f-df0faed2ad3c | filetype = 1 | modifieddate = 08/19/2026 03:53:00 | attribute = 1
+[SANMATSU] YELLOW : 3B10-587594-11.pdf | GUID = 9bd8d1a2-d3c2-4833-9df5-32b42181f405 | filetype = 1 | modifieddate = 08/19/2026 03:52:00 | attribute = 1
+[SANMATSU] YELLOW : 5010-791174-11.pdf | GUID = 5a9b6ed9-6328-40d8-832f-8c9ff12f1339 | filetype = 1 | modifieddate = 08/19/2026 03:52:00 | attribute = 1
+[SANMATSU] YELLOW : 3B10-579234-11.pdf | GUID = 191751c1-406d-4f15-81cc-47a94715338b | filetype = 1 | modifieddate = 08/19/2026 03:38:00 | attribute = 1
+[SANMATSU] YELLOW : 3B10-579234-11@1.pdf | GUID = 75c0f813-ef54-4d06-8a62-633c2bb59293 | filetype = 1 | modifieddate = 08/19/2026 03:38:00 | attribute = 1
+[SANMATSU] YELLOW : 5010-757191-11@1.pdf | GUID = d161fd69-6542-4001-b8e7-1bddf9281961 | filetype = 1 | modifieddate = 08/19/2026 03:04:00 | attribute = 1
+[SANMATSU] YELLOW : 5010-757191-11.pdf | GUID = efc6827d-78a6-4cd3-ad74-eb1ff26093e1 | filetype = 1 | modifieddate = 08/19/2026 03:04:00 | attribute = 1
+[SANMATSU] YELLOW : 5010-723491-12.pdf | GUID = 48ab560b-c541-4cbd-b094-95f448c17a91 | filetype = 1 | modifieddate = 08/19/2026 03:04:00 | attribute = 1
+[SANMATSU] YELLOW : 5010-723491-12@1.pdf | GUID = 33fb14f5-a3e9-43c9-aeed-c3618c4aa9f4 | filetype = 1 | modifieddate = 08/19/2026 03:04:00 | attribute = 1
 
 ========================================
         SANMATSU - TODAY
 ========================================
-Today's India Date       : 2026-08-18
+Today's India Date       : 2026-08-19
 Total File Count         : 100
-Yellow Icon Files        : 95
-Non Yellow Icon Files    : 5
+Yellow Icon Files        : 94
+Non Yellow Icon Files    : 6
 Yellow + Non Yellow      : 100
 ========================================
 [SANMATSU] Page 1 total records: 100, valid today's files: 100
 [SANMATSU] All 100 records on previous page were valid today's files.
 [SANMATSU] Moving to page 2...
 [SANMATSU] Processing page 2...
-[SANMATSU] YELLOW : 5010-603278-11@1.pdf | GUID = bd830b73-317e-4ebc-bd8c-03ff569f6474 | filetype = 1 | modifieddate = 08/18/2026 07:01:00 | attribute = 1
-[SANMATSU] NON YELLOW : 57533-8242B-KOUNYU@G.pdf | GUID = e4a5078d-3c06-45cf-aea6-da9551f64754 | filetype = 1 | modifieddate = 08/18/2026 07:00:00 | attribute = 0
-[SANMATSU] YELLOW : 5010-718142-11.pdf | GUID = 7d605b6c-a250-4c59-910e-3c23ed7e62e2 | filetype = 1 | modifieddate = 08/18/2026 06:51:00 | attribute = 1
-[SANMATSU] YELLOW : 5010-718142-11@1.pdf | GUID = d7b73612-2c85-4340-86f4-231689a55de0 | filetype = 1 | modifieddate = 08/18/2026 06:51:00 | attribute = 1
-[SANMATSU] YELLOW : 1412-260316-K.pdf | GUID = cb16f9e4-2d92-46b7-b2c5-7a10febd455e | filetype = 1 | modifieddate = 08/18/2026 06:51:00 | attribute = 1
-[SANMATSU] YELLOW : 5010-603686-11.pdf | GUID = 1cd0422f-e9bb-49a5-bc2d-5b9fec3ee656 | filetype = 1 | modifieddate = 08/18/2026 06:51:00 | attribute = 1
-[SANMATSU] YELLOW : 1412-260316-K@9.pdf | GUID = 18e0165b-c6f8-4360-84fe-b354fd02ebab | filetype = 1 | modifieddate = 08/18/2026 06:51:00 | attribute = 1
-[SANMATSU] YELLOW : 00220AA.pdf | GUID = ef835b7d-f2a5-4084-8d21-77d1734eea06 | filetype = 1 | modifieddate = 08/18/2026 06:50:00 | attribute = 1
-[SANMATSU] YELLOW : 1412-260316.pdf | GUID = 47fbcab8-1cbf-4dde-baf0-6efe2764f29a | filetype = 1 | modifieddate = 08/18/2026 06:50:00 | attribute = 1
-[SANMATSU] YELLOW : 5010-603686-11@1.pdf | GUID = 53a2e223-ab15-4dc5-a039-684043e3b9d9 | filetype = 1 | modifieddate = 08/18/2026 06:39:00 | attribute = 1
-[SANMATSU] YELLOW : 11095372-04@1.pdf | GUID = cb3bc224-94cf-45bb-9f22-f475a87458ab | filetype = 1 | modifieddate = 08/18/2026 06:28:00 | attribute = 1
-[SANMATSU] NON YELLOW : 3B10-573276-11@G.pdf | GUID = 73f9847f-a1c8-4d16-abeb-2e51218cc8f7 | filetype = 1 | modifieddate = 08/18/2026 06:27:00 | attribute = 0
-[SANMATSU] NON YELLOW : LRMS-110007-21@G.pdf | GUID = c8e4580a-5a5b-4267-a208-33e516557c91 | filetype = 1 | modifieddate = 08/18/2026 06:27:00 | attribute = 0
-[SANMATSU] NON YELLOW : 2S10-508787-11@G.pdf | GUID = 2d9ff7d9-8f6c-4a38-8007-2762d51e02f7 | filetype = 1 | modifieddate = 08/18/2026 06:26:00 | attribute = 0
-[SANMATSU] YELLOW : 00220AA@1.pdf | GUID = ff467297-080c-43cf-9dcb-2e470d1e7cc4 | filetype = 1 | modifieddate = 08/18/2026 06:17:00 | attribute = 1
-[SANMATSU] YELLOW : 5010-608079-11.pdf | GUID = 2c5dd47e-0830-4da8-98b1-b1811ba3ba38 | filetype = 1 | modifieddate = 08/18/2026 06:07:00 | attribute = 1
-[SANMATSU] YELLOW : 3B10-502481-11@9.pdf | GUID = 56cb8c84-57e7-4650-93e2-59ab5931e6f9 | filetype = 1 | modifieddate = 08/18/2026 06:07:00 | attribute = 1
-[SANMATSU] YELLOW : 5010-608079-11@1.pdf | GUID = 25f62cc1-0249-4798-b6eb-2513c498255b | filetype = 1 | modifieddate = 08/18/2026 06:07:00 | attribute = 1
-[SANMATSU] YELLOW : kcn-360b-056-1.pdf | GUID = 21eb8444-3235-483c-820a-dd9b040991cf | filetype = 1 | modifieddate = 08/18/2026 06:07:00 | attribute = 1
-[SANMATSU] NON YELLOW : 2S10-507728-11@G.pdf | GUID = 3929abc3-f3ea-4a55-951b-7091ad20fa91 | filetype = 1 | modifieddate = 08/18/2026 06:06:00 | attribute = 0
-[SANMATSU] YELLOW : 11095372-12@1.pdf | GUID = 3936ba94-80c6-40ad-8d40-5d80adf1780c | filetype = 1 | modifieddate = 08/18/2026 06:06:00 | attribute = 1
-[SANMATSU] YELLOW : 3B10-502481-11.pdf | GUID = 4730bc95-2d8a-4879-b9f3-8c8e7a26d9fa | filetype = 1 | modifieddate = 08/18/2026 06:06:00 | attribute = 1
-[SANMATSU] YELLOW : 5010-607781-11.pdf | GUID = e3f28d56-b376-4b71-a4ff-f38b4205792a | filetype = 1 | modifieddate = 08/18/2026 06:06:00 | attribute = 1
-[SANMATSU] YELLOW : 5010-704473-11.pdf | GUID = 4533cb5b-0063-4562-8d94-a9d0081444af | filetype = 1 | modifieddate = 08/18/2026 06:06:00 | attribute = 1
-[SANMATSU] YELLOW : 5010-711929-11.pdf | GUID = 5f010949-13b4-4424-83c4-83e32970b216 | filetype = 1 | modifieddate = 08/18/2026 05:55:00 | attribute = 1
-[SANMATSU] YELLOW : AB026-111-008A@1.pdf | GUID = 364b1d8b-8b97-4c75-a20e-f0a4df5bed87 | filetype = 1 | modifieddate = 08/18/2026 05:55:00 | attribute = 1
-[SANMATSU] YELLOW : DEL_AB026-111-008A.pdf | GUID = 7e929a9e-3a1f-4c40-94bd-44570ab8e666 | filetype = 1 | modifieddate = 08/18/2026 05:55:00 | attribute = 1
-[SANMATSU] YELLOW : 5010-711929-11@1.pdf | GUID = f2a0f935-56e4-4ad4-9018-535517041e79 | filetype = 1 | modifieddate = 08/18/2026 05:55:00 | attribute = 1
-[SANMATSU] YELLOW : 5010-805305-11@1.pdf | GUID = ddbe8352-e956-48b0-8333-5f833e2b413d | filetype = 1 | modifieddate = 08/18/2026 05:44:00 | attribute = 1
-[SANMATSU] YELLOW : 5010-804598-12@1.pdf | GUID = da7ba02a-ee3a-4f9c-af36-eb243272341d | filetype = 1 | modifieddate = 08/18/2026 05:44:00 | attribute = 1
-[SANMATSU] YELLOW : 5010-805305-11.pdf | GUID = d33fe65e-45d4-4a7a-92c3-af6739d7dfb3 | filetype = 1 | modifieddate = 08/18/2026 05:44:00 | attribute = 1
-[SANMATSU] YELLOW : CL180-WCBLL-SKR@9.pdf | GUID = 953482f6-f9a7-451f-9eb5-c25e1c39b90e | filetype = 1 | modifieddate = 08/18/2026 05:44:00 | attribute = 1
-[SANMATSU] YELLOW : 5010-804598-12.pdf | GUID = 9e61c0c3-3dad-48ff-bee3-241cefe54544 | filetype = 1 | modifieddate = 08/18/2026 05:44:00 | attribute = 1
-[SANMATSU] NON YELLOW : 11095372-10@1.pdf | GUID = 92fbb2c6-7200-4baf-a53f-27bdd3fbc839 | filetype = 1 | modifieddate = 08/18/2026 05:44:00 | attribute = 0
-[SANMATSU] YELLOW : 5010-802559-11.pdf | GUID = 98fa1d91-7bba-4455-9bcf-51190ae578a9 | filetype = 1 | modifieddate = 08/18/2026 05:44:00 | attribute = 1
-[SANMATSU] YELLOW : LRXC-510166-11@1.pdf | GUID = 26e50df4-dc5e-4c8c-8fdd-52ae101d84e2 | filetype = 1 | modifieddate = 08/18/2026 05:44:00 | attribute = 1
-[SANMATSU] NON YELLOW : OKN-RE0-009@G.pdf | GUID = 52a51e51-2e6a-437f-8e3d-9d5bad74cf6e | filetype = 1 | modifieddate = 08/18/2026 05:43:00 | attribute = 0
-[SANMATSU] YELLOW : 3B10-594339-11@1.pdf | GUID = c9476141-5b5a-425d-ad1a-2fb658103e62 | filetype = 1 | modifieddate = 08/18/2026 05:34:00 | attribute = 1
-[SANMATSU] YELLOW : 5010-805304-11.pdf | GUID = 973ff5ef-e52a-4e7a-8dce-874826600241 | filetype = 1 | modifieddate = 08/18/2026 05:34:00 | attribute = 1
-[SANMATSU] YELLOW : 5010-805304-11@1.pdf | GUID = 9f5ec5a1-8d0e-4c51-9286-65be4d6bcc5f | filetype = 1 | modifieddate = 08/18/2026 05:34:00 | attribute = 1
-[SANMATSU] YELLOW : 3B10-594339-11.pdf | GUID = 969943a5-dd3f-4395-955c-89f429077b4b | filetype = 1 | modifieddate = 08/18/2026 05:34:00 | attribute = 1
-[SANMATSU] YELLOW : 00175AA@1.pdf | GUID = 96f03281-3569-4fe0-b019-f3087504b7ee | filetype = 1 | modifieddate = 08/18/2026 05:32:00 | attribute = 1
-[SANMATSU] YELLOW : 11095372-06@1.pdf | GUID = 3d1243af-be70-4758-9dff-6c97fd8ac441 | filetype = 1 | modifieddate = 08/18/2026 05:23:00 | attribute = 1
-[SANMATSU] YELLOW : LJUC-510220-00.pdf | GUID = 0c949064-6d39-453d-83ca-16fc27e34c65 | filetype = 1 | modifieddate = 08/18/2026 05:23:00 | attribute = 1
-[SANMATSU] YELLOW : LJUC-510220-00@1.pdf | GUID = fc4535ee-28f5-4597-b7b4-daa35e9ce916 | filetype = 1 | modifieddate = 08/18/2026 05:23:00 | attribute = 1
-[SANMATSU] YELLOW : 2910-516175-11.pdf | GUID = f9c57999-2355-489e-8a41-9728dae34fb6 | filetype = 1 | modifieddate = 08/18/2026 05:23:00 | attribute = 1
-[SANMATSU] YELLOW : 00174AA@1.pdf | GUID = a6d9d5b3-b8d5-4728-842f-3b73a9e8b638 | filetype = 1 | modifieddate = 08/18/2026 05:22:00 | attribute = 1
-[SANMATSU] YELLOW : 5010-704473-11@1.pdf | GUID = 5452f166-a07b-46be-b6ac-14836a131b37 | filetype = 1 | modifieddate = 08/18/2026 05:13:00 | attribute = 1
-[SANMATSU] YELLOW : LJUC-510219-00@1.pdf | GUID = 9d2ea9c0-4f4a-4c82-bfa4-9b49ea5924e4 | filetype = 1 | modifieddate = 08/18/2026 05:13:00 | attribute = 1
-[SANMATSU] YELLOW : CL4-180-ASSY-ISHIKAWA.pdf | GUID = 91b6b671-238d-4c5c-8dfb-cd6622096298 | filetype = 1 | modifieddate = 08/18/2026 05:13:00 | attribute = 1
-[SANMATSU] YELLOW : 3B10-589158-11.pdf | GUID = e1c72d06-faca-4de4-a4c5-00de533a13a9 | filetype = 1 | modifieddate = 08/18/2026 05:13:00 | attribute = 1
-[SANMATSU] YELLOW : 11091530-80-TUI.pdf | GUID = 3b8e15c6-d818-4d2a-9066-1c741e29f6a8 | filetype = 1 | modifieddate = 08/18/2026 05:13:00 | attribute = 1
-[SANMATSU] YELLOW : 11091530-80-TUI@1.pdf | GUID = 8f47f600-259c-4883-97c9-676ccae012a1 | filetype = 1 | modifieddate = 08/18/2026 05:13:00 | attribute = 1
-[SANMATSU] YELLOW : LJUC-510219-00.pdf | GUID = 54cb573d-0efb-471f-9fc4-a18924e0cc74 | filetype = 1 | modifieddate = 08/18/2026 05:13:00 | attribute = 1
-[SANMATSU] YELLOW : 11091530-80-TUI@9.pdf | GUID = 1b4ad456-a209-4f30-82a7-e8aaed4706f2 | filetype = 1 | modifieddate = 08/18/2026 05:13:00 | attribute = 1
-[SANMATSU] YELLOW : 3B10-589158-11@1.pdf | GUID = 048a50f8-e1d3-445b-b2b6-a4636da2ccbb | filetype = 1 | modifieddate = 08/18/2026 05:13:00 | attribute = 1
-[SANMATSU] NON YELLOW : CL4-180-ASSY-ISHIKAWA@G.pdf | GUID = d32b5c5b-98f9-4955-9a03-065c144946ef | filetype = 1 | modifieddate = 08/18/2026 05:12:00 | attribute = 0
-[SANMATSU] YELLOW : 00118AA@1.pdf | GUID = d0bdbc31-2745-4536-bbee-6204b859b35c | filetype = 1 | modifieddate = 08/18/2026 05:12:00 | attribute = 1
-[SANMATSU] YELLOW : 00118AA.pdf | GUID = 454eef2e-f55c-40ff-b3ab-dc70fc1786f5 | filetype = 1 | modifieddate = 08/18/2026 05:12:00 | attribute = 1
-[SANMATSU] YELLOW : 5010-715281-11.pdf | GUID = 76b5d3d5-dd86-4ce3-a01b-535e3a3bc3df | filetype = 1 | modifieddate = 08/18/2026 05:01:00 | attribute = 1
-[SANMATSU] YELLOW : 5010-715281-11@1.pdf | GUID = e812a726-9c33-454c-a032-df5af9f19c6b | filetype = 1 | modifieddate = 08/18/2026 05:01:00 | attribute = 1
-[SANMATSU] YELLOW : LJUC-510217-00.pdf | GUID = 348161d6-db58-46fb-86a0-8d13e5dfb596 | filetype = 1 | modifieddate = 08/18/2026 05:01:00 | attribute = 1
-[SANMATSU] YELLOW : LJUC-510217-00@1.pdf | GUID = 2aa54ac4-d762-449c-b4de-4bb6706c3a46 | filetype = 1 | modifieddate = 08/18/2026 05:01:00 | attribute = 1
-[SANMATSU] YELLOW : 11095372-02@1.pdf | GUID = 8dd2033b-9c98-4415-a273-7b8c1000daea | filetype = 1 | modifieddate = 08/18/2026 05:01:00 | attribute = 1
-[SANMATSU] YELLOW : 5010-595863-11.pdf | GUID = 88741ea4-fb61-406e-a1dd-47ce34369550 | filetype = 1 | modifieddate = 08/18/2026 04:51:00 | attribute = 1
-[SANMATSU] YELLOW : LJUC-510218-00.pdf | GUID = 5bddc593-ed53-4188-b983-635e84aaf19d | filetype = 1 | modifieddate = 08/18/2026 04:51:00 | attribute = 1
-[SANMATSU] YELLOW : LJUC-510218-00@1.pdf | GUID = 99f85473-26ba-4331-84dd-babc66a6acc1 | filetype = 1 | modifieddate = 08/18/2026 04:51:00 | attribute = 1
-[SANMATSU] YELLOW : 5010-595863-11@1.pdf | GUID = 55d13c1d-24ea-43a8-aad5-ad9774402038 | filetype = 1 | modifieddate = 08/18/2026 04:51:00 | attribute = 1
-[SANMATSU] NON YELLOW : 5010-595861-11.pdf | GUID = 99265396-e77a-456b-bfd4-895ca13211be | filetype = 1 | modifieddate = 08/18/2026 04:38:00 | attribute = 0
-[SANMATSU] NON YELLOW : 5010-667440-12@1.pdf | GUID = bf11e246-471f-490b-8d43-3f552fb2cc1a | filetype = 1 | modifieddate = 08/18/2026 04:38:00 | attribute = 0
-[SANMATSU] NON YELLOW : 5010-595861-11@1.pdf | GUID = 7415376f-8180-4ef3-b248-3c3749dee56a | filetype = 1 | modifieddate = 08/18/2026 04:38:00 | attribute = 0
-[SANMATSU] YELLOW : 5010-743395-11.pdf | GUID = 8cd6f998-b374-45a6-9f10-98c3ec60ad67 | filetype = 1 | modifieddate = 08/18/2026 04:38:00 | attribute = 1
-[SANMATSU] YELLOW : 11095329-41@1.pdf | GUID = 727d58f7-7f3a-48bb-8bce-2e60894d5b8f | filetype = 1 | modifieddate = 08/18/2026 04:38:00 | attribute = 1
-[SANMATSU] NON YELLOW : 5010-667440-12.pdf | GUID = 66194a4f-1846-4fdc-9ec0-97767d3e237c | filetype = 1 | modifieddate = 08/18/2026 04:38:00 | attribute = 0
-[SANMATSU] YELLOW : 11095370-29@1.pdf | GUID = 8a366437-7639-48cf-8a35-25ae51f5d57d | filetype = 1 | modifieddate = 08/18/2026 04:28:00 | attribute = 1
-[SANMATSU] YELLOW : 11091513-36-1-TUI@1.pdf | GUID = a081dbad-5d7a-4cf1-aab0-51416773ff59 | filetype = 1 | modifieddate = 08/18/2026 04:28:00 | attribute = 1
-[SANMATSU] YELLOW : 11091513-36-1-TUI.pdf | GUID = 466a24ed-f9aa-4553-a976-2a97971769d3 | filetype = 1 | modifieddate = 08/18/2026 04:27:00 | attribute = 1
-[SANMATSU] YELLOW : 5010-651929-11.pdf | GUID = 79932ff4-4851-448a-ac64-e5c4d2e13852 | filetype = 1 | modifieddate = 08/18/2026 04:17:00 | attribute = 1
-[SANMATSU] YELLOW : 5010-665290-11@1.pdf | GUID = 695da285-31a0-475c-800a-4e9af9d9175c | filetype = 1 | modifieddate = 08/18/2026 04:17:00 | attribute = 1
-[SANMATSU] YELLOW : 5010-595862-11.pdf | GUID = 05879a66-663f-45d8-8758-6fdd4c107815 | filetype = 1 | modifieddate = 08/18/2026 04:17:00 | attribute = 1
-[SANMATSU] YELLOW : 11095330-53-1@1.pdf | GUID = 065b0184-7605-453e-beb2-c210e8658a68 | filetype = 1 | modifieddate = 08/18/2026 04:17:00 | attribute = 1
-[SANMATSU] YELLOW : 5010-665290-11.pdf | GUID = 594e5419-5d3a-4756-a40f-08a90f41c24f | filetype = 1 | modifieddate = 08/18/2026 04:17:00 | attribute = 1
-[SANMATSU] YELLOW : 5010-595862-11@1.pdf | GUID = ade6a32a-7a64-4534-8e4b-334190224bd8 | filetype = 1 | modifieddate = 08/18/2026 04:17:00 | attribute = 1
-[SANMATSU] YELLOW : 60360-3444B@1.pdf | GUID = 5bfe5fef-f45c-41ba-9cdd-30f44428a03e | filetype = 1 | modifieddate = 08/18/2026 04:17:00 | attribute = 1
-[SANMATSU] YELLOW : 5010-777848-11@1.pdf | GUID = ad6ab3f5-6067-4ce9-a526-db50449181f1 | filetype = 1 | modifieddate = 08/18/2026 04:17:00 | attribute = 1
-[SANMATSU] YELLOW : 11095345-13@1.pdf | GUID = 349dd1f2-d963-4b0d-8baa-0b38ed8ebd96 | filetype = 1 | modifieddate = 08/18/2026 04:17:00 | attribute = 1
-[SANMATSU] YELLOW : 5010-651929-11@1.pdf | GUID = 6abb3186-8dab-478f-91b2-eaa0c8b9819c | filetype = 1 | modifieddate = 08/18/2026 04:17:00 | attribute = 1
-[SANMATSU] YELLOW : 5010-777849-11@1.pdf | GUID = 654a20dc-2967-4c53-bc0d-dfc9b12a202f | filetype = 1 | modifieddate = 08/18/2026 04:17:00 | attribute = 1
-[SANMATSU] YELLOW : 60387-9666B@1.pdf | GUID = d92298a2-082c-432d-8744-d081b356bbba | filetype = 1 | modifieddate = 08/18/2026 04:17:00 | attribute = 1
-[SANMATSU] YELLOW : 5010-640981-11@1.pdf | GUID = ed63644b-3756-45a1-8b4f-fd43c488508c | filetype = 1 | modifieddate = 08/18/2026 04:05:00 | attribute = 1
-[SANMATSU] YELLOW : DEL_11091513-36-1-TUI@1.pdf | GUID = 5d031a42-4806-4713-960f-18f24ecfc309 | filetype = 1 | modifieddate = 08/18/2026 04:05:00 | attribute = 1
-[SANMATSU] YELLOW : 5010-640981-11.pdf | GUID = b3b72b93-0121-4af5-825c-b2423ab10a4c | filetype = 1 | modifieddate = 08/18/2026 04:05:00 | attribute = 1
-[SANMATSU] YELLOW : 2910-304342-11.pdf | GUID = 07086275-be6e-4c04-8530-e8a6b6737ea2 | filetype = 1 | modifieddate = 08/18/2026 04:05:00 | attribute = 1
-[SANMATSU] YELLOW : 5010-760768-11@1.pdf | GUID = 95b76a7e-11db-47ea-8d2e-e9ca7f73242a | filetype = 1 | modifieddate = 08/18/2026 04:05:00 | attribute = 1
-[SANMATSU] YELLOW : 2910-304342-11@1.pdf | GUID = 4d207e38-983c-4b3f-bf33-8f1c4877800e | filetype = 1 | modifieddate = 08/18/2026 04:05:00 | attribute = 1
-[SANMATSU] NON YELLOW : 11091513-36-1-TUI@G.pdf | GUID = c47f1b76-c1b9-4c21-a42b-e081d897c7d5 | filetype = 1 | modifieddate = 08/18/2026 04:05:00 | attribute = 0
-[SANMATSU] YELLOW : 11095329-74@1.pdf | GUID = 26d86f58-e1d3-4307-933a-09eb5b229be7 | filetype = 1 | modifieddate = 08/18/2026 04:05:00 | attribute = 1
-[SANMATSU] YELLOW : 11091513-36-1-TUI@9.pdf | GUID = ec190c53-ff8d-4b5a-8556-f2e924819118 | filetype = 1 | modifieddate = 08/18/2026 04:05:00 | attribute = 1
-[SANMATSU] NON YELLOW : LFPS-010132-00@G.pdf | GUID = c93eae8a-9d73-4917-aae4-e0c233b0e4a5 | filetype = 1 | modifieddate = 08/18/2026 04:05:00 | attribute = 0
-[SANMATSU] YELLOW : 5010-760507-12@1.pdf | GUID = 0d155685-e64b-4c4a-aa3f-7e41b89136a6 | filetype = 1 | modifieddate = 08/18/2026 04:04:00 | attribute = 1
+[SANMATSU] YELLOW : 00117AA.pdf | GUID = 2a693d42-d6cf-473b-89b1-45426aa8426b | filetype = 1 | modifieddate = 08/19/2026 03:04:00 | attribute = 1
+[SANMATSU] YELLOW : 00117AA@1.pdf | GUID = 66b94b33-c6fd-47e7-9548-8b3347e83ef7 | filetype = 1 | modifieddate = 08/19/2026 03:04:00 | attribute = 1
+[SANMATSU] YELLOW : 11095372-10.pdf | GUID = 504ee442-10d3-4a7c-b00f-5ef0fb9b51cc | filetype = 1 | modifieddate = 08/19/2026 02:51:00 | attribute = 1
+[SANMATSU] YELLOW : 11095372-10@1.pdf | GUID = 1d567aea-60ab-41d4-bb0f-fa4024c76a07 | filetype = 1 | modifieddate = 08/19/2026 02:51:00 | attribute = 1
+[SANMATSU] YELLOW : 5010-804975-11@9.pdf | GUID = 13571915-372a-4070-bf31-67a0814c319e | filetype = 1 | modifieddate = 08/19/2026 02:41:00 | attribute = 1
+[SANMATSU] YELLOW : 5010-804975-11.pdf | GUID = 758b2607-c2c8-4a95-a2af-c21ce89bbbc7 | filetype = 1 | modifieddate = 08/19/2026 02:41:00 | attribute = 1
+[SANMATSU] YELLOW : 5010-695169-11@1.pdf | GUID = eb2759ed-07bc-4432-9563-5e4f15470f53 | filetype = 1 | modifieddate = 08/19/2026 02:41:00 | attribute = 1
+[SANMATSU] YELLOW : 5010-695169-11.pdf | GUID = d9f30418-7058-40c4-a3a9-0305f057eaa7 | filetype = 1 | modifieddate = 08/19/2026 02:41:00 | attribute = 1
+[SANMATSU] YELLOW : 5010-804975-11@1.pdf | GUID = b440a126-145f-46a0-bee8-dbd3c4a7e741 | filetype = 1 | modifieddate = 08/19/2026 02:41:00 | attribute = 1
+[SANMATSU] YELLOW : 5010-678559-11.pdf | GUID = 4b572499-ffc7-4de9-ac37-cba741575ef5 | filetype = 1 | modifieddate = 08/19/2026 02:41:00 | attribute = 1
+[SANMATSU] YELLOW : 465290A@9.pdf | GUID = 8406ab97-614c-4a61-9d32-34d09264fd81 | filetype = 1 | modifieddate = 08/19/2026 02:41:00 | attribute = 1
+[SANMATSU] YELLOW : 465290a.pdf | GUID = 4395d597-f79e-48f6-9915-61731e8aa604 | filetype = 1 | modifieddate = 08/19/2026 02:41:00 | attribute = 1
+[SANMATSU] YELLOW : 00116AA@1.pdf | GUID = 617e820d-1941-4b8b-95d1-5476a2defd56 | filetype = 1 | modifieddate = 08/19/2026 02:41:00 | attribute = 1
+[SANMATSU] YELLOW : 5010-678559-11@1.pdf | GUID = 3846e333-f461-4f77-ae5e-d13f980454a7 | filetype = 1 | modifieddate = 08/19/2026 02:41:00 | attribute = 1
+[SANMATSU] YELLOW : 00116AA.pdf | GUID = a6a3de51-f8d8-4086-84da-974811f9f430 | filetype = 1 | modifieddate = 08/19/2026 02:41:00 | attribute = 1
+[SANMATSU] YELLOW : LTWX-010087-00.pdf | GUID = 43ec31b7-6f29-4323-912f-6e3babdb5a27 | filetype = 1 | modifieddate = 08/19/2026 02:27:00 | attribute = 1
+[SANMATSU] YELLOW : 5010-676020-11@1.pdf | GUID = ed98bf99-d061-4e22-9133-85bb5ecb9b85 | filetype = 1 | modifieddate = 08/19/2026 02:27:00 | attribute = 1
+[SANMATSU] YELLOW : LTWX-010087-00@1.pdf | GUID = 254030f3-7735-4a99-93d5-ce09dabf7a5f | filetype = 1 | modifieddate = 08/19/2026 02:27:00 | attribute = 1
+[SANMATSU] YELLOW : 5010-676020-11.pdf | GUID = 352a3eca-9b60-4f96-8c11-9791f03efb7b | filetype = 1 | modifieddate = 08/19/2026 02:27:00 | attribute = 1
+[SANMATSU] NON YELLOW : TF020-MSK@G.pdf | GUID = b6262d9c-8e27-41f7-9792-89286024e364 | filetype = 1 | modifieddate = 08/19/2026 02:26:00 | attribute = 0
+[SANMATSU] NON YELLOW : AB026-ESK@G.pdf | GUID = 295f381e-e7fa-4c72-8fa7-2893ff920cd7 | filetype = 1 | modifieddate = 08/19/2026 02:26:00 | attribute = 0
+[SANMATSU] YELLOW : LTWX-010086-00@1.pdf | GUID = fda58174-992f-4778-85b0-da5b2e244398 | filetype = 1 | modifieddate = 08/19/2026 02:15:00 | attribute = 1
+[SANMATSU] YELLOW : 3B10-591575-11.pdf | GUID = 19772302-47e7-4f02-847c-a311296d2902 | filetype = 1 | modifieddate = 08/19/2026 02:15:00 | attribute = 1
+[SANMATSU] YELLOW : 3B10-591575-11@1.pdf | GUID = 0f0ca2a2-f58f-404d-95e4-83428a4d411b | filetype = 1 | modifieddate = 08/19/2026 02:15:00 | attribute = 1
+[SANMATSU] YELLOW : LTWX-010086-00.pdf | GUID = da1f6375-d7f5-44cf-a64a-4ef99ab749e7 | filetype = 1 | modifieddate = 08/19/2026 02:15:00 | attribute = 1
+[SANMATSU] YELLOW : 11095372-06@1.pdf | GUID = cf3d2368-0a60-4581-9415-d521cebfbe70 | filetype = 1 | modifieddate = 08/19/2026 02:02:00 | attribute = 1
+[SANMATSU] YELLOW : LASY-010005-00.pdf | GUID = 2d501e61-7cb3-4702-9878-a093fc2ad866 | filetype = 1 | modifieddate = 08/19/2026 02:02:00 | attribute = 1
+[SANMATSU] YELLOW : LASY-010005-00@1.pdf | GUID = 25e8cc79-8ab2-4e6d-ae10-8a2fc62488cf | filetype = 1 | modifieddate = 08/19/2026 02:02:00 | attribute = 1
+[SANMATSU] YELLOW : 5010-616145-13@1.pdf | GUID = 30d27656-eac3-44bf-899d-4935bf02cee1 | filetype = 1 | modifieddate = 08/19/2026 02:01:00 | attribute = 1
+[SANMATSU] YELLOW : 11095372-06.pdf | GUID = 2c30f228-5105-4de8-9d6e-ad34d0d92f3c | filetype = 1 | modifieddate = 08/19/2026 02:01:00 | attribute = 1
+[SANMATSU] YELLOW : 5010-616145-13.pdf | GUID = 1cb2befc-89ca-4aef-8a57-cdb07295880f | filetype = 1 | modifieddate = 08/19/2026 02:01:00 | attribute = 1
+[SANMATSU] YELLOW : 00115AA.pdf | GUID = ff9b78a8-424b-4e71-8864-763a88216b0c | filetype = 1 | modifieddate = 08/19/2026 02:01:00 | attribute = 1
+[SANMATSU] YELLOW : 5010-677313-11.pdf | GUID = 2f39241e-f061-4c3c-aed5-13c98d240f2e | filetype = 1 | modifieddate = 08/19/2026 01:50:00 | attribute = 1
+[SANMATSU] YELLOW : 5010-677313-11@1.pdf | GUID = c165c254-d3d2-4eb9-9c9f-7e4330aaff29 | filetype = 1 | modifieddate = 08/19/2026 01:50:00 | attribute = 1
+[SANMATSU] YELLOW : LWYH-010017-00.pdf | GUID = 06901120-3582-4afc-bb15-2a1bd0b57cd1 | filetype = 1 | modifieddate = 08/19/2026 01:50:00 | attribute = 1
+[SANMATSU] NON YELLOW : 1B10-459380-11@G.pdf | GUID = db3ff939-1a41-491f-865e-73a7568184d3 | filetype = 1 | modifieddate = 08/19/2026 01:49:00 | attribute = 0
+[SANMATSU] YELLOW : LZNB-280002-00@1.pdf | GUID = 34ef61ad-140d-4748-9648-99d6cb858216 | filetype = 1 | modifieddate = 08/19/2026 01:49:00 | attribute = 1
+[SANMATSU] YELLOW : LWYH-010017-00@1.pdf | GUID = fb0fd246-243c-40fe-9489-13d6fb90b7a6 | filetype = 1 | modifieddate = 08/19/2026 01:49:00 | attribute = 1
+[SANMATSU] YELLOW : LZNB-280002-00.pdf | GUID = c471affc-4b48-46cd-b141-9457480a4c0b | filetype = 1 | modifieddate = 08/19/2026 01:49:00 | attribute = 1
+[SANMATSU] YELLOW : 00115AA@1.pdf | GUID = ae0dc2c4-7dc4-4a62-8837-5ef2789557a3 | filetype = 1 | modifieddate = 08/19/2026 01:49:00 | attribute = 1
+[SANMATSU] YELLOW : 5010-555273-13.pdf | GUID = bb06708e-af77-44fb-accc-4f063669cd0c | filetype = 1 | modifieddate = 08/19/2026 01:49:00 | attribute = 1
+[SANMATSU] YELLOW : AB017-011-003A@1.pdf | GUID = 76f4acb7-2261-481c-89a3-88fe64df495f | filetype = 1 | modifieddate = 08/19/2026 01:38:00 | attribute = 1
+[SANMATSU] YELLOW : LATU-281140-00@1.pdf | GUID = 4283d37d-74d2-4578-8642-0615a4712e22 | filetype = 1 | modifieddate = 08/19/2026 01:38:00 | attribute = 1
+[SANMATSU] YELLOW : LCST-010056-00@1.pdf | GUID = 72ed29ed-23d4-4b63-87b3-4e8c4f0bb9ef | filetype = 1 | modifieddate = 08/19/2026 01:25:00 | attribute = 1
+[SANMATSU] YELLOW : LCST-010056-00.pdf | GUID = 66f05add-2df7-4ebc-baf2-65ef850ee516 | filetype = 1 | modifieddate = 08/19/2026 01:25:00 | attribute = 1
+[SANMATSU] YELLOW : 11091572-24.pdf | GUID = 23e0af90-d5f4-4be5-b708-ad8ed260bcbe | filetype = 1 | modifieddate = 08/19/2026 01:25:00 | attribute = 1
+[SANMATSU] YELLOW : 5010-801918-11@1.pdf | GUID = 439ac56f-a7f4-4c75-b28f-11e69ca5f4ad | filetype = 1 | modifieddate = 08/19/2026 01:25:00 | attribute = 1
+[SANMATSU] YELLOW : 11091572-24@1.pdf | GUID = 89ea1694-8809-4e1a-bbf9-9fe33c3ada97 | filetype = 1 | modifieddate = 08/19/2026 01:24:00 | attribute = 1
+[SANMATSU] YELLOW : 00147AA@1.pdf | GUID = 32a69751-0709-4531-8469-2fd2fa3ff91e | filetype = 1 | modifieddate = 08/19/2026 01:24:00 | attribute = 1
+[SANMATSU] YELLOW : 11091572-23.pdf | GUID = c9ee012e-ba96-4e3d-90cf-421d4a8726a7 | filetype = 1 | modifieddate = 08/19/2026 01:17:00 | attribute = 1
+[SANMATSU] YELLOW : 5010-674603-11@1.pdf | GUID = 7a888ee1-4da4-4d08-8b8f-1a8f1ae436b5 | filetype = 1 | modifieddate = 08/19/2026 01:17:00 | attribute = 1
+[SANMATSU] YELLOW : 5010-674603-11.pdf | GUID = 1ce382ec-d408-4bdd-9628-78b095ac4085 | filetype = 1 | modifieddate = 08/19/2026 01:17:00 | attribute = 1
+[SANMATSU] YELLOW : 11091572-23@1.pdf | GUID = 1a259a5c-3e57-478e-950b-a01b60fafdc0 | filetype = 1 | modifieddate = 08/19/2026 01:17:00 | attribute = 1
+[SANMATSU] NON YELLOW : AB017-ESK@G.pdf | GUID = 9f5c70c7-a384-4295-a1f7-1c88d830dd37 | filetype = 1 | modifieddate = 08/19/2026 01:16:00 | attribute = 0
+[SANMATSU] YELLOW : MSKP5K-IP01W@1.pdf | GUID = 24c5f618-cdf7-4457-ac3e-8fb14dc27ed9 | filetype = 1 | modifieddate = 08/19/2026 01:00:00 | attribute = 1
+[SANMATSU] YELLOW : 5010-555273-13@1.pdf | GUID = da02780c-ecec-431a-8147-b879d7c0f10c | filetype = 1 | modifieddate = 08/19/2026 01:00:00 | attribute = 1
+[SANMATSU] YELLOW : MSKP5K-IP02W@1.pdf | GUID = b8c29038-4868-4f27-af8a-fc92907dbf09 | filetype = 1 | modifieddate = 08/19/2026 01:00:00 | attribute = 1
+[SANMATSU] YELLOW : SU-986009CE-1@1.pdf | GUID = 3ad8112d-31c9-40d3-9ebf-5844aa1da6ff | filetype = 1 | modifieddate = 08/19/2026 01:00:00 | attribute = 1
+[SANMATSU] YELLOW : 00219AA@1.pdf | GUID = c3254bf7-5c37-4325-a532-77c210f5e423 | filetype = 1 | modifieddate = 08/19/2026 01:00:00 | attribute = 1
+[SANMATSU] YELLOW : 5010-677986-11@1.pdf | GUID = be763804-8dc1-47c0-9ffd-6a4d36f760a6 | filetype = 1 | modifieddate = 08/19/2026 00:44:00 | attribute = 1
+[SANMATSU] YELLOW : 5010-677986-11.pdf | GUID = 608fb669-a633-47d0-8e21-ff2e42a133ac | filetype = 1 | modifieddate = 08/19/2026 00:44:00 | attribute = 1
+[SANMATSU] YELLOW : 11095372-02.pdf | GUID = dc4935c7-6b41-4559-bbf5-a91065f0249d | filetype = 1 | modifieddate = 08/19/2026 00:30:00 | attribute = 1
+[SANMATSU] YELLOW : 60361-4869B.pdf | GUID = f566ff2e-69d0-4311-adee-4ce0425dcf82 | filetype = 1 | modifieddate = 08/19/2026 00:30:00 | attribute = 1
+[SANMATSU] YELLOW : 60361-4869B@9.pdf | GUID = 5cd1c50e-6ce1-409c-9d81-580eb940cc07 | filetype = 1 | modifieddate = 08/19/2026 00:30:00 | attribute = 1
+[SANMATSU] YELLOW : 5010-750646-11@9.pdf | GUID = c3920f5d-a8a3-429b-9a56-ada9ae1735d9 | filetype = 1 | modifieddate = 08/19/2026 00:30:00 | attribute = 1
+[SANMATSU] YELLOW : 00113AA.pdf | GUID = f2a15e29-f3f6-47c1-a563-ffed0499852c | filetype = 1 | modifieddate = 08/19/2026 00:30:00 | attribute = 1
+[SANMATSU] YELLOW : 5010-750646-11.pdf | GUID = 31dc97d2-28b1-42f8-9bc6-a5d9641bbb8f | filetype = 1 | modifieddate = 08/19/2026 00:30:00 | attribute = 1
+[SANMATSU] YELLOW : 11095372-02@1.pdf | GUID = 7ec8901a-0947-4d15-8f04-8ce2c24c48da | filetype = 1 | modifieddate = 08/19/2026 00:30:00 | attribute = 1
+[SANMATSU] YELLOW : 00113AA@1.pdf | GUID = f085222c-c681-4ee3-9399-95b34a878ed8 | filetype = 1 | modifieddate = 08/19/2026 00:30:00 | attribute = 1
+[SANMATSU] YELLOW : LWYH-010022-00.pdf | GUID = f9e58a09-dc34-4435-bb3e-ff0697ffafdd | filetype = 1 | modifieddate = 08/19/2026 00:15:00 | attribute = 1
+[SANMATSU] YELLOW : LWYH-010022-00@1.pdf | GUID = 6454f9c1-44e5-4b1f-a82a-2152be430ced | filetype = 1 | modifieddate = 08/19/2026 00:15:00 | attribute = 1
+[SANMATSU] YELLOW : 5010-674210-11.pdf | GUID = af53cb7f-4cc2-4ee9-8373-63c1e1a80ac2 | filetype = 1 | modifieddate = 08/19/2026 00:15:00 | attribute = 1
+[SANMATSU] YELLOW : LWYH-010046-00.pdf | GUID = dd8227d6-dcd8-4b86-a7ca-101f3cae92e2 | filetype = 1 | modifieddate = 08/19/2026 00:15:00 | attribute = 1
+[SANMATSU] YELLOW : 5010-674210-11@1.pdf | GUID = 193ef849-4bc3-4581-9a85-918d91e2ffe4 | filetype = 1 | modifieddate = 08/19/2026 00:15:00 | attribute = 1
+[SANMATSU] YELLOW : LWYH-010046-00@1.pdf | GUID = a2b47064-6802-4680-a461-a1ea14082627 | filetype = 1 | modifieddate = 08/19/2026 00:15:00 | attribute = 1
+[SANMATSU] YELLOW : LSWC-510058-01.pdf | GUID = 2048eca0-2273-4619-a897-77284e5214e8 | filetype = 1 | modifieddate = 08/19/2026 00:15:00 | attribute = 1
+[SANMATSU] NON YELLOW : 26HST0313-GHB001@G.pdf | GUID = dab8c045-1b99-4a67-a43c-0532ef7ef32e | filetype = 1 | modifieddate = 08/19/2026 00:14:00 | attribute = 0
+[SANMATSU] YELLOW : 60361-4869B@1.pdf | GUID = 05854d54-a65a-4d87-b969-f259abb2a4e4 | filetype = 1 | modifieddate = 08/19/2026 00:02:00 | attribute = 1
+[SANMATSU] YELLOW : 2103-YUSO-00@1.pdf | GUID = caac02a7-bbc0-49c7-b9be-bd782363e50a | filetype = 1 | modifieddate = 08/18/2026 23:48:00 | attribute = 1
+[SANMATSU] YELLOW : 2103-YUSO-00@9.pdf | GUID = 83afe667-2beb-4e89-a18e-d4b2fe63886e | filetype = 1 | modifieddate = 08/18/2026 23:48:00 | attribute = 1
+[SANMATSU] YELLOW : 2103-YUSO-00.pdf | GUID = a7af547f-c00d-468d-b7a3-d771fe488489 | filetype = 1 | modifieddate = 08/18/2026 23:46:00 | attribute = 1
+[SANMATSU] YELLOW : 050-60-001-00@9.pdf | GUID = 32c034d4-3c6c-4916-addb-7f0093a631f9 | filetype = 1 | modifieddate = 08/18/2026 23:05:00 | attribute = 1
+[SANMATSU] YELLOW : 050-22-004-00.pdf | GUID = 82bddc05-caa3-4ee0-9dec-3b059abe1d00 | filetype = 1 | modifieddate = 08/18/2026 23:05:00 | attribute = 1
+[SANMATSU] YELLOW : 050-22-006-00@9.pdf | GUID = ad77dfe2-9a25-4f0c-90ba-32eb8bcae145 | filetype = 1 | modifieddate = 08/18/2026 23:05:00 | attribute = 1
+[SANMATSU] YELLOW : 050-22-006-00.pdf | GUID = ccb3f9a1-4fa2-4fb6-b92d-80c66b207f18 | filetype = 1 | modifieddate = 08/18/2026 23:05:00 | attribute = 1
+[SANMATSU] YELLOW : 050-22-004-00@1.pdf | GUID = ebcea980-85c3-41e0-8848-f6809e78b2af | filetype = 1 | modifieddate = 08/18/2026 23:05:00 | attribute = 1
+[SANMATSU] YELLOW : 050-22-006-00@1.pdf | GUID = bc8ef832-86ae-47d7-bf15-8bdcaaa5c3cc | filetype = 1 | modifieddate = 08/18/2026 23:05:00 | attribute = 1
+[SANMATSU] YELLOW : 050-22-004-00@9.pdf | GUID = f7b37243-4314-4bb4-9075-6e9f89e54bbb | filetype = 1 | modifieddate = 08/18/2026 23:05:00 | attribute = 1
+[SANMATSU] YELLOW : 5010-604002-11.pdf | GUID = 76766286-c214-4474-a121-c9849291ce01 | filetype = 1 | modifieddate = 08/18/2026 18:59:00 | attribute = 1
 
 ========================================
         SANMATSU - TODAY
 ========================================
-Today's India Date       : 2026-08-18
-Total File Count         : 100
-Yellow Icon Files        : 86
-Non Yellow Icon Files    : 14
-Yellow + Non Yellow      : 100
+Today's India Date       : 2026-08-19
+Total File Count         : 89
+Yellow Icon Files        : 84
+Non Yellow Icon Files    : 5
+Yellow + Non Yellow      : 89
 ========================================
-[SANMATSU] Page 2 total records: 100, valid today's files: 100
-[SANMATSU] All 100 records on previous page were valid today's files.
-[SANMATSU] Moving to page 3...
-[SANMATSU] Processing page 3...
-[SANMATSU] YELLOW : YM002-020-024A.pdf | GUID = 80a67fd7-191f-478f-91ca-c6d25fde716e | filetype = 1 | modifieddate = 08/18/2026 03:41:00 | attribute = 1
-[SANMATSU] YELLOW : YM002-011-032A.pdf | GUID = 58b6401b-9ed9-4872-92d8-6beba3b76938 | filetype = 1 | modifieddate = 08/18/2026 03:41:00 | attribute = 1
-[SANMATSU] YELLOW : LNNH-511834-00.pdf | GUID = a9d882ed-c6ca-4afc-819b-9071c2928a2f | filetype = 1 | modifieddate = 08/18/2026 03:41:00 | attribute = 1
-[SANMATSU] YELLOW : KPZ-192B-010-1@1.pdf | GUID = 1d6a6a54-8fdf-48dd-8e58-736448e310b9 | filetype = 1 | modifieddate = 08/18/2026 03:41:00 | attribute = 1
-[SANMATSU] YELLOW : LKNG-690028-00@1.pdf | GUID = 9e1781ba-5092-4490-b223-4596406c7784 | filetype = 1 | modifieddate = 08/18/2026 03:40:00 | attribute = 1
-[SANMATSU] YELLOW : LRYG-010057-20@9.pdf | GUID = 14dd80ba-c566-43e0-9bec-ae4ede7cfe8d | filetype = 1 | modifieddate = 08/18/2026 03:40:00 | attribute = 1
-[SANMATSU] YELLOW : LTXL-110004-00.pdf | GUID = 7da5a613-73a5-40a7-8d80-40c27b0a2272 | filetype = 1 | modifieddate = 08/18/2026 03:40:00 | attribute = 1
-[SANMATSU] YELLOW : LRXC-510822-00@1.pdf | GUID = ca0032fe-83c3-4732-b6d6-ba218b3d6157 | filetype = 1 | modifieddate = 08/18/2026 03:40:00 | attribute = 1
-[SANMATSU] YELLOW : F40201-MTC004.pdf | GUID = 4cdd2948-aafd-4c01-b791-f2e42c4a27b1 | filetype = 1 | modifieddate = 08/18/2026 03:40:00 | attribute = 1
-[SANMATSU] YELLOW : KPZ-036B-048-0@1.pdf | GUID = dd6df5fd-7eb7-448d-ac3d-412c693bab9d | filetype = 1 | modifieddate = 08/18/2026 03:40:00 | attribute = 1
-[SANMATSU] YELLOW : KPZ-192B-010-1.pdf | GUID = e57b176d-a02f-487a-8fbe-6c34be295415 | filetype = 1 | modifieddate = 08/18/2026 03:40:00 | attribute = 1
-[SANMATSU] YELLOW : KPZ-036B-048-0.pdf | GUID = bd5e69f0-8764-4f07-b102-ad000b843525 | filetype = 1 | modifieddate = 08/18/2026 03:39:00 | attribute = 1
-[SANMATSU] YELLOW : KPZ-192B-007-0@1.pdf | GUID = ced95440-1265-421e-b8f0-612ec5f791bb | filetype = 1 | modifieddate = 08/18/2026 03:39:00 | attribute = 1
-[SANMATSU] YELLOW : KPZ-192B-007-0.pdf | GUID = 2bc08f18-f129-4dd8-8643-e679f87878cc | filetype = 1 | modifieddate = 08/18/2026 03:39:00 | attribute = 1
-[SANMATSU] YELLOW : DEL_X56-0021-0-STGNM@1.pdf | GUID = 7bfde055-8663-40f4-b7c5-16f50d112445 | filetype = 1 | modifieddate = 08/18/2026 03:39:00 | attribute = 1
-[SANMATSU] YELLOW : DEL_5010-703467-11@1.pdf | GUID = c6329e37-76d8-424b-bf30-c3279e3ab90b | filetype = 1 | modifieddate = 08/18/2026 03:39:00 | attribute = 1
-[SANMATSU] YELLOW : DEL_60353-7282A@9.pdf | GUID = f7c78d80-20d3-4ee6-8e23-4ed6a44aa8d3 | filetype = 1 | modifieddate = 08/18/2026 03:39:00 | attribute = 1
-[SANMATSU] YELLOW : DEL_3B10-613300-11@9.pdf | GUID = cb6501c2-ee22-4d16-b86c-018495702fe8 | filetype = 1 | modifieddate = 08/18/2026 03:39:00 | attribute = 1
-[SANMATSU] YELLOW : DEL_5010-799262-13.pdf | GUID = 0b46c3bd-c058-421a-b812-db824d3d6634 | filetype = 1 | modifieddate = 08/18/2026 03:39:00 | attribute = 1
-[SANMATSU] YELLOW : DEL_LULC-010053-00.pdf | GUID = 88575820-0b55-4130-b75d-a82aba72025a | filetype = 1 | modifieddate = 08/18/2026 03:39:00 | attribute = 1
-[SANMATSU] YELLOW : DEL_X56-0021-0-STGNM.pdf | GUID = f587fc22-1495-4d34-bbed-611527613f0b | filetype = 1 | modifieddate = 08/18/2026 03:39:00 | attribute = 1
-[SANMATSU] YELLOW : 6010-015839-11@1.pdf | GUID = 1933b7a2-cd5a-4e6a-874e-5f121c770290 | filetype = 1 | modifieddate = 08/18/2026 03:39:00 | attribute = 1
-[SANMATSU] YELLOW : DEL_00154AB.pdf | GUID = 0fab5492-0493-4a02-ada6-7828417fd56c | filetype = 1 | modifieddate = 08/18/2026 03:39:00 | attribute = 1
-[SANMATSU] YELLOW : 5010-769795-11.pdf | GUID = 9a0bc4c4-d11b-4ed7-bf7e-d3b6336afc16 | filetype = 1 | modifieddate = 08/18/2026 03:39:00 | attribute = 1
-[SANMATSU] YELLOW : 5010-773633-11.pdf | GUID = 946c5de8-1883-49ab-97a3-a95d7692382c | filetype = 1 | modifieddate = 08/18/2026 03:39:00 | attribute = 1
-[SANMATSU] YELLOW : DEL_11142651-01@9.pdf | GUID = 7bef864b-2632-4c00-a459-d91d6a78da95 | filetype = 1 | modifieddate = 08/18/2026 03:39:00 | attribute = 1
-[SANMATSU] YELLOW : DEL_11095323-01@1.pdf | GUID = a6db374c-4268-4177-8a4b-d5192add3926 | filetype = 1 | modifieddate = 08/18/2026 03:39:00 | attribute = 1
-[SANMATSU] YELLOW : 5010-728940-11.pdf | GUID = 9602078d-f334-4304-9946-435e0ceb78ad | filetype = 1 | modifieddate = 08/18/2026 03:39:00 | attribute = 1
-[SANMATSU] YELLOW : 5010-729986-11@1.pdf | GUID = 2fa70092-9d48-42b0-b167-a2a52720f6c3 | filetype = 1 | modifieddate = 08/18/2026 03:39:00 | attribute = 1
-[SANMATSU] YELLOW : 5010-735101-11.pdf | GUID = 9e1ddbcf-4008-4421-b5f4-be0f66be1ce1 | filetype = 1 | modifieddate = 08/18/2026 03:39:00 | attribute = 1
-[SANMATSU] YELLOW : 5010-735182-12.pdf | GUID = 0efe1330-025f-4789-8ab1-3cb9db7b3212 | filetype = 1 | modifieddate = 08/18/2026 03:39:00 | attribute = 1
-[SANMATSU] YELLOW : 5010-740285-11.pdf | GUID = 8feecce9-721a-4438-9968-11375ed2b4af | filetype = 1 | modifieddate = 08/18/2026 03:39:00 | attribute = 1
-[SANMATSU] YELLOW : 5010-740283-12.pdf | GUID = 85e0274a-d2ad-4cda-a9b5-20a5bbd240f7 | filetype = 1 | modifieddate = 08/18/2026 03:39:00 | attribute = 1
-[SANMATSU] YELLOW : 5010-673064-11.pdf | GUID = 8e8f2b5b-b5ba-41b8-a0b6-55cae9f1ae3f | filetype = 1 | modifieddate = 08/18/2026 03:38:00 | attribute = 1
-[SANMATSU] YELLOW : 0040-00612SA@1.pdf | GUID = f4b3892b-c3e5-45cc-873d-d7fd6a195318 | filetype = 1 | modifieddate = 08/18/2026 03:38:00 | attribute = 1
-[SANMATSU] YELLOW : 2S10-508786-11.pdf | GUID = 00177c72-5647-49be-936f-2ff6a2a85965 | filetype = 1 | modifieddate = 08/18/2026 03:38:00 | attribute = 1
-[SANMATSU] YELLOW : 3B10-323012-11.pdf | GUID = 832ecad4-a638-46cd-a5e9-38a00bdfc7f8 | filetype = 1 | modifieddate = 08/18/2026 03:38:00 | attribute = 1
-[SANMATSU] YELLOW : 1408039-01@9.pdf | GUID = d6857668-26f5-4a98-821a-b96bf16a859e | filetype = 1 | modifieddate = 08/18/2026 03:38:00 | attribute = 1
-[SANMATSU] YELLOW : 3B10-589783-11.pdf | GUID = 1cd87c29-13a3-4264-af8e-86f3e895fd34 | filetype = 1 | modifieddate = 08/18/2026 03:38:00 | attribute = 1
-[SANMATSU] YELLOW : 3B10-541092-12.pdf | GUID = ba7585b0-b7f6-458a-aac7-6c7621445816 | filetype = 1 | modifieddate = 08/18/2026 03:38:00 | attribute = 1
-[SANMATSU] YELLOW : 5010-571291-11@1.pdf | GUID = a73fa541-08a4-4545-8892-993f6317679f | filetype = 1 | modifieddate = 08/18/2026 03:20:00 | attribute = 1
-[SANMATSU] YELLOW : LGMC-010022-20.pdf | GUID = a219d610-4dfc-4ecd-ae2f-aa92ea9d0f67 | filetype = 1 | modifieddate = 08/18/2026 03:20:00 | attribute = 1
-[SANMATSU] YELLOW : 5010-571291-11.pdf | GUID = 71982a4b-50b6-4c1e-8d46-561a9bafd480 | filetype = 1 | modifieddate = 08/18/2026 03:20:00 | attribute = 1
-[SANMATSU] YELLOW : 2103-YUSO-00@1.pdf | GUID = 2d2f10ff-4499-4705-a01a-7312eb9a876e | filetype = 1 | modifieddate = 08/18/2026 03:08:00 | attribute = 1
-[SANMATSU] YELLOW : 3B10-561922-11@1.pdf | GUID = f8cbb8af-5d6d-4c03-b370-ffee768fba4d | filetype = 1 | modifieddate = 08/18/2026 03:08:00 | attribute = 1
-[SANMATSU] YELLOW : 11095329-72@1.pdf | GUID = 5a99fba2-0ef4-4c20-aac1-bcb02d74408f | filetype = 1 | modifieddate = 08/18/2026 03:08:00 | attribute = 1
-[SANMATSU] YELLOW : LCYN-010004-20@1.pdf | GUID = 2a388c2d-8f8e-4d94-9ba2-b33aabc3d666 | filetype = 1 | modifieddate = 08/18/2026 03:08:00 | attribute = 1
-[SANMATSU] YELLOW : 11095329-43@1.pdf | GUID = fabd06e7-4527-40cd-a5c6-3d992e671d5e | filetype = 1 | modifieddate = 08/18/2026 03:08:00 | attribute = 1
-[SANMATSU] YELLOW : 2103-YUSO-00.pdf | GUID = 4e29fb92-68f4-4429-bbdc-e330a9068373 | filetype = 1 | modifieddate = 08/18/2026 03:08:00 | attribute = 1
-[SANMATSU] YELLOW : 3B10-561922-11.pdf | GUID = 78a5d1a7-255b-4e2d-a400-d8420795606e | filetype = 1 | modifieddate = 08/18/2026 03:08:00 | attribute = 1
-[SANMATSU] YELLOW : LGMC-010021-20.pdf | GUID = 3906264f-815c-44ac-8a42-1df58abfc2a6 | filetype = 1 | modifieddate = 08/18/2026 03:08:00 | attribute = 1
-[SANMATSU] YELLOW : 5010-607781-11@1.pdf | GUID = 356b4516-8c1b-444f-8519-3fdfe8de8425 | filetype = 1 | modifieddate = 08/18/2026 03:08:00 | attribute = 1
-[SANMATSU] YELLOW : 11095329-69@1.pdf | GUID = ccc39fe3-79ab-4b3a-bc5a-c4e318a53497 | filetype = 1 | modifieddate = 08/18/2026 03:08:00 | attribute = 1
-[SANMATSU] YELLOW : 1412-260812-KOU1.pdf | GUID = 82793b0f-6d9a-45d1-83ae-ddb5eb992ff1 | filetype = 1 | modifieddate = 08/18/2026 03:08:00 | attribute = 1
-[SANMATSU] YELLOW : 11095329-40@1.pdf | GUID = 8f98c314-b027-4ffb-935c-baabd77e8d5b | filetype = 1 | modifieddate = 08/18/2026 02:56:00 | attribute = 1
-[SANMATSU] YELLOW : 3B10-563953-11@1.pdf | GUID = 4993f8a8-cb8e-4b1e-b964-a676e736a7b7 | filetype = 1 | modifieddate = 08/18/2026 02:44:00 | attribute = 1
-[SANMATSU] YELLOW : 11095329-39@1.pdf | GUID = 7e7ab28f-c0d4-458c-b3e8-32a345e5230e | filetype = 1 | modifieddate = 08/18/2026 02:44:00 | attribute = 1
-[SANMATSU] YELLOW : 5010-728940-11@1.pdf | GUID = 58936d49-e71e-4167-bc8f-dad53ee784ed | filetype = 1 | modifieddate = 08/18/2026 02:44:00 | attribute = 1
-[SANMATSU] YELLOW : 5010-607744-11.pdf | GUID = 9401d495-5085-4fcd-bff5-e8a454144b34 | filetype = 1 | modifieddate = 08/18/2026 02:44:00 | attribute = 1
-[SANMATSU] YELLOW : 3B10-563953-11.pdf | GUID = 9c189de6-74ee-4179-91fe-7b4d3169f04d | filetype = 1 | modifieddate = 08/18/2026 02:44:00 | attribute = 1
-[SANMATSU] YELLOW : 5010-607744-11@1.pdf | GUID = d6c44662-94fc-43bd-89d6-aa1d4e96a920 | filetype = 1 | modifieddate = 08/18/2026 02:44:00 | attribute = 1
-[SANMATSU] YELLOW : 5010-710260-11@9.pdf | GUID = b18c867e-5a2c-48a7-b97a-7bbd91aa568c | filetype = 1 | modifieddate = 08/18/2026 02:44:00 | attribute = 1
-[SANMATSU] YELLOW : 5010-710260-11.pdf | GUID = 6bea2699-af27-48a4-9376-004d07cec997 | filetype = 1 | modifieddate = 08/18/2026 02:44:00 | attribute = 1
-[SANMATSU] YELLOW : 5010-710260-11@1.pdf | GUID = 4226cc76-d352-4732-80ec-baea5149d78f | filetype = 1 | modifieddate = 08/18/2026 02:44:00 | attribute = 1
-[SANMATSU] YELLOW : 3B10-563666-11@1.pdf | GUID = 4be29c08-941d-419c-84c6-c618b534b667 | filetype = 1 | modifieddate = 08/18/2026 02:20:00 | attribute = 1
-[SANMATSU] YELLOW : 11095330-34-1@1.pdf | GUID = eae52b3e-a268-481b-be1d-ec026847b13b | filetype = 1 | modifieddate = 08/18/2026 02:20:00 | attribute = 1
-[SANMATSU] YELLOW : 3B10-563666-11.pdf | GUID = 8fe61dfa-d775-4dcd-9ca4-ad294bbee7cc | filetype = 1 | modifieddate = 08/18/2026 02:20:00 | attribute = 1
-[SANMATSU] YELLOW : 11095329-37@1.pdf | GUID = c00140d8-513c-4a8f-8638-d1c2325b39cd | filetype = 1 | modifieddate = 08/18/2026 02:20:00 | attribute = 1
-[SANMATSU] YELLOW : 0040-00612SB.pdf | GUID = ec2fc510-4980-41eb-a304-ef1c9775b413 | filetype = 1 | modifieddate = 08/18/2026 02:20:00 | attribute = 1
-[SANMATSU] YELLOW : 0040-00612SB@1.pdf | GUID = ed7d8c8c-e027-4946-9205-379f85baa160 | filetype = 1 | modifieddate = 08/18/2026 02:19:00 | attribute = 1
-[SANMATSU] YELLOW : 60387-9666B.pdf | GUID = 2a18c3ca-78b8-4e4f-b425-ad91286b98da | filetype = 1 | modifieddate = 08/18/2026 02:07:00 | attribute = 1
-[SANMATSU] YELLOW : 5010-712967-11@1.pdf | GUID = 916db453-d4fd-4c1d-ad3d-074d04d0bfed | filetype = 1 | modifieddate = 08/18/2026 02:07:00 | attribute = 1
-[SANMATSU] YELLOW : 5010-712967-11.pdf | GUID = f77330c5-81d0-481c-8306-970d51bd1bbf | filetype = 1 | modifieddate = 08/18/2026 02:07:00 | attribute = 1
-[SANMATSU] YELLOW : 11095329-36@1.pdf | GUID = a751730a-9f7e-49f1-a278-d30d7d2e6050 | filetype = 1 | modifieddate = 08/18/2026 02:07:00 | attribute = 1
-[SANMATSU] YELLOW : 11095323-08@1.pdf | GUID = 24790280-b1e2-4530-9e85-a3c96676251f | filetype = 1 | modifieddate = 08/18/2026 02:07:00 | attribute = 1
-[SANMATSU] YELLOW : 11095323-11@1.pdf | GUID = e96a58a8-2492-4095-93ae-210e164c56f6 | filetype = 1 | modifieddate = 08/18/2026 02:07:00 | attribute = 1
-[SANMATSU] YELLOW : 11095323-01@1.pdf | GUID = bcd4781b-2860-48fc-a351-692cb7b81394 | filetype = 1 | modifieddate = 08/18/2026 01:55:00 | attribute = 1
-[SANMATSU] YELLOW : 3B10-582861-11@1.pdf | GUID = bf89acdf-4b1d-4e86-a820-e19444a20dfc | filetype = 1 | modifieddate = 08/18/2026 01:54:00 | attribute = 1
-[SANMATSU] YELLOW : 3B10-582861-11.pdf | GUID = abb24547-8abe-4ae5-afdc-5b4ec1d0e41d | filetype = 1 | modifieddate = 08/18/2026 01:54:00 | attribute = 1
-[SANMATSU] YELLOW : 5010-771312-11@1.pdf | GUID = 5e9809cb-76fc-47ad-a5d4-25ee1967c96b | filetype = 1 | modifieddate = 08/18/2026 01:54:00 | attribute = 1
-[SANMATSU] YELLOW : 5010-771312-11.pdf | GUID = 2587ef0c-2a69-44d9-88f4-3599d093b672 | filetype = 1 | modifieddate = 08/18/2026 01:54:00 | attribute = 1
-[SANMATSU] YELLOW : 11136322-1@1.pdf | GUID = c522082f-eae5-4c5a-88d8-9d86c02dc857 | filetype = 1 | modifieddate = 08/18/2026 01:41:00 | attribute = 1
-[SANMATSU] YELLOW : 300342AA@1.pdf | GUID = 5080b941-ab3b-4dc1-be86-c2bd80a1368c | filetype = 1 | modifieddate = 08/18/2026 01:40:00 | attribute = 1
-[SANMATSU] YELLOW : 300340AB@1.pdf | GUID = 3b678b3b-0ffb-48b8-9ea4-6a39dc9737a2 | filetype = 1 | modifieddate = 08/18/2026 01:40:00 | attribute = 1
-[SANMATSU] YELLOW : 300340AB.pdf | GUID = ebc8b0d2-897b-4b81-9973-f7bbf3555428 | filetype = 1 | modifieddate = 08/18/2026 01:40:00 | attribute = 1
-[SANMATSU] YELLOW : 11095323-03@1.pdf | GUID = 5101ff48-a0d1-45dd-80a0-6507ebf3c278 | filetype = 1 | modifieddate = 08/18/2026 01:40:00 | attribute = 1
-[SANMATSU] YELLOW : 11136322-1.pdf | GUID = dde74694-18ee-4fa0-bf4e-34503ef9171c | filetype = 1 | modifieddate = 08/18/2026 01:40:00 | attribute = 1
-[SANMATSU] YELLOW : 300340AB@9.pdf | GUID = 6e16d504-8242-4be8-b6df-7e010143cf4a | filetype = 1 | modifieddate = 08/18/2026 01:26:00 | attribute = 1
-[SANMATSU] YELLOW : 300338AB.pdf | GUID = ed4b4e41-f71f-4c05-8e52-e8e4fcc1798a | filetype = 1 | modifieddate = 08/18/2026 01:26:00 | attribute = 1
-[SANMATSU] YELLOW : 300338AB@9.pdf | GUID = 89d608a9-7c9d-4097-ba8b-2d3e22aed7e1 | filetype = 1 | modifieddate = 08/18/2026 01:26:00 | attribute = 1
-[SANMATSU] YELLOW : 300338AB@1.pdf | GUID = b6450990-da28-47d3-9ffd-dc6bd398f00f | filetype = 1 | modifieddate = 08/18/2026 01:26:00 | attribute = 1
-[SANMATSU] YELLOW : DEL_300340AB.pdf | GUID = 162636df-acac-450d-8d3c-231f7e5b4949 | filetype = 1 | modifieddate = 08/18/2026 01:26:00 | attribute = 1
-[SANMATSU] YELLOW : DEL_300338AB.pdf | GUID = d56eab1a-ff2f-4972-aa39-8bd4e9c39cda | filetype = 1 | modifieddate = 08/18/2026 01:26:00 | attribute = 1
-[SANMATSU] YELLOW : 11095329-51@1.pdf | GUID = a87ab659-1109-4621-8ece-f2c2e96c160a | filetype = 1 | modifieddate = 08/18/2026 01:26:00 | attribute = 1
-[SANMATSU] YELLOW : 11095329-50@1.pdf | GUID = 713b673c-4c72-415f-9010-a42656d36217 | filetype = 1 | modifieddate = 08/18/2026 01:26:00 | attribute = 1
-[SANMATSU] YELLOW : 11095329-49@1.pdf | GUID = dd7b6a33-ee98-430d-bba5-d8ae52e22d96 | filetype = 1 | modifieddate = 08/18/2026 01:10:00 | attribute = 1
-[SANMATSU] YELLOW : 11095329-47@1.pdf | GUID = 64ded584-289a-40a1-9d73-6d6b9065f5ba | filetype = 1 | modifieddate = 08/18/2026 01:10:00 | attribute = 1
-[SANMATSU] YELLOW : 11095370-28@1.pdf | GUID = aa2f9f71-1593-4163-b80b-fa290b4bc19a | filetype = 1 | modifieddate = 08/18/2026 01:10:00 | attribute = 1
-[SANMATSU] YELLOW : 5010-525650-11.pdf | GUID = 178ea723-27ef-44ab-a82a-cb3ce7e223af | filetype = 1 | modifieddate = 08/18/2026 01:10:00 | attribute = 1
-[SANMATSU] YELLOW : 465290a.pdf | GUID = a3f01273-264e-4773-b3b0-1665cb941429 | filetype = 1 | modifieddate = 08/18/2026 01:10:00 | attribute = 1
-
-========================================
-        SANMATSU - TODAY
-========================================
-Today's India Date       : 2026-08-18
-Total File Count         : 100
-Yellow Icon Files        : 100
-Non Yellow Icon Files    : 0
-Yellow + Non Yellow      : 100
-========================================
-[SANMATSU] Page 3 total records: 100, valid today's files: 100
-[SANMATSU] All 100 records on previous page were valid today's files.
-[SANMATSU] Moving to page 4...
-[SANMATSU] Processing page 4...
-[SANMATSU] YELLOW : 465290A@9.pdf | GUID = 8d679987-1cdb-447e-86b4-ef82459fefba | filetype = 1 | modifieddate = 08/18/2026 01:10:00 | attribute = 1
-[SANMATSU] YELLOW : 5010-805089-11.pdf | GUID = 6177d71f-a05f-46da-8c4b-0eecb4e1561c | filetype = 1 | modifieddate = 08/18/2026 00:53:00 | attribute = 1
-[SANMATSU] YELLOW : 60387-9666B@9.pdf | GUID = 5e4719ae-a50e-4bee-bc15-f30b77212f15 | filetype = 1 | modifieddate = 08/18/2026 00:53:00 | attribute = 1
-[SANMATSU] YELLOW : DEL_60387-9666B@1.pdf | GUID = fb9bbbce-0c02-45de-aa56-5b6215af9c56 | filetype = 1 | modifieddate = 08/18/2026 00:53:00 | attribute = 1
-[SANMATSU] YELLOW : LJUC-510199-01.pdf | GUID = d3bbdba9-b659-4418-985b-74136a25c4eb | filetype = 1 | modifieddate = 08/18/2026 00:53:00 | attribute = 1
-[SANMATSU] YELLOW : 60360-3444B.pdf | GUID = 7d578246-47c6-4d56-a85a-afaeb2e06c7a | filetype = 1 | modifieddate = 08/18/2026 00:53:00 | attribute = 1
-[SANMATSU] YELLOW : 5010-805089-11@1.pdf | GUID = c56f0384-aa35-4861-97cc-5266444ed660 | filetype = 1 | modifieddate = 08/18/2026 00:53:00 | attribute = 1
-[SANMATSU] YELLOW : DEL_60387-9666B.pdf | GUID = ded32837-c46c-457e-a9dc-1f45e64100b6 | filetype = 1 | modifieddate = 08/18/2026 00:53:00 | attribute = 1
-[SANMATSU] YELLOW : LJUC-510199-01@1.pdf | GUID = 96678ed9-4a4d-4249-b689-bb8120e58f6c | filetype = 1 | modifieddate = 08/18/2026 00:53:00 | attribute = 1
-[SANMATSU] YELLOW : 11095370-26@1.pdf | GUID = 19100b7d-3479-4ae5-aaea-76037b36443f | filetype = 1 | modifieddate = 08/18/2026 00:53:00 | attribute = 1
-[SANMATSU] YELLOW : 11095329-44@1.pdf | GUID = 09a2b827-8af7-46ce-9491-49ca2a126088 | filetype = 1 | modifieddate = 08/18/2026 00:53:00 | attribute = 1
-[SANMATSU] YELLOW : 5010-525650-11@1.pdf | GUID = 4184662a-dd08-4fbd-9c05-b6b05ac8bbe0 | filetype = 1 | modifieddate = 08/18/2026 00:53:00 | attribute = 1
-[SANMATSU] YELLOW : 5010-633418-11@1.pdf | GUID = cde4143c-7597-4734-a36f-750c188079dc | filetype = 1 | modifieddate = 08/18/2026 00:36:00 | attribute = 1
-[SANMATSU] YELLOW : 1704-4204-00@1.pdf | GUID = 1b149d5c-f099-4c1b-9b23-68df86a58bd4 | filetype = 1 | modifieddate = 08/18/2026 00:36:00 | attribute = 1
-[SANMATSU] YELLOW : 5010-633418-11.pdf | GUID = ddcf1710-4a78-4df2-a1a7-a08079827acd | filetype = 1 | modifieddate = 08/18/2026 00:36:00 | attribute = 1
-[SANMATSU] YELLOW : 1408039-01.pdf | GUID = f7006ac3-113e-47c3-b341-ddeac808ba56 | filetype = 1 | modifieddate = 08/18/2026 00:36:00 | attribute = 1
-[SANMATSU] NON YELLOW : KTM-377B-023-0@G.pdf | GUID = 16e6c9df-a278-4762-a0c2-d387258ed1a4 | filetype = 1 | modifieddate = 08/18/2026 00:35:00 | attribute = 0
-[SANMATSU] YELLOW : LZTV-040301-00@1.pdf | GUID = 17cf1ee6-6c53-4c55-b697-99e633075360 | filetype = 1 | modifieddate = 08/18/2026 00:20:00 | attribute = 1
-[SANMATSU] YELLOW : LZTV-040302-00.pdf | GUID = a3810d36-5683-449e-9b77-0a8fc644569c | filetype = 1 | modifieddate = 08/18/2026 00:20:00 | attribute = 1
-[SANMATSU] YELLOW : LZTV-040302-00@1.pdf | GUID = 108218d2-abe5-45a6-b7f4-1c0324ec6032 | filetype = 1 | modifieddate = 08/18/2026 00:20:00 | attribute = 1
-[SANMATSU] YELLOW : LZTV-040301-00.pdf | GUID = 917b0fd7-a624-421f-837a-8b52f48dc8ef | filetype = 1 | modifieddate = 08/18/2026 00:20:00 | attribute = 1
-[SANMATSU] YELLOW : aichi322-00207-00-mi@1.pdf | GUID = 2945acb8-891f-4dba-bbfd-1d165e8acb36 | filetype = 1 | modifieddate = 08/18/2026 00:20:00 | attribute = 1
-[SANMATSU] YELLOW : 440-0657-00@1.pdf | GUID = 88ee8cbb-7fec-41b7-923e-24ebba712540 | filetype = 1 | modifieddate = 08/18/2026 00:20:00 | attribute = 1
-[SANMATSU] YELLOW : TF008-50-001A@1.pdf | GUID = bdf8ca92-45a3-41f1-ac1d-60809a4e3a03 | filetype = 1 | modifieddate = 08/18/2026 00:20:00 | attribute = 1
-[SANMATSU] YELLOW : LNNN-510554-00.pdf | GUID = 6a89500e-1824-4f8d-ad05-3932e6417404 | filetype = 1 | modifieddate = 08/18/2026 00:02:00 | attribute = 1
-[SANMATSU] YELLOW : 11095345-12@1.pdf | GUID = 7167eecd-53db-4280-90f8-c705cf1ad7af | filetype = 1 | modifieddate = 08/18/2026 00:02:00 | attribute = 1
-[SANMATSU] YELLOW : LNNN-510554-00@1.pdf | GUID = 6899aca1-be9d-4023-a98f-bb355071454d | filetype = 1 | modifieddate = 08/18/2026 00:02:00 | attribute = 1
-[SANMATSU] YELLOW : LNNN-510533-00@9.pdf | GUID = e43bf83b-70ab-45bc-a41e-1750fff09015 | filetype = 1 | modifieddate = 08/17/2026 23:33:00 | attribute = 1
-[SANMATSU] YELLOW : LNNN-510533-00.pdf | GUID = 2531c685-590f-4ccd-982b-07d09a22e421 | filetype = 1 | modifieddate = 08/17/2026 23:33:00 | attribute = 1
-[SANMATSU] YELLOW : LNNN-510535-00@1.pdf | GUID = b50ec777-8d15-437b-b560-d95cc784c83e | filetype = 1 | modifieddate = 08/17/2026 23:33:00 | attribute = 1
-[SANMATSU] YELLOW : LNNN-510535-00.pdf | GUID = 6c158911-2ce6-4c67-b50c-5b9b05fbcda6 | filetype = 1 | modifieddate = 08/17/2026 23:32:00 | attribute = 1
-[SANMATSU] YELLOW : LNNN-510533-00@1.pdf | GUID = f78d2a7e-eec2-4740-ad90-e0eaa53765e0 | filetype = 1 | modifieddate = 08/17/2026 23:32:00 | attribute = 1
-[SANMATSU] YELLOW : LNNN-510518-00.pdf | GUID = 75f085c3-1ad4-49a5-93b2-4aef5c0c9101 | filetype = 1 | modifieddate = 08/17/2026 23:20:00 | attribute = 1
-[SANMATSU] YELLOW : LNNN-510518-00@1.pdf | GUID = 64cd2e1a-5c31-4b6f-b079-b3a241badc23 | filetype = 1 | modifieddate = 08/17/2026 23:20:00 | attribute = 1
-[SANMATSU] YELLOW : LNNN-510515-00@9.pdf | GUID = cbedbea7-3d90-4038-868e-bfc159755bdf | filetype = 1 | modifieddate = 08/17/2026 23:07:00 | attribute = 1
-[SANMATSU] YELLOW : LNNN-510515-00@1.pdf | GUID = e8f139fa-d7c3-4fae-8193-c2f3edccefcc | filetype = 1 | modifieddate = 08/17/2026 23:07:00 | attribute = 1
-
-========================================
-        SANMATSU - TODAY
-========================================
-Today's India Date       : 2026-08-18
-Total File Count         : 36
-Yellow Icon Files        : 35
-Non Yellow Icon Files    : 1
-Yellow + Non Yellow      : 36
-========================================
-[SANMATSU] Page 4 total records: 100, valid today's files: 36
-[SANMATSU] Reached older/non-matching records on page 4 (36/100).
+[SANMATSU] Page 2 total records: 100, valid today's files: 89
+[SANMATSU] Reached older/non-matching records on page 2 (89/100).
 [SANMATSU] All today's valid files on this page have been counted.
 
 ========================================
      SANMATSU - ALL PAGES TODAY TOTAL
 ========================================
-Today's Total File Count     : 336
-Today's Yellow Icon Files    : 316
-Today's No Yellow Icon Files : 20
+Today's Total File Count     : 189
+Today's Yellow Icon Files    : 178
+Today's No Yellow Icon Files : 11
 ========================================
 ]]></system-out>
   </testcase>
-  <testcase name="validNisinoLoginTest" classname="org.nisino.tests.NisinoScanTest" time="3.422">
-    <system-out><![CDATA[Context closed successfully.com.microsoft.playwright.impl.BrowserContextImpl@7dd00705
-Browser closed successfully.com.microsoft.playwright.impl.BrowserImpl@6ceb7b5e
-Playwright closed successfully.com.microsoft.playwright.impl.PlaywrightImpl@4fe875be
-Browser launched successfully.com.microsoft.playwright.impl.BrowserImpl@4a9486c0
-Page created successfully.com.microsoft.playwright.impl.PageImpl@7bde1f3a
+  <testcase name="validNisinoLoginTest" classname="org.nisino.tests.NisinoScanTest" time="4.065">
+    <system-out><![CDATA[Context closed successfully.com.microsoft.playwright.impl.BrowserContextImpl@5965844d
+Browser closed successfully.com.microsoft.playwright.impl.BrowserImpl@6f952d6c
+Playwright closed successfully.com.microsoft.playwright.impl.PlaywrightImpl@4a9486c0
+Browser launched successfully.com.microsoft.playwright.impl.BrowserImpl@40ee0a22
+Page created successfully.com.microsoft.playwright.impl.PageImpl@67dba613
 Navigated to base URL successfully.https://www.alfadock-pack.com/
 Selected Language: English
 Starting Company Login...
@@ -1098,8 +876,8 @@ Login button clicked
 User logged in successfully.
 ]]></system-out>
   </testcase>
-  <testcase name="validatingScanSocketTest" classname="org.nisino.tests.NisinoScanTest" time="25.368">
-    <system-out><![CDATA[HyperLink icon is displayed.
+  <testcase name="validatingScanSocketTest" classname="org.nisino.tests.NisinoScanTest" time="29.816">
+    <system-out><![CDATA[HyperLink icon is not displayed.
 Clicking hyperlink icon
 hyperlink icon clicked successfully
 Current URL: https://www.alfadock-pack.com/ver10/#/home/adsocket
@@ -1118,7 +896,7 @@ Attribute Icon Files     : 30
 Non-Attribute Icon Files : 0
 Total File Count         : 30
 ======================================
-Screenshot saved: screenshots/NISINOSEIKISS_BEFORE WORK_20260818_164625.png
+Screenshot saved: screenshots/NISINOSEIKISS_BEFORE WORK_20260819_135642.png
 clicked 完了 folder
 Pagination already set to 100
 
@@ -1126,13 +904,13 @@ Pagination already set to 100
 COMPANY : NISINOSEIKISS
 DAY     : Today
 ======================================
-Non-Attribute File : 2026.08.18.103923.pdf
+Non-Attribute File : 2026.08.19.102748.pdf
 --------------------------------------
-Attribute Icon Files     : 11
+Attribute Icon Files     : 10
 Non-Attribute Icon Files : 1
-Total File Count         : 12
+Total File Count         : 11
 ======================================
-Screenshot saved: screenshots/NISINOSEIKISS_COMPLETED_20260818_164633.png
+Screenshot saved: screenshots/NISINOSEIKISS_COMPLETED_20260819_135651.png
 ]]></system-out>
   </testcase>
 </testsuite>

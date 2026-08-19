@@ -8,6 +8,7 @@ import base.BaseDriver;
 import fivesservice.Oaksystem;
 import pages.CompLoginPage;
 import pages.UserLoginPage;
+import utils.AllureScreenshotUtil;
 import utils.ConfigReader;
 
 public class OakSystemDrawTest extends BaseDriver {
@@ -41,10 +42,13 @@ public class OakSystemDrawTest extends BaseDriver {
         oakSystem.validatehyperlinkicon();
         oakSystem.clickhyperlinkicon();
         oakSystem.hyperLinkPageURL();
+        AllureScreenshotUtil.allureAttachScreenshot(page, "hyperlink");
         oakSystem.validatedrawsocketicon();
         oakSystem.clickdrawsocketicon();
+        AllureScreenshotUtil.allureAttachScreenshot(page, "Draw Socket");
         oakSystem.drawSocketURL();
         oakSystem.setPagination("100");
+        AllureScreenshotUtil.allureAttachScreenshot(page, "Draw Socket");
         oakSystem.verifyTodayFileCountAndGetScreenshot();
     }
 

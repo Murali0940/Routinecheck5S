@@ -7,6 +7,7 @@ D:\PlaywrightJava\registrationservice\src\main\java\listeners\EmailReportListene
 D:\PlaywrightJava\registrationservice\src\main\java\pages\CompLoginPage.java
 D:\PlaywrightJava\registrationservice\src\main\java\pages\Homepage.java
 D:\PlaywrightJava\registrationservice\src\main\java\pages\UserLoginPage.java
+D:\PlaywrightJava\registrationservice\src\main\java\utils\AllureScreenshotUtil.java
 D:\PlaywrightJava\registrationservice\src\main\java\utils\APIFileUtil.java
 D:\PlaywrightJava\registrationservice\src\main\java\utils\ConfigReader.java
 D:\PlaywrightJava\registrationservice\src\main\java\utils\EmailReportService.java

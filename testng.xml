@@ -12,7 +12,6 @@
      <test name="routinecheck5S">
 
         <classes>
-
             <class name="org.ohkuma.tests.OhkumaTest"/>
             <class name="org.oaksystem.tests.OakSystemDrawTest"/>
             <class name="org.sanmatsu.tests.SanmatsuTest"/>

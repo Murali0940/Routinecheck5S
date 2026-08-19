@@ -5,6 +5,7 @@ import com.microsoft.playwright.options.WaitForSelectorState;
 
 import io.qameta.allure.Allure;
 import io.qameta.allure.Step;
+import utils.AllureScreenshotUtil;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -31,6 +32,8 @@ public class UserLoginPage {
     public Homepage userLogin(String user, String pass) {
 
         Allure.step("Starting user login");
+
+        AllureScreenshotUtil.allureAttachScreenshot(page, "user login page");
 
         // Wait for username field
         page.getByPlaceholder("Username").waitFor(
@@ -63,6 +66,8 @@ public class UserLoginPage {
             throw new AssertionError(
                     "User login button is visible but not enabled.");
         }
+
+        AllureScreenshotUtil.allureAttachScreenshot(page, "user login page");
 
         btnLogin1.click();
 

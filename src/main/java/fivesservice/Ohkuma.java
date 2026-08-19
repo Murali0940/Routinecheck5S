@@ -169,6 +169,7 @@ public class Ohkuma {
     // ============================================================
 
     public void clickHyperLinkIcon() {
+        hyperLinkIcon.scrollIntoViewIfNeeded();
         page.waitForLoadState();
         page.waitForTimeout(1000);
         hyperLinkIcon.click();
@@ -176,6 +177,8 @@ public class Ohkuma {
     }
 
     public void clickS09SocketIcon() {
+
+        adSocketS09Icon.scrollIntoViewIfNeeded();
         page.waitForLoadState();
         page.waitForTimeout(2000);
         adSocketS09Icon.click();
