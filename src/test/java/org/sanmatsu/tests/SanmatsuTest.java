@@ -7,6 +7,7 @@ import com.microsoft.playwright.Locator;
 import fivesservice.Sanmatsu;
 import pages.CompLoginPage;
 import pages.UserLoginPage;
+import utils.AllureScreenshotUtil;
 import utils.ConfigReader;
 import base.BaseDriver;
 
@@ -39,11 +40,14 @@ public class SanmatsuTest extends BaseDriver {
         sanmatsu.homePageURL();
         sanmatsu.validatehyperlinkicon();
         sanmatsu.clickhyperlinkicon();
+        AllureScreenshotUtil.allureAttachScreenshot(page, "hyper link");
         sanmatsu.hyperLinkPageURL();
         sanmatsu.validatedrawsocketicon();
         sanmatsu.clickdrawsocketicon();
+        AllureScreenshotUtil.allureAttachScreenshot(page, "draw socket");
         sanmatsu.drawSocketURL();
         sanmatsu.setPagination("100");
+        AllureScreenshotUtil.allureAttachScreenshot(page, "draw socket");
         sanmatsu.verifyTodayFileCountAndGetScreenshot();
     }
 

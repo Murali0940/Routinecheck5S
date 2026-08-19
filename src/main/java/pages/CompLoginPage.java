@@ -6,6 +6,7 @@ import com.microsoft.playwright.options.WaitForSelectorState;
 
 import io.qameta.allure.Allure;
 import io.qameta.allure.Step;
+import utils.AllureScreenshotUtil;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -68,6 +69,8 @@ public class CompLoginPage {
                     "Company login button is visible but not enabled.");
         }
 
+        AllureScreenshotUtil.allureAttachScreenshot(page, "company login page");
+
         btnLogin.click();
 
         System.out.println("Company login button clicked.");
@@ -76,6 +79,7 @@ public class CompLoginPage {
 
         // Wait for the next page to become available
         page.waitForLoadState(LoadState.DOMCONTENTLOADED);
+
         page.waitForTimeout(3000);
 
         return new UserLoginPage(page);

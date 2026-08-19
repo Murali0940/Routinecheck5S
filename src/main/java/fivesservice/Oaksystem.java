@@ -7,6 +7,7 @@ import com.microsoft.playwright.options.LoadState;
 
 import base.BaseDriver;
 import io.qameta.allure.Allure;
+import utils.AllureScreenshotUtil;
 import utils.FileCountResult;
 import utils.OakSystemFileAPIUtil;
 import utils.TestExecutionReport;
@@ -130,14 +131,18 @@ public class Oaksystem {
 
     public void clickhyperlinkicon() {
 
+        hyperLinkIcon.scrollIntoViewIfNeeded();
+
         page.waitForLoadState();
         page.waitForTimeout(1000);
         hyperLinkIcon.click();
         Allure.step("HyperLink icon clicked..");
-
     }
 
     public void clickdrawsocketicon() {
+
+        drawSocketIcon.scrollIntoViewIfNeeded();
+
         page.waitForLoadState();
         page.waitForTimeout(1000);
         drawSocketIcon.click();
@@ -149,11 +154,27 @@ public class Oaksystem {
 
     public void validatehyperlinkicon() {
 
-        hyperLinkIcon.isVisible();
+        boolean visible = hyperLinkIcon.isVisible();
+        if (visible) {
+            System.out.println("hyperlink icon is visible");
+            Allure.step("hyperlink icon is visible");
+        } else {
+            System.out.println("hyperlink icon is not visible");
+            Allure.step("hyperlink icon is not visible");
+        }
 
     }
 
     public void validatedrawsocketicon() {
+
+        boolean visible = drawSocketIcon.isVisible();
+        if (visible) {
+            System.out.println("drawsocket icon is visible");
+            Allure.step("drawsocket icon is visible");
+        } else {
+            System.out.println("drawsocket icon is not visible");
+            Allure.step("drawsocket icon is not visible");
+        }
 
         drawSocketIcon.isVisible();
 

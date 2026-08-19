@@ -7,6 +7,7 @@ import com.microsoft.playwright.Locator;
 import fivesservice.Ohkuma;
 import pages.CompLoginPage;
 import pages.UserLoginPage;
+import utils.AllureScreenshotUtil;
 import utils.ConfigReader;
 import base.BaseDriver;
 
@@ -45,6 +46,7 @@ public class OhkumaTest extends BaseDriver {
         ohkuma.clickS09SocketIcon();
         ohkuma.drawSocketURL();
         ohkuma.setPagination("100");
+        AllureScreenshotUtil.allureAttachScreenshot(page, "S09 Socket");
         ohkuma.verifyTodayFileCountAndGetScreenshot();
     }
 
