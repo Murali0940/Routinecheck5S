@@ -52,7 +52,7 @@ public class Sanmatsu {
         page.waitForLoadState(LoadState.NETWORKIDLE);
         page.waitForTimeout(1000);
         hyperLinkIcon.click();
-        Allure.step("HyperLink icon clicked..");
+        Allure.step("HyperLink icon clicked.");
 
     }
 
