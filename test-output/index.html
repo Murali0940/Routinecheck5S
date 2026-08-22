@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <meta charset='utf-8'>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports1.css" rel="stylesheet" id="ultra" />
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" id="retro" disabled="false"/>
+    <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
+      <br/>
+      <span class="top-banner-font-1">1 suite</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" title="Collapse/expand all the suites" class="collapse-all-link">
+          <img src="collapseall.gif" class="collapse-all-icon">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" panel-name="suite-routinecheck5S_test_suite" class="navigator-link">
+              <span class="suite-name border-passed">routinecheck5S test suite</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" panel-name="test-xml-routinecheck5S_test_suite" class="navigator-link ">
+                    <span>D:\PlaywrightJava\registrationservice\testng.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="testlist-routinecheck5S_test_suite" class="navigator-link ">
+                    <span class="test-stats">1 test</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="group-routinecheck5S_test_suite" class="navigator-link ">
+                    <span>0 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="times-routinecheck5S_test_suite" class="navigator-link ">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="reporter-routinecheck5S_test_suite" class="navigator-link ">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="ignored-methods-routinecheck5S_test_suite" class="navigator-link ">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="chronological-routinecheck5S_test_suite" class="navigator-link ">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">8 methods,   8 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-routinecheck5S_test_suite" class="hide-methods passed suite-routinecheck5S_test_suite"> (hide)</a> <!-- hide-methods passed suite-routinecheck5S_test_suite -->
+                      <a href="#" panel-name="suite-routinecheck5S_test_suite" class="show-methods passed suite-routinecheck5S_test_suite"> (show)</a> <!-- show-methods passed suite-routinecheck5S_test_suite -->
+                    </span>
+                    <div class="method-list-content passed suite-routinecheck5S_test_suite">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-routinecheck5S_test_suite" title="org.ohkuma.tests.OhkumaTest" class="method navigator-link" hash-for-method="validLoginTest">validLoginTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-routinecheck5S_test_suite" title="org.oaksystem.tests.OakSystemDrawTest" class="method navigator-link" hash-for-method="validLoginTest">validLoginTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-routinecheck5S_test_suite" title="org.sanmatsu.tests.SanmatsuTest" class="method navigator-link" hash-for-method="validLoginTest">validLoginTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-routinecheck5S_test_suite" title="org.nisino.tests.NisinoScanTest" class="method navigator-link" hash-for-method="validNisinoLoginTest">validNisinoLoginTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-routinecheck5S_test_suite" title="org.oaksystem.tests.OakSystemDrawTest" class="method navigator-link" hash-for-method="validatingDrawSocketTest">validatingDrawSocketTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-routinecheck5S_test_suite" title="org.ohkuma.tests.OhkumaTest" class="method navigator-link" hash-for-method="validatingS09Socket">validatingS09Socket</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-routinecheck5S_test_suite" title="org.sanmatsu.tests.SanmatsuTest" class="method navigator-link" hash-for-method="validatingSanmatsuHomePage">validatingSanmatsuHomePage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-routinecheck5S_test_suite" title="org.nisino.tests.NisinoScanTest" class="method navigator-link" hash-for-method="validatingScanSocketTest">validatingScanSocketTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-routinecheck5S_test_suite -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-routinecheck5S_test_suite" class="panel routinecheck5S_test_suite">
+          <div class="suite-routinecheck5S_test_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">org.sanmatsu.tests.SanmatsuTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="validLoginTest">
+                  </a> <!-- validLoginTest -->
+                  <span class="method-name">validLoginTest</span>
+                  <em>
+(Verify login with valid Company and User credentials)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validatingSanmatsuHomePage">
+                  </a> <!-- validatingSanmatsuHomePage -->
+                  <span class="method-name">validatingSanmatsuHomePage</span>
+                  <em>
+(validatingSanmatsuHomePage)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-routinecheck5S_test_suite-class-passed -->
+          <div class="suite-routinecheck5S_test_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">org.ohkuma.tests.OhkumaTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="validLoginTest">
+                  </a> <!-- validLoginTest -->
+                  <span class="method-name">validLoginTest</span>
+                  <em>
+(Verify login with valid Company and User credentials)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validatingS09Socket">
+                  </a> <!-- validatingS09Socket -->
+                  <span class="method-name">validatingS09Socket</span>
+                  <em>
+(validatingS09Socket)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-routinecheck5S_test_suite-class-passed -->
+          <div class="suite-routinecheck5S_test_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">org.nisino.tests.NisinoScanTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="validNisinoLoginTest">
+                  </a> <!-- validNisinoLoginTest -->
+                  <span class="method-name">validNisinoLoginTest</span>
+                  <em>
+(Verify login with valid Company and User credentials.)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validatingScanSocketTest">
+                  </a> <!-- validatingScanSocketTest -->
+                  <span class="method-name">validatingScanSocketTest</span>
+                  <em>
+(validatingDrawSocketTest)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-routinecheck5S_test_suite-class-passed -->
+          <div class="suite-routinecheck5S_test_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">org.oaksystem.tests.OakSystemDrawTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="validLoginTest">
+                  </a> <!-- validLoginTest -->
+                  <span class="method-name">validLoginTest</span>
+                  <em>
+(Verify login with valid Company and User credentials.)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="validatingDrawSocketTest">
+                  </a> <!-- validatingDrawSocketTest -->
+                  <span class="method-name">validatingDrawSocketTest</span>
+                  <em>
+(validatingDrawSocketTest)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-routinecheck5S_test_suite-class-passed -->
+        </div> <!-- panel routinecheck5S_test_suite -->
+        <div panel-name="test-xml-routinecheck5S_test_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">D:\PlaywrightJava\registrationservice\testng.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite name=&quot;routinecheck5S test suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
+  &lt;listeners&gt;
+    &lt;listener class-name=&quot;io.qameta.allure.testng.AllureTestNg&quot;/&gt;
+    &lt;listener class-name=&quot;listeners.EmailReportListener&quot;/&gt;
+  &lt;/listeners&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;routinecheck5S&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;org.ohkuma.tests.OhkumaTest&quot;/&gt;
+      &lt;class name=&quot;org.oaksystem.tests.OakSystemDrawTest&quot;/&gt;
+      &lt;class name=&quot;org.sanmatsu.tests.SanmatsuTest&quot;/&gt;
+      &lt;class name=&quot;org.nisino.tests.NisinoScanTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- routinecheck5S --&gt;
+&lt;/suite&gt; &lt;!-- routinecheck5S test suite --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-routinecheck5S_test_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for routinecheck5S test suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">routinecheck5S (4 classes)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-routinecheck5S_test_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for routinecheck5S test suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-routinecheck5S_test_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for routinecheck5S test suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_routinecheck5S_test_suite');
+function tableData_routinecheck5S_test_suite() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(8);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'validatingS09Socket')
+data.setCell(0, 2, 'org.ohkuma.tests.OhkumaTest')
+data.setCell(0, 3, 44976);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'validatingScanSocketTest')
+data.setCell(1, 2, 'org.nisino.tests.NisinoScanTest')
+data.setCell(1, 3, 33696);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'validatingSanmatsuHomePage')
+data.setCell(2, 2, 'org.sanmatsu.tests.SanmatsuTest')
+data.setCell(2, 3, 25041);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'validatingDrawSocketTest')
+data.setCell(3, 2, 'org.oaksystem.tests.OakSystemDrawTest')
+data.setCell(3, 3, 20129);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'validLoginTest')
+data.setCell(4, 2, 'org.ohkuma.tests.OhkumaTest')
+data.setCell(4, 3, 4452);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'validLoginTest')
+data.setCell(5, 2, 'org.sanmatsu.tests.SanmatsuTest')
+data.setCell(5, 3, 4194);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'validLoginTest')
+data.setCell(6, 2, 'org.oaksystem.tests.OakSystemDrawTest')
+data.setCell(6, 3, 4154);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'validNisinoLoginTest')
+data.setCell(7, 2, 'org.nisino.tests.NisinoScanTest')
+data.setCell(7, 3, 4123);
+window.suiteTableData['routinecheck5S_test_suite']= { tableData: data, tableDiv: 'times-div-routinecheck5S_test_suite'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 2 minutes</span>
+              <div id="times-div-routinecheck5S_test_suite">
+              </div> <!-- times-div-routinecheck5S_test_suite -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-routinecheck5S_test_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for routinecheck5S test suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-routinecheck5S_test_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">0 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-routinecheck5S_test_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">org.ohkuma.tests.OhkumaTest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setup</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">validLoginTest</span>
+                <span class="method-start">24963 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">validatingS09Socket</span>
+                <span class="method-start">29492 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">teardown</span>
+                <span class="method-start">74503 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">org.oaksystem.tests.OakSystemDrawTest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setup</span>
+                <span class="method-start">74859 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">validLoginTest</span>
+                <span class="method-start">77159 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">validatingDrawSocketTest</span>
+                <span class="method-start">81318 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">teardown</span>
+                <span class="method-start">101468 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">org.sanmatsu.tests.SanmatsuTest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setup</span>
+                <span class="method-start">101914 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">validLoginTest</span>
+                <span class="method-start">104139 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">validatingSanmatsuHomePage</span>
+                <span class="method-start">108336 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">teardown</span>
+                <span class="method-start">133384 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">org.nisino.tests.NisinoScanTest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setup</span>
+                <span class="method-start">133777 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">validNisinoLoginTest</span>
+                <span class="method-start">135952 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">validatingScanSocketTest</span>
+                <span class="method-start">140077 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">teardown</span>
+                <span class="method-start">173778 ms</span>
+              </div> <!-- configuration-class after -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+<script type="text/javascript" src="testng-reports2.js"></script>
+</html>
