@@ -7,7 +7,6 @@ import com.microsoft.playwright.options.LoadState;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import java.time.LocalDate;
 import base.BaseDriver;
 import io.qameta.allure.Allure;
 import utils.FileCountResult;
@@ -25,22 +24,22 @@ public class Sanmatsu {
 
     // constructor
 
-        public Sanmatsu(Page page) {
-            this.page = page;
-            this.hyperLinkIcon = page.locator(
-                    "//h4[text()='HyperLink']/preceding::input[@src='assets/icons/hyperLink.png']");
-            this.drawSocketIcon = page.locator(
-                    "//h4[text()='ドキュワークス図面']/preceding::input[@type='image' and @src='assets/icons/Drawing.png']");
+    public Sanmatsu(Page page) {
+        this.page = page;
+        this.hyperLinkIcon = page.locator(
+                "//h4[text()='HyperLink']/preceding::input[@src='assets/icons/hyperLink.png']");
+        this.drawSocketIcon = page.locator(
+                "//h4[text()='ドキュワークス図面']/preceding::input[@type='image' and @src='assets/icons/Drawing.png']");
 
-            // Automatically capture getSocketFiles API response in real-time
-            this.page.onResponse(res -> {
-                if (res.url().contains("getSocketFiles") && res.status() == 200) {
-                    try {
-                        String text = res.text();
-                        if (text != null && !text.isBlank() && text.trim().startsWith("[")) {
-                            this.latestSocketFilesJson = text;
-                        }
-                    } catch (Exception ignored) {
+        // Automatically capture getSocketFiles API response in real-time
+        this.page.onResponse(res -> {
+            if (res.url().contains("getSocketFiles") && res.status() == 200) {
+                try {
+                    String text = res.text();
+                    if (text != null && !text.isBlank() && text.trim().startsWith("[")) {
+                        this.latestSocketFilesJson = text;
+                    }
+                } catch (Exception ignored) {
                 }
             }
         });
@@ -200,36 +199,38 @@ public class Sanmatsu {
         }
     }
 
-    private static LocalDate parseDate(String dateStr) {
-        if (dateStr == null || dateStr.isBlank()) {
-            return null;
-        }
-        String cleaned = dateStr.trim();
-        java.time.format.DateTimeFormatter[] formatters = new java.time.format.DateTimeFormatter[] {
-                java.time.format.DateTimeFormatter.ofPattern("MM/dd/yyyy HH:mm:ss"),
-                java.time.format.DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss"),
-                java.time.format.DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"),
-                java.time.format.DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss"),
-                java.time.format.DateTimeFormatter.ofPattern("MM/dd/yyyy"),
-                java.time.format.DateTimeFormatter.ofPattern("yyyy/MM/dd"),
-                java.time.format.DateTimeFormatter.ofPattern("yyyy-MM-dd")
-        };
-        for (java.time.format.DateTimeFormatter dtf : formatters) {
-            try {
-                if (cleaned.length() > 10 && (cleaned.contains(":") || cleaned.contains("T"))) {
-                    return java.time.LocalDateTime.parse(cleaned, dtf).toLocalDate();
-                } else {
-                    return java.time.LocalDate.parse(cleaned, dtf);
-                }
-            } catch (Exception ignored) {
-            }
-        }
-        try {
-            return java.time.LocalDate.parse(cleaned);
-        } catch (Exception ignored) {
-        }
-        return null;
-    }
+    // private static LocalDate parseDate(String dateStr) {
+    // if (dateStr == null || dateStr.isBlank()) {
+    // return null;
+    // }
+    // String cleaned = dateStr.trim();
+    // java.time.format.DateTimeFormatter[] formatters = new
+    // java.time.format.DateTimeFormatter[] {
+    // java.time.format.DateTimeFormatter.ofPattern("MM/dd/yyyy HH:mm:ss"),
+    // java.time.format.DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss"),
+    // java.time.format.DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"),
+    // java.time.format.DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss"),
+    // java.time.format.DateTimeFormatter.ofPattern("MM/dd/yyyy"),
+    // java.time.format.DateTimeFormatter.ofPattern("yyyy/MM/dd"),
+    // java.time.format.DateTimeFormatter.ofPattern("yyyy-MM-dd")
+    // };
+    // for (java.time.format.DateTimeFormatter dtf : formatters) {
+    // try {
+    // if (cleaned.length() > 10 && (cleaned.contains(":") ||
+    // cleaned.contains("T"))) {
+    // return java.time.LocalDateTime.parse(cleaned, dtf).toLocalDate();
+    // } else {
+    // return java.time.LocalDate.parse(cleaned, dtf);
+    // }
+    // } catch (Exception ignored) {
+    // }
+    // }
+    // try {
+    // return java.time.LocalDate.parse(cleaned);
+    // } catch (Exception ignored) {
+    // }
+    // return null;
+    // }
 
     public void verifyTodayFileCountAndGetScreenshot() {
 
