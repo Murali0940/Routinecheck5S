@@ -17,6 +17,7 @@
             <class name="org.sanmatsu.tests.SanmatsuTest"/>
             <class name="org.nisino.tests.NisinoScanTest"/>
             <!-- <class name="org.attributeprocess.AttributeProcessTest"/> -->
+            <class name="org.masuda.MasudaScanTest"/>
         </classes>
     </test>
 
