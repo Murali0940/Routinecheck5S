@@ -33,9 +33,9 @@ public class MasudaScanTest extends BaseDriver {
 
     }
 
-    @Test(priority = 2, description = "validatingS09Socket")
+    @Test(priority = 2, description = "validatingscanSocket")
 
-    public void validatingS09Socket() {
+    public void validatingScanSocket() {
 
         masuda = new Masuda(page);
         masuda.homePageURL();
@@ -46,7 +46,7 @@ public class MasudaScanTest extends BaseDriver {
         masuda.clickScanSocketIcon();
         masuda.drawSocketURL();
         masuda.setPagination("100");
-        AllureScreenshotUtil.allureAttachScreenshot(page, "S09 Socket");
+        AllureScreenshotUtil.allureAttachScreenshot(page, "scanSocket");
         masuda.verifyTodayFileCountAndGetScreenshot();
     }
 

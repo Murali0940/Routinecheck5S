@@ -6,6 +6,8 @@ import java.util.List;
 import org.apache.commons.mail2.jakarta.EmailAttachment;
 import org.apache.commons.mail2.jakarta.HtmlEmail;
 
+import base.BaseDriver;
+
 public class EmailReportService {
 
         public static void sendEmail(String report) {
@@ -24,16 +26,19 @@ public class EmailReportService {
 
                         String receiver2 = ConfigReader.get("RECEIVER_EMAIL_ADDRESS2");
 
-                        String receiver3 = ConfigReader.get("RECEIVER_EMAIL_ADDRESS3");
+                        // String receiver3 =
+                        // ConfigReader.get("RECEIVER_EMAIL_ADDRESS3");
 
-                        String receiver4 = ConfigReader.get("RECEIVER_EMAIL_ADDRESS4");
+                        // String receiver4 =
+                        // ConfigReader.get("RECEIVER_EMAIL_ADDRESS4");
 
                         String[] receiverEmails = {
+
                                         receiver1,
                                         receiver2,
-                                        receiver3,
-                                        receiver4,
 
+                                        // receiver3,
+                                        // receiver4
                         };
 
                         // =====================================================
@@ -78,9 +83,13 @@ public class EmailReportService {
                         // SUBJECT
                         // =====================================================
 
-                        email.setSubject("Routine Company Check - Automation Report");
+                        email.setSubject(
+                                        "Routine Company Check - Automation Report");
 
-                        // IMPORTANT: UTF-8
+                        // =====================================================
+                        // CHARACTER SET
+                        // =====================================================
+
                         email.setCharset("UTF-8");
 
                         // =====================================================
@@ -93,7 +102,9 @@ public class EmailReportService {
                         // PLAIN TEXT FALLBACK
                         // =====================================================
 
-                        email.setTextMsg("Please open this email in an HTML-compatible email client.");
+                        email.setTextMsg(
+                                        "Please open this email in an "
+                                                        + "HTML-compatible email client.");
 
                         // =====================================================
                         // ATTACH COMPANY SCREENSHOTS
@@ -132,7 +143,8 @@ public class EmailReportService {
 
                                         System.out.println(
                                                         "Attaching screenshot: "
-                                                                        + screenshotFile.getAbsolutePath());
+                                                                        + screenshotFile
+                                                                                        .getAbsolutePath());
 
                                 } else {
 
@@ -143,24 +155,86 @@ public class EmailReportService {
                         }
 
                         // =====================================================
+                        // ATTACH PLAYWRIGHT VIDEOS
+                        // =====================================================
+
+                        List<String> videoPaths = BaseDriver.getVideoPaths();
+
+                        for (String videoPath : videoPaths) {
+
+                                if (videoPath == null
+                                                || videoPath.trim().isEmpty()) {
+
+                                        continue;
+                                }
+
+                                File videoFile = new File(videoPath);
+
+                                if (videoFile.exists()
+                                                && videoFile.isFile()) {
+
+                                        EmailAttachment videoAttachment = new EmailAttachment();
+
+                                        videoAttachment.setPath(
+                                                        videoFile.getAbsolutePath());
+
+                                        videoAttachment.setDisposition(
+                                                        EmailAttachment.ATTACHMENT);
+
+                                        videoAttachment.setDescription(
+                                                        "Playwright automation execution video");
+
+                                        videoAttachment.setName(
+                                                        videoFile.getName());
+
+                                        email.attach(videoAttachment);
+
+                                        System.out.println(
+                                                        "Attaching video: "
+                                                                        + videoFile
+                                                                                        .getAbsolutePath());
+
+                                } else {
+
+                                        System.out.println(
+                                                        "Video not found, skipping: "
+                                                                        + videoPath);
+                                }
+                        }
+
+                        // =====================================================
                         // SEND EMAIL
                         // =====================================================
 
                         email.send();
 
-                        System.out.println("======================================");
+                        System.out.println(
+                                        "======================================");
 
-                        System.out.println("Email report sent successfully.");
+                        System.out.println(
+                                        "Email report sent successfully.");
 
-                        System.out.println("======================================");
+                        System.out.println(
+                                        "Screenshots attached: "
+                                                        + screenshotPaths.size());
+
+                        System.out.println(
+                                        "Videos attached: "
+                                                        + videoPaths.size());
+
+                        System.out.println(
+                                        "======================================");
 
                 } catch (Exception e) {
 
-                        System.err.println("======================================");
+                        System.err.println(
+                                        "======================================");
 
-                        System.err.println("Failed to send email.");
+                        System.err.println(
+                                        "Failed to send email.");
 
-                        System.err.println("======================================");
+                        System.err.println(
+                                        "======================================");
 
                         e.printStackTrace();
                 }
