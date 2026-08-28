@@ -1,7 +1,13 @@
+
+
 git status
 git checkout -b (branch name) - creates new branch
+code modify
 git status
 git add .
+code stash
+git pull origin main
+apply stash
 git commit -m "message"
 git push -u origin (branch name) 
 
@@ -14,4 +20,13 @@ git push origin main
 ===========================
 
 ngrok start command -> ngrok http 8080
+
+
+#=============================
+
+1. stash 
+2. git fetch origin main
+3. stash -> apply stash ( it will show all the changes)
+4. commit
+5. sync button will do ( pull and push). 
 
