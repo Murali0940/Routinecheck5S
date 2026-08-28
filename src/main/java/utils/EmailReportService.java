@@ -26,19 +26,17 @@ public class EmailReportService {
 
                         String receiver2 = ConfigReader.get("RECEIVER_EMAIL_ADDRESS2");
 
-                        // String receiver3 =
-                        // ConfigReader.get("RECEIVER_EMAIL_ADDRESS3");
+                        String receiver3 = ConfigReader.get("RECEIVER_EMAIL_ADDRESS3");
 
-                        // String receiver4 =
-                        // ConfigReader.get("RECEIVER_EMAIL_ADDRESS4");
+                        String receiver4 = ConfigReader.get("RECEIVER_EMAIL_ADDRESS4");
 
                         String[] receiverEmails = {
 
                                         receiver1,
                                         receiver2,
 
-                                        // receiver3,
-                                        // receiver4
+                                        receiver3,
+                                        receiver4
                         };
 
                         // =====================================================
@@ -154,53 +152,53 @@ public class EmailReportService {
                                 }
                         }
 
-                        // =====================================================
-                        // ATTACH PLAYWRIGHT VIDEOS
-                        // =====================================================
+                        // // =====================================================
+                        // // ATTACH PLAYWRIGHT VIDEOS
+                        // // =====================================================
 
-                        List<String> videoPaths = BaseDriver.getVideoPaths();
+                        // List<String> videoPaths = BaseDriver.getVideoPaths();
 
-                        for (String videoPath : videoPaths) {
+                        // for (String videoPath : videoPaths) {
 
-                                if (videoPath == null
-                                                || videoPath.trim().isEmpty()) {
+                        // if (videoPath == null
+                        // || videoPath.trim().isEmpty()) {
 
-                                        continue;
-                                }
+                        // continue;
+                        // }
 
-                                File videoFile = new File(videoPath);
+                        // File videoFile = new File(videoPath);
 
-                                if (videoFile.exists()
-                                                && videoFile.isFile()) {
+                        // if (videoFile.exists()
+                        // && videoFile.isFile()) {
 
-                                        EmailAttachment videoAttachment = new EmailAttachment();
+                        // EmailAttachment videoAttachment = new EmailAttachment();
 
-                                        videoAttachment.setPath(
-                                                        videoFile.getAbsolutePath());
+                        // videoAttachment.setPath(
+                        // videoFile.getAbsolutePath());
 
-                                        videoAttachment.setDisposition(
-                                                        EmailAttachment.ATTACHMENT);
+                        // videoAttachment.setDisposition(
+                        // EmailAttachment.ATTACHMENT);
 
-                                        videoAttachment.setDescription(
-                                                        "Playwright automation execution video");
+                        // videoAttachment.setDescription(
+                        // "Playwright automation execution video");
 
-                                        videoAttachment.setName(
-                                                        videoFile.getName());
+                        // videoAttachment.setName(
+                        // videoFile.getName());
 
-                                        email.attach(videoAttachment);
+                        // email.attach(videoAttachment);
 
-                                        System.out.println(
-                                                        "Attaching video: "
-                                                                        + videoFile
-                                                                                        .getAbsolutePath());
+                        // System.out.println(
+                        // "Attaching video: "
+                        // + videoFile
+                        // .getAbsolutePath());
 
-                                } else {
+                        // } else {
 
-                                        System.out.println(
-                                                        "Video not found, skipping: "
-                                                                        + videoPath);
-                                }
-                        }
+                        // System.out.println(
+                        // "Video not found, skipping: "
+                        // + videoPath);
+                        // }
+                        // }
 
                         // =====================================================
                         // SEND EMAIL
@@ -218,9 +216,9 @@ public class EmailReportService {
                                         "Screenshots attached: "
                                                         + screenshotPaths.size());
 
-                        System.out.println(
-                                        "Videos attached: "
-                                                        + videoPaths.size());
+                        // System.out.println(
+                        // "Videos attached: "
+                        // + videoPaths.size());
 
                         System.out.println(
                                         "======================================");
