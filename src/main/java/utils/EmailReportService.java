@@ -32,7 +32,6 @@ public class EmailReportService {
 
                                         receiver1,
                                         receiver2,
-
                                         receiver3,
                                         receiver4
                         };
