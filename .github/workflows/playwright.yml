@@ -42,7 +42,7 @@ jobs:
 
       # 6. Run TestNG + Playwright tests
       - name: Run Playwright tests
-        run: mvn test
+        run: mvn clean test
 
       # 7. Upload Allure results
       - name: Upload Allure results
