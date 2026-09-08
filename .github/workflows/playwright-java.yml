@@ -1,11 +1,25 @@
-name: Playwright Java Test
+name: Playwright Java Tests
 
 on:
+  push:
+  pull_request:
   workflow_dispatch:
+
+permissions:
+  contents: read
 
 jobs:
   test:
+    if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository
     runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    env:
+      CONFIG_DIR: .ci/playwright-config
+      PLAYWRIGHT_BASE_URL: ${{ secrets.PLAYWRIGHT_BASE_URL }}
+      PLAYWRIGHT_COMPANY_CONFIG: ${{ secrets.PLAYWRIGHT_COMPANY_CONFIG }}
+      PLAYWRIGHT_USER_CONFIG: ${{ secrets.PLAYWRIGHT_USER_CONFIG }}
+      PLAYWRIGHT_REPORT_CONFIG: ${{ secrets.PLAYWRIGHT_REPORT_CONFIG }}
 
     steps:
       - name: Checkout code
@@ -15,11 +29,50 @@ jobs:
         uses: actions/setup-java@v4
         with:
           java-version: '21'
-          distribution: 'temurin'
+          distribution: temurin
           cache: maven
 
-      - name: Install Playwright browsers
-        run: mvn exec:java -e -Dexec.mainClass=com.microsoft.playwright.CLI -Dexec.args="install chromium"
+      - name: Install Playwright Chromium and Linux dependencies
+        run: mvn -B -ntp exec:java -Dexec.mainClass=com.microsoft.playwright.CLI -Dexec.args="install --with-deps chromium"
 
-      - name: Run Playwright Test
-        run: mvn test
+      - name: Prepare CI configuration
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "$CONFIG_DIR"
+
+          : "${PLAYWRIGHT_BASE_URL:?Configure the PLAYWRIGHT_BASE_URL repository secret}"
+          : "${PLAYWRIGHT_COMPANY_CONFIG:?Configure the PLAYWRIGHT_COMPANY_CONFIG repository secret}"
+          : "${PLAYWRIGHT_USER_CONFIG:?Configure the PLAYWRIGHT_USER_CONFIG repository secret}"
+
+          printf '%s\n' "base.url=$PLAYWRIGHT_BASE_URL" 'browser=chromium' 'headless=true' 'slowmo=0' 'timeout=60000' > "$CONFIG_DIR/application.properties"
+          printf '%s\n' "$PLAYWRIGHT_COMPANY_CONFIG" > "$CONFIG_DIR/company-credentials.properties"
+          printf '%s\n' "$PLAYWRIGHT_USER_CONFIG" > "$CONFIG_DIR/user-credentials.properties"
+
+          if [[ -n "${PLAYWRIGHT_REPORT_CONFIG:-}" ]]; then
+            printf '%s\n' "$PLAYWRIGHT_REPORT_CONFIG" > "$CONFIG_DIR/test-report.properties"
+          else
+            printf '%s\n' 'screenshot.on.failure=true' 'screenshot.path=test-output/screenshots' > "$CONFIG_DIR/test-report.properties"
+          fi
+
+      - name: Run Playwright tests
+        shell: bash
+        run: >-
+          xvfb-run -a -s "-screen 0 1920x1080x24"
+          mvn -B -ntp test
+          -Dconfig.file="$CONFIG_DIR/application.properties"
+          -Dcompany.config="$CONFIG_DIR/company-credentials.properties"
+          -Duser.config="$CONFIG_DIR/user-credentials.properties"
+          -Dreport.config="$CONFIG_DIR/test-report.properties"
+
+      - name: Upload test artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-test-results
+          if-no-files-found: ignore
+          path: |
+            target/surefire-reports/
+            target/allure-results/
+            test-videos/
+            test-output/
