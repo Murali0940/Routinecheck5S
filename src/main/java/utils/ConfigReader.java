@@ -58,9 +58,7 @@ public final class ConfigReader {
 
         } catch (IOException e) {
 
-            throw new RuntimeException(
-                    "Failed to load external properties file",
-                    e);
+            System.out.println("Failed to load external properties file" + e.getMessage());
         }
     }
 
