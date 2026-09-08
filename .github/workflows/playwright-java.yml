@@ -16,10 +16,10 @@ jobs:
 
     env:
       CONFIG_DIR: .ci/playwright-config
-      PLAYWRIGHT_BASE_URL: ${{ secrets.PLAYWRIGHT_BASE_URL }}
-      PLAYWRIGHT_COMPANY_CONFIG: ${{ secrets.PLAYWRIGHT_COMPANY_CONFIG }}
-      PLAYWRIGHT_USER_CONFIG: ${{ secrets.PLAYWRIGHT_USER_CONFIG }}
-      PLAYWRIGHT_REPORT_CONFIG: ${{ secrets.PLAYWRIGHT_REPORT_CONFIG }}
+      PLAYWRIGHT_BASE_URL: ${{ secrets.PLAYWRIGHT_BASE_URL || '' }}
+      PLAYWRIGHT_COMPANY_CONFIG: ${{ secrets.PLAYWRIGHT_COMPANY_CONFIG || '' }}
+      PLAYWRIGHT_USER_CONFIG: ${{ secrets.PLAYWRIGHT_USER_CONFIG || '' }}
+      PLAYWRIGHT_REPORT_CONFIG: ${{ secrets.PLAYWRIGHT_REPORT_CONFIG || '' }}
 
     steps:
       - name: Checkout code
