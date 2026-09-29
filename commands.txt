@@ -22,6 +22,9 @@ git push origin main
 ngrok start command -> ngrok http 8080
 
 
+mvn -Dtest=OhkumaTest test
+
+
 #=============================
 
 1. stash 

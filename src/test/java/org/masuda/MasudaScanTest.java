@@ -33,7 +33,7 @@ public class MasudaScanTest extends BaseDriver {
 
     }
 
-    @Test(priority = 2, description = "validatingscanSocket", enabled = false)
+    @Test(priority = 2, description = "validatingscanSocket", enabled = true)
 
     public void validatingScanSocket() {
 
@@ -50,7 +50,7 @@ public class MasudaScanTest extends BaseDriver {
         masuda.verifyTodayFileCountAndGetScreenshot();
     }
 
-    @Test(priority = 3, description = "validating Inspection Socket")
+    @Test(priority = 3, description = "validating Inspection Socket", enabled = false)
 
     public void validatingInspectionSocket() {
 

@@ -121,12 +121,7 @@ public class BaseDriver {
                                 .setHeadless(headless)
                                 .setSlowMo(slowMo)
                                 .setArgs(Arrays.asList(
-                                        "--start-maximized",
-                                        "--window-position=0,0",
-                                        "--window-size="
-                                                + screenWidth
-                                                + ","
-                                                + screenHeight)));
+                                        "--start-maximized")));
 
         System.out.println("Browser launched successfully.");
 
@@ -138,7 +133,7 @@ public class BaseDriver {
 
         context = browser.newContext(
                 new Browser.NewContextOptions()
-                        .setViewportSize(screenWidth, screenHeight)
+                        .setViewportSize(null)
                         .setRecordVideoDir(videoDir)
                         .setRecordVideoSize(screenWidth, screenHeight));
 
