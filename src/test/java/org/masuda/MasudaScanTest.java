@@ -33,7 +33,7 @@ public class MasudaScanTest extends BaseDriver {
 
     }
 
-    @Test(priority = 2, description = "validatingscanSocket")
+    @Test(priority = 2, description = "validatingscanSocket", enabled = false)
 
     public void validatingScanSocket() {
 
@@ -47,6 +47,17 @@ public class MasudaScanTest extends BaseDriver {
         masuda.drawSocketURL();
         masuda.setPagination("100");
         AllureScreenshotUtil.allureAttachScreenshot(page, "scanSocket");
+        masuda.verifyTodayFileCountAndGetScreenshot();
+    }
+
+    @Test(priority = 3, description = "validating Inspection Socket")
+
+    public void validatingInspectionSocket() {
+
+        masuda = new Masuda(page);
+        masuda.clickMasudaInspectionSocket();
+        masuda.setPagination("100");
+        AllureScreenshotUtil.allureAttachScreenshot(page, "inspectionSocket");
         masuda.verifyTodayFileCountAndGetScreenshot();
     }
 

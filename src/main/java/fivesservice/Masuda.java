@@ -21,6 +21,8 @@ public class Masuda {
 
     private final Locator hyperLinkIcon;
     private final Locator scanSocketIcon;
+    private final Locator alfadockLogo;
+    private final Locator inspectionSocket;
 
     // methods
 
@@ -30,6 +32,8 @@ public class Masuda {
                 "//h4[text()='HyperLink']/preceding::input[@src='assets/icons/hyperLink.png']");
         this.scanSocketIcon = page.locator(
                 "//input[@type='image' and @src='assets/icons/Scan.png']");
+        this.alfadockLogo = page.locator("img[src='assets/icons/logo.png']");
+        this.inspectionSocket = page.locator("input[src*='Inspection_Socket.png']");
     }
 
     public void homePageURL() {
@@ -636,4 +640,28 @@ public class Masuda {
         System.out.println("[MASUDA] Home icon clicked - returned to S09 folder list.");
         Allure.step("Home icon clicked - returned to S09 folder list.");
     }
+
+    // Masuda Inspection socket
+
+    // Click Masuda Inspection Socket
+    public void clickMasudaInspectionSocket() {
+
+        alfadockLogo.click();
+        page.waitForLoadState(LoadState.NETWORKIDLE);
+
+        hyperLinkIcon.click();
+        page.waitForLoadState(LoadState.NETWORKIDLE);
+
+        inspectionSocket.click();
+        page.waitForLoadState(LoadState.NETWORKIDLE);
+
+        page.waitForTimeout(5000);
+
+        Allure.step("[MASUDA] Clicked Masuda Inspection Socket");
+
+        System.out.println("[MASUDA] Clicked Masuda Inspection Socket");
+
+        verifyTodayFileCountAndGetScreenshot();
+    }
+
 }
