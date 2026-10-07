@@ -17,13 +17,13 @@ import com.microsoft.playwright.Page;
 
 public class CreateDummyPdf {
 
-    private Page page;
+    public Page page;
 
     public CreateDummyPdf(Page page) {
         this.page = page;
     }
 
-    public void createDummypdf() {
+    public void createDummypdfFile() {
 
         page.waitForTimeout(2000);
 

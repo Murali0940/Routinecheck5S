@@ -12,275 +12,103 @@ import java.time.format.DateTimeFormatter;
 
 public class MasudaInspectionAPIFileUtil {
 
-        /*
-         * API modifieddate format
-         *
-         * Example:
-         * 08/18/2026 09:30:00
-         */
+        private static final ObjectMapper OBJECT_MAPPER = new ObjectMapper();
+
         private static final DateTimeFormatter FORMATTER = DateTimeFormatter.ofPattern("MM/dd/yyyy HH:mm:ss");
 
-        /*
-         * Masuda API modifieddate is treated as UTC.
-         */
+        /** Masuda API modifieddate is treated as UTC. */
         private static final ZoneOffset API_ZONE = ZoneOffset.UTC;
 
-        /*
-         * India Standard Time
-         */
+        /** India Standard Time. */
         private static final ZoneId INDIA_ZONE = ZoneId.of("Asia/Kolkata");
 
-        /*
-         * filetype = 1 -> Valid file
-         */
-        private static final int FILE_TYPE = 1;
+        /** filetype = 1 means a valid file. */
+        private static final int VALID_FILE_TYPE = 1;
+
+        /** attribute = 1 means Yellow icon. */
+        private static final int YELLOW_ATTRIBUTE = 1;
 
         /**
-         * Process Masuda Inspection files.
+         * Processes all files in the supplied JSON array and returns today's counts.
          *
-         * Rules:
-         *
-         * 1. GUID must be available.
-         * 2. filetype must be 1.
-         * 3. modifieddate must be available.
-         * 4. modifieddate is treated as UTC.
-         * 5. UTC is converted to India time.
-         * 6. Only today's files are counted.
-         *
-         * ICON RULE:
-         *
-         * attribute = 1
-         * -> YELLOW ICON
-         *
-         * attribute != 1
-         * -> NON YELLOW ICON
-         *
-         * This method processes ALL files supplied in the
-         * API response. Callers are responsible for passing in
-         * a JSON array that already contains ALL pages of results
-         * (see MasudaInspectionTest.getAllSocketFilesJson()) --
-         * this class has no knowledge of pagination.
+         * @param jsonResponse JSON array returned by the Masuda Inspection API
+         * @return today's Yellow, Non-Yellow and total file counts
+         * @throws IllegalArgumentException if the response is null, blank, invalid,
+         *                                  or is not a JSON array
          */
         public FileCountResult getTodayFileCount(String jsonResponse) {
 
+                if (jsonResponse == null || jsonResponse.isBlank()) {
+                        throw new IllegalArgumentException(
+                                        "[MASUDA] API response must not be null or blank.");
+                }
+
                 try {
+                        JsonNode files = OBJECT_MAPPER.readTree(jsonResponse);
 
-                        ObjectMapper mapper = new ObjectMapper();
-
-                        JsonNode files = mapper.readTree(jsonResponse);
-
-                        /*
-                         * Validate API response
-                         */
-                        if (!files.isArray()) {
-
+                        if (files == null || !files.isArray()) {
                                 throw new IllegalArgumentException(
-                                                "[MASUDA] Invalid API response. "
-                                                                + "Expected JSON array.");
+                                                "[MASUDA] Invalid API response. Expected JSON array.");
                         }
 
-                        /*
-                         * Today's date in India
-                         */
                         LocalDate today = LocalDate.now(INDIA_ZONE);
 
                         int totalFileCount = 0;
                         int yellowIconFileCount = 0;
                         int nonYellowIconFileCount = 0;
 
-                        /*
-                         * Process every file
-                         */
                         for (JsonNode file : files) {
 
-                                /*
-                                 * ================================================
-                                 * 1. GUID CHECK
-                                 * ================================================
-                                 */
-
-                                String guid = file.path("guid")
-                                                .asText("")
-                                                .trim();
-
-                                if (guid.isEmpty()
-                                                || guid.equalsIgnoreCase("null")) {
-
+                                if (file == null || !file.isObject()) {
                                         continue;
                                 }
 
-                                /*
-                                 * ================================================
-                                 * 2. FILE TYPE CHECK
-                                 * ================================================
-                                 */
-
-                                int fileType = file.path("filetype")
-                                                .asInt(-1);
-
-                                if (fileType != FILE_TYPE) {
-
+                                // 1. GUID check
+                                String guid = getText(file, "guid");
+                                if (guid.isEmpty() || "null".equalsIgnoreCase(guid)) {
                                         continue;
                                 }
 
-                                /*
-                                 * ================================================
-                                 * 3. MODIFIED DATE CHECK
-                                 * ================================================
-                                 */
-
-                                String modifiedDate = file.path("modifieddate")
-                                                .asText("")
-                                                .trim();
-
-                                if (modifiedDate.isEmpty()) {
-
+                                // 2. File type check
+                                int fileType = file.path("filetype").asInt(-1);
+                                if (fileType != VALID_FILE_TYPE) {
                                         continue;
                                 }
 
-                                /*
-                                 * ================================================
-                                 * 4. CONVERT UTC -> INDIA DATE
-                                 * ================================================
-                                 */
+                                // 3. Modified date check
+                                String modifiedDate = getText(file, "modifieddate");
+                                if (modifiedDate.isEmpty() || "null".equalsIgnoreCase(modifiedDate)) {
+                                        continue;
+                                }
 
+                                // 4. UTC -> India date
                                 LocalDate fileDate = convertUtcToIndiaDate(modifiedDate);
-
                                 if (fileDate == null) {
-
                                         continue;
                                 }
 
-                                /*
-                                 * ================================================
-                                 * 5. TODAY CHECK
-                                 * ================================================
-                                 */
-
-                                if (!fileDate.equals(today)) {
-
-                                        /*
-                                         * This file is not today's file.
-                                         *
-                                         * Do not count it.
-                                         */
+                                // 5. Today's file check
+                                if (!today.equals(fileDate)) {
                                         continue;
                                 }
 
-                                /*
-                                 * ================================================
-                                 * TODAY'S VALID FILE
-                                 * ================================================
-                                 */
-
+                                // Valid file for today
                                 totalFileCount++;
 
-                                /*
-                                 * ================================================
-                                 * 6. ATTRIBUTE CHECK
-                                 * ================================================
-                                 */
+                                // 6. Attribute / icon check
+                                int attribute = file.path("attribute").asInt(-1);
+                                String fileName = getText(file, "filename");
 
-                                int attribute = file.path("attribute")
-                                                .asInt(-1);
-
-                                String fileName = file.path("filename")
-                                                .asText("")
-                                                .trim();
-
-                                /*
-                                 * ================================================
-                                 * ATTRIBUTE = 1
-                                 * YELLOW ICON
-                                 * ================================================
-                                 */
-
-                                if (attribute == 1) {
-
+                                if (attribute == YELLOW_ATTRIBUTE) {
                                         yellowIconFileCount++;
-
-                                        System.out.println(
-                                                        "[MASUDA] YELLOW : "
-                                                                        + fileName
-                                                                        + " | GUID = "
-                                                                        + guid
-                                                                        + " | filetype = "
-                                                                        + fileType
-                                                                        + " | modifieddate = "
-                                                                        + modifiedDate
-                                                                        + " | attribute = "
-                                                                        + attribute);
-
-                                        /*
-                                         * ================================================
-                                         * ATTRIBUTE != 1
-                                         * NON YELLOW ICON
-                                         * ================================================
-                                         */
-
+                                        logFile("YELLOW", fileName, guid, fileType, modifiedDate, attribute);
                                 } else {
-
                                         nonYellowIconFileCount++;
-
-                                        System.out.println(
-                                                        "[MASUDA] NON YELLOW : "
-                                                                        + fileName
-                                                                        + " | GUID = "
-                                                                        + guid
-                                                                        + " | filetype = "
-                                                                        + fileType
-                                                                        + " | modifieddate = "
-                                                                        + modifiedDate
-                                                                        + " | attribute = "
-                                                                        + attribute);
+                                        logFile("NON YELLOW", fileName, guid, fileType, modifiedDate, attribute);
                                 }
                         }
 
-                        /*
-                         * ================================================
-                         * FINAL RESULT
-                         * ================================================
-                         */
-
-                        System.out.println();
-                        System.out.println(
-                                        "========================================");
-
-                        System.out.println(
-                                        "        MASUDA INSPECTION - TODAY");
-
-                        System.out.println(
-                                        "========================================");
-
-                        System.out.println(
-                                        "Today's India Date       : "
-                                                        + today);
-
-                        System.out.println(
-                                        "Total Today Files       : "
-                                                        + totalFileCount);
-
-                        System.out.println(
-                                        "Yellow Icon Files       : "
-                                                        + yellowIconFileCount);
-
-                        System.out.println(
-                                        "Non Yellow Icon Files   : "
-                                                        + nonYellowIconFileCount);
-
-                        System.out.println(
-                                        "Yellow + Non Yellow     : "
-                                                        + (yellowIconFileCount
-                                                                        + nonYellowIconFileCount));
-
-                        System.out.println(
-                                        "========================================");
-
-                        /*
-                         * ================================================
-                         * RETURN RESULT
-                         * ================================================
-                         */
+                        printSummary(today, totalFileCount, yellowIconFileCount, nonYellowIconFileCount);
 
                         return new FileCountResult(
                                         yellowIconFileCount,
@@ -288,71 +116,81 @@ public class MasudaInspectionAPIFileUtil {
                                         totalFileCount,
                                         null);
 
+                } catch (IllegalArgumentException e) {
+                        throw e;
                 } catch (Exception e) {
-
                         throw new RuntimeException(
-                                        "[MASUDA] Failed to process today's "
-                                                        + "file information",
-                                        e);
+                                        "[MASUDA] Failed to process today's file information", e);
                 }
         }
 
         /**
-         * Convert API UTC modifieddate
-         * to India date.
+         * Converts the API modifieddate from UTC to India time and returns the
+         * resulting India date.
          */
-        private LocalDate convertUtcToIndiaDate(
-                        String modifiedDate) {
-
+        private LocalDate convertUtcToIndiaDate(String modifiedDate) {
                 try {
-
-                        /*
-                         * Parse API date/time
-                         */
-                        LocalDateTime apiDateTime = LocalDateTime.parse(
-                                        modifiedDate,
-                                        FORMATTER);
-
-                        /*
-                         * Treat API date/time as UTC
-                         */
+                        LocalDateTime apiDateTime = LocalDateTime.parse(modifiedDate, FORMATTER);
                         ZonedDateTime utcDateTime = apiDateTime.atZone(API_ZONE);
-
-                        /*
-                         * Convert UTC -> India
-                         */
-                        ZonedDateTime indiaDateTime = utcDateTime.withZoneSameInstant(
-                                        INDIA_ZONE);
-
-                        /*
-                         * Return India date
-                         */
+                        ZonedDateTime indiaDateTime = utcDateTime.withZoneSameInstant(INDIA_ZONE);
                         return indiaDateTime.toLocalDate();
-
                 } catch (Exception e) {
-
                         System.out.println(
-                                        "[MASUDA] Invalid modifieddate: "
-                                                        + modifiedDate);
-
+                                        "[MASUDA] Invalid modifieddate: " + modifiedDate);
                         return null;
                 }
         }
 
-        /*
-         * =========================================================
-         * RESULT CLASS
-         * =========================================================
-         */
+        private String getText(JsonNode node, String fieldName) {
+                JsonNode value = node.path(fieldName);
+                if (value.isMissingNode() || value.isNull()) {
+                        return "";
+                }
+                return value.asText("").trim();
+        }
 
+        private void logFile(
+                        String iconType,
+                        String fileName,
+                        String guid,
+                        int fileType,
+                        String modifiedDate,
+                        int attribute) {
+
+                System.out.println(
+                                "[MASUDA] " + iconType
+                                                + " : " + fileName
+                                                + " | GUID = " + guid
+                                                + " | filetype = " + fileType
+                                                + " | modifieddate = " + modifiedDate
+                                                + " | attribute = " + attribute);
+        }
+
+        private void printSummary(
+                        LocalDate today,
+                        int totalFileCount,
+                        int yellowIconFileCount,
+                        int nonYellowIconFileCount) {
+
+                System.out.println();
+                System.out.println("========================================");
+                System.out.println("        MASUDA INSPECTION - TODAY");
+                System.out.println("========================================");
+                System.out.println("Today's India Date       : " + today);
+                System.out.println("Total Today Files       : " + totalFileCount);
+                System.out.println("Yellow Icon Files       : " + yellowIconFileCount);
+                System.out.println("Non Yellow Icon Files   : " + nonYellowIconFileCount);
+                System.out.println("Yellow + Non Yellow     : "
+                                + (yellowIconFileCount + nonYellowIconFileCount));
+                System.out.println("========================================");
+        }
+
+        /** Result object containing today's file counts. */
         public static class FileCountResult {
 
                 private final int yellowIconFileCount;
-
                 private final int nonYellowIconFileCount;
-
                 private final int totalFileCount;
-
                 private final String screenshotPath;
 
                 public FileCountResult(
@@ -361,33 +199,38 @@ public class MasudaInspectionAPIFileUtil {
                                 int totalFileCount,
                                 String screenshotPath) {
 
+                        if (yellowIconFileCount < 0
+                                        || nonYellowIconFileCount < 0
+                                        || totalFileCount < 0) {
+                                throw new IllegalArgumentException("File counts cannot be negative.");
+                        }
+
+                        if (yellowIconFileCount + nonYellowIconFileCount != totalFileCount) {
+                                throw new IllegalArgumentException(
+                                                "Yellow + Non-Yellow count must equal total file count.");
+                        }
+
                         this.yellowIconFileCount = yellowIconFileCount;
-
                         this.nonYellowIconFileCount = nonYellowIconFileCount;
-
                         this.totalFileCount = totalFileCount;
-
                         this.screenshotPath = screenshotPath;
                 }
 
                 public int getYellowIconFileCount() {
-
                         return yellowIconFileCount;
                 }
 
                 public int getNonYellowIconFileCount() {
-
                         return nonYellowIconFileCount;
                 }
 
                 public int getTotalFileCount() {
-
                         return totalFileCount;
                 }
 
                 public String getScreenshotPath() {
-
                         return screenshotPath;
                 }
         }
+
 }

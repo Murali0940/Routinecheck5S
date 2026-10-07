@@ -50,15 +50,13 @@ public class MasudaScanTest extends BaseDriver {
         masuda.verifyTodayFileCountAndGetScreenshot();
     }
 
-    @Test(priority = 3, description = "validating Inspection Socket", enabled = false)
+    @Test(priority = 3, description = "validating Inspection Socket", enabled = true)
 
     public void validatingInspectionSocket() {
 
         masuda = new Masuda(page);
         masuda.clickMasudaInspectionSocket();
-        masuda.setPagination("100");
         AllureScreenshotUtil.allureAttachScreenshot(page, "inspectionSocket");
-        masuda.verifyTodayFileCountAndGetScreenshot();
     }
 
 }

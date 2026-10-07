@@ -11,11 +11,14 @@ import base.BaseDriver;
 import io.qameta.allure.Allure;
 import utils.FileCountResult;
 import utils.MasudaAPIFileUtil;
+import utils.MasudaInspectionAPIFileUtil;
 import utils.TestExecutionReport;
 
 public class Masuda {
 
     private Page page;
+
+    private final MasudaInspectionAPIFileUtil masudaInspectionAPIFileUtil;
 
     // locators
 
@@ -28,6 +31,7 @@ public class Masuda {
 
     public Masuda(Page page) {
         this.page = page;
+        this.masudaInspectionAPIFileUtil = new MasudaInspectionAPIFileUtil();
         this.hyperLinkIcon = page.locator(
                 "//h4[text()='HyperLink']/preceding::input[@src='assets/icons/hyperLink.png']");
         this.scanSocketIcon = page.locator(
@@ -657,11 +661,46 @@ public class Masuda {
 
         page.waitForTimeout(5000);
 
-        Allure.step("[MASUDA] Clicked Masuda Inspection Socket");
+        setPagination("100");
 
+        Allure.step("[MASUDA] Clicked Masuda Inspection Socket");
         System.out.println("[MASUDA] Clicked Masuda Inspection Socket");
 
-        verifyTodayFileCountAndGetScreenshot();
+        // Get Masuda API response
+        String jsonResponse = getSocketFiles();
+
+        // Process API response
+        MasudaInspectionAPIFileUtil.FileCountResult result = masudaInspectionAPIFileUtil
+                .getTodayFileCount(jsonResponse);
+
+        // Get counts
+        int yellowCount = result.getYellowIconFileCount();
+        int nonYellowCount = result.getNonYellowIconFileCount();
+        int totalCount = result.getTotalFileCount();
+
+        System.out.println("[MASUDA] Yellow Files     : " + yellowCount);
+        System.out.println("[MASUDA] Non-Yellow Files : " + nonYellowCount);
+        System.out.println("[MASUDA] Total Files      : " + totalCount);
+
+        String screenshotPath = BaseDriver.takeScreenshot(
+                page,
+                "MASUDA_INSPECTION_SOCKET");
+
+        TestExecutionReport.addResult(
+                "MASUDA INSPECTION SOCKET",
+                "Today",
+                totalCount,
+                yellowCount,
+                nonYellowCount,
+                screenshotPath);
+
+        Allure.step(
+                "[MASUDA] Today Files: "
+                        + totalCount
+                        + " | Yellow: "
+                        + yellowCount
+                        + " | Non-Yellow: "
+                        + nonYellowCount);
     }
 
 }
