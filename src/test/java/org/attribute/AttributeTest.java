@@ -32,7 +32,7 @@ public class AttributeTest extends BaseDriver {
 
     }
 
-    @Test(priority = 2, description = "setting the attribute for the file")
+    @Test(priority = 2, description = "setting the attribute for the file", enabled = false)
     public void setAttributeTest() throws IOException {
         AttributeProcess attributeProcess = new AttributeProcess(page);
         attributeProcess.clickHyperlinkIcon();
@@ -40,6 +40,12 @@ public class AttributeTest extends BaseDriver {
         attributeProcess.setAttribute();
         attributeProcess.dragLatestPdfToScanSocket();
 
+    }
+
+    @Test(priority = 3, description = "Set Attribute In Drawing Management", enabled = true)
+    public void setAttributeInDrawingManagement() throws IOException {
+        AttributeProcess attributeProcess = new AttributeProcess(page);
+        attributeProcess.drawingManagementicon();
     }
 
 }
